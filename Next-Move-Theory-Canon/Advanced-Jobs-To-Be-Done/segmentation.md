@@ -1,6 +1,6 @@
 # Segmentation by Customer Jobs
 
-This file is the canon page on **segmentation in AJTBD** — how to build the Map of Segments, separate causal segmentation criteria from fake segmentation criteria, choose a focus segment, and scale from one segment into sub-segments and adjacent segments. It builds on [job-graph.md](job-graph.md) (the segmentation surface) and feeds value design, positioning, acquisition, pricing, retention, and unit economics.
+This file is the canon page on **segmentation in AJTBD** — how to build the Map of Segments, separate causal segmentation criteria from fake segmentation criteria, choose a focus segment, and scale from one segment into sub-segments and adjacent segments. It builds on [Job Graph](job-graph.md) (the segmentation surface) and feeds value design, positioning, acquisition, pricing, retention, and unit economics.
 
 The short form: **strategy starts by deciding which Core Jobs of which segment we will compete for — and why we can win.** Everything downstream follows.
 
@@ -24,7 +24,7 @@ For product strategy, value creation, positioning, and differentiation, **the fi
 
 Same surface verb does not mean same segment. **UberX** performs *"get from A to B cheaply enough"*; **Uber Comfort** performs *"get from A to B in a quiet recent-model car"*; **TurboTax** performs *"file my return through guided software"*; **H&R Block Assisted** performs *"hand off my return to a tax pro."* Same broad territory, different Core Jobs, different criteria, different segments.
 
-**The same criteria in a different priority order are also different segments.** Two groups can perform the same Core Job and name the same criteria — yet rank them differently. *Speed-first* vs *no-stress-first*, *control-first* vs *done-for-me-first* (see [value-creation.md §10](value-creation.md)): same Job, same criteria list, inverted priority order — different segments, requiring different products. The priority order over the criteria, not just the presence of a criterion, is part of the segmentation root.
+**The same criteria in a different priority order are also different segments.** Two groups can perform the same Core Job and name the same criteria — yet rank them differently. *Speed-first* vs *no-stress-first*, *control-first* vs *done-for-me-first* (see [Value Creation §10](value-creation.md)): same Job, same criteria list, inverted priority order — different segments, requiring different products. The priority order over the criteria, not just the presence of a criterion, is part of the segmentation root.
 
 **Operational consequence:**
 
@@ -32,7 +32,7 @@ Same surface verb does not mean same segment. **UberX** performs *"get from A to
 
 ## 3. The Map of Segments is the strategic unit — the Job Graph is the surface that makes it visible
 
-**The Map of Segments is the set of Job-based segments that exist around the Big Jobs we might compete for, with their economic attractiveness attached.** It is the third AJTBD unit of analysis: the **Job** is atomic, the **Job Graph** is structural, and the **Map of Segments** is strategic (see [ajtbd-key-theses.md §1](ajtbd-key-theses.md)).
+**The Map of Segments is the set of Job-based segments that exist around the Big Jobs we might compete for, with their economic attractiveness attached.** It is the third AJTBD unit of analysis: the **Job** is atomic, the **Job Graph** is structural, and the **Map of Segments** is strategic (see [AJTBD key theses §1](ajtbd-key-theses.md)).
 
 The Map answers the strategy question: **which Core Jobs of which people will we compete for, why these and not others, and why will we win?** Without it, the segment-and-Job choice defaults to the implicit bets of §1, any of which can be false.
 
@@ -84,7 +84,7 @@ This is why *"enterprise," "premium," "parents," "churned," "high intent,"* and 
 
 ## 9. A focus segment is the segment whose Core Jobs we deliberately choose to compete for
 
-**The focus segment is the answer to the compete / do-not-compete decision in §6.** It is not the segment the team likes, understands, or already has most of; it is the segment whose Core Jobs the company deliberately chooses to compete for after comparing the Map of Segments — the one whose §6 evidence answers all four questions in the affirmative (value, margin, demand, with size as the scale check; short form in [ajtbd-key-theses.md §13](ajtbd-key-theses.md) and [§14](ajtbd-key-theses.md)).
+**The focus segment is the answer to the compete / do-not-compete decision in §6.** It is not the segment the team likes, understands, or already has most of; it is the segment whose Core Jobs the company deliberately chooses to compete for after comparing the Map of Segments — the one whose §6 evidence answers all four questions in the affirmative (value, margin, demand, with size as the scale check; short form in [AJTBD key theses §13](ajtbd-key-theses.md) and [§14](ajtbd-key-theses.md)).
 
 **Operational consequence:**
 
@@ -92,11 +92,11 @@ This is why *"enterprise," "premium," "parents," "churned," "high intent,"* and 
 
 ## 10. A sub-segment is the same Core Job under a sharper context — a new segment is a different Core Job or a materially different criteria set
 
-**A sub-segment keeps the same Core Job and the same main success criteria — but a sharper context adds extra success criteria on top.** Context is what produces criteria ([job-structure.md §3](job-structure.md)): a narrower context produces additional ones the broader segment doesn't carry. A US payroll tool performing *run payroll on time and correctly* has a single-state sub-segment and a multi-state sub-segment whose context adds a criterion the first never has — *taxes registered, withheld, and remitted correctly in every state where I employ someone*. A DoorDash customer in a doorman building and one in a walk-up without a buzzer share the same Core Job, but the walk-up's context adds the criterion *the order reaches me, not a locked lobby door*.
+**A sub-segment keeps the same Core Job and the same main success criteria — but a sharper context adds extra success criteria on top.** Context is what produces criteria ([Job Structure §3](job-structure.md)): a narrower context produces additional ones the broader segment doesn't carry. A US payroll tool performing *run payroll on time and correctly* has a single-state sub-segment and a multi-state sub-segment whose context adds a criterion the first never has — *taxes registered, withheld, and remitted correctly in every state where I employ someone*. A DoorDash customer in a doorman building and one in a walk-up without a buzzer share the same Core Job, but the walk-up's context adds the criterion *the order reaches me, not a locked lobby door*.
 
 **A new segment appears when the Core Job, the success criteria, or their priority order change materially** (§2). *"Publish a simple marketing site"* and *"run a headless storefront for 10,000 SKUs"* are different Jobs, not sub-segments. *"Track my team's tasks"* and *"plan a 30-person cross-functional roadmap"* are different Jobs. *"Clean everyday cotton shirts"* and *"restore a delicate wedding dress"* are different Jobs.
 
-**Do not confuse sub-segments with Small Jobs.** A **Small Job** is a sibling Job at the same level as our Core Job that our product does not perform (see [job-graph.md §2](job-graph.md)). A **sub-segment** is a sharper slice of customers performing the same Core Job in a different context.
+**Do not confuse sub-segments with Small Jobs.** A **Small Job** is a sibling Job at the same level as our Core Job that our product does not perform (see [Job Graph §2](job-graph.md)). A **sub-segment** is a sharper slice of customers performing the same Core Job in a different context.
 
 **Operational consequence:**
 
@@ -110,11 +110,11 @@ The pattern is visible across categories. **Uber** expanded from one ride-hailin
 
 **Profit from the focus segment funds expansion.** Expansion before a profitable base usually spreads resources across several partially served segments; expansion after focus turns existing margin, knowledge, and channel learning into the next segment bet.
 
-**Critical Chain repair is usually the first scaling move inside a sub-segment** (see [critical-chain.md §9.4](critical-chain.md)). The product may already create value, but one link breaks for the new sub-segment — building access, data format, compliance review, payment method, installation constraint. Repair the break before declaring the segment unattractive.
+**Critical Chain repair is usually the first scaling move inside a sub-segment** (see [Critical Chain §9.4](critical-chain.md)). The product may already create value, but one link breaks for the new sub-segment — building access, data format, compliance review, payment method, installation constraint. Repair the break before declaring the segment unattractive.
 
 ## 12. ABCDX is the fastest local-optimum move for an existing product with enough paying customers
 
-**For an existing product, start with the customers who already validated several assumptions by paying.** ABCDX splits the paying base by per-unit margin × satisfaction: A and B are profitable enough to deserve more resources; C and D consume resources without closing the economic loop; X points outside the current product's Core Jobs (see [ABCDX segmentation](../ABCDX/abcdx-segmentation-key-theses.md)).
+**For an existing product, start with the customers who already validated several assumptions by paying.** ABCDX splits the paying base by per-unit margin × satisfaction: A and B are profitable enough to deserve more resources; C and D consume resources without closing the economic loop; X points outside the current product's Core Jobs (see [ABCDX segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md)).
 
 ABCDX is not a substitute for Job segmentation. **It is a sequencing move.** First identify A/B by margin and satisfaction; then run AJTBD interviews inside A/B to cluster them by Core Jobs and success criteria; then refocus product, acquisition, sales, support, and pricing on the A/B Job clusters.
 
@@ -124,7 +124,7 @@ ABCDX is not a substitute for Job segmentation. **It is a sequencing move.** Fir
 
 ## 13. New products and global-optimum moves usually search outside the current paying base — but a global optimum can also be a new Core Job of a segment you already serve
 
-**When the product is new, when the current base is too small, or when the team is looking for a global optimum, the search usually starts outside current customers.** The target is the market around a broad Big Job: who already pays money, time, or energy to perform it; which Core Jobs they currently perform; which criteria matter; which Solutions install which Job Graphs; which segments are economically attractive. **But "outside the base" is not the only road to a global optimum:** the segments you already serve perform many Core Jobs you don't yet touch — unique value usually lives *outside* your current Core Jobs (a Previous Job, a Next Job, a sibling Small Job, or one level up, for the customer you already have), and capturing one can be a larger prize than a new audience (see [value-creation.md §17](value-creation.md)). Compare both before assuming the optimum lives elsewhere.
+**When the product is new, when the current base is too small, or when the team is looking for a global optimum, the search usually starts outside current customers.** The target is the market around a broad Big Job: who already pays money, time, or energy to perform it; which Core Jobs they currently perform; which criteria matter; which Solutions install which Job Graphs; which segments are economically attractive. **But "outside the base" is not the only road to a global optimum:** the segments you already serve perform many Core Jobs you don't yet touch — unique value usually lives *outside* your current Core Jobs (a Previous Job, a Next Job, a sibling Small Job, or one level up, for the customer you already have), and capturing one can be a larger prize than a new audience (see [Value Creation §17](value-creation.md)). Compare both before assuming the optimum lives elsewhere.
 
 Do not validate a narrow fantasy segment first. *"AI assistant for PRDs in US seed-stage SaaS startups"* is often too narrow as the first research frame — widen to the broad-market territory of §4 (*"employees who produce complex documents under deadline and review pressure"*) so the Map can reveal segments the team did not imagine, then narrow after the Map appears.
 
@@ -132,7 +132,7 @@ Do not validate a narrow fantasy segment first. *"AI assistant for PRDs in US se
 
 **B2B segmentation is still rooted in Core Jobs and success criteria.** Industry, employee count, revenue, ACV, and company stage are refinements unless they change Jobs, criteria, margin, or the Critical Chain.
 
-B2B adds three fields to the segment record (see [b2b.md §10](b2b.md)):
+B2B adds three fields to the segment record (see [B2B §10](b2b.md)):
 
 - **Deal Critical Chain.** The same surface Core Job runs through different role maps — founder-led SMB, mid-market functional buyer, enterprise buying committee — each demanding different stakeholders, different evidence, and a different deal chain.
 - **Approval process.** Credit-card swipe, procurement, RFP, security review, legal review, CFO approval — each creates different chain-break risk.
@@ -141,7 +141,7 @@ B2B adds three fields to the segment record (see [b2b.md §10](b2b.md)):
 **Operational consequences:**
 
 - **Recruit the Decision Maker for purchase segmentation.** End users reveal end-user Jobs; Decision Makers reveal budget, role chain, objections, and personal Jobs.
-- **Map business and personal Jobs per role.** The business Job frames the deal; the personal Job often decides whether the human moves (see [b2b.md §5](b2b.md)).
+- **Map business and personal Jobs per role.** The business Job frames the deal; the personal Job often decides whether the human moves (see [B2B §5](b2b.md)).
 
 ## 15. Internal-product segmentation follows the same logic — the budget-holder's Job decides investment, the employee's Job decides use
 
@@ -162,7 +162,7 @@ Three internal-product segments recur:
 
 **A Map of Segments is empirical knowledge with a shelf life.** Pre-pandemic, many markets refreshed segment knowledge every 18–36 months; by 2023, annual was a better default; in AI-, regulation-, or channel-exposed 2026 markets it can drift in 3–6 months. Treat the numbers as a planning heuristic, not a law — the real trigger is visible change in Solutions, budgets, channels, regulation, customer workflows, or the Job Graph itself.
 
-**Segments drift because Core Jobs, success criteria, current Solutions, Consideration Activators, budgets, and channel proxies drift.** The person looks the same while the Job they hire, the criteria they apply, or the competitor they weigh has changed. Lower-level Jobs and Micro Jobs change fastest; Big Jobs usually move slower (see [job-graph.md §6](job-graph.md)).
+**Segments drift because Core Jobs, success criteria, current Solutions, Consideration Activators, budgets, and channel proxies drift.** The person looks the same while the Job they hire, the criteria they apply, or the competitor they weigh has changed. Lower-level Jobs and Micro Jobs change fastest; Big Jobs usually move slower (see [Job Graph §6](job-graph.md)).
 
 ## 17. The recurring segmentation failures are predictable — and all start upstream
 
@@ -170,7 +170,7 @@ Three internal-product segments recur:
 
 The common failure modes:
 
-- **Nonexistent Core Jobs of nonexistent people.** The team builds for a future-tense fantasy rather than past-payment evidence (Fake Jobs — see [job-types-and-properties.md §8](job-types-and-properties.md)).
+- **Nonexistent Core Jobs of nonexistent people.** The team builds for a future-tense fantasy rather than past-payment evidence (Fake Jobs — see [Job Types and Properties §8](job-types-and-properties.md)).
 - **Real Jobs in an unattractive segment.** Customers exist and value exists, but budget, frequency, margin, or reachability fail.
 - **Wrong order of criteria.** Starting with churners, non-buyers, demography, or support tickets and treating the resulting slice as the market (§5).
 - **Resource dilution.** The team keeps adding features for different Core Jobs of different segments and never creates a strong enough Aha Moment for one.
@@ -186,13 +186,13 @@ The common failure modes:
 
 ## Cross-references
 
-- [ajtbd-key-theses.md §12](ajtbd-key-theses.md) — short-form segmentation thesis; [§13](ajtbd-key-theses.md) — strategy = choosing Jobs and segments; [§14](ajtbd-key-theses.md) — cause-and-effect chain to profit.
-- [job-graph.md §11](job-graph.md) — Job Graph as the segmentation surface.
-- [job-structure.md §8 and §11](job-structure.md) — success criteria and same-outcome-different-criteria discipline.
-- [value-creation.md §9–§10](value-creation.md) — success criteria as the operational location of value; different segments value different criteria and rank them in different priority orders.
-- [critical-chain.md §9.4](critical-chain.md) — scaling to sub-segments by discovering and repairing chain-breaks.
-- [behaviour-change.md §10–§11](behaviour-change.md) — behavior-change classes and durable-switching mechanics by segment.
-- [b2b.md §10](b2b.md) — B2B segmentation additions: role chain, approval process, budget cycle.
-- [ABCDX segmentation](../ABCDX/abcdx-segmentation-key-theses.md) — existing-product local-optimum segmentation by margin × satisfaction before AJTBD-on-A/B.
-- [HowTos/find-segmentation-criteria.md](../HowTos/find-segmentation-criteria.md) — operational checklist for extracting causal segmentation criteria.
-- [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md) — interview mechanics for surfacing Jobs, criteria, Consideration Activators, and Critical Chains.
+- [AJTBD key theses §12](ajtbd-key-theses.md) — short-form segmentation thesis; [§13](ajtbd-key-theses.md) — strategy = choosing Jobs and segments; [§14](ajtbd-key-theses.md) — cause-and-effect chain to profit.
+- [Job Graph §11](job-graph.md) — Job Graph as the segmentation surface.
+- [Job Structure §8 and §11](job-structure.md) — success criteria and same-outcome-different-criteria discipline.
+- [Value Creation §9–§10](value-creation.md) — success criteria as the operational location of value; different segments value different criteria and rank them in different priority orders.
+- [Critical Chain §9.4](critical-chain.md) — scaling to sub-segments by discovering and repairing chain-breaks.
+- [Behaviour Change §10–§11](behaviour-change.md) — behavior-change classes and durable-switching mechanics by segment.
+- [B2B §10](b2b.md) — B2B segmentation additions: role chain, approval process, budget cycle.
+- [ABCDX segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md) — existing-product local-optimum segmentation by margin × satisfaction before AJTBD-on-A/B.
+- [Find segmentation criteria](../HowTos/find-segmentation-criteria.md) — operational checklist for extracting causal segmentation criteria.
+- [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — interview mechanics for surfacing Jobs, criteria, Consideration Activators, and Critical Chains.

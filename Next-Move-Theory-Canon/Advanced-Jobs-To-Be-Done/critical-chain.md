@@ -1,8 +1,8 @@
 # Critical Chain of Jobs
 
-This file is the canon page on **Critical Chains** in AJTBD — the sequences of lower-level Jobs that must all be performed for a higher-level Job to land. It expands [ajtbd-key-theses.md §10](ajtbd-key-theses.md) (Critical Chain as operational delivery) and [§11](ajtbd-key-theses.md) (Critical-Chain scaling).
+This file is the canon page on **Critical Chains** in AJTBD — the sequences of lower-level Jobs that must all be performed for a higher-level Job to land. It expands [AJTBD key theses §10](ajtbd-key-theses.md) (Critical Chain as operational delivery) and [§11](ajtbd-key-theses.md) (Critical-Chain scaling).
 
-The Critical Chain is the **Job Graph projected onto a time axis at a chosen Solution** ([job-graph.md](job-graph.md)). Strategic moves operate on the Job Graph; operational moves — value delivery, communication, activation, retention, churn diagnosis — operate here, on the chain. The term is borrowed from Goldratt's *Critical Chain* (see [scientific-foundations.md §20](scientific-foundations.md)): in project management the chain is tasks; in AJTBD it is **Jobs**, and the throttle by the slowest link, the catastrophic effect of a single break, and the dominance of cycles all carry across.
+The Critical Chain is the **Job Graph projected onto a time axis at a chosen Solution** ([Job Graph](job-graph.md)). Strategic moves operate on the Job Graph; operational moves — value delivery, communication, activation, retention, churn diagnosis — operate here, on the chain. The term is borrowed from Goldratt's *Critical Chain* (see [Scientific Foundations §20](scientific-foundations.md)): in project management the chain is tasks; in AJTBD it is **Jobs**, and the throttle by the slowest link, the catastrophic effect of a single break, and the dominance of cycles all carry across.
 
 ---
 
@@ -24,7 +24,7 @@ The Big Job behind each lands only when the last Job in the chain completes.
 
 ## 2. A Critical Chain is the Job Graph projected onto a time axis — only the lowest-level Jobs appear
 
-The Job Graph is *hierarchical* (`Super Big > Big > Core/Small > Micro` — see [ajtbd-key-theses.md §9](ajtbd-key-theses.md)). **The Critical Chain is that same graph projected onto a time axis.** Only the *lowest-level Jobs at the chosen zoom* appear as nodes; higher-level Jobs aren't act-able at a single moment — they emerge when the atomic acts beneath them complete.
+The Job Graph is *hierarchical* (`Super Big > Big > Core/Small > Micro` — see [AJTBD key theses §9](ajtbd-key-theses.md)). **The Critical Chain is that same graph projected onto a time axis.** Only the *lowest-level Jobs at the chosen zoom* appear as nodes; higher-level Jobs aren't act-able at a single moment — they emerge when the atomic acts beneath them complete.
 
 | Axis | Job Graph | Critical Chain |
 |---|---|---|
@@ -42,11 +42,11 @@ Now zoom into one node — `get from A to B`, the Core Job Uber performs. At thi
 
 ## 3. Chain choice is dominated by predicted completability — the probability term in the value formula
 
-**Completability is the Probability term in the value formula.** The brain scores each candidate chain with `Value ≈ Probability of the Outcome × Outcome − Cost` ([value-creation.md §3](value-creation.md)). *Outcome* is how well the Core Jobs land at the customer's criteria; **the Probability of the Outcome is whether the chain runs end-to-end without a break.** They multiply — a brilliant Outcome behind a foreseeable break still scores near zero. Teams over-invest in Outcome and underweight the Probability term; customers don't — they discount any chain they can foresee breaking, including at a Job we don't perform.
+**Completability is the Probability term in the value formula.** The brain scores each candidate chain with `Value ≈ Probability of the Outcome × Outcome − Cost` ([Value Creation §3](value-creation.md)). *Outcome* is how well the Core Jobs land at the customer's criteria; **the Probability of the Outcome is whether the chain runs end-to-end without a break.** They multiply — a brilliant Outcome behind a foreseeable break still scores near zero. Teams over-invest in Outcome and underweight the Probability term; customers don't — they discount any chain they can foresee breaking, including at a Job we don't perform.
 
-**Trust and social-status signals are how the customer estimates a Probability they can't measure directly.** Brand, reviews, customer logos, peer recommendations stand in for the completability forecast (see [scientific-foundations.md §24](scientific-foundations.md)) — which is why a vendor with weaker Core Jobs but strong trust signals beats a better one without them.
+**Trust and social-status signals are how the customer estimates a Probability they can't measure directly.** Brand, reviews, customer logos, peer recommendations stand in for the completability forecast (see [Scientific Foundations §24](scientific-foundations.md)) — which is why a vendor with weaker Core Jobs but strong trust signals beats a better one without them.
 
-**Loss aversion sharpens the Probability term.** A broken chain delivers nothing, and the predicted loss outweighs an equal-sized Outcome gain ([value-creation.md §7](value-creation.md)) — so a serious break forecast can sink an otherwise strong chain.
+**Loss aversion sharpens the Probability term.** A broken chain delivers nothing, and the predicted loss outweighs an equal-sized Outcome gain ([Value Creation §7](value-creation.md)) — so a serious break forecast can sink an otherwise strong chain.
 
 **Worked example — Vercel vs. raw AWS.** AWS had better primitives and lower cost, but shipping a React app meant chaining compute → security groups → load balancer → build → deploy → CDN → monitoring, with multiple foreseeable breaks. Vercel guaranteed the chain — connect the repo, `git push`, the rest runs automatically. Lower Outcome per Job, far higher Probability of the Outcome — Vercel owned early-stage front-end teams for years.
 
@@ -64,13 +64,13 @@ Now zoom into one node — `get from A to B`, the Core Job Uber performs. At thi
 The diagnostic question is therefore not *"why didn't they like the product?"* but *"which Solution did they switch to, and which Big-Job criterion did it hit that we missed?"* Two refinements:
 
 - **They dropped off at a specific step → fix *that* step, not one downstream.** Most psychotherapist-matching services lose people at *find a therapist* — but the larger drop is earlier, at *understand I need therapy* and *decide to look*. Unblocking the earliest broken step pushes the most motivated customers through.
-- **They switched to "nothing" (the null Solution).** No competitor captured them; the blocker is habit, fear, or the cognitive cost of evaluating anything at all. The lever isn't competitor-comparison messaging — it's lowering the energy to start any chain (the Orientation Job — see [behaviour-change.md §10](behaviour-change.md)).
+- **They switched to "nothing" (the null Solution).** No competitor captured them; the blocker is habit, fear, or the cognitive cost of evaluating anything at all. The lever isn't competitor-comparison messaging — it's lowering the energy to start any chain (the Orientation Job — see [Behaviour Change §10](behaviour-change.md)).
 
 ---
 
 ## 5. The chain must not break — when it does, a cascade fires inside the customer
 
-**The cascade.** When a single Job isn't performed, the higher-level result is at risk — but nothing is forced on the customer yet. **A Tax Job appears only if the Big Job matters enough that the customer still wants it** — then, to rescue it, they take on work they never signed up for: *perform the broken Job themselves this time*, and/or *find a different solution that won't break next time* ([value-creation.md §8](value-creation.md)). The brain registers a **Problem** — the customer-experience side of a Negative Prediction Error ([behaviour-change.md §7](behaviour-change.md)); irritation and frustration follow. How far they go depends on the importance of the higher-level Job:
+**The cascade.** When a single Job isn't performed, the higher-level result is at risk — but nothing is forced on the customer yet. **A Tax Job appears only if the Big Job matters enough that the customer still wants it** — then, to rescue it, they take on work they never signed up for: *perform the broken Job themselves this time*, and/or *find a different solution that won't break next time* ([Value Creation §8](value-creation.md)). The brain registers a **Problem** — the customer-experience side of a Negative Prediction Error ([Behaviour Change §7](behaviour-change.md)); irritation and frustration follow. How far they go depends on the importance of the higher-level Job:
 
 - **High-importance → pays + searches.** Performs the broken Job once *and* launches an Orientation Job to find a replacement. The broken chain exits consideration; a competing one is about to enter — one of the canonical behavior-change triggers (§6).
 - **Medium-importance → pays once, stays (for now).** Important enough to absorb the extra work, not enough to go looking today. Trust degrades silently; retention metrics look healthy but aren't. **Detection signal:** support tickets that close as *"resolved"* but say *"I figured it out myself," "I did it manually this time," "we just worked around it"* — each is a paid Tax Job, and the weekly rate is the leading indicator of silent churn.
@@ -85,13 +85,13 @@ The diagnostic question is therefore not *"why didn't they like the product?"* b
 **Operational consequences:**
 
 - **Map the chain explicitly before scaling.** Implicit chains always omit the link about to break — so treat a single broken link as the default failure mode when a metric drops on a sub-segment, before suspecting value or messaging.
-- **Reliability beats brilliance.** One severe break undoes months of accumulated Aha Moments ([value-creation.md §7](value-creation.md) on Problem asymmetry). Removing one negative-emotion micro-step is often worth more than any new feature — Square's tip screen, TurboTax's *"we'll catch the missed deduction,"* Apple Pay's no-swipe-no-signature each delete a single micro-Problem from a chain the customer already wanted to walk.
+- **Reliability beats brilliance.** One severe break undoes months of accumulated Aha Moments ([Value Creation §7](value-creation.md) on Problem asymmetry). Removing one negative-emotion micro-step is often worth more than any new feature — Square's tip screen, TurboTax's *"we'll catch the missed deduction,"* Apple Pay's no-swipe-no-signature each delete a single micro-Problem from a chain the customer already wanted to walk.
 
 ---
 
 ## 6. A chain-break is a behavior-change trigger — receptivity to Consideration Activators spikes at the break
 
-When the current chain breaks, the brain registers a Problem and an *Orientation Job* fires: *"what else can I use?"* The customer leaves steady-state habit, enters evaluation mode, and becomes receptive to Consideration Activators. This is one of the seven canonical behavior-change triggers (full taxonomy in [behaviour-change.md §8](behaviour-change.md)).
+When the current chain breaks, the brain registers a Problem and an *Orientation Job* fires: *"what else can I use?"* The customer leaves steady-state habit, enters evaluation mode, and becomes receptive to Consideration Activators. This is one of the seven canonical behavior-change triggers (full taxonomy in [Behaviour Change §8](behaviour-change.md)).
 
 **Products that exploit this window:** Wealthfront / Robinhood load Consideration Activators when the bank chain breaks (surprise fees, hidden minimums); Notion when Google Docs chains break (lost docs, version chaos); Slack when the email chain breaks (long threads, lost attachments).
 
@@ -99,7 +99,7 @@ When the current chain breaks, the brain registers a Problem and an *Orientation
 
 **Operational consequence: the cheapest moment to acquire is the chain-break, not steady-state habit.** Map the predictable break moments in your sub-segment — tax season, year-end audit, new-role onboarding, post-merger integration, regulatory deadline — and time outreach to them.
 
-**Two related modes the canon names elsewhere:** First-time vs Nth-time entry into the Big Job, and competing through the Big Job when our Solution is unfamiliar. Both are treated in [behaviour-change.md §10](behaviour-change.md) (Class 1 vs Class 2).
+**Two related modes the canon names elsewhere:** First-time vs Nth-time entry into the Big Job, and competing through the Big Job when our Solution is unfamiliar. Both are treated in [Behaviour Change §10](behaviour-change.md) (Class 1 vs Class 2).
 
 ---
 
@@ -143,10 +143,10 @@ The first three sites sit inside the chain you built; this one comes from outsid
 
 ## 8. Mechanics for fixing chain-breaks
 
-Each move is a subtraction or substitution on the chain (see [Next-Move-Theory/subtraction.md §1](../Next-Move-Theory/subtraction.md) for the meta-operator):
+Each move is a subtraction or substitution on the chain (see [Subtraction §1](../Next-Move-Theory/subtraction.md) for the meta-operator):
 
 - **Repair the broken Job in place.** Stripe Checkout for local merchants; Plaid for mortgage docs.
-- **Kill the Job entirely.** Face ID killed *"type my password"*; AirPods killed *"untangle my headphones"* ([value-creation.md §14.2](value-creation.md)).
+- **Kill the Job entirely.** Face ID killed *"type my password"*; AirPods killed *"untangle my headphones"* ([Value Creation §14.2](value-creation.md)).
 - **Take the Job off the customer.** Belong for rental management; Wealthfront for rebalancing; DoorDash for *"go to the restaurant."*
 - **Route the broken Job to a recommended partner.** When the chain breaks at a Job you don't perform and don't want to, route the customer to a reliable vendor at the right moment. Apple's App Store keeps *"get any Job done on my phone"* running; Salesforce's AppExchange does it for *"run my revenue stack"*; a realtor's preferred-vendor network for *"buy this home."*
 - **Reduce hand-offs.** Collapsing two roles removes a break-boundary — Tesla owns sales + service; Warby Parker owns prescriptions + frames + retail.
@@ -171,13 +171,13 @@ Figma → Dev Mode (*implement the design*); Carfax → finance through a partne
 
 ### 9.3 Move up a level — collapse the entire chain into a new, higher Core Job
 
-Squarespace collapsed *buy hosting → install WordPress → manage plugins → renew SSL* into *publish*. Uber collapsed *own a car* into *get a ride*. The most powerful move when applicable (full treatment in [value-creation.md §14.1](value-creation.md)).
+Squarespace collapsed *buy hosting → install WordPress → manage plugins → renew SSL* into *publish*. Uber collapsed *own a car* into *get a ride*. The most powerful move when applicable (full treatment in [Value Creation §14.1](value-creation.md)).
 
 ### 9.4 Repair the chain when scaling to a new sub-segment
 
 A product that runs fine in its launch sub-segment hits an invisible break the first time it pushes into an adjacent one. **Same product, same value, same team — and a chain that ran clean in segment A breaks at a link nobody can see from inside segment A**, because the context, regulator, buy-side role, data format, or criteria changed.
 
-Two failure modes (mirror of [value-creation.md §1 Problem 3](value-creation.md)): **Mode A** — added value doesn't overcome the new segment's gravitational forces (habit, switching cost, fears); the fix is re-applying value mechanics to *this* segment. **Mode B** — value exists, but the chain breaks before the segment reaches it. Mode B is the common one and is invisible from inside the base, because every current customer already passed through the part that breaks. Tell them apart in the field: Mode A is conversation-shaped (prospects engage politely and quietly don't convert); Mode B is funnel-shaped (they sign up, get blocked at a specific step, and ghost or file a support ticket).
+Two failure modes (mirror of [Value Creation §1 Problem 3](value-creation.md)): **Mode A** — added value doesn't overcome the new segment's gravitational forces (habit, switching cost, fears); the fix is re-applying value mechanics to *this* segment. **Mode B** — value exists, but the chain breaks before the segment reaches it. Mode B is the common one and is invisible from inside the base, because every current customer already passed through the part that breaks. Tell them apart in the field: Mode A is conversation-shaped (prospects engage politely and quietly don't convert); Mode B is funnel-shaped (they sign up, get blocked at a specific step, and ghost or file a support ticket).
 
 **The unlock is a chain repair, not a new feature:** **Stripe Checkout** (launch segment was YC startups with engineers; for local merchants the chain broke at *"I don't know what an API key is"*); **Notion Enterprise** (the enterprise chain broke at SSO/SAML/SCIM/audit-log); **Zoom for Education** (broke at FERPA, waiting rooms, locked meetings).
 
@@ -200,7 +200,7 @@ A B2B sale is rarely one role performing one Job. It is a chain spanning several
 
 **Most B2B chain-breaks are *personal-Job* failures, not business-Job failures.** The IT director's *"don't let an un-audited tool into our perimeter"* blocks a deal the business Job *"reduce tooling cost"* would have closed. Canonical breaks: **IT security review** (champion wants it, budget is approved, IT blocks on missing SSO/audit-log — the most common reason mid-market deals stall above $50K ACV); **clinical integration** (CMO approves, clinicians refuse because it doesn't write back to Epic — a Tax Job the buyer never saw).
 
-**Operational consequence: map the B2B chain as *roles × Jobs per role*, not a linear path, and fix breaks with role-specific evidence — not a better core product.** The IT director needs a SOC 2 report and a one-pager to defend the choice internally, not a new feature. (Full B2B treatment in [b2b.md](b2b.md).)
+**Operational consequence: map the B2B chain as *roles × Jobs per role*, not a linear path, and fix breaks with role-specific evidence — not a better core product.** The IT director needs a SOC 2 report and a one-pager to defend the choice internally, not a new feature. (Full B2B treatment in [B2B](b2b.md).)
 
 ---
 
@@ -218,7 +218,7 @@ Follow-ups against the chain:
 - **Time-gaps:** *"How long did each step take? Where did you wait, and for what?"*
 - **Hidden prerequisites:** *"What had to be true before you could even start?"*
 
-**Output:** a written chain — one Job per node, every hand-off named, every cycle marked, every time-gap measured. Without it, every fix is a local optimum. Full method: [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md).
+**Output:** a written chain — one Job per node, every hand-off named, every cycle marked, every time-gap measured. Without it, every fix is a local optimum. Method: [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md).
 
 ---
 
@@ -243,15 +243,15 @@ CJM keeps its value downstream of a validated chain — at the UX-polish layer, 
 
 ## Cross-references
 
-- [ajtbd-key-theses.md §10](ajtbd-key-theses.md) — short form of the Critical Chain thesis; [§11](ajtbd-key-theses.md) — Critical-Chain scaling discipline
-- [ajtbd-key-theses.md §23](ajtbd-key-theses.md) — move-up-a-level; [§25](ajtbd-key-theses.md) — business + personal Jobs in B2B chains
-- [job-graph.md](job-graph.md) — the Job Graph the chain is projected from; directional and structural moves
-- [value-creation.md §3](value-creation.md) — the value formula (`Probability of the Outcome × Outcome − Cost`); [§7](value-creation.md) — Problem asymmetry; [§14](value-creation.md) — kill-a-Job, move-up-a-level
-- [value-creation.md §1 Problem 3](value-creation.md) — Mode A vs Mode B when scaling; [§10](value-creation.md) — criteria-priority orders that gate the §3 completability thesis
-- [behaviour-change.md §7](behaviour-change.md) — Problem neurobiology; [§8](behaviour-change.md) — the seven behavior-change triggers; [§10](behaviour-change.md) — Class 1 vs Class 2, First-time vs Nth-time
-- [consideration-activators.md](consideration-activators.md) — the five Activators and Loading
-- [scientific-foundations.md §20](scientific-foundations.md) — Goldratt's Critical Chain; [§24](scientific-foundations.md) — social proof / trust as completability proxies
-- [b2b.md](b2b.md) — full B2B treatment (roles × Jobs, personal-Job dominance)
-- [Next-Move-Theory/subtraction.md](../Next-Move-Theory/subtraction.md) — the subtraction meta-operator
-- [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md) — full interview methodology
-- [Algorithms/scale-product.md](../Algorithms/scale-product.md) — chain repair for sub-segment expansion; [exit-competition.md](../Algorithms/exit-competition.md) — Previous/Next Job strategies; [increase-retention.md](../Algorithms/increase-retention.md) — moving to the Next Job
+- [AJTBD key theses §10](ajtbd-key-theses.md) — short form of the Critical Chain thesis; [§11](ajtbd-key-theses.md) — Critical-Chain scaling discipline
+- [AJTBD key theses §23](ajtbd-key-theses.md) — move-up-a-level; [§25](ajtbd-key-theses.md) — business + personal Jobs in B2B chains
+- [Job Graph](job-graph.md) — the Job Graph the chain is projected from; directional and structural moves
+- [Value Creation §3](value-creation.md) — the value formula (`Probability of the Outcome × Outcome − Cost`); [§7](value-creation.md) — Problem asymmetry; [§14](value-creation.md) — kill-a-Job, move-up-a-level
+- [Value Creation §1 Problem 3](value-creation.md) — Mode A vs Mode B when scaling; [§10](value-creation.md) — criteria-priority orders that gate the §3 completability thesis
+- [Behaviour Change §7](behaviour-change.md) — Problem neurobiology; [§8](behaviour-change.md) — the seven behavior-change triggers; [§10](behaviour-change.md) — Class 1 vs Class 2, First-time vs Nth-time
+- [Consideration Activators](consideration-activators.md) — the five Activators and Loading
+- [Scientific Foundations §20](scientific-foundations.md) — Goldratt's Critical Chain; [§24](scientific-foundations.md) — social proof / trust as completability proxies
+- [B2B](b2b.md) — full B2B treatment (roles × Jobs, personal-Job dominance)
+- [Subtraction](../Next-Move-Theory/subtraction.md) — the subtraction meta-operator
+- [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — interview methodology
+- [Scale a Product](../Algorithms/scale-product.md) — chain repair for sub-segment expansion; [Exit Competition](../Algorithms/exit-competition.md) — Previous/Next Job strategies; [Increase Retention](../Algorithms/increase-retention.md) — moving to the Next Job

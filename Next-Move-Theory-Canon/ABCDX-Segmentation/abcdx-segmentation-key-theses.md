@@ -2,7 +2,7 @@
 
 This file is the canon page on **ABCDX segmentation** — the discipline of splitting a currently-paying customer base into five groups by **per-unit margin × satisfaction**, redirecting resources to the high-margin satisfied groups (A and B), actively firing the unprofitable dissatisfied ones (C and D), and treating the leftover **X** — customers who touched the product but don't fit any of A/B/C/D — as the visible signal that valuable segments exist *outside* the product's current Core Jobs.
 
-ABCDX is the canonical **local-optimum** move in the methodology: work the customers you already have to a more profitable, more focused state — without changing the segment-Job-product triple itself. The page connects to [rat-key-theses.md §2](../Riskiest-Assumption-Test/rat-key-theses.md) (segments-and-Jobs as the root of the chain), [value-creation.md §10](../AJTBD/value-creation.md) (criteria-priority orders as the segmentation root), [value-creation.md §14.1](../AJTBD/value-creation.md) (move-up-a-level — the structural answer to C/D customers who can never become A/B on this product), [barrier-removal.md](../AJTBD/barrier-removal.md) and [ajtbd-key-theses.md §15](../AJTBD/ajtbd-key-theses.md) (the *hard vs. not-important-enough* drop-off diagnostic), and [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md) (the interview protocol used inside A/B once they're identified). The complementary **global-optimum** moves — entering a new segment, climbing to a higher-level Core Job, changing the business model — live in [Algorithms/scale-product.md](../Algorithms/scale-product.md), [Algorithms/exit-competition.md](../Algorithms/exit-competition.md), and [Algorithms/grow-existing-product.md](../Algorithms/grow-existing-product.md).
+ABCDX is the canonical **local-optimum** move in the methodology: work the customers you already have to a more profitable, more focused state — without changing the segment-Job-product triple itself. The page connects to [Riskiest Assumption Test §2](../Riskiest-Assumption-Test/rat-key-theses.md) (segments-and-Jobs as the root of the chain), [Value Creation §10](../Advanced-Jobs-To-Be-Done/value-creation.md) (criteria-priority orders as the segmentation root), [Value Creation §14.1](../Advanced-Jobs-To-Be-Done/value-creation.md) (move-up-a-level — the structural answer to C/D customers who can never become A/B on this product), [Barrier Removal](../Advanced-Jobs-To-Be-Done/barrier-removal.md) and [AJTBD key theses §15](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) (the *hard vs. not-important-enough* drop-off diagnostic), and [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) (the interview protocol used inside A/B once they're identified). The complementary **global-optimum** moves — entering a new segment, climbing to a higher-level Core Job, changing the business model — live in [Scale a Product](../Algorithms/scale-product.md), [Exit Competition](../Algorithms/exit-competition.md), and [Grow an Existing Product](../Algorithms/grow-existing-product.md).
 
 ---
 
@@ -46,7 +46,7 @@ What stays fixed across the move: **the Core Jobs the product performs and the b
 - **Full market research — the slower, broader path (~6+ months).** When the team has the time and the business doesn't need an immediate operational lift, the alternative is to map *the whole market* — segments paying the team, segments paying competitors, segments not currently served at all. The deliverable is a complete map of who exists, what they pay for, and which Jobs they perform. **The downside is time;** the upside is that the focus-segment decision is made against the full picture, including segments outside the current paying base (the X-class direction — §4) — and the team can pick a global-optimum bet (§6) rather than the local-optimum one ABCDX produces by construction.
 - **Inside both paths, sequencing still applies.** ABCDX is criterion #1 for the quick-result path; Job-Graph similarity inside A/B is criterion #2 (§5). Full market research starts at criterion #1 = Job-Graph similarity across the *whole* market, with profitability and current-paying-status as later refinements. *Neither path collapses the two criteria; both apply them in order.*
 
-**For new products with very few or no paying customers, the question doesn't apply.** ABCDX needs a paying base big enough to produce signal (§9); a product with eight paying customers is *searching for a segment from scratch* ([rat-key-theses.md §2](../Riskiest-Assumption-Test/rat-key-theses.md)). Criterion #1 is Job-Graph similarity across the market; ABCDX comes later, once a paying base exists.
+**For new products with very few or no paying customers, the question doesn't apply.** ABCDX needs a paying base big enough to produce signal (§9); a product with eight paying customers is *searching for a segment from scratch* ([Riskiest Assumption Test §2](../Riskiest-Assumption-Test/rat-key-theses.md)). Criterion #1 is Job-Graph similarity across the market; ABCDX comes later, once a paying base exists.
 
 **Operational consequences:**
 
@@ -70,7 +70,7 @@ The ABCDX frame splits paying customers across **two independent axes intersecte
 **Operational consequences:**
 
 - **A and B are the growth surface; C and D are the operational drag.** Every operational lever — acquisition channels, activation, retention, expansion, support staffing, pricing — should be tuned to attract more A/B and to deflect or automate-down C/D.
-- **B → A is usually a higher-leverage move than A → A+.** B customers are already paying and already in the door; what's missing is one or two specific Core Jobs the product underperforms on. The diagnostic interview ([HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md)) surfaces them; closing the gap is normal value-creation work ([value-creation.md §18](../AJTBD/value-creation.md)). A → A+ runs into the rising prediction bar ([value-creation.md §6](../AJTBD/value-creation.md)) — each marginal improvement registers as less value than the last.
+- **B → A is usually a higher-leverage move than A → A+.** B customers are already paying and already in the door; what's missing is one or two specific Core Jobs the product underperforms on. The diagnostic interview ([AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md)) surfaces them; closing the gap is normal value-creation work ([Value Creation §18](../Advanced-Jobs-To-Be-Done/value-creation.md)). A → A+ runs into the rising prediction bar ([Value Creation §6](../Advanced-Jobs-To-Be-Done/value-creation.md)) — each marginal improvement registers as less value than the last.
 - **C ≠ D, and the operational move differs.** C can sometimes be migrated to A or B *for a different product/business-model* (§13); D rarely can — D customers are off-target across any plausible variation of the offering.
 
 ---
@@ -88,33 +88,33 @@ The four cells (§3) describe customers who *fit* the product's current Core Job
 **Operational consequences:**
 
 - **Instrument X explicitly.** A team that tracks only A/B/C/D loses the X signal entirely — bounced visitors disappear into funnel-conversion metrics, refunds disappear into churn, off-label use cases disappear into anecdote. *Tag X customers in the CRM; interview a sample.*
-- **X is not a local-optimum target; X is a global-optimum scouting surface.** Don't try to "convert X to A" by tweaking the current funnel — the Core Jobs mismatch is structural, not messaging. The right move is *map X's Jobs* and ask *"would building a product for these Jobs produce its own A/B?"* ([Algorithms/exit-competition.md](../Algorithms/exit-competition.md) for the global-optimum playbook.)
+- **X is not a local-optimum target; X is a global-optimum scouting surface.** Don't try to "convert X to A" by tweaking the current funnel — the Core Jobs mismatch is structural, not messaging. The right move is *map X's Jobs* and ask *"would building a product for these Jobs produce its own A/B?"* ([Exit Competition](../Algorithms/exit-competition.md) for the global-optimum playbook.)
 - **The "bought-but-using-it-for-something-else" sub-class is the most actionable.** They are already paying for value that the product delivers as a *side-effect.* Surfacing the off-label use case and naming it as a first-class Core Job often unlocks a new segment with zero new engineering — the product already performs the Job; it just wasn't sold for it. [Slack's](https://www.slack.com) emergence from internal tooling at Tiny Speck and [Loom's](https://www.loom.com) emergence from async-feedback among remote teams both started this way.
 
 ---
 
 ## 5. Once A/B is identified, the second criterion clusters them into segments by Core Jobs and success criteria — run AJTBD interviews inside A/B before scaling
 
-ABCDX identifies **A/B as a margin-and-satisfaction cohort;** the **second segmentation criterion**, applied *inside* A/B, is **Job-Graph similarity** — clustering A/B customers into **segments performing similar Core Jobs with similar success criteria** (see [segmentation.md](../AJTBD/segmentation.md) and [ajtbd-key-theses.md §12](../AJTBD/ajtbd-key-theses.md)). The two criteria are sequential (§2), not alternative — ABCDX answers *which customers to focus on;* the Job-Graph clustering inside A/B answers *which Jobs to compete on for them.* The output of the two-step sequence is the team's **focus segment(s)** — that is the actual end-state the work is reaching for; A/B was just the cohort that got the team to a non-noise signal fast.
+ABCDX identifies **A/B as a margin-and-satisfaction cohort;** the **second segmentation criterion**, applied *inside* A/B, is **Job-Graph similarity** — clustering A/B customers into **segments performing similar Core Jobs with similar success criteria** (see [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md) and [AJTBD key theses §12](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md)). The two criteria are sequential (§2), not alternative — ABCDX answers *which customers to focus on;* the Job-Graph clustering inside A/B answers *which Jobs to compete on for them.* The output of the two-step sequence is the team's **focus segment(s)** — that is the actual end-state the work is reaching for; A/B was just the cohort that got the team to a non-noise signal fast.
 
 **The flow:**
 
 1. **ABCDX** → produce the A/B cohort and the causal segmentation criteria that define it (§8).
-2. **AJTBD interviews** ([HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md)) on 15–25 A/B customers → surface the Core Jobs they hire the product for, the success criteria they evaluate it against, the Big Jobs above, the barriers they overcame, the Aha Moment that activated them.
+2. **AJTBD interviews** ([AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md)) on 15–25 A/B customers → surface the Core Jobs they hire the product for, the success criteria they evaluate it against, the Big Jobs above, the barriers they overcame, the Aha Moment that activated them.
 3. **Cluster the interviews into segments inside A/B** — groups of A/B customers performing similar Core Jobs with similar success criteria.
 4. **Pick the focus segment(s).** Rebuild communication, funnels, content, ads, sales scripts, landing pages, and onboarding around them.
 
 **What this surfaces:**
 
 - The **Core Jobs** A/B customers actually hire the product for (often different from what the team thought).
-- The **success criteria** they evaluate against — the operational spec for value-design ([value-creation.md §9](../AJTBD/value-creation.md)).
-- The **Big Jobs** above — where communication and motivation hooks live ([value-creation.md §15](../AJTBD/value-creation.md)).
+- The **success criteria** they evaluate against — the operational spec for value-design ([Value Creation §9](../Advanced-Jobs-To-Be-Done/value-creation.md)).
+- The **Big Jobs** above — where communication and motivation hooks live ([Value Creation §15](../Advanced-Jobs-To-Be-Done/value-creation.md)).
 - The **barriers** A/B customers overcame and the **Aha Moment** that converted them — both are templates for engineering activation for the next cohort.
 
 **Two research designs depending on the team's question:**
 
-- **Acquisition-focused.** Map the Critical Chain ([critical-chain.md §11](../AJTBD/critical-chain.md)) from the moment the Big Job appears in the customer's head to the moment they hire the Solution. Surfaces where Consideration Activators loads, where competitors enter the Consideration Set, where receptivity windows fire ([behaviour-change.md §8](../AJTBD/behaviour-change.md)).
-- **Activation-and-value-focused.** Map the Critical Chain of Micro Jobs leading to the Core Job. Surfaces where the chain breaks ([critical-chain.md §2](../AJTBD/critical-chain.md)), where the Aha Moment could fire earlier ([value-creation.md §12](../AJTBD/value-creation.md)), where micro-Problems accumulate ([critical-chain.md §5](../AJTBD/critical-chain.md)).
+- **Acquisition-focused.** Map the Critical Chain ([Critical Chain §11](../Advanced-Jobs-To-Be-Done/critical-chain.md)) from the moment the Big Job appears in the customer's head to the moment they hire the Solution. Surfaces where Consideration Activators loads, where competitors enter the Consideration Set, where receptivity windows fire ([Behaviour Change §8](../Advanced-Jobs-To-Be-Done/behaviour-change.md)).
+- **Activation-and-value-focused.** Map the Critical Chain of Micro Jobs leading to the Core Job. Surfaces where the chain breaks ([Critical Chain §2](../Advanced-Jobs-To-Be-Done/critical-chain.md)), where the Aha Moment could fire earlier ([Value Creation §12](../Advanced-Jobs-To-Be-Done/value-creation.md)), where micro-Problems accumulate ([Critical Chain §5](../Advanced-Jobs-To-Be-Done/critical-chain.md)).
 
 **Operational consequences:**
 
@@ -128,7 +128,7 @@ ABCDX identifies **A/B as a margin-and-satisfaction cohort;** the **second segme
 Every product investment routes — at the most basic level — into one of two classes:
 
 - **Local optimum.** Optimize what already works. Hold **Core Jobs and business model** constant; tune funnel conversion, activation, retention, expansion, and value-delivery for the customers already paying. The segment the company serves *narrows* through the work — firing C/D, refocusing on A/B — but the Core Jobs the product performs and the way it makes money don't change. **Lower-risk hypotheses** — every link of the [RAT chain](../Riskiest-Assumption-Test/rat-key-theses.md) (segments-and-Jobs, value, unit economics, channels) is validated for these customers by their past payment. **Bounded return** — capped by the current A/B segment's size and the value-creation headroom inside it. **Delegated to less senior staff** — feature work, conversion-rate optimization, support automation, lead qualification.
-- **Global optimum.** Re-bet one or more links of the RAT chain. Enter a new segment, climb to a higher-level Core Job ([value-creation.md §14.1](../AJTBD/value-creation.md)), change the business model, expand to a new country. **Higher-risk hypotheses** — every link being re-bet is a place the initiative can die. **Larger return ceiling** — potentially a 10× larger segment, a different unit-economics curve, a market only you can reach. **Delegated to the most senior staff** — the founders, the highest-judgment people on the team.
+- **Global optimum.** Re-bet one or more links of the RAT chain. Enter a new segment, climb to a higher-level Core Job ([Value Creation §14.1](../Advanced-Jobs-To-Be-Done/value-creation.md)), change the business model, expand to a new country. **Higher-risk hypotheses** — every link being re-bet is a place the initiative can die. **Larger return ceiling** — potentially a 10× larger segment, a different unit-economics curve, a market only you can reach. **Delegated to the most senior staff** — the founders, the highest-judgment people on the team.
 
 **ABCDX is the canonical local-optimum entry point.** It accepts the segment-Job-product triple as given and asks the narrower question: *of the customers performing that triple today, which deserve the team's next dollar?* The X class (§4) is the methodology's pointer *out* of the local optimum — it is what the team sees first when scouting global-optimum bets.
 
@@ -163,9 +163,9 @@ Every product investment routes — at the most basic level — into one of two 
 
 **And not any cause is a causal segmentation criterion.** A causal segmentation criterion is a criterion thanks to which we know how to create added value, earn target per-unit margin, or create demand:
 
-- **Can we create added value for them?** Does this criterion point at people whose Core Jobs our product can perform with a positive prediction error against their existing alternatives ([value-creation.md §4](../AJTBD/value-creation.md))?
-- **Can we serve them at our target per-unit margin?** Does this criterion correlate with willingness-to-pay, deal size, support cost, and acquisition cost in a way that closes unit economics ([rat-key-theses.md §1](../Riskiest-Assumption-Test/rat-key-theses.md))?
-- **Can we create or capture demand from them?** Does this criterion describe people who are reachable through some channel — already searching for the Job, or activate-able through Consideration Activators ([behaviour-change.md §4](../AJTBD/behaviour-change.md))?
+- **Can we create added value for them?** Does this criterion point at people whose Core Jobs our product can perform with a positive prediction error against their existing alternatives ([Value Creation §4](../Advanced-Jobs-To-Be-Done/value-creation.md))?
+- **Can we serve them at our target per-unit margin?** Does this criterion correlate with willingness-to-pay, deal size, support cost, and acquisition cost in a way that closes unit economics ([Riskiest Assumption Test §1](../Riskiest-Assumption-Test/rat-key-theses.md))?
+- **Can we create or capture demand from them?** Does this criterion describe people who are reachable through some channel — already searching for the Job, or activate-able through Consideration Activators ([Behaviour Change §4](../Advanced-Jobs-To-Be-Done/behaviour-change.md))?
 
 Without those three predictions, a candidate criterion may be a true cause of some behavior, but it isn't a causal segmentation criterion — it doesn't tell the team whether to compete for this person or not. **Fake segmentation criteria create a false feeling of understanding: the segment sounds named, but the team still does not know how to create value, close margin, or create demand.**
 
@@ -208,7 +208,7 @@ Inside ABCDX specifically: once A is identified, the question is *what about thi
 
 - **Estimate your archetype before reaching for a threshold number.** A team that copy-pastes a *"30 for B2B"* or *"200 for B2C"* rule will either run ABCDX too early on a noisy base or wait too long while obvious patterns are visible. The four archetypes above are anchors — match your business to the closest one and adjust from there.
 - **Below the threshold, ABCDX is a hypothesis — not a finished segmentation.** Treat the visible A pattern as a recruiting criterion for finding more matching customers before reallocating resources.
-- **Truly below threshold *and* no readable causal segmentation criterion → you are searching for a segment from scratch**, not running ABCDX ([rat-key-theses.md §2](../Riskiest-Assumption-Test/rat-key-theses.md)). Don't pretend you have product-market fit on a handful of customers; the search is structurally different (global-optimum work, §6) and routes through interviews of *people who paid competitors,* not your own three customers. **For new products, criterion #1 is Job-Graph similarity, not ABCDX** — see §2.
+- **Truly below threshold *and* no readable causal segmentation criterion → you are searching for a segment from scratch**, not running ABCDX ([Riskiest Assumption Test §2](../Riskiest-Assumption-Test/rat-key-theses.md)). Don't pretend you have product-market fit on a handful of customers; the search is structurally different (global-optimum work, §6) and routes through interviews of *people who paid competitors,* not your own three customers. **For new products, criterion #1 is Job-Graph similarity, not ABCDX** — see §2.
 
 ---
 
@@ -221,7 +221,7 @@ Inside ABCDX specifically: once A is identified, the question is *what about thi
 
 **The strategic question: which A-on-side-one serves which A-on-side-two most efficiently?** A demand A-segment with criteria the supply A-segment cannot meet produces friction at every transaction. Worker.ru's A on the candidate side (working-class candidates with stable price-range positioning) maps efficiently to its A on the employer side (high-volume employers — fast-food chains, taxi fleets — who need stable wage-band hiring). [Uber](https://www.uber.com) Comfort's A on the rider side (quiet-cabin, recent-model-car preference) maps to drivers with newer cars and lower-friction service. [Airbnb](https://www.airbnb.com)'s A on the guest side (multi-night, family-or-couple travel) maps to hosts with full apartments rather than single rooms.
 
-**Where to start — at the scarcer side of the Critical Chain.** Run the demand-side ABCDX first when supply is abundant and demand is the constraint; run the supply-side ABCDX first when supply is scarce and demand is queuing. (See [critical-chain.md §9](../AJTBD/critical-chain.md) on the slowest-link diagnostic — the same logic applies here.)
+**Where to start — at the scarcer side of the Critical Chain.** Run the demand-side ABCDX first when supply is abundant and demand is the constraint; run the supply-side ABCDX first when supply is scarce and demand is queuing. (See [Critical Chain §9](../Advanced-Jobs-To-Be-Done/critical-chain.md) on the slowest-link diagnostic — the same logic applies here.)
 
 **Operational consequences:**
 
@@ -234,7 +234,7 @@ Inside ABCDX specifically: once A is identified, the question is *what about thi
 
 **ABCDX is segmentation against a *fixed* product configuration.** Change any of the inputs that define the configuration and the segmentation must be redone. Three categories of triggers force a re-run:
 
-- **You change the Core Jobs the product performs.** Add a new Core Job ([value-creation.md §17](../AJTBD/value-creation.md)), drop one, climb a level ([value-creation.md §14.1](../AJTBD/value-creation.md)), absorb a Previous or Next Job in the chain ([critical-chain.md §13](../AJTBD/critical-chain.md)) — the ABCDX assignment shifts because customers who were C/D for the old Core Jobs may be A/B for the new ones (and vice versa). **The re-run is mandatory; the old segmentation is no longer load-bearing.**
+- **You change the Core Jobs the product performs.** Add a new Core Job ([Value Creation §17](../Advanced-Jobs-To-Be-Done/value-creation.md)), drop one, climb a level ([Value Creation §14.1](../Advanced-Jobs-To-Be-Done/value-creation.md)), absorb a Previous or Next Job in the chain ([Critical Chain §13](../Advanced-Jobs-To-Be-Done/critical-chain.md)) — the ABCDX assignment shifts because customers who were C/D for the old Core Jobs may be A/B for the new ones (and vice versa). **The re-run is mandatory; the old segmentation is no longer load-bearing.**
 - **You change the business model.** Pricing, contract structure, distribution, packaging — each can flip a profitable cohort to unprofitable and vice versa. A C-segment may become B at a different price point; an A-segment may become D when the contract structure shifts the operational cost.
 - **The macro environment shifts.** Pandemics, AI commoditization, rate cycles, regulatory change — all rewrite customer behavior beneath the segmentation. **Refresh at least annually** as a default floor; semi-annually in disrupted categories.
 
@@ -260,7 +260,7 @@ A working procedure that produces an operationalizable ABCDX in roughly 2–4 we
 3. **Cross-rank by satisfaction.** NPS, CSAT, retention, repeat purchase, referral activity, support ticket volume, product-usage cadence. As with margin: prefer data when available, expert judgment when not.
 4. **Cluster into 2 or 4 groups.** Two-group form (A/B vs C/D) is easier on small bases; four-group form (A vs B vs C vs D) adds resolution on larger ones.
 5. **Tag the X class.** Pull the cohorts that *touched* the product but don't fit A/B/C/D — bounced visitors, refunded purchasers, off-label users (§4). They are not part of the A/B/C/D ranking; they are a separate list for global-optimum scouting.
-6. **Find the causal segmentation criteria for each group** (§8). Look for shared properties of the *people and their situation* — context, prior experience, budget structure, role, what they hire the product *for.* If expert pattern-matching fails, run **AJTBD interviews** ([HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md)) with 5–10 customers from each cell.
+6. **Find the causal segmentation criteria for each group** (§8). Look for shared properties of the *people and their situation* — context, prior experience, budget structure, role, what they hire the product *for.* If expert pattern-matching fails, run **AJTBD interviews** ([AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md)) with 5–10 customers from each cell.
 7. **Translate causal segmentation criteria into 4–5 inbound qualification questions** (§8). These are what the funnel uses operationally.
 8. **Inside A/B, run the second segmentation criterion — Job-Graph similarity** (§5). AJTBD interviews on 15–25 A/B customers; cluster into segments by Core Jobs and success criteria; pick the focus segment.
 9. **Build the operational allocation.** Channels, sales-rep tiers, onboarding flow, support tier, pricing — all biased toward A/B; C/D routed to self-serve, automation, or a polite *"we're not the right fit;"* X kept under observation as a global-optimum scouting surface.
@@ -303,7 +303,7 @@ A widely-used adjacent technique: the **Sean Ellis test** (~[2015](https://revie
 
 - **ABCDX measures both *satisfaction* and *unit-economic profitability;* the Sean Ellis test measures only satisfaction.** A cohort that says *"very disappointed if it disappeared"* but loses money per unit is *not the segment to scale on* — the more they love you, the faster you burn capital.
 - **ABCDX distinguishes A from B as a *resource-allocation* signal; the Ellis test does not.** Once a Sean Ellis cohort is identified, the team still has to decide who inside it is high-margin and who isn't.
-- **Vohra's follow-up move — *"what would convert you to very-disappointed?"* — collects feature requests from satisfied customers, not Job-and-criteria diagnostics.** This is value-creation work *delegated to the customer,* which is brittle (see [value-creation.md §1, Problem 2](../AJTBD/value-creation.md)). It happened to work for Superhuman partly because the customer base was unusually self-aware; the move generalizes poorly.
+- **Vohra's follow-up move — *"what would convert you to very-disappointed?"* — collects feature requests from satisfied customers, not Job-and-criteria diagnostics.** This is value-creation work *delegated to the customer,* which is brittle (see [Value Creation §1, Problem 2](../Advanced-Jobs-To-Be-Done/value-creation.md)). It happened to work for Superhuman partly because the customer base was unusually self-aware; the move generalizes poorly.
 
 **Combined use is acceptable** — run ABCDX as the primary segmentation, layer the Sean Ellis test on top inside the A/B cohort to surface *which* A/B subset feels the product is irreplaceable. The Ellis-test readout then guides communication and growth-loop work, while ABCDX continues to drive resource allocation.
 
@@ -316,22 +316,22 @@ A common reading: *"local optimum is for mature products; global optimum is for 
 - **Local-optimum work runs continuously.** ABCDX-driven feature work, conversion-rate work, activation work for the current A/B. *Less senior staff; quarterly cadence; bounded return; high success rate; small per-bet downside.*
 - **Global-optimum bets run in parallel.** A small senior team studies adjacent segments, climbs the Job Graph to higher-level Big Jobs, prototypes a new business model, mines the X class (§4) for the next product. *Most senior staff; multi-quarter cadence; outsized return when it lands; lower success rate; larger per-bet downside.*
 
-The structure mirrors §2 and §8 of [rat-key-theses.md](../Riskiest-Assumption-Test/rat-key-theses.md): expensive-consequence high-risk-of-being-wrong assumptions go to senior people; cheap-consequence low-risk assumptions go to junior. ABCDX-driven work is the latter; new-segment / higher-Core-Job / new-market work is the former.
+The structure mirrors §2 and §8 of [Riskiest Assumption Test](../Riskiest-Assumption-Test/rat-key-theses.md): expensive-consequence high-risk-of-being-wrong assumptions go to senior people; cheap-consequence low-risk assumptions go to junior. ABCDX-driven work is the latter; new-segment / higher-Core-Job / new-market work is the former.
 
 ---
 
 ## Cross-references
 
-- [rat-key-theses.md §1–§2](../Riskiest-Assumption-Test/rat-key-theses.md) — the chain of risky assumptions; segments-and-Jobs as the root
-- [rat-key-theses.md §8](../Riskiest-Assumption-Test/rat-key-theses.md) — the RAT formula and delegation by risk level
-- [value-creation.md §10](../AJTBD/value-creation.md) — criteria-priority orders as the segmentation root
-- [value-creation.md §11](../AJTBD/value-creation.md) — mapping segment criteria to mechanics
-- [value-creation.md §12](../AJTBD/value-creation.md) — the Aha Moment as the engineered first Aha Moment
-- [value-creation.md §14.1](../AJTBD/value-creation.md) — move-up-a-level as the structural response to C/D customers
-- [value-creation.md §17](../AJTBD/value-creation.md) — value lives outside your current Core Jobs (the X-class pointer)
-- [critical-chain.md §13](../AJTBD/critical-chain.md) — Previous-Job and Next-Job strategy
-- [critical-chain.md §11](../AJTBD/critical-chain.md) — interview protocol for surfacing the Critical Chain
-- [critical-chain.md §4](../AJTBD/critical-chain.md) — Solution-switch interpretation of drop-off; *hard vs. not-important-enough* diagnostic in [barrier-removal.md](../AJTBD/barrier-removal.md) and [ajtbd-key-theses.md §15](../AJTBD/ajtbd-key-theses.md)
-- [behaviour-change.md §8](../AJTBD/behaviour-change.md) — receptivity windows and triggers
-- [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md) — full AJTBD interview protocol
-- [ajtbd-key-theses.md §12](../AJTBD/ajtbd-key-theses.md) — segmentation by Core Jobs and success criteria as primary; Big Job as motivation refinement
+- [Riskiest Assumption Test §1–§2](../Riskiest-Assumption-Test/rat-key-theses.md) — the chain of risky assumptions; segments-and-Jobs as the root
+- [Riskiest Assumption Test §8](../Riskiest-Assumption-Test/rat-key-theses.md) — the RAT formula and delegation by risk level
+- [Value Creation §10](../Advanced-Jobs-To-Be-Done/value-creation.md) — criteria-priority orders as the segmentation root
+- [Value Creation §11](../Advanced-Jobs-To-Be-Done/value-creation.md) — mapping segment criteria to mechanics
+- [Value Creation §12](../Advanced-Jobs-To-Be-Done/value-creation.md) — the Aha Moment as the engineered first Aha Moment
+- [Value Creation §14.1](../Advanced-Jobs-To-Be-Done/value-creation.md) — move-up-a-level as the structural response to C/D customers
+- [Value Creation §17](../Advanced-Jobs-To-Be-Done/value-creation.md) — value lives outside your current Core Jobs (the X-class pointer)
+- [Critical Chain §13](../Advanced-Jobs-To-Be-Done/critical-chain.md) — Previous-Job and Next-Job strategy
+- [Critical Chain §11](../Advanced-Jobs-To-Be-Done/critical-chain.md) — interview protocol for surfacing the Critical Chain
+- [Critical Chain §4](../Advanced-Jobs-To-Be-Done/critical-chain.md) — Solution-switch interpretation of drop-off; *hard vs. not-important-enough* diagnostic in [Barrier Removal](../Advanced-Jobs-To-Be-Done/barrier-removal.md) and [AJTBD key theses §15](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md)
+- [Behaviour Change §8](../Advanced-Jobs-To-Be-Done/behaviour-change.md) — receptivity windows and triggers
+- [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — AJTBD interview guide
+- [AJTBD key theses §12](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — segmentation by Core Jobs and success criteria as primary; Big Job as motivation refinement

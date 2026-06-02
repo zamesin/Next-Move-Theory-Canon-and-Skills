@@ -233,7 +233,7 @@ For each raw hypothesis, map which Forces it operates on:
 | Fears toward us | Reduce — must include a concrete fear-reduction lever or it dies |
 | Habit toward current | Reuse OR sidestep via Aha Moment — NEVER fight head-on |
 
-Per `main-idea.md`: we can only influence Added Value and Fears; we surface Problems; we reuse-or-sidestep Habit. Hypotheses that fight Habit head-on get downgraded unless paired with an explicit Aha Moment + Activating Knowledge plan. Hypotheses missing fear-reduction get flagged.
+Per `behaviour-change.md`: we can only influence Added Value and Fears; we surface Problems; we reuse-or-sidestep Habit. Hypotheses that fight Habit head-on get downgraded unless paired with an explicit Aha Moment + Activating Knowledge plan. Hypotheses missing fear-reduction get flagged.
 
 After this filter: typically 5-8 hypotheses survive. Write the analysis to `03-raw-hypotheses.md` (extend) or to a Forces sub-section.
 
@@ -300,7 +300,7 @@ Both primary and supplementary appear in `result.md` (Sections 1 and 2). The sup
 
 ### STAGE 9: Generate top-3 risky assumptions for the primary value prop
 
-Per `RAT/risk-assumption-test.md`:
+Per `Riskiest-Assumption-Test/rat-key-theses.md`:
 
 1. Inventory every assumption inside the chosen primary value prop (typically 10-20 across 5 categories: Market / Segment / Value / Unit Econ / Demand + custom).
 2. For each, write the **evil twin** — concrete risk if it fails.
@@ -454,11 +454,11 @@ Each card uses the compact 5-line format:
 3. `/product-requirements` — turn primary value prop into a PRD.
 
 ## 8. Methodology references
-- `Next-Move-Theory-Canon/AJTBD/value-creation.md` — 19 mechanics, value as positive prediction error
+- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md` — 19 mechanics, value as positive prediction error
 - `Next-Move-Theory-Canon/Algorithms/create-value.md` — 9-step main algorithm
-- `Next-Move-Theory-Canon/AJTBD/main-idea.md` — Four Forces
-- `Next-Move-Theory-Canon/RAT/risk-assumption-test.md` — RAT formula
-- `Next-Move-Theory-Canon/AJTBD/critical-chain.md` — Critical Chain placement and shift-left
+- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` — Four Forces of Progress archive
+- `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` — RAT formula
+- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` — Critical Chain placement and shift-left
 
 ## 9. Why this differs from "Value Proposition Canvas" / Lean Canvas
 {Brief paragraph.}

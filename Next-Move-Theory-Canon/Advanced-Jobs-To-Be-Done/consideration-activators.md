@@ -2,13 +2,13 @@
 
 The consolidated set of theses about Consideration Activators — what it is, how it differs from neighbouring concepts, and why it sits at the heart of category creation and switching.
 
-For the step-by-step *how-to* of loading Consideration Activators into customers (DocuSign real-estate closing pattern, robot vacuum case, AI-enabled marketing agency case, Hunt's Buyer Awareness Pyramid mapping, the 5-step Complex Sales presentation) see [HowTos/load-consideration-activators.md](../HowTos/load-consideration-activators.md).
+For the step-by-step *how-to* of loading Consideration Activators into customers (DocuSign real-estate closing pattern, robot vacuum case, AI-enabled marketing agency case, Hunt's Buyer Awareness Pyramid mapping, the 5-step Complex Sales presentation) see [Load Consideration Activators](../HowTos/load-consideration-activators.md).
 
 ---
 
 ## 1. Consideration Set and Consideration Activators — what they are, why they matter, and the five components
 
-**Consideration Set (CS)** is the customer-side container — four slots in *State A* of every Job that hold what the customer's brain compares at the moment of choice. It lives **inside the Job**, not as a separate unit of analysis (see [ajtbd-key-theses.md §1, §2, §3](ajtbd-key-theses.md)).
+**Consideration Set (CS)** is the customer-side container — four slots in *State A* of every Job that hold what the customer's brain compares at the moment of choice. It lives **inside the Job**, not as a separate unit of analysis (see [AJTBD key theses §1, §2, §3](ajtbd-key-theses.md)).
 
 **Consideration Activators (CA)** are the five pieces of information that, when loaded into the customer's Consideration Set, activate the customer's choice in our favor.
 
@@ -30,11 +30,11 @@ CA has five components; CS has four slots — each CA component writes into a CS
 
 2. **The new Job Graph performs the Big Job more efficiently than the customer's current way** → CS slot 2 (comparative knowledge of how each Graph performs the Big Job). The Core Jobs in our Graph sit one level below the Big Job and deliver it at better success criteria — cheaper enough, faster enough, safer enough, higher-status enough, or more reliable enough to justify switching from the current Solution. Abstract *"better"* doesn't activate; a concrete, criteria-anchored delta does.
 
-3. **A concrete named product performs that Job Graph, with an entry path** → CS slot 3 (named products with entry paths). A *name* (the product / service / brand that runs the Core Jobs at the criteria) and a *first concrete step* (download the app, book a 15-min call, sign up at this URL, ask the bank teller). Without name + door, components 1 and 2 stay abstract — the customer knows a better way exists and why it matters, but has no handle to act on (solution-aware but not product-aware in Hunt's Pyramid — see [load-consideration-activators.md](../HowTos/load-consideration-activators.md)).
+3. **A concrete named product performs that Job Graph, with an entry path** → CS slot 3 (named products with entry paths). A *name* (the product / service / brand that runs the Core Jobs at the criteria) and a *first concrete step* (download the app, book a 15-min call, sign up at this URL, ask the bank teller). Without name + door, components 1 and 2 stay abstract — the customer knows a better way exists and why it matters, but has no handle to act on (solution-aware but not product-aware in Hunt's Pyramid — see [Load Consideration Activators](../HowTos/load-consideration-activators.md)).
 
-4. **Specific fears about our new Job Graph are reduced** → CS slot 4 (fears about the alternatives + what reduces them — here, the fear about *our* way). A fear is the customer's prediction that the Big Job won't be performed well through our new Graph — a Critical Chain break, Problem, Tax Job, personal risk, or irreversible loss the customer predicts for *our* Solution. The message names the specific feared break, then shows why it is prevented, absorbed, reversible, insured, or irrelevant. If the break is real, communication cannot reduce it — the team must change reality first ([barrier-removal.md](barrier-removal.md)).
+4. **Specific fears about our new Job Graph are reduced** → CS slot 4 (fears about the alternatives + what reduces them — here, the fear about *our* way). A fear is the customer's prediction that the Big Job won't be performed well through our new Graph — a Critical Chain break, Problem, Tax Job, personal risk, or irreversible loss the customer predicts for *our* Solution. The message names the specific feared break, then shows why it is prevented, absorbed, reversible, insured, or irrelevant. If the break is real, communication cannot reduce it — the team must change reality first ([Barrier Removal](barrier-removal.md)).
 
-5. **The competing Job Graph is fired** — concretely less energy-efficient by the Big Jobs' success criteria → CS slot 4 (the *same* fears slot — here, the fear about the *competing* way). The fire names the specific Problems (failures that produce Problems — see [behaviour-change.md §7](behaviour-change.md)) and Risks (forced Tax Jobs, criteria the alternative cannot hit, chain-breaks it leaves open) that follow from sticking with the current Solution. Abstract *"they're worse"* doesn't fire anything — the customer's brain won't down-weight an option without a concrete reason.
+5. **The competing Job Graph is fired** — concretely less energy-efficient by the Big Jobs' success criteria → CS slot 4 (the *same* fears slot — here, the fear about the *competing* way). The fire names the specific Problems (failures that produce Problems — see [Behaviour Change §7](behaviour-change.md)) and Risks (forced Tax Jobs, criteria the alternative cannot hit, chain-breaks it leaves open) that follow from sticking with the current Solution. Abstract *"they're worse"* doesn't fire anything — the customer's brain won't down-weight an option without a concrete reason.
 
 **Minimum required for activation: components 1 + 2 + 3.** Without the new Job Graph awareness, the value delta, and a named product with an entry path, the customer can't move. Components 4 and 5 raise conversion rate substantially — at scale, they are not optional.
 
@@ -42,7 +42,7 @@ CA has five components; CS has four slots — each CA component writes into a CS
 
 - **A discount is not Consideration Activators.** A discount is a closing tool for people who have already decided or are on the edge. It changes cost, not Job awareness. It can't activate a dormant Job.
 - **A feature description is not Consideration Activators.** *"Linear shows issue status and assignee inline"* is a description. The test: did this fact cause the person to *switch* Solutions? If no, it's a feature, not Consideration Activators.
-- **Removing a real chain blocker is not Consideration Activators.** A missing migration path, unsupported state, absent permit path, unavailable payment method, broken form, or missing SOC 2 report is product / operations / legal / logistics work ([barrier-removal.md](barrier-removal.md)). Consideration Activators can truthfully say the feared break is handled only after reality makes it true.
+- **Removing a real chain blocker is not Consideration Activators.** A missing migration path, unsupported state, absent permit path, unavailable payment method, broken form, or missing SOC 2 report is product / operations / legal / logistics work ([Barrier Removal](barrier-removal.md)). Consideration Activators can truthfully say the feared break is handled only after reality makes it true.
 
 ## 3. Consideration Activators vs. Trigger vs. Aha Moment
 
@@ -88,7 +88,7 @@ The specific story does the work of several components simultaneously: it carrie
 - **The Consideration Set updates** — the candidate set of Solutions the brain compares at the moment of choice now includes Cursor and Claude Code (and the Job Graph each Solution would install, with predicted costs, benefits, and fears).
 - **The person can now hire your Solution** — the trigger fires; the chosen Solution installs the Critical Chain underneath.
 
-**The Consideration Set is the operational consequence of Consideration Activators in the customer's State A.** It is not a separate unit of analysis — it lives inside State A of the Job (see [job-structure.md §5, §17](job-structure.md)). Each Orientation Job the customer ever runs adds, refines, or removes Solutions in the set; competitor failure stories fire options out; demos, reviews, and trials update predicted costs and benefits. **Consideration Activators is what *creates* and *updates* the Consideration Set** — propositionally (via communication, peer story, content) or experientially (via first-hand trial). Once chosen, the Solution installs the **Critical Chain** the customer walks ([critical-chain.md](critical-chain.md)).
+**The Consideration Set is the operational consequence of Consideration Activators in the customer's State A.** It is not a separate unit of analysis — it lives inside State A of the Job (see [Job Structure §5, §17](job-structure.md)). Each Orientation Job the customer ever runs adds, refines, or removes Solutions in the set; competitor failure stories fire options out; demos, reviews, and trials update predicted costs and benefits. **Consideration Activators is what *creates* and *updates* the Consideration Set** — propositionally (via communication, peer story, content) or experientially (via first-hand trial). Once chosen, the Solution installs the **Critical Chain** the customer walks ([Critical Chain](critical-chain.md)).
 
 This is the mechanism by which new, unfamiliar Solutions spread across a market.
 
@@ -101,7 +101,7 @@ A person can acquire Consideration Activators through:
 - **Content marketing** — articles, SEO content, YouTube / Instagram videos, podcasts.
 - **Salesperson outreach** — proactive contact from a vendor's sales team.
 - **Social observation** — seeing another person use the Solution and asking about it.
-- **Environmental context — proximity-loaded CA.** Showrooms, demo zones, furnished interiors, in-product onboarding tours, *"people you may know"* suggestions, marketplace home-screen feeds. The canonical case is IKEA: the showroom route and furnished rooms work as *visual Consideration Activators*, mass-activating latent Jobs (*"oh, I need a shelf like that"*) the customer didn't know they had. The low-cost food court primes the latent Big Job *"furnish my home"* by anchoring the visit to a positive experience first. (Detailed treatment in [behaviour-change.md §5](behaviour-change.md).)
+- **Environmental context — proximity-loaded CA.** Showrooms, demo zones, furnished interiors, in-product onboarding tours, *"people you may know"* suggestions, marketplace home-screen feeds. The canonical case is IKEA: the showroom route and furnished rooms work as *visual Consideration Activators*, mass-activating latent Jobs (*"oh, I need a shelf like that"*) the customer didn't know they had. The low-cost food court primes the latent Big Job *"furnish my home"* by anchoring the visit to a positive experience first. (Detailed treatment in [Behaviour Change §5](behaviour-change.md).)
 - **First-hand trial** — the customer encounters the new Job Graph directly (free trial, demo, friend's product) and absorbs the value side experientially rather than propositionally.
 
 For unfamiliar Solutions, **content marketing, word-of-mouth, and environmental context typically outperform display advertising** — because Consideration Activators requires *understanding* the new Job + Solution pairing, and short ad formats rarely carry that bandwidth.
@@ -120,14 +120,14 @@ This is why *trying solutions is itself a research activity* for the customer. T
 - **Class 1 — the Big Job already exists for this person.** They already perform it with some Solution. Your job is to show that yours performs it more efficiently. CA is helpful, but the Big Job is already awake.
 - **Class 2 — the Big Job is dormant or doesn't exist for this person.** CA is the **only** way in. You must first wake the Big Job, and only then can you sell your Solution for that Job.
 
-Most failed launches of category-defining products fail not on value but on Consideration Activators: the Big Job was never woken up. Full treatment of the two classes, the diagnostic question, and the operational differences in [behaviour-change.md §10](behaviour-change.md).
+Most failed launches of category-defining products fail not on value but on Consideration Activators: the Big Job was never woken up. Full treatment of the two classes, the diagnostic question, and the operational differences in [Behaviour Change §10](behaviour-change.md).
 
 ## 11. Consideration Activators as the engine of market education and scale
 
 To grow the market for your Solution, you have to grow the share of people in the market who carry the Consideration Activators. There are three levers:
 
 - **Load Consideration Activators at scale** — content, partnerships, PR, market education.
-- **Load Consideration Activators at moments of heightened receptivity** — Critical Chain breaks, life events, competitor failures (full taxonomy of triggers in [behaviour-change.md §8](behaviour-change.md)).
+- **Load Consideration Activators at moments of heightened receptivity** — Critical Chain breaks, life events, competitor failures (full taxonomy of triggers in [Behaviour Change §8](behaviour-change.md)).
 - **Load Consideration Activators from high-credibility sources** — banks, doctors, peers, the influencers your segment trusts.
 
 > The DocuSign real-estate closing pattern is the canonical example: buyers and sellers did not wake up wanting *e-signature software*; the trusted counterparty in the closing chain sent a signing link, loaded the Consideration Activators that electronic signatures were accepted and secure, removed the fear of doing the closing wrong, and fired the old print-scan-fax / overnight-envelope Job Graph.
@@ -138,4 +138,4 @@ In an AJTBD interview, surface Consideration Activators with this question:
 
 > *"What did you learn that made you want to get the expected outcome with these success criteria? Did this happen after some specific experience?"*
 
-For the full interview methodology — recruiting criteria, follow-up rules, B2B specifics, anti-patterns — see [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md).
+For the interview guide — the principles and the question bank — see [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md).

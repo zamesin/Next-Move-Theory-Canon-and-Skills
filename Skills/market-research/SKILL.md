@@ -26,12 +26,12 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 
 | File | What the skill uses it for |
 |---|---|
-| `Next-Move-Theory-Canon/AJTBD/ajtbd-key-theses.md` | Jobs, the Job Graph, value & the Aha Moment, segmentation, Consideration Activators, Barrier Removal, the published value-creation mechanics (§22–§23) |
-| `Next-Move-Theory-Canon/AJTBD/segmentation.md` | the deep segmentation method |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md` | Jobs, the Job Graph, value & the Aha Moment, segmentation, Consideration Activators, Barrier Removal, the published value-creation mechanics (§22–§23) |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md` | the deep segmentation method |
 | `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` | the RAT cause-and-effect chain, the RAT formula, pivot logic |
 | `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md` | the chain to profit, local-vs-global optimum, the segment-selection logic |
 
-One agent (the Strategy agent, Deep mode) additionally reads `Next-Move-Theory-Canon/AJTBD/value-creation-mechanics.md` for the richer published mechanic menu.
+One agent (the Strategy agent, Deep mode) additionally reads `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` for the richer published mechanic menu.
 
 > **Path note.** Use the paths above. If a file is not found there, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix that the public repo strips.
 
@@ -457,7 +457,7 @@ Orchestrator:       assemble report → compute one-pager last → chat summary
 ### Agent prompts
 
 Each prompt opens with the shared preamble:
-> You work with Ivan Zamesin's AJTBD / Next Move Theory methodology. Use ONLY these canon files as the methodology source — do NOT use generic JTBD from the internet or prior training: `Next-Move-Theory-Canon/AJTBD/ajtbd-key-theses.md`, `Next-Move-Theory-Canon/AJTBD/segmentation.md`, `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md`, `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md`. (If not found, retry with a `1-` prefix on the canon folder.) Never write methodology citations or canon paths into user-facing files — those go to `debug.md`. Every named external source is a clickable Markdown link. Append a start line and an end line (with key counts) to `debug.md`.
+> You work with Ivan Zamesin's AJTBD / Next Move Theory methodology. Use ONLY these canon files as the methodology source — do NOT use generic JTBD from the internet or prior training: `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md`, `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md`, `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md`, `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md`. (If not found, retry with a `1-` prefix on the canon folder.) Never write methodology citations or canon paths into user-facing files — those go to `debug.md`. Every named external source is a clickable Markdown link. Append a start line and an end line (with key counts) to `debug.md`.
 
 **[1A] Market & Sizing.** Read `00-input.md` + the read set. Formulate and validate the market-level Big Job internally (debug.md only). Compute TAM / SAM / SOM, each via 3 methods (top-down / bottom-up / analog), averaged (median if methods diverge >2×). Compare to the user's ambition. Write the **compact** body to `01-market-sizing.md` (summary table + landscape + ambition + takeaway) and the **short** method tables + one-line verifications to `01-market-sizing-appendix.md`. ≤12 fetches.
 

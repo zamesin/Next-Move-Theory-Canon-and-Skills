@@ -2,7 +2,7 @@
 
 This file is the canonical reference for the **taxonomy of Jobs** — the *properties* every Job carries on multiple axes (critical-chain participation, frequency, `conscious` / `unconscious`) and the *types* a Job is categorically assigned to (Regular, Orientation, Tax, Fake, Emotional, Viral). The taxonomy is a diagnostic instrument: it routes the team to the right mechanic and separates Jobs worth investing in from Jobs that drain effort.
 
-It sits on top of [job-structure.md](job-structure.md) (the eight elements of a single Job) and feeds [critical-chain.md](critical-chain.md) (where the customer walks the chain). It connects to [behaviour-change.md](behaviour-change.md), [value-creation.md](value-creation.md), and [Next-Move-Theory/subtraction.md](../Next-Move-Theory/subtraction.md).
+It sits on top of [Job Structure](job-structure.md) (the eight elements of a single Job) and feeds [Critical Chain](critical-chain.md) (where the customer walks the chain). It connects to [Behaviour Change](behaviour-change.md), [Value Creation](value-creation.md), and [Subtraction](../Next-Move-Theory/subtraction.md).
 
 ---
 
@@ -31,18 +31,18 @@ They are *different Jobs*, not one Job changing type. Each Job is typed by its m
 
 ## 2. Critical-chain participation — read on the chain axis; the thesis lives in critical-chain.md
 
-A Job's **critical-chain participation** — which Critical Chain it sits in, and to which higher-level Job — is one of the axes you read it on (§1). The thesis itself is critical-chain material: benefit lands at the end of the chain (earlier Jobs are pure cost; only the last few deliver the result), so the dominant move on any chain-participating Job is to **kill the earlier Jobs** or **move up a level**. Full treatment in [critical-chain.md §1–§5](critical-chain.md) (chain structure, value-at-the-end, the cascade when a chain breaks) and [value-creation.md §14](value-creation.md) (kill-a-Job, move-up-a-level).
+A Job's **critical-chain participation** — which Critical Chain it sits in, and to which higher-level Job — is one of the axes you read it on (§1). The thesis itself is critical-chain material: benefit lands at the end of the chain (earlier Jobs are pure cost; only the last few deliver the result), so the dominant move on any chain-participating Job is to **kill the earlier Jobs** or **move up a level**. Full treatment in [Critical Chain §1–§5](critical-chain.md) (chain structure, value-at-the-end, the cascade when a chain breaks) and [Value Creation §14](value-creation.md) (kill-a-Job, move-up-a-level).
 
 ## 3. Frequency — how often the Job is performed sets the unit economics of the business
 
 **Frequency is the rate at which the same Job recurs in the customer's life** — daily, weekly, monthly, yearly. An Instacart customer who orders weekly performs the same Job ~50×/year. A home-buyer performs *"buy a home"* ~3×/lifetime. Same person, two Jobs, two-orders-of-magnitude different frequency.
 
-**Frequency stacks with critical-chain participation.** The Instacart Job participates in a chain *and* recurs at high frequency; most operationally interesting Jobs carry both properties. (The chain's own structure — sequential vs parallel siblings, breaks, cycles — is treated in [critical-chain.md §1–§2](critical-chain.md).)
+**Frequency stacks with critical-chain participation.** The Instacart Job participates in a chain *and* recurs at high frequency; most operationally interesting Jobs carry both properties. (The chain's own structure — sequential vs parallel siblings, breaks, cycles — is treated in [Critical Chain §1–§2](critical-chain.md).)
 
 **Operational consequences:**
 
-- **If your business model rewards cohorts (subscriptions, marketplaces, repeat purchase), the segments worth competing for are the ones whose focus Jobs are *more frequent* on average.** Frequency is a primary driver of LTV — a Job that pays $20 × 50×/year compounds into very different unit economics than a Job that pays $200 × 3×/lifetime, even at a 10×-smaller ticket. It feeds the unit-econ link of the cause-and-effect chain to profit ([ajtbd-key-theses.md §14](ajtbd-key-theses.md)).
-- **Some Jobs that look low-frequency at the individual level are high-frequency at a different segmentation cut.** *"Move to a new city"* fires ~3×/lifetime for an individual but ~200×/year for a corporate relocation department. Which side of the frequency split you stand on is a segmentation choice (see [segmentation.md](segmentation.md)), not a fixed property of the verb.
+- **If your business model rewards cohorts (subscriptions, marketplaces, repeat purchase), the segments worth competing for are the ones whose focus Jobs are *more frequent* on average.** Frequency is a primary driver of LTV — a Job that pays $20 × 50×/year compounds into very different unit economics than a Job that pays $200 × 3×/lifetime, even at a 10×-smaller ticket. It feeds the unit-econ link of the cause-and-effect chain to profit ([AJTBD key theses §14](ajtbd-key-theses.md)).
+- **Some Jobs that look low-frequency at the individual level are high-frequency at a different segmentation cut.** *"Move to a new city"* fires ~3×/lifetime for an individual but ~200×/year for a corporate relocation department. Which side of the frequency split you stand on is a segmentation choice (see [Segmentation](segmentation.md)), not a fixed property of the verb.
 
 ## 4. Awareness — every Job is either `conscious` or `unconscious`
 
@@ -56,7 +56,7 @@ A Job's **critical-chain participation** — which Critical Chain it sits in, an
 
 **Operational consequences:**
 
-- **Do not ask customers to name their needs.** The need or higher-level Job their behavior serves is often `unconscious` (see [scientific-foundations.md §10](scientific-foundations.md)). Ask about concrete past behavior, recent situations, tradeoffs, emotional spikes, and what changed after the Solution was used.
+- **Do not ask customers to name their needs.** The need or higher-level Job their behavior serves is often `unconscious` (see [Scientific Foundations §10](scientific-foundations.md)). Ask about concrete past behavior, recent situations, tradeoffs, emotional spikes, and what changed after the Solution was used.
 - **Treat self-report as one signal, not the source of truth.** A customer can honestly say *"I bought Peloton for fitness"* while the stronger Big Job is *"feel like the kind of person who has their life together."* Validate against repeated behavior, paid commitment, avoided alternatives, and the Job Graph around the purchase — the explanation is an input to test, not the conclusion.
 
 ---
@@ -86,21 +86,21 @@ A Job's **critical-chain participation** — which Critical Chain it sits in, an
 
 **Operational consequence:**
 
-- **Marketing, sales, and content land *hardest* when the customer is already *inside* an Orientation Job** — most receptive to Consideration Activators, so the same message costs far less to land than at steady-state habit ([behaviour-change.md §11](behaviour-change.md)). But they also work *outside* one: loading Consideration Activators can itself *wake* an Orientation Job — you can *be* the trigger ([behaviour-change.md §8](behaviour-change.md), [job-structure.md §6](job-structure.md)). Cheapest of all is timing outreach to a window already firing — Critical-Chain breaks, life events, Problems with the current Solution (see [critical-chain.md §6](critical-chain.md); [§4](critical-chain.md) unpacks the Big-Job-stays-Solution-changes dynamic that follows).
+- **Marketing, sales, and content land *hardest* when the customer is already *inside* an Orientation Job** — most receptive to Consideration Activators, so the same message costs far less to land than at steady-state habit ([Behaviour Change §11](behaviour-change.md)). But they also work *outside* one: loading Consideration Activators can itself *wake* an Orientation Job — you can *be* the trigger ([Behaviour Change §8](behaviour-change.md), [Job Structure §6](job-structure.md)). Cheapest of all is timing outreach to a window already firing — Critical-Chain breaks, life events, Problems with the current Solution (see [Critical Chain §6](critical-chain.md); [§4](critical-chain.md) unpacks the Big-Job-stays-Solution-changes dynamic that follows).
 
 ## 7. Tax Job — unplanned work the customer pays because the Solution they hired screwed up
 
-**A Tax Job is a Job the customer never planned to perform — and now has to, because the Solution hired for a different Job in the chain failed.** Operationally: **Tax Job = the customer-side consequence of a Critical-Chain break** (see [critical-chain.md §5](critical-chain.md)). The Solution promised to perform Job *N* in the chain; it didn't; the higher-level Job is important enough that the customer pays the Tax Job to get the result anyway.
+**A Tax Job is a Job the customer never planned to perform — and now has to, because the Solution hired for a different Job in the chain failed.** Operationally: **Tax Job = the customer-side consequence of a Critical-Chain break** (see [Critical Chain §5](critical-chain.md)). The Solution promised to perform Job *N* in the chain; it didn't; the higher-level Job is important enough that the customer pays the Tax Job to get the result anyway.
 
 **Worked example — cross-country move.** A customer hires a moving company to relocate from New York to Los Angeles. The movers pack the apartment, drive the truck across the country, unload — and dump several hundred pounds of boxes on the sidewalk in the rain, refusing to carry them up to the third-floor walk-up. *Carry every box up three flights tonight* is now a Tax Job: the customer never planned to do it, would gladly have paid an extra $100 had the movers offered, and now does it anyway because the alternative (boxes on the sidewalk overnight) breaks the higher-level Job *"settle into the new apartment by Sunday night."*
 
-**A Tax Job produces a Negative Prediction Error.** The customer arrived with a prediction (*"the movers will deliver to the apartment door"*); reality fell below the prediction (*"they dumped it on the curb"*); the brain registers the gap as irritation, anger, and a teaching signal — *"this Solution performs the Big Job worse than I predicted; avoid it next time."* The Tax Job is the structural consequence of the chain-break; the Negative Prediction Error is the brain-side signal and the **Problem** is its customer-experience side. See [value-creation.md §5–§7](value-creation.md) and [behaviour-change.md §7](behaviour-change.md) for the predict-and-compare mechanism behind this.
+**A Tax Job produces a Negative Prediction Error.** The customer arrived with a prediction (*"the movers will deliver to the apartment door"*); reality fell below the prediction (*"they dumped it on the curb"*); the brain registers the gap as irritation, anger, and a teaching signal — *"this Solution performs the Big Job worse than I predicted; avoid it next time."* The Tax Job is the structural consequence of the chain-break; the Negative Prediction Error is the brain-side signal and the **Problem** is its customer-experience side. See [Value Creation §5–§7](value-creation.md) and [Behaviour Change §7](behaviour-change.md) for the predict-and-compare mechanism behind this.
 
 **Operational consequences:**
 
-- **Tax Jobs are toxic to retention disproportionately to their size.** The brain's negative-learning rate runs faster than its positive-learning rate (loss aversion; see [value-creation.md §7](value-creation.md)). A single Tax Job can undo months of Regular-Job-quality Solution performance.
-- **A Tax Job is a behavior-change trigger.** The customer launches an Orientation Job (*"who else does this without dumping boxes on the curb?"*) and becomes receptive to a competitor's Consideration Activators. This is the canonical acquisition window for a chain-completing competitor (see [critical-chain.md §6](critical-chain.md)).
-- **The fix for a Tax Job is to perform the broken Job — not to apologize for it.** A discount, a refund, a written sorry — none of these perform the Job. Take the Job off the customer (the *Take the Job off the customer* mechanic — [value-creation-mechanics.md](value-creation-mechanics.md)), repair the chain in place (the *Fix the Problems* mechanic), or route the Job to a partner who will reliably perform it (the *Route the broken Job to a recommended partner* mechanic — [critical-chain.md §8](critical-chain.md)).
+- **Tax Jobs are toxic to retention disproportionately to their size.** The brain's negative-learning rate runs faster than its positive-learning rate (loss aversion; see [Value Creation §7](value-creation.md)). A single Tax Job can undo months of Regular-Job-quality Solution performance.
+- **A Tax Job is a behavior-change trigger.** The customer launches an Orientation Job (*"who else does this without dumping boxes on the curb?"*) and becomes receptive to a competitor's Consideration Activators. This is the canonical acquisition window for a chain-completing competitor (see [Critical Chain §6](critical-chain.md)).
+- **The fix for a Tax Job is to perform the broken Job — not to apologize for it.** A discount, a refund, a written sorry — none of these perform the Job. Take the Job off the customer (the *Take the Job off the customer* mechanic — [Value-Creation Mechanics](value-creation-mechanics.md)), repair the chain in place (the *Fix the Problems* mechanic), or route the Job to a partner who will reliably perform it (the *Route the broken Job to a recommended partner* mechanic — [Critical Chain §8](critical-chain.md)).
 
 ## 8. Fake Job — the customer's fantasy about the future, never performed in the past
 
@@ -111,7 +111,7 @@ A Job's **critical-chain participation** — which Critical Chain it sits in, an
 **Operational consequences:**
 
 - **Designing a product for Fake Jobs is among the most expensive errors in product work.** The Job looks like a real segment (interviews land on real *"I want to learn Spanish"* answers), it sizes plausibly in a market study, and it converts at near zero — because the customer was never going to act. The cost compounds: weeks of build against a hypothesis that returns negative evidence.
-- **The recruitment rule that prevents Fake-Job research: study only customers who *paid* (or invested significant time/energy) in the past.** Past investment is the cheapest reliable filter against Fake Jobs in one pass (see [ajtbd-key-theses.md §15](ajtbd-key-theses.md), [rat-key-theses.md §2](../Riskiest-Assumption-Test/rat-key-theses.md)).
+- **The recruitment rule that prevents Fake-Job research: study only customers who *paid* (or invested significant time/energy) in the past.** Past investment is the cheapest reliable filter against Fake Jobs in one pass (see [AJTBD key theses §15](ajtbd-key-theses.md), [Riskiest Assumption Test §2](../Riskiest-Assumption-Test/rat-key-theses.md)).
 - **A Big Job above a Fake Job is often a real Job at a different level.** The customer who says *"I'll learn Spanish"* but has never opened Duolingo may still have a real Big Job *"feel at home when I visit my partner's family in Mexico City."* Climb up; the real Job is rarely at the verb the customer first names.
 
 ## 9. Viral Job — performed for or with another person; may bring free customers
@@ -133,7 +133,7 @@ A Job's **critical-chain participation** — which Critical Chain it sits in, an
 
 **An Emotional Job is the only Job type with no higher-level Job above it.** It is the terminal top of the upward Job Graph: above *"I want to stop feeling anxious"* or *"I want to feel calm"* there is no further Job to ask *"in order to do what?"* about. Above it is the underlying need / affective regulation, not another Job.
 
-**Every fully specified non-Emotional Job points upward to terminal Emotional Jobs.** [job-structure.md §4](job-structure.md) stores the negative emotions in State A; [job-structure.md §10](job-structure.md) stores the positive emotions expected in State B. Those emotions imply two emotion-regulation Jobs above the ordinary Job: an avoidance Emotional Job (*"stop feeling anxious / afraid / ashamed / overloaded"*) and an approach Emotional Job (*"feel calm / safe / proud / in control"*). They sit above the ordinary Job as terminal motivation nodes.
+**Every fully specified non-Emotional Job points upward to terminal Emotional Jobs.** [Job Structure §4](job-structure.md) stores the negative emotions in State A; [Job Structure §10](job-structure.md) stores the positive emotions expected in State B. Those emotions imply two emotion-regulation Jobs above the ordinary Job: an avoidance Emotional Job (*"stop feeling anxious / afraid / ashamed / overloaded"*) and an approach Emotional Job (*"feel calm / safe / proud / in control"*). They sit above the ordinary Job as terminal motivation nodes.
 
 **The Functional / Social / Emotional triad maps into the Job Graph, not into adjectives.** A Functional Job is an ordinary outcome Job whose primary criteria are not themselves the emotion shift or belonging move. A Social Job is a Job whose higher-level motivation runs through relatedness / belonging / attachment. An Emotional Job is the explicit emotion-regulation Job. The same customer action can serve all three: TurboTax performs *"file my federal and state return correctly"* while serving *"stop feeling anxious about IRS mistakes"* and, for some customers, *"feel competent handling adult money tasks."*
 
@@ -141,7 +141,7 @@ A Job's **critical-chain participation** — which Critical Chain it sits in, an
 
 - **Do not bury Emotional Jobs inside copy adjectives.** If the customer performs *"stop feeling anxious about whether this is right,"* the product either performs that Job or it does not. Name it, design for it, and test it.
 - **Emotional Jobs are often the highest-converting communication layer.** *"Sleep well knowing your data is protected"* sells the terminal Emotional Job above the functional Core Job *"encrypt customer data."*
-- **Eliminating a negative emotion is value creation.** The *Remove negative emotions* mechanic ([value-creation-mechanics.md](value-creation-mechanics.md)) performs the avoidance Emotional Job by deleting the State-A emotional cost.
+- **Eliminating a negative emotion is value creation.** The *Remove negative emotions* mechanic ([Value-Creation Mechanics](value-creation-mechanics.md)) performs the avoidance Emotional Job by deleting the State-A emotional cost.
 
 ---
 
@@ -158,17 +158,17 @@ A Job's **critical-chain participation** — which Critical Chain it sits in, an
 | **Viral** | Can the product acquire customers for free? | Build around the Core Job performed in front of an audience (§9). |
 | **Emotional** | What's the highest-converting message? | Name the State-A / State-B emotion; delete the negative one (§10). |
 
-Types and properties are *diagnostic inputs*; the *dynamic process* that turns them into outcomes — Consideration Set updates, drop-off analysis, the seven triggers that re-launch the Job, the compete-through-Big-Job strategy when your Solution is unfamiliar — lives in **[critical-chain.md](critical-chain.md)** (§§4–6, §12) and **[behaviour-change.md §8](behaviour-change.md)**.
+Types and properties are *diagnostic inputs*; the *dynamic process* that turns them into outcomes — Consideration Set updates, drop-off analysis, the seven triggers that re-launch the Job, the compete-through-Big-Job strategy when your Solution is unfamiliar — lives in **[Critical Chain](critical-chain.md)** (§§4–6, §12) and **[Behaviour Change §8](behaviour-change.md)**.
 
 ---
 
 ## Cross-references
 
-- [job-structure.md](job-structure.md) — the eight elements of a single Job; State-A negative emotions and State-B positive emotions as the source of Emotional Jobs.
-- [critical-chain.md](critical-chain.md) — the operational core: Critical Chains as the structural unit for chain-participating Jobs; chain-execution dynamics (§§4–6, §12) that use types and properties as input (Consideration Set, compete-through-Big-Job, drop-off analysis, the seven triggers that re-launch the chain); Tax Jobs as the chain-break consequence (§5); cycles in the chain (§7.2).
-- [scientific-foundations.md](scientific-foundations.md) — introspection limits (§10) and trauma-shaped behavior (§19), grounding the `conscious` / `unconscious` property.
-- [value-creation.md](value-creation.md) — the predict-and-compare mechanism (§4), positive and negative prediction errors (§5–§7), the Aha Moment (§12), the foundational mechanic catalog (§18) — especially Kill a Job (§14.2) and Move up a level (§14.1) for sequential-chain Jobs.
-- [behaviour-change.md](behaviour-change.md) — the neurobiology of prediction errors (§7) that anchors the Tax Job framing; habit dynamics for frequency (§9, §11).
-- [ajtbd-key-theses.md](ajtbd-key-theses.md) — Job as the root cause of every product decision (§2); segmentation by Job Graph (§12); Big Job vs Core Job (§9).
-- [Next-Move-Theory/subtraction.md](../Next-Move-Theory/subtraction.md) — Kill a Job and Move-up-a-level as the dominant mechanics for any Job in a Critical Chain.
-- [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md) — the past-payment recruitment discipline that filters Fake Jobs and low motivation in one pass.
+- [Job Structure](job-structure.md) — the eight elements of a single Job; State-A negative emotions and State-B positive emotions as the source of Emotional Jobs.
+- [Critical Chain](critical-chain.md) — the operational core: Critical Chains as the structural unit for chain-participating Jobs; chain-execution dynamics (§§4–6, §12) that use types and properties as input (Consideration Set, compete-through-Big-Job, drop-off analysis, the seven triggers that re-launch the chain); Tax Jobs as the chain-break consequence (§5); cycles in the chain (§7.2).
+- [Scientific Foundations](scientific-foundations.md) — introspection limits (§10) and trauma-shaped behavior (§19), grounding the `conscious` / `unconscious` property.
+- [Value Creation](value-creation.md) — the predict-and-compare mechanism (§4), positive and negative prediction errors (§5–§7), the Aha Moment (§12), the foundational mechanic catalog (§18) — especially Kill a Job (§14.2) and Move up a level (§14.1) for sequential-chain Jobs.
+- [Behaviour Change](behaviour-change.md) — the neurobiology of prediction errors (§7) that anchors the Tax Job framing; habit dynamics for frequency (§9, §11).
+- [AJTBD key theses](ajtbd-key-theses.md) — Job as the root cause of every product decision (§2); segmentation by Job Graph (§12); Big Job vs Core Job (§9).
+- [Subtraction](../Next-Move-Theory/subtraction.md) — Kill a Job and Move-up-a-level as the dominant mechanics for any Job in a Critical Chain.
+- [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — the past-payment recruitment discipline that filters Fake Jobs and low motivation in one pass.

@@ -6,7 +6,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Citation-age discipline.** Older sources appear as **classic anchors** — original formulations, canonical constructs, or historical sources still in use. Current AJTBD claims use post-2000 empirical papers, reviews, meta-analyses, or field syntheses wherever the claim is still scientifically active.
 
-> **Why a separate document.** Several canon pages reuse the same scientific results: [value-creation.md](value-creation.md), [behaviour-change.md](behaviour-change.md), [communication.md](communication.md), [critical-chain.md](critical-chain.md), [ajtbd-key-theses.md](ajtbd-key-theses.md), [job-structure.md](job-structure.md), [job-graph.md](job-graph.md). Keeping citations here lets those pages stay focused on methodology and gives science-minded readers one place to inspect the evidence.
+> **Why a separate document.** Several canon pages reuse the same scientific results: [Value Creation](value-creation.md), [Behaviour Change](behaviour-change.md), [Communication](communication.md), [Critical Chain](critical-chain.md), [AJTBD key theses](ajtbd-key-theses.md), [Job Structure](job-structure.md), [Job Graph](job-graph.md). Keeping citations here lets those pages stay focused on methodology and gives science-minded readers one place to inspect the evidence.
 
 ## Contents
 
@@ -38,7 +38,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Advanced Jobs To Be Done interpretation.** AJTBD treats the allostatic energy-budget engine as the substrate the rest of the methodology rests on. The customer's spend — attention, time, decisions, cognitive load, negative emotion — is the same body-budget calculation Sterling and Barrett describe, projected onto product experience. The customer meets the product with a prediction already running; brand, advertising, packaging, prior exposure, and peer recommendation shape that prediction before the product is evaluated. **AJTBD's central definition of value, built on top of this substrate, is unpacked in §2.**
 
-**Canon usage.** §2 (the key hypothesis of value built on this substrate); [value-creation.md §2](value-creation.md); [behaviour-change.md §6](behaviour-change.md); [Next-Move-Theory/subtraction.md §2(a)](../Next-Move-Theory/subtraction.md) (allostasis as the substrate of cognitive-economics asymmetry); §23 (predictive processing as the emerging unifying lens).
+**Canon usage.** §2 (the key hypothesis of value built on this substrate); [Value Creation §2](value-creation.md); [Behaviour Change §6](behaviour-change.md); [Subtraction §2(a)](../Next-Move-Theory/subtraction.md) (allostasis as the substrate of cognitive-economics asymmetry); §23 (predictive processing as the emerging unifying lens).
 
 ---
 
@@ -54,11 +54,11 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 [Shenhav, Botvinick & Cohen (2013), *The Expected Value of Control*](https://pmc.ncbi.nlm.nih.gov/articles/PMC3767969/) gives the same shape at the neural level. Their formal model for how the brain allocates cognitive control is `EVC(signal, state) = Σᵢ Pr(outcomeᵢ | signal, state) × Value(outcomeᵢ) − Cost(signal)` — exactly `Probability × Outcome − Cost`. The Cost term is the metabolic cost of running cognitive control.
 
-**Operational consequence.** Three independent levers — raise the Probability of the Outcome (reliability proofs, guarantees), raise Outcome multiplicatively (move-up-a-level kills lower-level Jobs as a class), or lower Cost (subtract money, time, effort, cognitive load, negative emotion). The value-creation mechanics catalog ([value-creation.md §18](value-creation.md)) routes through this skeleton.
+**Operational consequence.** Three independent levers — raise the Probability of the Outcome (reliability proofs, guarantees), raise Outcome multiplicatively (move-up-a-level kills lower-level Jobs as a class), or lower Cost (subtract money, time, effort, cognitive load, negative emotion). The value-creation mechanics catalog ([Value Creation §18](value-creation.md)) routes through this skeleton.
 
-**Value vs behaviour change.** Value is the *absolute* energy-efficiency rating of a Solution × Job pairing — iPhone 6 retains value (you can still place a call) when alternatives are absent. The customer's brain — automatically, continuously, unconsciously — predicts reality: for every interaction with a product, it predicts **both** the costs that getting a specific outcome will require **and** whether that outcome will actually arrive at the quality the customer expected. When the experience happens, the brain compares its predictions against what actually arrived and produces a delta on each term. Those deltas — not value itself — drive **behaviour change**: adoption (Aha Moment), switching, retention drift (Red Queen), and learning (RPE updates the prediction model, §11). Different neural substrates: value lives in vmPFC and ventral striatum (§3); the deltas live in midbrain dopamine (§11). Full behaviour-change mechanics in [behaviour-change.md](behaviour-change.md).
+**Value vs behaviour change.** Value is the *absolute* energy-efficiency rating of a Solution × Job pairing — iPhone 6 retains value (you can still place a call) when alternatives are absent. The customer's brain — automatically, continuously, unconsciously — predicts reality: for every interaction with a product, it predicts **both** the costs that getting a specific outcome will require **and** whether that outcome will actually arrive at the quality the customer expected. When the experience happens, the brain compares its predictions against what actually arrived and produces a delta on each term. Those deltas — not value itself — drive **behaviour change**: adoption (Aha Moment), switching, retention drift (Red Queen), and learning (RPE updates the prediction model, §11). Different neural substrates: value lives in vmPFC and ventral striatum (§3); the deltas live in midbrain dopamine (§11). Full behaviour-change mechanics in [Behaviour Change](behaviour-change.md).
 
-**Canon usage.** [value-creation.md §2–§5](value-creation.md) (operational unpacking — value mechanics; behaviour change driven by the *Aha Moment* and the *Problem*); [value-creation.md §3](value-creation.md) (the formula in operational form for product use); [behaviour-change.md](behaviour-change.md) (behaviour change — adoption, switching, learning); [ajtbd-key-theses.md §6](ajtbd-key-theses.md) (short version in the key theses); §1, §3, §4, §11, §23.
+**Canon usage.** [Value Creation §2–§5](value-creation.md) (operational unpacking — value mechanics; behaviour change driven by the *Aha Moment* and the *Problem*); [Value Creation §3](value-creation.md) (the formula in operational form for product use); [Behaviour Change](behaviour-change.md) (behaviour change — adoption, switching, learning); [AJTBD key theses §6](ajtbd-key-theses.md) (short version in the key theses); §1, §3, §4, §11, §23.
 
 ---
 
@@ -72,7 +72,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Advanced Jobs To Be Done interpretation.** AJTBD treats functional, emotional, social, financial, and status outcomes as inputs to one predicted Job-value comparison. Reward cues can matter before explicit *"buying mode"* — walking past a Pellegrino shelf, scrolling past a competitor's ad, hearing a peer mention a brand. Advertising, packaging, landing-page copy, peer recommendation, brand identity, and prior similar experiences become priors the customer brings into explicit evaluation. The pre-purchase priors set the value baseline the actual product is measured against (§11 reward prediction error).
 
-**Canon usage.** [value-creation.md §2](value-creation.md) (emotional and functional value compete on a shared valuation register); [communication.md](communication.md) (pre-purchase framing has neural impact); §4 (purchase-decision neuroscience — NAcc/insula/mPFC architecture extending the common-currency mechanism into the integrated buy/no-buy computation).
+**Canon usage.** [Value Creation §2](value-creation.md) (emotional and functional value compete on a shared valuation register); [Communication](communication.md) (pre-purchase framing has neural impact); §4 (purchase-decision neuroscience — NAcc/insula/mPFC architecture extending the common-currency mechanism into the integrated buy/no-buy computation).
 
 ---
 
@@ -90,9 +90,9 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Advanced Jobs To Be Done interpretation.** A purchase screen is a live evaluation of anticipated reward against anticipated cost. In AJTBD terms, the product offer activates the expected outcome side of the Job — *what result will I get if I buy this?* — while the price reveal activates the cost side — *what will I have to give up to get it?* The buy/no-buy choice integrates the two. Advertising, brand exposure, peer recommendation, prior similar products, packaging shorthand, category priors, and identity-fit signals all shape expected outcome before the offer screen.
 
-**The §2–§4 arc, in one sentence.** The brain runs a common-currency valuation that compares predicted benefit against predicted cost in real time (§3); the same machinery fires at the moment of purchase, with NAcc carrying anticipated reward, insula carrying anticipated cost as physical pain, and mPFC integrating the two (§4). AJTBD's claim (§2) is that this valuation *is* body-budget energy efficiency against the customer's prediction. Every operational tool downstream — Aha Moment, criteria-encoded predictions, the value formula, the mechanics catalog — routes through this single loop; the full unpacking sits in [value-creation.md §2–§7](value-creation.md).
+**The §2–§4 arc, in one sentence.** The brain runs a common-currency valuation that compares predicted benefit against predicted cost in real time (§3); the same machinery fires at the moment of purchase, with NAcc carrying anticipated reward, insula carrying anticipated cost as physical pain, and mPFC integrating the two (§4). AJTBD's claim (§2) is that this valuation *is* body-budget energy efficiency against the customer's prediction. Every operational tool downstream — Aha Moment, criteria-encoded predictions, the value formula, the mechanics catalog — routes through this single loop; the full unpacking sits in [Value Creation §2–§7](value-creation.md).
 
-**Canon usage.** The operational implications (anticipatory framing, friction-of-paying mechanics, free-price-effect thresholds) live in [value-creation.md §3, §6, §8](value-creation.md); [behaviour-change.md §9](behaviour-change.md) treats insula-as-pain as a force blocking behavior change.
+**Canon usage.** The operational implications (anticipatory framing, friction-of-paying mechanics, free-price-effect thresholds) live in [Value Creation §3, §6, §8](value-creation.md); [Behaviour Change §9](behaviour-change.md) treats insula-as-pain as a force blocking behavior change.
 
 ---
 
@@ -126,7 +126,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Advanced Jobs To Be Done interpretation.** AJTBD uses an **operational taxonomy of eight clusters** — the five-cluster consensus core plus three recurring extensions (status, growth/meaning, consistency). The extensions are kept separate rather than folded into the core because each carries a distinct purchase signal that disappears under a coarser label. **Status** — Rolex, executive tier, Tesla — is about rank position relative to peers; if you collapse it into *relatedness*, you lose the willingness-to-pay premium that status-driven buyers carry. **Growth / meaning** is about who the customer is becoming; if you collapse it into *competence*, you lose identity-driven adoption — the *"I'm a Tesla person"* class of switch. **Consistency** is about a current Solution clashing with the customer's self-model; if you collapse it into *safety*, you lose dissonance-driven switching — the *"I can no longer use this without contradicting who I am"* moment.
 
-**Canon usage.** §8 (goals/Jobs as need-serving goal representations); §6 (status as a high-leverage extension need); [value-creation.md §10](value-creation.md) (criteria-priority orders by segment) and the *Perform Jobs while simultaneously satisfying deeper needs* mechanic ([value-creation-mechanics.md](value-creation-mechanics.md)); [segmentation.md](segmentation.md) (how the needs-as-motivation framing operationalizes into segmentation by Core Jobs and success criteria).
+**Canon usage.** §8 (goals/Jobs as need-serving goal representations); §6 (status as a high-leverage extension need); [Value Creation §10](value-creation.md) (criteria-priority orders by segment) and the *Perform Jobs while simultaneously satisfying deeper needs* mechanic ([Value-Creation Mechanics](value-creation-mechanics.md)); [Segmentation](segmentation.md) (how the needs-as-motivation framing operationalizes into segmentation by Core Jobs and success criteria).
 
 ---
 
@@ -146,10 +146,10 @@ Each section below follows the same order: citations, research claim, plain-Engl
 - **Status can be active even when rank has no direct payoff.** In Zink's noncompetitive game, status had no impact on reward expectancy or task difficulty, yet superior-vs-inferior others produced differential neural responses. That is why asking *"why did you buy the Rolex?"* often returns a functional-reasons narrator answer (§10) while the hidden Big Job is status.
 - **Status loss is heavier than status gain.** A visible downgrade, public criticism, or peer comparison can create disproportionate negative emotion (consistent with §13 loss aversion). Status repair becomes a high-energy Big Job.
 - **Volatile rank creates stronger engagement.** In Zink's unstable-hierarchy variant, rank shifts recruited more emotional circuitry. Leaderboards, follower counts, league standings, and badges use the same mechanism.
-- **Status can create willingness to pay.** Watches, cars, fashion, premium-tier subscriptions, executive travel, B2B *"enterprise"* tiers, and visible-brand purchases can extract margin from status delivery in addition to functional gain. Mechanic #10 in [value-creation.md §18](value-creation.md) routes through this entry when the focused need is status.
-- **Status mechanics need Big-Job alignment.** Duolingo's leagues, Strava's monthly distance challenges, and LinkedIn's *"Top Voice"* badges route status into Big Jobs the customer self-identifies with. Mechanic #20 in [value-creation.md §18](value-creation.md) routes through this entry when the product creates a new link to the Big Job *"I want to signal my status to my peer group."*
+- **Status can create willingness to pay.** Watches, cars, fashion, premium-tier subscriptions, executive travel, B2B *"enterprise"* tiers, and visible-brand purchases can extract margin from status delivery in addition to functional gain. Mechanic #10 in [Value Creation §18](value-creation.md) routes through this entry when the focused need is status.
+- **Status mechanics need Big-Job alignment.** Duolingo's leagues, Strava's monthly distance challenges, and LinkedIn's *"Top Voice"* badges route status into Big Jobs the customer self-identifies with. Mechanic #20 in [Value Creation §18](value-creation.md) routes through this entry when the product creates a new link to the Big Job *"I want to signal my status to my peer group."*
 
-**Canon usage.** [value-creation.md §10](value-creation.md) (status-first criteria-priority order); [value-creation.md §18 mechanics #10, #20](value-creation.md); §5 (AJTBD need taxonomy — status as one of the extensions); §8 (Jobs as need-serving goal representations).
+**Canon usage.** [Value Creation §10](value-creation.md) (status-first criteria-priority order); [Value Creation §18 mechanics #10, #20](value-creation.md); §5 (AJTBD need taxonomy — status as one of the extensions); §8 (Jobs as need-serving goal representations).
 
 ---
 
@@ -165,7 +165,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Advanced Jobs To Be Done interpretation.** When a Big Job ties to who a person considers themselves to be (*"I'm a person who takes care of their health"*), it imports the identity's ingroup-defining strategies (per Oyserman IBM). The customer performs the Big Job as *what people like me do*. That makes the Big Job harder to drop under setback and harder for a competing Solution to displace once the customer identifies with the current Solution (*"I'm an Apple person"*).
 
-**Canon usage.** [behaviour-change.md §9, §11](behaviour-change.md) (identity alignment as a driver; identity-as-current-solution as a blocker); §8 (identity can strengthen a need-serving Job).
+**Canon usage.** [Behaviour Change §9, §11](behaviour-change.md) (identity alignment as a driver; identity-as-current-solution as a blocker); §8 (identity can strengthen a need-serving Job).
 
 ---
 
@@ -179,7 +179,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Advanced Jobs To Be Done interpretation.** **A Job is AJTBD's customer-research name for this need-serving goal representation.** In product work, the represented future is written as State A -> expected State B, performed in order to perform a higher-level Job, which ultimately serves needs. This makes the Job a real motivational structure: it has a current situation, expected outcome, success criteria, motivational weight, and an action path through a Solution or workaround. The operational layers are simple: needs explain durability, Jobs make that motivational weight designable, emotions show progress while the Job is being performed. The methodological chain is **needs -> Job -> action -> emotion/progress signal.**
 
-**Canon usage.** §5 (the need taxonomy that supplies motivational grounding); §10 (why needs are inferred — confabulation and introspection limits); [job-structure.md](job-structure.md) (Job statements); [job-graph.md](job-graph.md) (laddering and *in order to do what?*).
+**Canon usage.** §5 (the need taxonomy that supplies motivational grounding); §10 (why needs are inferred — confabulation and introspection limits); [Job Structure](job-structure.md) (Job statements); [Job Graph](job-graph.md) (laddering and *in order to do what?*).
 
 ---
 
@@ -191,12 +191,12 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Plain-English explanation.** Emotions do two things at once: **(1) they extract meaning** from a situation — *threat / opportunity / loss / progress / failure / success* — and **(2) they release motivational energy** in the implied direction. Positive emotion signals progress and energizes continuation; negative emotion signals loss or threat and energizes avoidance, repair, or resistance. Affective valence is present even in many objects, words, and interfaces customers describe as neutral.
 
-**Advanced Jobs To Be Done interpretation.** Every Job is performed in pursuit of a higher-level Job, which ultimately serves a need. The emotional arc of any Critical Chain walk ([critical-chain.md §5](critical-chain.md)) is the real-time readout of progress toward that higher-level Job. Aesthetics, brand tone, typography, copy-feel, and packaging matter even in utility-looking categories because customers evaluate the whole experience affectively. Two operational consequences:
+**Advanced Jobs To Be Done interpretation.** Every Job is performed in pursuit of a higher-level Job, which ultimately serves a need. The emotional arc of any Critical Chain walk ([Critical Chain §5](critical-chain.md)) is the real-time readout of progress toward that higher-level Job. Aesthetics, brand tone, typography, copy-feel, and packaging matter even in utility-looking categories because customers evaluate the whole experience affectively. Two operational consequences:
 
-- **Removing one negative-emotion micro-step from a customer transition carries disproportionate weight.** Because the negative emotion is both *signal of failure* AND *demotivational drain*, removing it eliminates two losses at once. Square's tipping screen, TurboTax's *"don't worry, we'll catch the missed deduction,"* Apple Pay's silent-on-the-counter payment — each removes one anxiety-producing micro-step from a transition the customer was already willing to make. Mechanic #17 in [value-creation.md §18](value-creation.md) routes through this.
+- **Removing one negative-emotion micro-step from a customer transition carries disproportionate weight.** Because the negative emotion is both *signal of failure* AND *demotivational drain*, removing it eliminates two losses at once. Square's tipping screen, TurboTax's *"don't worry, we'll catch the missed deduction,"* Apple Pay's silent-on-the-counter payment — each removes one anxiety-producing micro-step from a transition the customer was already willing to make. Mechanic #17 in [Value Creation §18](value-creation.md) routes through this.
 - **Communication in the customer's emotional language outperforms purely functional language.** *"Stop worrying about whether your IRS return is right"* moves the State-A-anxious customer; *"file your taxes accurately"* stays at the verb. Emotional language activates the goal-and-need substrate.
 
-**Canon usage.** [value-creation.md §5–§7](value-creation.md) (positive and negative prediction errors as emotional events); [critical-chain.md §5](critical-chain.md) (predictions and per-step emotional signaling during the chain walk); [job-structure.md §4, §10](job-structure.md) (negative State A / positive State B emotions); §8 (emotions as progress signals while need-serving Jobs are performed).
+**Canon usage.** [Value Creation §5–§7](value-creation.md) (positive and negative prediction errors as emotional events); [Critical Chain §5](critical-chain.md) (predictions and per-step emotional signaling during the chain walk); [Job Structure §4, §10](job-structure.md) (negative State A / positive State B emotions); §8 (emotions as progress signals while need-serving Jobs are performed).
 
 ---
 
@@ -208,9 +208,9 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Plain-English explanation.** The left hemisphere hosts an *inner narrator* that generates explanations to assimilate observed behavior, affect, and events into a coherent story. *"I dieted all week then ate the cake — my boss was a jerk, I deserved a treat"* is narrator coherence-making in real time; the actual cause (impulse, blood sugar, stress, habit cue) is invisible to the speaker. Customers can usually describe what happened, what they tried, what felt hard, what outcome they wanted, what trade-off they accepted, and what they felt. Direct need labels and causal explanations are less reliable.
 
-**Advanced Jobs To Be Done interpretation.** Direct motive explanations are low-trust data. Anchor interviews on observable past behavior — paid money, spent time, invested energy (see [rat-key-theses.md §2](../Riskiest-Assumption-Test/rat-key-theses.md)) — and surface the Job through its eight-element structure: expected outcome, success criteria, context, trigger, higher-level Job, positive and negative emotions. The canonical question forms, each mapped to a Job element, live in [ajtbd-key-theses.md §3](ajtbd-key-theses.md); the full interview guide lives in [HowTos/conduct-ajtbd-interviews.md](../HowTos/conduct-ajtbd-interviews.md). The contrast: questions anchored on Job elements against a concrete past performance surface the Job; *"why did you choose us?"* surfaces the narrator. When behavior looks trauma-shaped, identity-protective, or unconscious, the interview is mainly a detector: collect the story, contradictions, emotions, trade-offs, and repeated actions, then infer the Job and validate it through behavior, sales tests, messaging tests, or product experiments. Do not treat the customer's beautiful explanation as the cause.
+**Advanced Jobs To Be Done interpretation.** Direct motive explanations are low-trust data. Anchor interviews on observable past behavior — paid money, spent time, invested energy (see [Riskiest Assumption Test §2](../Riskiest-Assumption-Test/rat-key-theses.md)) — and surface the Job through its eight-element structure: expected outcome, success criteria, context, trigger, higher-level Job, positive and negative emotions. The canonical question forms, each mapped to a Job element, live in [AJTBD key theses §3](ajtbd-key-theses.md); the interview guide lives in [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md). The contrast: questions anchored on Job elements against a concrete past performance surface the Job; *"why did you choose us?"* surfaces the narrator. When behavior looks trauma-shaped, identity-protective, or unconscious, the interview is mainly a detector: collect the story, contradictions, emotions, trade-offs, and repeated actions, then infer the Job and validate it through behavior, sales tests, messaging tests, or product experiments. Do not treat the customer's beautiful explanation as the cause.
 
-**Canon usage.** §19 (trauma is widespread — adult unconscious behavior shaped by childhood patterns); §8 (Jobs as need-serving goal representations); [job-structure.md §1](job-structure.md) (needs are inferred through Jobs); [ajtbd-key-theses.md §15](ajtbd-key-theses.md) (past-performance recruitment); [rat-key-theses.md §2](../Riskiest-Assumption-Test/rat-key-theses.md) (segments-and-Jobs validation through past payment).
+**Canon usage.** §19 (trauma is widespread — adult unconscious behavior shaped by childhood patterns); §8 (Jobs as need-serving goal representations); [Job Structure §1](job-structure.md) (needs are inferred through Jobs); [AJTBD key theses §15](ajtbd-key-theses.md) (past-performance recruitment); [Riskiest Assumption Test §2](../Riskiest-Assumption-Test/rat-key-theses.md) (segments-and-Jobs validation through past payment).
 
 ---
 
@@ -226,7 +226,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 **Advanced Jobs To Be Done interpretation.** The customer arrives with a prediction already running: what the Solution will do, how much effort it will cost, whether the result will be worth it, and whether this is a product for *people like me*. When the Solution performs the Job, the customer receives value — energy efficiency in performing the Job, the *absolute* property of the Solution × Job pair (§2). The brain *additionally* receives a teaching signal based on the *delta* between delivered efficiency and predicted efficiency: positive when delivery exceeds prediction (*this way works, repeat it*), negative when it falls below (*this is costlier than I thought, distrust it next time*). Value and teaching signal are two distinct outputs; conflating them was a category error the AJTBD canon explicitly avoids.
 
-This is the mechanism behind the customer's prediction bar. Value itself is the more energy-efficient experience while performing the Job; the prediction-error signal is how the brain notices that reality beat or missed prediction and decides whether to update. Hedonic adaptation and the Red Queen in [value-creation.md §6](value-creation.md) use this logic: once a better-than-predicted delivery is learned, it becomes the new baseline, and the same delivery stops teaching.
+This is the mechanism behind the customer's prediction bar. Value itself is the more energy-efficient experience while performing the Job; the prediction-error signal is how the brain notices that reality beat or missed prediction and decides whether to update. Hedonic adaptation and the Red Queen in [Value Creation §6](value-creation.md) use this logic: once a better-than-predicted delivery is learned, it becomes the new baseline, and the same delivery stops teaching.
 
 Three operational consequences:
 
@@ -234,7 +234,7 @@ Three operational consequences:
 - **Reliability protects the prediction bar.** A worse-than-predicted moment teaches avoidance and distrust; repeated small wins can be damaged by one sharp miss, especially when the miss carries negative emotion (§13).
 - **Value work never ends.** Once the customer learns the better way, the prediction rises. The team must keep deleting cost, improving outcome, or reducing uncertainty against the updated prediction.
 
-**Canon usage.** [value-creation.md §4, §5](value-creation.md) (delivery above or below prediction as the brain's learning signal; value itself is energy efficiency in performing a Job, §2); [value-creation.md §6](value-creation.md) (rising prediction bar — Red Queen — runs on selective encoding); [behaviour-change.md §7](behaviour-change.md) (the mechanism by which behavior change happens); §23 (predictive processing as the emerging unifying lens); §9 (emotions as the signal and fuel that arrive when reality beats or misses prediction).
+**Canon usage.** [Value Creation §4, §5](value-creation.md) (delivery above or below prediction as the brain's learning signal; value itself is energy efficiency in performing a Job, §2); [Value Creation §6](value-creation.md) (rising prediction bar — Red Queen — runs on selective encoding); [Behaviour Change §7](behaviour-change.md) (the mechanism by which behavior change happens); §23 (predictive processing as the emerging unifying lens); §9 (emotions as the signal and fuel that arrive when reality beats or misses prediction).
 
 ---
 
@@ -255,7 +255,7 @@ Diener, Lucas & Scollon (2006) revisited the literature and concluded adaptation
 
 Operationally, value creation is continuous work. The team cannot rely on yesterday's delight, because the brain turns repeated delight into a baseline. To keep creating value, the Solution must keep outperforming the customer's updated prediction: delete another Tax Job, reduce another source of anxiety, shorten another delay, improve another success criterion, or make the same Job feel easier than the customer now expects. The product does not need random novelty; it needs a steady increase in Job-performance efficiency against a rising prediction bar.
 
-**Canon usage.** [value-creation.md §6](value-creation.md) (Red Queen — value delivery must accelerate; the contrast half explains why a peak feature also flattens the perceived value of adjacent ordinary features); [behaviour-change.md §11](behaviour-change.md) (durable behavior change requires repeated better-than-predicted experiences against rising bars).
+**Canon usage.** [Value Creation §6](value-creation.md) (Red Queen — value delivery must accelerate; the contrast half explains why a peak feature also flattens the perceived value of adjacent ordinary features); [Behaviour Change §11](behaviour-change.md) (durable behavior change requires repeated better-than-predicted experiences against rising bars).
 
 ---
 
@@ -273,7 +273,7 @@ Operationally, value creation is continuous work. The team cannot rely on yester
 
 This explains why *fix the Problem* is one of the strongest value-creation mechanics and one of the strongest ways to bring a product to market. A Problem is already emotionally loaded: the customer has felt the break, paid the cost, lost trust, or failed to complete the Critical Chain. Removing that break creates immediate value because the product deletes pain the customer already understands. This does not make *fix the Problem* the only mechanic. It is one powerful route among the broader set of value-creation mechanics.
 
-**Canon usage.** [value-creation.md §7](value-creation.md) (the full operational treatment — activation, retention, trust, WoM); [behaviour-change.md §7, §9](behaviour-change.md) (loss aversion as a force blocking behavior change; the cost-asymmetry force); [Next-Move-Theory/subtraction.md §2(d)](../Next-Move-Theory/subtraction.md) (subtraction of already-felt negatives as a directional value-creation heuristic); [critical-chain.md §3](critical-chain.md) (loss aversion amplifies the chain-completability term in customer chain-choice).
+**Canon usage.** [Value Creation §7](value-creation.md) (the full operational treatment — activation, retention, trust, WoM); [Behaviour Change §7, §9](behaviour-change.md) (loss aversion as a force blocking behavior change; the cost-asymmetry force); [Subtraction §2(d)](../Next-Move-Theory/subtraction.md) (subtraction of already-felt negatives as a directional value-creation heuristic); [Critical Chain §3](critical-chain.md) (loss aversion amplifies the chain-completability term in customer chain-choice).
 
 ---
 
@@ -289,9 +289,9 @@ This explains why *fix the Problem* is one of the strongest value-creation mecha
 
 **Advanced Jobs To Be Done interpretation.** Products with deferred value face a structural communication problem: the customer's brain under-credits future benefit relative to present cost, price pain (§4), and loss aversion (§13). AJTBD therefore translates deferred value into present-tense experience wherever possible.
 
-This explains why moving the **Aha Moment** earlier in the customer's Critical Chain is so powerful ([value-creation.md §12](value-creation.md)). Every Job before the Aha is a delay before the customer receives a concrete proof of value; temporal discounting makes that delayed proof feel weaker than it really is. When the Aha fires earlier, the customer gets an immediate better-than-predicted signal, the abandonment window shrinks, and the rest of the Critical Chain is performed under stronger motivation.
+This explains why moving the **Aha Moment** earlier in the customer's Critical Chain is so powerful ([Value Creation §12](value-creation.md)). Every Job before the Aha is a delay before the customer receives a concrete proof of value; temporal discounting makes that delayed proof feel weaker than it really is. When the Aha fires earlier, the customer gets an immediate better-than-predicted signal, the abandonment window shrinks, and the rest of the Critical Chain is performed under stronger motivation.
 
-**Canon usage.** [value-creation.md §19](value-creation.md) (deferred-value products face hyperbolic-discount headwinds; translate benefit to present-tense experience); [communication.md](communication.md) (copy patterns for translating deferred value).
+**Canon usage.** [Value Creation §19](value-creation.md) (deferred-value products face hyperbolic-discount headwinds; translate benefit to present-tense experience); [Communication](communication.md) (copy patterns for translating deferred value).
 
 ---
 
@@ -305,7 +305,7 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 **Advanced Jobs To Be Done interpretation.** Habit is a learned control pattern. Changing it usually requires new context, repeated mismatch, or renewed goal-directed control — which makes behavior change costly in practice. Reusing existing habits beats fighting them.
 
-**Canon usage.** [behaviour-change.md §7, §9, §11](behaviour-change.md) (habit as a dominant blocker; the three rules for working with habit); [value-creation.md §8](value-creation.md) (switching cost has a habit-physiology component); §11 (prediction errors update the model; the DLS/DMS shift is a control-arbitration problem).
+**Canon usage.** [Behaviour Change §7, §9, §11](behaviour-change.md) (habit as a dominant blocker; the three rules for working with habit); [Value Creation §8](value-creation.md) (switching cost has a habit-physiology component); §11 (prediction errors update the model; the DLS/DMS shift is a control-arbitration problem).
 
 ---
 
@@ -319,7 +319,7 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 **Advanced Jobs To Be Done interpretation.** Even when explicit stakes are severe, unconscious competing commitments plus habit physiology (§15) can hold behavior in place. Next Move Theory behavior-change algorithms start from this baseline — behavior is protected by Jobs, habits, identity, and social context.
 
-**Canon usage.** [behaviour-change.md §9](behaviour-change.md) (the deepest blocker on behavior change); §19 (trauma as the deeper substrate of unconscious self-protective programs).
+**Canon usage.** [Behaviour Change §9](behaviour-change.md) (the deepest blocker on behavior change); §19 (trauma as the deeper substrate of unconscious self-protective programs).
 
 ---
 
@@ -335,9 +335,9 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 - **Curiosity is reward-like anticipation.** The reward signal fires *before* the answer arrives; the brain treats upcoming information as valuable before it receives it. This supports open-loop storytelling, good onboarding questions, and product explanations that make the customer genuinely want the answer.
 - **Incidental material can ride the curiosity window.** A brand, feature claim, teammate's name, or pricing detail co-presented with the answer may be remembered better when it lands inside a genuine curiosity state. Treat this as a design hypothesis to test in context.
-- **High-curiosity states can make Consideration Activators cheaper to install.** Per [behaviour-change.md §9](behaviour-change.md), Consideration Activators is the loader for new Job Graphs. When the customer arrives actively wondering, the same Consideration Activators content should land with stronger memory support. Design intake flows that *open* a curiosity loop before they *deliver* the Consideration Activators.
+- **High-curiosity states can make Consideration Activators cheaper to install.** Per [Behaviour Change §9](behaviour-change.md), Consideration Activators is the loader for new Job Graphs. When the customer arrives actively wondering, the same Consideration Activators content should land with stronger memory support. Design intake flows that *open* a curiosity loop before they *deliver* the Consideration Activators.
 
-**Canon usage.** [behaviour-change.md §9](behaviour-change.md) (curiosity as a driving force in behavior change); §11 (reward prediction error — anticipation of novel information fires dopamine before the information arrives).
+**Canon usage.** [Behaviour Change §9](behaviour-change.md) (curiosity as a driving force in behavior change); §11 (reward prediction error — anticipation of novel information fires dopamine before the information arrives).
 
 ---
 
@@ -356,9 +356,9 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 - **Aligned use serves the customer's Big Job.** Duolingo's variable-reward streaks drive *"I want to learn this language"*; Strava's segment PRs drive *"I want to improve my fitness"*; a journaling app's surprise prompts drive *"I want to build a reflection habit"*; an unread-email count drives *"I want to stay on top of correspondence."*
 - **Extraction use runs after the customer's Big Job collapses.** Slot machines, infinite-scroll engagement farming, dating-app match-rationing, gacha lootbox monetization, and compulsion-trigger push notifications can keep behavior running while the customer's higher-level Job gets worse.
 - **The audit signal:** power users who self-report *"I can't stop using this and it's making my life worse."* The mechanic has escaped its Big-Job constraint and is running as a pure dopamine extractor — the structural signature of dark-pattern design, operationally distinct from product-market fit.
-- **The Red Queen compounds in this category** ([value-creation.md §6](value-creation.md)). When several competitors run variable-reward loops at maximum intensity, the engagement-design floor rises — every entrant is increasingly forced into addictive-design territory just to compete on session length. Decide deliberately whether to compete in it (and accept the dark-pattern risk) or differentiate against it (the *"time well spent"* positioning).
+- **The Red Queen compounds in this category** ([Value Creation §6](value-creation.md)). When several competitors run variable-reward loops at maximum intensity, the engagement-design floor rises — every entrant is increasingly forced into addictive-design territory just to compete on session length. Decide deliberately whether to compete in it (and accept the dark-pattern risk) or differentiate against it (the *"time well spent"* positioning).
 
-**Canon usage.** §11 (reward prediction error — the underlying teaching signal that variable-reward designs exploit); [value-creation.md §18](value-creation.md) (gamification — use with care); [behaviour-change.md §11](behaviour-change.md) (durability via habit reuse).
+**Canon usage.** §11 (reward prediction error — the underlying teaching signal that variable-reward designs exploit); [Value Creation §18](value-creation.md) (gamification — use with care); [Behaviour Change §11](behaviour-change.md) (durability via habit reuse).
 
 ---
 
@@ -372,16 +372,16 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 **Plain-English explanation.** The clinical conception of trauma — a single sharp event leaving a clear diagnostic mark — is the visible tip of a larger distribution. Childhood adversity can shape adult attention, threat response, relationship behavior, and self-protection outside conscious access.
 
-**Advanced Jobs To Be Done interpretation.** Childhood adversity is one mechanism that can install long-running self-protective Jobs around safety, status, belonging, control, or identity. In AJTBD, these Jobs carry the `unconscious` property: the person performs the Job, but cannot accurately name the Job or the need it serves (see [job-types-and-properties.md §4](job-types-and-properties.md)).
+**Advanced Jobs To Be Done interpretation.** Childhood adversity is one mechanism that can install long-running self-protective Jobs around safety, status, belonging, control, or identity. In AJTBD, these Jobs carry the `unconscious` property: the person performs the Job, but cannot accurately name the Job or the need it serves (see [Job Types and Properties §4](job-types-and-properties.md)).
 
 - **Some adult purchase decisions are routed through `unconscious` Jobs.** A customer who reports buying a luxury car *"for the engineering"* may, underneath, be performing the Big Job *"I want to prove to my father (or to my younger self) that I made it."* A customer paying $400/month for therapy *"to optimize productivity"* may be performing *"I want to finally feel safe in my own skin."* Treat these as AJTBD hypotheses to test through interview depth and behavior.
 - **The Job is still a Job when the customer cannot name it.** It still has State A, expected State B, success criteria, emotion, and a higher-level Job. The `unconscious` property means the researcher reaches it through repeated behavior, spending, avoidance, contradictions, and emotional spikes rather than through direct self-report.
 - **The deepest layer of motivation is rarely surfaced by direct questioning.** Same finding as Kegan's *Immunity to Change* (§16): customers protect unconscious commitments. The diagnostic moves that surface them work by routing *around* the conscious self-report and surfacing the protective program underneath:
     - the *"what could go wrong?"* probe;
     - the *"in order to do what?"* laddering question repeated 3-5 times;
-    - the personal-Job interview move in B2B ([job-structure.md §16](job-structure.md)).
+    - the personal-Job interview move in B2B ([Job Structure §16](job-structure.md)).
 
-**Canon usage.** [job-types-and-properties.md §4](job-types-and-properties.md) (`conscious` / `unconscious` as a Job property); [behaviour-change.md §9](behaviour-change.md) (Immunity to Change as the operational hook for unconscious self-protective commitments); §10 (confabulation, introspection limits, and narrator limits); [job-structure.md §16](job-structure.md) (B2B personal-Job laddering).
+**Canon usage.** [Job Types and Properties §4](job-types-and-properties.md) (`conscious` / `unconscious` as a Job property); [Behaviour Change §9](behaviour-change.md) (Immunity to Change as the operational hook for unconscious self-protective commitments); §10 (confabulation, introspection limits, and narrator limits); [Job Structure §16](job-structure.md) (B2B personal-Job laddering).
 
 ---
 
@@ -395,7 +395,7 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 **Advanced Jobs To Be Done interpretation.** AJTBD borrows the term: the *Critical Chain of Jobs* is the sequence of Jobs that must all be performed for a higher-level Job to be achieved. Completion depends on every required link.
 
-**Canon usage.** [critical-chain.md](critical-chain.md) (the full treatment); [value-creation.md §1, §18](value-creation.md); [ajtbd-key-theses.md §10](ajtbd-key-theses.md).
+**Canon usage.** [Critical Chain](critical-chain.md) (the full treatment); [Value Creation §1, §18](value-creation.md); [AJTBD key theses §10](ajtbd-key-theses.md).
 
 ---
 
@@ -409,7 +409,7 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 **Advanced Jobs To Be Done interpretation.** AJTBD arrived at this thesis from the Job/value logic — because value is energy efficiency for the brain in performing a Job (outcome per cost, §2), the limit case is a Job performed with no product interaction, no decision, no attention, no visible effort — maximum outcome at minimum cost overhead.
 
-**Canon usage.** [ajtbd-key-theses.md §23](ajtbd-key-theses.md) (the invisible-product limit case); [value-creation.md §1, §14](value-creation.md).
+**Canon usage.** [AJTBD key theses §23](ajtbd-key-theses.md) (the invisible-product limit case); [Value Creation §1, §14](value-creation.md).
 
 ---
 
@@ -431,10 +431,10 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 **Advanced Jobs To Be Done interpretation.** Three operational consequences:
 
 - **Conversion, activation, and first-impression design target Prediction mode.** Lindgaard et al. (2006) shows very-fast visual-appeal judgment for web homepages; ads, storefronts, packaging, and product first encounters are the broader AJTBD application (§13). Design for the prediction the customer arrived with.
-- **Activation/Aha-Moment design forces Prediction-error mode.** A positive prediction error ([value-creation.md §12](value-creation.md)) is a mismatch between prediction and reality. The Aha Moment is that positive prediction-error event in product experience — *"oh, this is actually doing it."* Design the first session to create a deliberate prediction-error spike before the customer's attention drifts.
+- **Activation/Aha-Moment design forces Prediction-error mode.** A positive prediction error ([Value Creation §12](value-creation.md)) is a mismatch between prediction and reality. The Aha Moment is that positive prediction-error event in product experience — *"oh, this is actually doing it."* Design the first session to create a deliberate prediction-error spike before the customer's attention drifts.
 - **Before trying to persuade, identify what would force an update.** If the customer is running cached prediction, the lever is not more explanation; it is a violated prior — unexpected proof, missing assumed risk, peer evidence, or first-hand trial that makes Prediction-error mode engage.
 
-**Canon usage.** §23 (predictive processing as the emerging unifying lens — System 1/2 are operating modes under that lens); §11 (reward prediction error and the energy cost of model updates explains why Prediction-error mode is metabolically expensive and therefore rare); §10 (confabulation — System 2 constructing post-hoc rationalizations for System 1 decisions); [value-creation.md §12](value-creation.md) (Aha Moment as the product-experience Positive Prediction Error); §13 (50-ms web-homepage visual-appeal evidence and the broader AJTBD first-contact application).
+**Canon usage.** §23 (predictive processing as the emerging unifying lens — System 1/2 are operating modes under that lens); §11 (reward prediction error and the energy cost of model updates explains why Prediction-error mode is metabolically expensive and therefore rare); §10 (confabulation — System 2 constructing post-hoc rationalizations for System 1 decisions); [Value Creation §12](value-creation.md) (Aha Moment as the product-experience Positive Prediction Error); §13 (50-ms web-homepage visual-appeal evidence and the broader AJTBD first-contact application).
 
 ---
 
@@ -463,7 +463,7 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 **Advanced Jobs To Be Done interpretation.** The customer arrives at every product touchpoint with a prediction already running — value, price, fit, feel, status, future use — assembled from advertising, brand, peer recommendation, prior experience, identity, and context. The product either confirms, exceeds, or falls below that prediction. AJTBD uses predictive processing as a synthesis lens; the core methodology rests on the established components in the earlier sections.
 
-**Canon usage.** §1 (allostasis as predictive energy regulation); §3 (common valuation register); §4 (purchase-decision neuroscience); §11 (reward prediction error); §22 (dual-process cognition as prediction/update modes); [value-creation.md §4–§6](value-creation.md) (prediction, positive and negative prediction errors, and the rising prediction bar).
+**Canon usage.** §1 (allostasis as predictive energy regulation); §3 (common valuation register); §4 (purchase-decision neuroscience); §11 (reward prediction error); §22 (dual-process cognition as prediction/update modes); [Value Creation §4–§6](value-creation.md) (prediction, positive and negative prediction errors, and the rising prediction bar).
 
 ---
 
@@ -475,9 +475,9 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 
 **Plain-English explanation.** Faced with a value or risk it can't measure, the brain reaches for a signal it can — what others did, who recommends it, how established the vendor looks.
 
-**Advanced Jobs To Be Done interpretation.** A customer can't directly measure whether a Critical Chain will run end-to-end — the Probability-of-the-Outcome term in the value formula (see [critical-chain.md §3](critical-chain.md)). So they substitute trust and social-status signals — brand, reviews, customer logos, peer recommendations — as a proxy for that completability forecast. A vendor with weaker Core Jobs but strong trust signals can beat a better one without them.
+**Advanced Jobs To Be Done interpretation.** A customer can't directly measure whether a Critical Chain will run end-to-end — the Probability-of-the-Outcome term in the value formula (see [Critical Chain §3](critical-chain.md)). So they substitute trust and social-status signals — brand, reviews, customer logos, peer recommendations — as a proxy for that completability forecast. A vendor with weaker Core Jobs but strong trust signals can beat a better one without them.
 
-**Canon usage.** [critical-chain.md §3](critical-chain.md) (the completability forecast and its trust / social-status proxies).
+**Canon usage.** [Critical Chain §3](critical-chain.md) (the completability forecast and its trust / social-status proxies).
 
 ---
 

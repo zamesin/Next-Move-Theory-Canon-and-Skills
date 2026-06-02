@@ -1,6 +1,6 @@
 # Barrier Removal
 
-This file is the canon page on **Barrier Removal** in AJTBD: the work of making a new Job Graph executable in reality for a specific segment. It connects [value-creation.md](value-creation.md), [critical-chain.md](critical-chain.md), [consideration-activators.md](consideration-activators.md), [communication.md](communication.md), and [behaviour-change.md](behaviour-change.md).
+This file is the canon page on **Barrier Removal** in AJTBD: the work of making a new Job Graph executable in reality for a specific segment. It connects [Value Creation](value-creation.md), [Critical Chain](critical-chain.md), [Consideration Activators](consideration-activators.md), [Communication](communication.md), and [Behaviour Change](behaviour-change.md).
 
 ---
 
@@ -36,7 +36,7 @@ This file is the canon page on **Barrier Removal** in AJTBD: the work of making 
 
 **The conversion diagnostic is strict:** if the chain cannot run, fix the Barrier; if the chain can run but the customer predicts a break, reduce the fear; if the chain ran and still delivered below prediction, improve value or repair the chain break that produced the Problem. These are different failures with different fixes.
 
-Concrete Consideration-Activators-loading acts that reduce specific fears — live import previews, $1 test payments, ZIP/state support checks, same-segment case studies that name the feared break — are unpacked in [consideration-activators.md](consideration-activators.md).
+Concrete Consideration-Activators-loading acts that reduce specific fears — live import previews, $1 test payments, ZIP/state support checks, same-segment case studies that name the feared break — are unpacked in [Consideration Activators](consideration-activators.md).
 
 ## 5. Barriers cluster into six recurring classes
 
@@ -77,8 +77,8 @@ Concrete Consideration-Activators-loading acts that reduce specific fears — li
 
 ## Cross-references
 
-- [value-creation.md](value-creation.md) — value as energy efficiency (outcome/cost), value mechanics, the *Aha Moment* / *Problem* as drivers of behaviour change.
-- [critical-chain.md](critical-chain.md) — chain-breaks, Tax Jobs, preemptive avoidance, and mechanics for fixing broken chains.
-- [consideration-activators.md](consideration-activators.md) — Consideration Activators components and why real blockers are not Consideration Activators.
-- [communication.md](communication.md) — how Barrier reality and fear-reduction claims show up in messages, landing pages, and sales.
-- [behaviour-change.md](behaviour-change.md) — forces that drive and block behavior change.
+- [Value Creation](value-creation.md) — value as energy efficiency (outcome/cost), value mechanics, the *Aha Moment* / *Problem* as drivers of behaviour change.
+- [Critical Chain](critical-chain.md) — chain-breaks, Tax Jobs, preemptive avoidance, and mechanics for fixing broken chains.
+- [Consideration Activators](consideration-activators.md) — Consideration Activators components and why real blockers are not Consideration Activators.
+- [Communication](communication.md) — how Barrier reality and fear-reduction claims show up in messages, landing pages, and sales.
+- [Behaviour Change](behaviour-change.md) — forces that drive and block behavior change.

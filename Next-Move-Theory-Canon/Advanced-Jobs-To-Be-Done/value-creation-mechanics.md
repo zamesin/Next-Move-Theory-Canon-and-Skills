@@ -1,8 +1,8 @@
 # Value-Creation Mechanics — the Canonical Catalog
 
-The foundational catalog of value-creation mechanics referenced from [value-creation.md §11](value-creation.md). Each mechanic is one operational way to raise the energy-efficiency ratio of a Solution × Job pairing (per [value-creation.md §3](value-creation.md)) — by raising **P** (probability the Solution performs the Job at criteria), raising **Outcome** (criteria-met-better), or lowering **Cost** (time, money, effort, cognitive load, negative emotion, Tax Jobs).
+The foundational catalog of value-creation mechanics referenced from [Value Creation §11](value-creation.md). Each mechanic is one operational way to raise the energy-efficiency ratio of a Solution × Job pairing (per [Value Creation §3](value-creation.md)) — by raising **P** (probability the Solution performs the Job at criteria), raising **Outcome** (criteria-met-better), or lowering **Cost** (time, money, effort, cognitive load, negative emotion, Tax Jobs).
 
-> **For the full operational catalog of 100+ mechanics** across the four Next Move Theory pillars — with detailed how-tos, decision tables, per-mechanic risks, combinations, and adjacent business-task mechanics (retention, pricing, go-to-market, scaling) — see [`Next-Move-Theory/mechanics-catalog.md`](../Next-Move-Theory/mechanics-catalog.md) (internal-only).
+> **For the full operational catalog of 100+ mechanics** across the four Next Move Theory pillars — with detailed how-tos, decision tables, per-mechanic risks, combinations, and adjacent business-task mechanics (retention, pricing, go-to-market, scaling) — see [Mechanics Catalog](../Next-Move-Theory/mechanics-catalog.md) (internal-only).
 
 ---
 
@@ -13,7 +13,7 @@ The foundational catalog of value-creation mechanics referenced from [value-crea
 
 **Examples:** AirPods killed *"untangle my headphones"*; Face ID killed *"type my password"*; Apple Pay killed *"reach for my wallet"*; Tesla's stripped-down interior killed *"find the right knob"*; Square's QR-tipping killed *"find cash to leave a tip"*; auto-pay killed *"remember to send the credit card payment by the 12th"*.
 
-**Deeper:** [value-creation.md §14.2](value-creation.md); [`Next-Move-Theory/subtraction.md`](../Next-Move-Theory/subtraction.md).
+**Deeper:** [Value Creation §14.2](value-creation.md); [Subtraction](../Next-Move-Theory/subtraction.md).
 
 ---
 
@@ -24,7 +24,7 @@ The foundational catalog of value-creation mechanics referenced from [value-crea
 
 **Examples:** Just Eat's London experiment found dark-kitchen density below 25-min delivery produced a step-change in retention; DoorDash reduced kitchen-prep latency via restaurant tablets and unlocked courier capacity; Stripe shipped instant payouts where banks had taken 2–3 days; ChatGPT collapsed *"find template → format headings → draft → restructure"* from hours to seconds; modern checkouts collapsed *"enter address + card + verification"* into a single tap (Apple Pay, Shop Pay).
 
-**Deeper:** [`critical-chain.md §9`](critical-chain.md).
+**Deeper:** [Critical Chain §9](critical-chain.md).
 
 ---
 
@@ -44,7 +44,7 @@ The product performs several of the customer's Jobs with one Solution — raisin
 
 **Examples:** Premium bottled water ($10/bottle) performs the Core Job *hydrate* but links to *"create aesthetics at my dinner table"*; Apple's MacBook performs *"do creative knowledge work"* and links to *"signal status and aesthetic taste"*; Patagonia links *outdoor clothing* to *"signal my values around environmental responsibility"*; an AJTBD course links *learn product methodology* to multiple Big Jobs at once — *grow my career, build a side project, consult, become a respected practitioner.*
 
-**Deeper:** [value-creation.md §16](value-creation.md).
+**Deeper:** [Value Creation §16](value-creation.md).
 
 ---
 
@@ -55,7 +55,7 @@ The product performs several of the customer's Jobs with one Solution — raisin
 
 **Examples:** Tesla deliberately understates 0–60 acceleration in marketing for newer models so the test drive over-delivers; Wealthfront's onboarding sets explicit return expectations *below* historical S&P returns so the first quarter reads as positive; Lenny Rachitsky's newsletter explicitly says *"this is not a step-by-step playbook — it's a synthesis of patterns"* before the read; modern SaaS-onboarding screens that say *"this will take 4 minutes"* and then take 3.
 
-**Deeper:** [value-creation.md §6](value-creation.md).
+**Deeper:** [Value Creation §6](value-creation.md).
 
 ---
 
@@ -84,7 +84,7 @@ The product performs several of the customer's Jobs with one Solution — raisin
 
 **Examples:** Square's tip screen removed the awkwardness of choosing a tip while the barista watches; TurboTax removed *"am I doing this wrong"* by adding accuracy guarantees; insurance products sell *"peace of mind tonight,"* not *"fewer claims"*; therapy-matching services sell *"someone who actually understands me,"* not *"licensed therapist nearby"*; Wealthfront sells *"you'll be OK in retirement,"* not *"diversified asset allocation."*
 
-**Deeper:** [`scientific-foundations.md §13`](scientific-foundations.md) (loss aversion).
+**Deeper:** [Scientific Foundations §13](scientific-foundations.md) (loss aversion).
 
 ---
 
@@ -95,7 +95,7 @@ The product performs several of the customer's Jobs with one Solution — raisin
 
 **Examples:** Tesla collapsed dealer + finance + service into one company; in-house procurement at large enterprises collapses *vendor → distributor → procurement → end-user*; Salesforce's full-suite play absorbs Marketo + Service Cloud + Tableau roles; Apple's vertical integration (chip → device → OS → store → service) collapses every traditional consumer-electronics hand-off.
 
-**Deeper:** [`critical-chain.md §11`](critical-chain.md).
+**Deeper:** [Critical Chain §11](critical-chain.md).
 
 ---
 
@@ -106,7 +106,7 @@ The product performs several of the customer's Jobs with one Solution — raisin
 
 **Examples:** Free trials and freemium tiers (Notion, Linear, ChatGPT free); *"first month free, no card"* in B2B SaaS; tripwire offerings — disproportionately high value at a low price for first-time customers; Skillshare's free-class introductory experience; Stripe's *"9 lines of code, test mode works without an account"* — value visible before money or onboarding.
 
-**Deeper:** [value-creation.md §8](value-creation.md).
+**Deeper:** [Value Creation §8](value-creation.md).
 
 ---
 
@@ -126,7 +126,7 @@ The most-skipped baseline. **Until the Core Job lands at the focus segment's suc
 
 **Examples:** Chrome's address bar performs *"open the news site whose domain I half-remember"* with the criterion *"<3 seconds, no extra clicks"*; Wealthfront performs *"rebalance my portfolio quarterly without my involvement"* with the criterion *"I see the projected balance at 65 in plain English"*; Stripe performs *"accept online payments turnkey"* with the criterion *"integrate in one afternoon with 9 lines of code."*
 
-**Deeper:** [value-creation.md §9](value-creation.md).
+**Deeper:** [Value Creation §9](value-creation.md).
 
 ---
 
@@ -146,7 +146,7 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** Stripe Checkout fixed *"I don't know what an API key is"* for local merchants who had been blocked at integration; Plaid fixed *"upload bank statements as PDFs"* for digital mortgage applications; TurboTax fixed *"will the IRS catch a mistake"* by adding accuracy guarantees; modern telehealth fixed *"the video call won't connect after I've filled out a 30-minute intake form"* with end-to-end session reliability.
 
-**Deeper:** [`critical-chain.md §2, §11`](critical-chain.md).
+**Deeper:** [Critical Chain §2, §11](critical-chain.md).
 
 ---
 
@@ -157,14 +157,14 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** Stripe Checkout absorbed *"explain to a non-technical merchant how to integrate payments"* — a Job Stripe never had in their YC-stage launch market; Notion Enterprise absorbed *"pass IT security review with SOC 2, SAML, SCIM, audit log"* — Jobs Notion never had at the individual / small-team level; Zoom for Education absorbed *"FERPA-compliant waiting rooms, breakout rooms, locked meetings"* during 2020 K-12 expansion.
 
-**Deeper:** [`critical-chain.md §6, §11`](critical-chain.md).
+**Deeper:** [Critical Chain §6, §11](critical-chain.md).
 
 ---
 
 ### Take the Job off the customer entirely (done-for-you)
 *Забрать выполнение работы с человека*
 
-**Convert the product from a *tool* into a *service*.** The customer was performing the Job; now you perform it for them. The strongest form of value compression — the customer's chain shrinks by the entire Job, not just a step inside it. Carries a money premium that the *done-for-me-first* segment will pay (see [value-creation.md §10](value-creation.md)).
+**Convert the product from a *tool* into a *service*.** The customer was performing the Job; now you perform it for them. The strongest form of value compression — the customer's chain shrinks by the entire Job, not just a step inside it. Carries a money premium that the *done-for-me-first* segment will pay (see [Value Creation §10](value-creation.md)).
 
 **Examples:** Robot vacuum vs manual vacuuming; Wealthfront vs DIY rebalancing; Belong / Mynd vs self-managed rental property; DoorDash vs cooking; Bench vs DIY bookkeeping; modern AI agents performing entire workflows (code-review, customer-outreach, document-drafting) end-to-end.
 
@@ -177,7 +177,7 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** Typeform's natural next Job after *"build the form, collect responses"* is *"analyze and respond to responses"* — Typeform's Insights and integrations expand into this; Figma's natural next Job after design is implementation handoff — Dev Mode performs that Job; after-sale auto-service contracts on car sales; tax-advisor add-on after TurboTax filing; Carfax adding mortgage referral after vehicle-history report; a kitchen-and-bath remodel firm cross-selling appliances after the renovation.
 
-**Deeper:** [`critical-chain.md §9`](critical-chain.md).
+**Deeper:** [Critical Chain §9](critical-chain.md).
 
 ---
 
@@ -188,7 +188,7 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** Lenny's Newsletter performs the Orientation Job *"understand how to be a great product person"* and routes paying readers to its courses and recommended tools; SmartAsset performs *"figure out my retirement plan"* and routes to advisor partners; Bench's blog performs *"understand small-business bookkeeping"* and routes to Bench's service; Coursera's recommendation engine performs *"choose what to learn next"* and routes to its catalog; The Wirecutter performs *"choose the best version of this product"* and routes to merchant affiliates.
 
-**Deeper:** [`job-types-and-properties.md`](job-types-and-properties.md); [`consideration-activators.md`](consideration-activators.md).
+**Deeper:** [Job Types and Properties](job-types-and-properties.md); [Consideration Activators](consideration-activators.md).
 
 ---
 
@@ -199,7 +199,7 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** A free chapter of a book; free intro lesson on Coursera / Skillshare; the first analysis free at a market-research consultancy; chatbot products that deliver a partial answer in the free tier and full reasoning in the paid; financial advisors offering a free financial-plan review as the first slice; a CRM tool's *"see your top 10 leads scored — upgrade to see all 1,000."*
 
-**Deeper:** [value-creation.md §12](value-creation.md) (Aha Moment placement).
+**Deeper:** [Value Creation §12](value-creation.md) (Aha Moment placement).
 
 ---
 
@@ -210,18 +210,18 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** Patek Philippe sells *"signal who I am to my peers"* through the watch; Tesla's interior + acceleration profile sell *"competence + status"* through the car; Apple Vision Pro sells *"belong to the early-adopter tribe"*; a Peloton bike sells *"competence in fitness"* visible to the household; Mercedes-Maybach sells *"status + autonomy"* (chauffeur-implied); premium bottled water (Voss, Fiji) sells *"aesthetics at my dinner table."*
 
-**Deeper:** [`scientific-foundations.md §5-7`](scientific-foundations.md).
+**Deeper:** [Scientific Foundations §5-7](scientific-foundations.md).
 
 ---
 
 ### Better meet the success criteria of Core Jobs / Big Jobs
 *Лучше выполнять критерии успеха Core Jobs / Big Jobs*
 
-**Perform the same Job *better against the criteria the focus segment uses to evaluate it*.** Different segments value different criteria — the priority order over criteria is what makes them different segments ([`segmentation.md`](segmentation.md)). The mechanic is: identify which one or several criteria dominate for your focus segment, raise performance on those specifically.
+**Perform the same Job *better against the criteria the focus segment uses to evaluate it*.** Different segments value different criteria — the priority order over criteria is what makes them different segments ([Segmentation](segmentation.md)). The mechanic is: identify which one or several criteria dominate for your focus segment, raise performance on those specifically.
 
 **Examples:** Uber's tariff ladder — same Big Job *get from A to B*, different criteria per tier: Comfort raises *clean cabin, recent-model car, quiet driver*; Black raises *luxury vehicle, driver in formal attire*; XL raises *6+ seats, room for luggage*. Apple raises *aesthetics, build quality, ecosystem coherence* against the same Core Job other phones perform. Bloomberg Terminal raises *latency, breadth of data feeds, keystroke speed* against the same financial-data Core Job.
 
-**Deeper:** [value-creation.md §9, §10, §11](value-creation.md).
+**Deeper:** [Value Creation §9, §10, §11](value-creation.md).
 
 ---
 
@@ -250,7 +250,7 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** Plaid's instant account-linking killed the document-cycle in digital mortgage applications (lender requests doc A → submit → asks for B → submit → asks for C that could have been asked at A); modern PSA systems front-load tax requirements; SOC-2 audit firms that ask for the full evidence list upfront vs. iteratively; TurboTax's *"let's collect all your forms at once"* import flow replaced the cycle where the user had to re-enter when something was missing.
 
-**Deeper:** [`critical-chain.md §8`](critical-chain.md).
+**Deeper:** [Critical Chain §8](critical-chain.md).
 
 ---
 
@@ -261,12 +261,12 @@ Perform a Job without the Problem the customer has been hitting in their current
 
 **Examples:** Tesla owns sales + service + financing — collapses the typical car-buy hand-off sequence (dealer → finance → service department) into one company. Stripe owns merchant-onboarding + payments + reconciliation + dispute-handling. Warby Parker owns prescription + frames + retail. Zappos owns service + fulfillment. In healthcare, integrated systems (Kaiser Permanente, Mayo) collapse the GP → lab → specialist → primary-care hand-off chain that breaks routinely in fragmented systems.
 
-**Deeper:** [`critical-chain.md §7, §11`](critical-chain.md).
+**Deeper:** [Critical Chain §7, §11](critical-chain.md).
 
 ---
 
 ## How §11 picks from this catalog
 
-[value-creation.md §11](value-creation.md) maps each segment's priority criterion (or criteria) to the lead mechanic(s) to test first. The full set above is what §11 picks from. Real value-design sessions layer two or three mechanics, but the *lead* mechanic is chosen against the segment's priority criterion (per [value-creation.md §10](value-creation.md)).
+[Value Creation §11](value-creation.md) maps each segment's priority criterion (or criteria) to the lead mechanic(s) to test first. The full set above is what §11 picks from. Real value-design sessions layer two or three mechanics, but the *lead* mechanic is chosen against the segment's priority criterion (per [Value Creation §10](value-creation.md)).
 
-For operational how-tos — when to apply each mechanic, what to test before building, common failure modes, layered combinations, and the broader 100+ catalog including go-to-market, retention, pricing, scaling, exit-from-direct-competition — see internal-only [`Next-Move-Theory/mechanics-catalog.md`](../Next-Move-Theory/mechanics-catalog.md).
+For operational how-tos — when to apply each mechanic, what to test before building, common failure modes, layered combinations, and the broader 100+ catalog including go-to-market, retention, pricing, scaling, exit-from-direct-competition — see internal-only [Mechanics Catalog](../Next-Move-Theory/mechanics-catalog.md).

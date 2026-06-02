@@ -10,7 +10,7 @@ Most of what a product team will ever decide — whether to start an initiative,
 
 ## 1. RAT is a written list of positively-stated risky assumptions — a cause-and-effect chain rooted in Segments and Jobs
 
-Every new initiative — *any product, any feature, any market entry, any pricing change, any new channel*, without exception — is a chain of cause-and-effect-linked risky assumptions, rooted in **Segments and Jobs**: the segments we serve and the Core Jobs we choose to compete on (per [ajtbd-key-theses.md §12](../AJTBD/ajtbd-key-theses.md)).
+Every new initiative — *any product, any feature, any market entry, any pricing change, any new channel*, without exception — is a chain of cause-and-effect-linked risky assumptions, rooted in **Segments and Jobs**: the segments we serve and the Core Jobs we choose to compete on (per [AJTBD key theses §12](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md)).
 
 **The RAT is a *written* list of positively-stated risky assumptions on which the initiative's success depends** — every link of the chain, in a form falsifiable by a single experiment. The form is *positive* — *"the market is large enough"* not *"the market might be too small"*; *"the segment pays at our price"* not *"customers might not pay."* The positive form tells the team what to *confirm,* not what to *worry about.*
 
@@ -30,7 +30,7 @@ Every new initiative — *any product, any feature, any market entry, any pricin
 
 - **Every assumption must be visible — the comfortable ones and the painful ones equally.** Most teams unconsciously work on a sub-list (market, segment, value, maybe demand) and skip unit economics, regulatory risk, founder-team risk, and the operational assumptions that will actually kill them. The skipped ones bet against the team silently and win silently — write down every belief the product depends on *before* the first dollar is spent on the build.
 - **The killing assumption often hides in product-specific custom risks, not in the main chain.** The chain above is the universal layer that every initiative has; the custom layer (§5) is where the assumptions specific to *this* product live.
-- **The default direction on a new initiative is subtractive, not additive.** When the team cannot decide whether to add or remove a complication, the math says remove (compare with [value-creation.md §1 Problem 1](../AJTBD/value-creation.md) — the brain's drive is to remove entities).
+- **The default direction on a new initiative is subtractive, not additive.** When the team cannot decide whether to add or remove a complication, the math says remove (compare with [Value Creation §1 Problem 1](../Advanced-Jobs-To-Be-Done/value-creation.md) — the brain's drive is to remove entities).
 
 **A worked example — Claude Code at launch.** A real RAT (rough reconstruction; the actual one belongs to the team):
 
@@ -56,7 +56,7 @@ The choice has two halves, each individually fatal:
 **Operational consequences:**
 
 - **Before committing any build budget, verify that the people performing the Core Jobs you want to compete on actually exist.** Not as team intuition — as evidence from customer interviews against the actual segment definition. *Existence is the cheapest assumption to validate; failing to validate it is the most expensive miss in product work.*
-- **Segment by Core Jobs and success criteria — not by Big Jobs and not by demographics.** Segmentation in this methodology runs through *sets of similar Core Jobs with similar success criteria and similar expected outcomes.* **The success criteria *are* the segmentation criteria** — not demographics, not firmographics, not Big-Job similarity. Two groups of people with identical demographics and the same Big Job can have inverted Core-Job sets and are different segments. (Canon treatment: [ajtbd-key-theses.md §12](../AJTBD/ajtbd-key-theses.md), [segmentation.md](../AJTBD/segmentation.md).)
+- **Segment by Core Jobs and success criteria — not by Big Jobs and not by demographics.** Segmentation in this methodology runs through *sets of similar Core Jobs with similar success criteria and similar expected outcomes.* **The success criteria *are* the segmentation criteria** — not demographics, not firmographics, not Big-Job similarity. Two groups of people with identical demographics and the same Big Job can have inverted Core-Job sets and are different segments. (Canon treatment: [AJTBD key theses §12](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md), [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md).)
 
 **The downstream consequence.** Most of the rest of this page is a methodology for making wrong-Segments-and-Jobs decisions cheaper to detect and faster to recover from. The single most leveraged hour the team spends on RAT, however, is the hour before any of that — when Segments and Jobs are being chosen for the first time.
 
@@ -90,7 +90,7 @@ The launch mode and the knowledge mode use the same calendar, the same headcount
 
 The most damaging word in the product lexicon is the *P* in *MVP.* A "Minimum Viable Product" is not a product. **It is a probe — a way of testing the set of risky assumptions the team has explicitly packaged into it, as fast and as cheaply as possible.** The set is usually small (one to a few of the top-priority assumptions from §8's formula) — but it *is* a set, and every assumption in it must be named in advance, in §1's positive form. Higham's [original 2016 framing](https://hackernoon.com/the-mvp-is-dead-long-live-the-rat-233d5d16ab02) made the same correction by abandoning the name entirely: *MVP is dead; what you build is the Riskiest Assumption Test.* The replacement name is less catchy; the surgical clarity it forces is what matters.
 
-Teams that read "Minimum Viable Product" hear *build a small version of the product you want to ship.* The mistake compounds at every step — the team scopes a small version of the wrong product (the one whose risks were never inventoried), ships it to nobody (because the segment was never confirmed), iterates on it (because identity has now attached — see [value-creation.md §1, Problem 2](../AJTBD/value-creation.md)), and only kills it after the budget is gone. The *M* and the *V* both did their job; the *P* killed the team.
+Teams that read "Minimum Viable Product" hear *build a small version of the product you want to ship.* The mistake compounds at every step — the team scopes a small version of the wrong product (the one whose risks were never inventoried), ships it to nobody (because the segment was never confirmed), iterates on it (because identity has now attached — see [Value Creation §1, Problem 2](../Advanced-Jobs-To-Be-Done/value-creation.md)), and only kills it after the budget is gone. The *M* and the *V* both did their job; the *P* killed the team.
 
 **Three operational consequences:**
 
@@ -98,7 +98,7 @@ Teams that read "Minimum Viable Product" hear *build a small version of the prod
 - **The probe's design is dictated by the risk you are testing, not by the product you want to ship.** Risk = *the segment will not pay* → probe is a price-anchored landing page to Stripe Checkout. Risk = *drivers will sabotage the product* (§5 example below) → probe is a phone call to a driver. Risk = *enterprise will not buy without SOC 2* → probe is a customer-interview call to the buyer, not an audit. The shape of the probe is downstream of the shape of the risk.
 - **An MVP must name every risky assumption it is built to test.** A single MVP can test more than one assumption — but if the team cannot list which assumptions this MVP is probing, by name and in §1's positive form, the MVP has drifted back into *small-version-of-the-product* mode and is no longer RAT.
 
-(The *concierge MVP* — founders performing the Job manually for the first cohort — is RAT's logic on the value side: buy the *can-we-deliver-the-Job-at-criteria* knowledge before building the system. Maps to mechanic #4 in [value-creation.md §18](../AJTBD/value-creation.md).)
+(The *concierge MVP* — founders performing the Job manually for the first cohort — is RAT's logic on the value side: buy the *can-we-deliver-the-Job-at-criteria* knowledge before building the system. Maps to mechanic #4 in [Value Creation §18](../Advanced-Jobs-To-Be-Done/value-creation.md).)
 
 ---
 
@@ -165,7 +165,7 @@ What floats to the top is the assumption with the highest *probability of being 
 
 **Three operational consequences:**
 
-- **Put Segments-and-Jobs validation at the top of nearly every new-product priority list.** The assumption is upstream, usually high-risk, catastrophic when wrong, and cheap to test through 15–25 [AJTBD interviews](../HowTos/conduct-ajtbd-interviews.md) before build budget is committed.
+- **Put Segments-and-Jobs validation at the top of nearly every new-product priority list.** The assumption is upstream, usually high-risk, catastrophic when wrong, and cheap to test through 15–25 [AJTBD interviews](../HowTos/basic-ajtbd-interview-guide-and-principles.md) before build budget is committed.
 - **Delegation by risk level.** Risky assumptions with expensive consequences and high probability are top-management work; cheap-and-low-probability risks are delegated down. *New products are launched by senior people; features are shipped by juniors.* The asymmetry of the formula is the reason — a feature whose worst case is *"nobody uses it"* is not a top-management problem; a market entry whose worst case is *"$5M and three years gone"* is.
 - **The denominator changes the answer.** Two assumptions equally risky and equally expensive — the one with the cheaper validation comes first. This is why concierge MVPs, fake-door tests, smoke-test landing pages, and partner phone calls beat building. *Cheaper denominator means revisiting the assumption sooner with new evidence.*
 
@@ -201,7 +201,7 @@ The antidote — *what can we drop?* — is the most under-used exercise in prod
 - *Drop the marketplace component* — run the supply side as a concierge service for the first 50 transactions.
 - *Drop the integrations* — pretend the integration exists; ask the customer to email the data manually for the first cohort.
 
-The default disposition is *drop it unless we can show the product cannot exist without it.* (The methodological inversion of feature thinking; compare [value-creation.md §1](../AJTBD/value-creation.md).)
+The default disposition is *drop it unless we can show the product cannot exist without it.* (The methodological inversion of feature thinking; compare [Value Creation §1](../Advanced-Jobs-To-Be-Done/value-creation.md).)
 
 **Sequencing principle.** A broader, scrappier version first; a narrower one next. When the broad version finds traction, the team has validated other risky assumptions along the way (segment, channel, unit-economics direction); a narrower version can then be built *on top of* the validated evidence. Starting narrow with everything custom multiplies risk by stacking specificity on top of unknowns.
 

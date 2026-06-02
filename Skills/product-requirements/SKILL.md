@@ -277,7 +277,7 @@ This stage runs WITHOUT user questions. Generate everything based on the idea an
 Read the canon:
 - `Next-Move-Theory-Canon/Next Move Theory/overview.md` — meta-framework
 - `Next-Move-Theory-Canon/Next Move Theory/product-strategy.md` — product strategy
-- `Next-Move-Theory-Canon/Algorithms/main-algorithm.md` — main algorithm
+- `Next-Move-Theory-Canon/Algorithms/the-algorithm.md` — main algorithm
 - `Next-Move-Theory-Canon/Algorithms/launch-product.md` — launch algorithm
 
 Based on the idea and business context, generate 3 business goal variants:
@@ -289,9 +289,9 @@ Based on the idea and business context, generate 3 business goal variants:
 ### Step 2.2: Generate segments (~80% market coverage)
 
 Read the canon:
-- `Next-Move-Theory-Canon/AJTBD/segmentation.md`
-- `Next-Move-Theory-Canon/AJTBD/job-structure.md`
-- `Next-Move-Theory-Canon/AJTBD/value-creation.md`
+- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md`
+- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md`
+- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md`
 - `Next-Move-Theory-Canon/UnitEconomics/growth-points.md`
 
 **Generation rules:**
@@ -596,7 +596,7 @@ For each Core Job from selected segments:
 - **For each requirement, declare:**
   - Which Core Job it serves
   - **Which Big Job it ultimately ladders to** (mandatory — feature without Big Job link is invalid)
-  - Which value mechanic from `AJTBD/value-creation.md` it implements (one of 19)
+  - Which value mechanic from `Advanced-Jobs-To-Be-Done/value-creation.md` it implements (one of 19)
 - Connection to Aha Moment: which steps lead to value activation
 
 ### 4. Onboarding and value activation
@@ -769,7 +769,7 @@ You are a product copywriter and marketer working with Ivan Zamesin's Next Move 
 Before starting, read:
 - `Next-Move-Theory-Canon/Algorithms/position-product.md` — positioning, landing formulas, one-liner
 - `Next-Move-Theory-Canon/Algorithms/increase-conversion.md` — 7 conversion factors, Aha Moment, anxiety reduction
-- `Next-Move-Theory-Canon/AJTBD/communication.md` — communication principles
+- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/communication.md` — communication principles
 - `Next-Move-Theory-Canon/Algorithms/create-acquisition-channel.md` — channels via Previous Job, viral Jobs, Activating Knowledge
 - `Next-Move-Theory-Canon/Algorithms/increase-average-check.md` — upsell mechanics
 - `Next-Move-Theory-Canon/Algorithms/increase-retention.md` — retention mechanics

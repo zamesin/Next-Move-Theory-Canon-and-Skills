@@ -2,17 +2,17 @@
 
 An AJTBD interview reconstructs a customer's motivation from what they actually did. In one 30–90 minute conversation it surfaces the **Jobs** the person performs, the **success criteria** by which they judge "good enough," the **Consideration Set** they compared at the moment of choice, the **Critical Chain** they walked, the **Aha Moments** and **Problems** along the way, and the **Barriers** that stopped them — anchored, throughout, on past performance rather than on what they say they'll do next.
 
-This guide is the distilled version: the **principles** that govern every interview and the **question bank** you actually ask. The conceptual base lives in the canon — start with [ajtbd-key-theses.md](../AJTBD/ajtbd-key-theses.md). The interview is upstream of everything else: the Jobs, criteria, and competitors it surfaces are what the strategy is later built from.
+This guide is the distilled version: the **principles** that govern every interview and the **question bank** you actually ask. The conceptual base lives in the canon — start with [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md). The interview is upstream of everything else: the Jobs, criteria, and competitors it surfaces are what the strategy is later built from.
 
 ---
 
 ## 1. Main principles
 
-1. **The question set for one Job is universal — the skill is choosing *which* Jobs to study.** Every Job, from a life-level Big Job to a tiny Micro Job, has the same eight elements ([ajtbd-key-theses.md §3](../AJTBD/ajtbd-key-theses.md)), and the same questions surface them (§7). What changes between interviews is *selection*: a customer's Job Graph holds hundreds of Jobs, interview time is fixed, and choosing the right Jobs to dig for the business problem at hand is the highest-leverage decision in the method.
+1. **The question set for one Job is universal — the skill is choosing *which* Jobs to study.** Every Job, from a life-level Big Job to a tiny Micro Job, has the same eight elements ([AJTBD key theses §3](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md)), and the same questions surface them (§7). What changes between interviews is *selection*: a customer's Job Graph holds hundreds of Jobs, interview time is fixed, and choosing the right Jobs to dig for the business problem at hand is the highest-leverage decision in the method.
 
 2. **Every interview moves a specific business goal.** You never start from a blank slate — you know which product, which stage, which business goal, and which candidate mechanic (whether it's Value, Go To Market, Growth, or any other mechanic). The strategy tells you which Jobs to dig: *"add an adjacent segment"* sends you to people paying for a variation of the same Core Jobs; *"perform the Next Job"* sends you to the Next Small Jobs in the chain; *"capture the Previous Job"* sends you to the Previous Small Jobs.
 
-3. **Study Jobs by past expenditure of money, time, and energy — never by future intent.** People are poor forecasters of their own behavior and love to fantasize: they buy gym memberships and don't go. The reliable filter is a *past* expenditure — they paid, spent time, burned energy. Future-tense intent with no past commitment is a **Fake Job** ([job-types-and-properties.md §8](../AJTBD/job-types-and-properties.md)); building for it is among the most expensive errors in product work. Screen on it: *"When did you last pay for X? What did you pay? What did you do as a result?"* The one narrow exception is B2B — a Decision Maker is paid to forecast, so you may study Jobs they're already starting to act on, knowing the Job may still never get performed ([b2b.md](../AJTBD/b2b.md)).
+3. **Study Jobs by past expenditure of money, time, and energy — never by future intent.** People are poor forecasters of their own behavior and love to fantasize: they buy gym memberships and don't go. The reliable filter is a *past* expenditure — they paid, spent time, burned energy. Future-tense intent with no past commitment is a **Fake Job** ([Job Types and Properties §8](../Advanced-Jobs-To-Be-Done/job-types-and-properties.md)); building for it is among the most expensive errors in product work. Screen on it: *"When did you last pay for X? What did you pay? What did you do as a result?"* The one narrow exception is B2B — a Decision Maker is paid to forecast, so you may study Jobs they're already starting to act on, knowing the Job may still never get performed ([B2B](../Advanced-Jobs-To-Be-Done/b2b.md)).
 
 4. **Open with an open question, then test your hypotheses — and check you didn't lead them.** Open with *"Tell me which tasks you solve with {product}"* (use the everyday word *task*, never the term *Job*). Then probe your hypotheses about trigger, context, and criteria. Then verify: *"Does this genuinely annoy you, or did I lead you?"* The open question protects against planting answers; the probe protects against the respondent not knowing what you mean or simply forgetting.
 
@@ -20,7 +20,7 @@ This guide is the distilled version: the **principles** that govern every interv
 
 6. **Record what they said — don't invent.** Copy the respondent's own words for the criteria, context, trigger, and emotions. The moment you paraphrase a Job into your own tidy wording, you've quietly swapped their Job for your hypothesis — and then you design for the hypothesis.
 
-7. **A Problem is a consequence of a Job — study Jobs first.** A Problem is what the customer feels when a Solution hired for a Job performs below its success criteria ([behaviour-change.md §7](../AJTBD/behaviour-change.md)). You can recruit people with a Problem and dig it — but always reconstruct *which Job was being performed when it fired,* or you're working a symptom.
+7. **A Problem is a consequence of a Job — study Jobs first.** A Problem is what the customer feels when a Solution hired for a Job performs below its success criteria ([Behaviour Change §7](../Advanced-Jobs-To-Be-Done/behaviour-change.md)). You can recruit people with a Problem and dig it — but always reconstruct *which Job was being performed when it fired,* or you're working a symptom.
 
 8. **Establish emotional contact before you dig.** You're talking person-to-person, not function-to-function — and without contact you never reach the Big Job, the emotions, or an honest answer to the sell. Spend the first minutes earning it (§3).
 
@@ -28,11 +28,11 @@ This guide is the distilled version: the **principles** that govern every interv
 
 10. **Always come with an offer, and sell.** The sell is the ultimate test of everything you think you learned — whether the Job is real and present, whether the money is there, whether the value and its communication land. It often teaches more than the Job study itself (§9).
 
-11. **In B2B, always study personal Jobs.** Behind every business Job (*hit the plan, cut cost, ship by Q3*) sits a personal Job (*don't get fired, get promoted, win recognition*) — and the personal Job is usually what actually moves the human. A team that sells only to the business Job loses to one that knows the personal one ([b2b.md §5](../AJTBD/b2b.md)).
+11. **In B2B, always study personal Jobs.** Behind every business Job (*hit the plan, cut cost, ship by Q3*) sits a personal Job (*don't get fired, get promoted, win recognition*) — and the personal Job is usually what actually moves the human. A team that sells only to the business Job loses to one that knows the personal one ([B2B §5](../Advanced-Jobs-To-Be-Done/b2b.md)).
 
 12. **The respondent's time is a gift — moderate the conversation to spend it well.** Some respondents ramble; letting them run costs you the information you came for. Interrupt gently and steer back — *"sorry to cut in; we have little time and a lot I still want to learn from you."* Extracting their gift sloppily wastes what they gave you.
 
-**One caveat on what interviews can reach.** Mostly-conscious Jobs (*"file my return on time," "ship the feature this sprint"*) interview cleanly. Mostly-unconscious drivers (status, identity, safety) don't — ask *"why did you buy the premium one?"* and the inner narrator returns a convincing, functional, false story ([scientific-foundations.md §10](../AJTBD/scientific-foundations.md)). For those, generate the hypothesis yourself and validate it through sales, A/B, or messaging tests — not through more direct questioning.
+**One caveat on what interviews can reach.** Mostly-conscious Jobs (*"file my return on time," "ship the feature this sprint"*) interview cleanly. Mostly-unconscious drivers (status, identity, safety) don't — ask *"why did you buy the premium one?"* and the inner narrator returns a convincing, functional, false story ([Scientific Foundations §10](../Advanced-Jobs-To-Be-Done/scientific-foundations.md)). For those, generate the hypothesis yourself and validate it through sales, A/B, or messaging tests — not through more direct questioning.
 
 ## 2. The interview arc — eight blocks
 
@@ -46,11 +46,11 @@ A fixed time budget (30 / 45 / 60 / 90 minutes), spent to extract the most valua
 6. **Sell** (§9) — 5–10 min
 7. **Get a referral** — *"Which of your colleagues or peers would you recommend I talk to?"* — 2–3 min
 
-(B2B adds a roles / deals / budget block — see [b2b.md](../AJTBD/b2b.md).)
+(B2B adds a roles / deals / budget block — see [B2B](../Advanced-Jobs-To-Be-Done/b2b.md).)
 
 ## 3. Establish emotional contact first — it's the gate to the Big Job and the emotions
 
-**Talk person-to-person, not function-to-function** — and do it in the first minutes. Without emotional contact the respondent only opens up in the second half, and you lose the part of the interview where the prime cuts live: the emotions and the Big Job. Emotions matter because they're the brain's read-out of how Jobs are being performed ([scientific-foundations.md §9](../AJTBD/scientific-foundations.md)); you can't create value against an emotion you never surfaced.
+**Talk person-to-person, not function-to-function** — and do it in the first minutes. Without emotional contact the respondent only opens up in the second half, and you lose the part of the interview where the prime cuts live: the emotions and the Big Job. Emotions matter because they're the brain's read-out of how Jobs are being performed ([Scientific Foundations §9](../Advanced-Jobs-To-Be-Done/scientific-foundations.md)); you can't create value against an emotion you never surfaced.
 
 **A firewall fires whenever you want something from someone who doesn't yet know why they should talk to you** — searching, instantly, for three answers: *Is this person a threat? Where do they rank me — above, level, below? Do I want them in my pack?* Leave the questions unanswered and the respondent checks out. The moves below answer them.
 
@@ -73,7 +73,7 @@ Either branch ends with a list of expected outcomes (Jobs). **Pick the most impo
 
 ## 5. Map the Graph fast — six directions, every question anchored on the higher-level Job
 
-With practice you map a Graph in 5–10 minutes. From any node §4 surfaced, expand up, sideways, and down. **The anchoring rule: every question carries the *expected outcome of the higher-level Job* in its frame** — that anchor is what keeps the answer inside the Graph instead of drifting ([job-graph.md §17](../AJTBD/job-graph.md)). Substitute `{braces}` with the respondent's own words.
+With practice you map a Graph in 5–10 minutes. From any node §4 surfaced, expand up, sideways, and down. **The anchoring rule: every question carries the *expected outcome of the higher-level Job* in its frame** — that anchor is what keeps the answer inside the Graph instead of drifting ([Job Graph §17](../Advanced-Jobs-To-Be-Done/job-graph.md)). Substitute `{braces}` with the respondent's own words.
 
 - **Anchor — Core Jobs:** the Jobs §4 surfaced for the Solution under study.
 - **Up — Big Jobs:** *"Why do you want {the expected outcome of the Core Job}? In order to do what?"* — ask for every Core Job, and go at least one level up.
@@ -87,13 +87,13 @@ With practice you map a Graph in 5–10 minutes. From any node §4 surfaced, exp
 
 ## 6. Get the Core / Big level right — it's the origin of the coordinate system
 
-The **Core Job** is the highest-level Job the product performs *fully* and can't climb above right now; the **Big Job** is one level above — it carries the motivation, but the product doesn't fully perform it ([ajtbd-key-theses.md §9](../AJTBD/ajtbd-key-theses.md)). Place the Core Job wrong and Previous, Next, up, and down all come out wrong — so pin the level with the **climb test** ([job-graph.md §3](../AJTBD/job-graph.md)):
+The **Core Job** is the highest-level Job the product performs *fully* and can't climb above right now; the **Big Job** is one level above — it carries the motivation, but the product doesn't fully perform it ([AJTBD key theses §9](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md)). Place the Core Job wrong and Previous, Next, up, and down all come out wrong — so pin the level with the **climb test** ([Job Graph §3](../Advanced-Jobs-To-Be-Done/job-graph.md)):
 
 1. **Start from a Job the customer named when you opened the dig (§4)** — the same open *"which tasks do you solve with our product?"* question; its answers are your candidate Core Jobs.
 2. **Does our product perform this Job *fully*, end-to-end — every sub-Job inside the product?** If **no**, it sits too high → drop one level and retry. Operational tell of "fully": most Micro Jobs underneath happen inside the product.
 3. **If yes, can we climb one level up and *still* fully perform that higher Job?** If **yes** → climb and retry from step 2. **Stop when it's *fully-performed: yes / one level up: no* — that level is the Core Job.**
 
-**Climb as high as you honestly can** — the highest level the product fully performs *today* (it rises as the product absorbs more sibling and Micro Jobs). Then validate the finished Graph by applying *"for what? / in order to do what?"* to every node ([job-graph.md §18](../AJTBD/job-graph.md)).
+**Climb as high as you honestly can** — the highest level the product fully performs *today* (it rises as the product absorbs more sibling and Micro Jobs). Then validate the finished Graph by applying *"for what? / in order to do what?"* to every node ([Job Graph §18](../Advanced-Jobs-To-Be-Done/job-graph.md)).
 
 ## 7. Dig one Job in detail — first decide: a recurring Job or a one-off?
 
@@ -102,7 +102,7 @@ The **Core Job** is the highest-level Job the product performs *fully* and can't
 - **A one-off / rarely-performed Job** the person did once or a few times — *rent an apartment, buy a house, hire an employee.* Anchor on that **one concrete past instance** and ask in the **past tense:** what they wanted that time, what they did, how it went.
 - **A high-frequency Job** the person performs many times — *take a rideshare, order food delivery.* Here you usually want **how they perform it *in general* — the typical, habitual pattern — not the single last instance** (one instance can be idiosyncratic). So ask in the **present / habitual tense** (*"usually"*), and also ask **how often** they do it.
 
-Match the framing to the Job; the two columns below give the wording for each. Three disciplines hold for both: **never stop at an abstract criterion or value** (*"fast"* → *"fast as in what? — it took 4 minutes"*; a concrete criterion has a **direction** — which axis — and a **level**, the threshold above which they feel value and below which a Problem — [job-structure.md §8](../AJTBD/job-structure.md)); **each `I want to + verb` is a separate Job** (parse a multi-verb answer like *"rent out my place **and** earn steady income"* into levels before recording); and **copy the respondent's exact words — don't invent.**
+Match the framing to the Job; the two columns below give the wording for each. Three disciplines hold for both: **never stop at an abstract criterion or value** (*"fast"* → *"fast as in what? — it took 4 minutes"*; a concrete criterion has a **direction** — which axis — and a **level**, the threshold above which they feel value and below which a Problem — [Job Structure §8](../Advanced-Jobs-To-Be-Done/job-structure.md)); **each `I want to + verb` is a separate Job** (parse a multi-verb answer like *"rent out my place **and** earn steady income"* into levels before recording); and **copy the respondent's exact words — don't invent.**
 
 ### The Job — ask in the matching tense
 
@@ -140,8 +140,8 @@ Match the framing to the Job; the two columns below give the wording for each. T
 
 The §7 bank already asks the Consideration-Activators, Fears, Barriers, alternative-solution, and Problem questions. Two concepts sharpen those answers, each with a *wider* version of a bank question:
 
-- **A Fear is not a Barrier.** A **Barrier** is an *objective* fact that makes the new way non-executable (no integration, an unsupported region, no budget code); a **Fear** is the customer's *prediction* that a Barrier, Problem, or loss will happen ([barrier-removal.md §1, §3](../AJTBD/barrier-removal.md)). The §7 bank surfaces fears about the chosen Solution; widen them across the *alternatives* too — *"What bad thing could happen if you go after {expected outcome} this way?"* — because customers fear the other ways as much as yours (to *"make idle cash work"* there's a savings account, T-bills, an index fund, real estate, each with its own Fears).
-- **The real competitive set sits at the Big Job, not the Core Job** ([job-graph.md §15](../AJTBD/job-graph.md)). Read the §7 *alternatives* answer at that level — the substitutes a customer weighs against the *Big Job* (a mattress competes with coffee for *"function on no sleep"*), not just the direct look-alikes, are who you actually compete with.
+- **A Fear is not a Barrier.** A **Barrier** is an *objective* fact that makes the new way non-executable (no integration, an unsupported region, no budget code); a **Fear** is the customer's *prediction* that a Barrier, Problem, or loss will happen ([Barrier Removal §1, §3](../Advanced-Jobs-To-Be-Done/barrier-removal.md)). The §7 bank surfaces fears about the chosen Solution; widen them across the *alternatives* too — *"What bad thing could happen if you go after {expected outcome} this way?"* — because customers fear the other ways as much as yours (to *"make idle cash work"* there's a savings account, T-bills, an index fund, real estate, each with its own Fears).
+- **The real competitive set sits at the Big Job, not the Core Job** ([Job Graph §15](../Advanced-Jobs-To-Be-Done/job-graph.md)). Read the §7 *alternatives* answer at that level — the substitutes a customer weighs against the *Big Job* (a mattress competes with coffee for *"function on no sleep"*), not just the direct look-alikes, are who you actually compete with.
 
 ## 9. Always sell — it's the ultimate test of what you think you learned
 
@@ -149,27 +149,27 @@ Once you know the Jobs, you can sell through them — so come to every interview
 
 ## 10. Two starting points
 
-- **Research among paying customers:** segment the base by margin and satisfaction, interview the profitable-and-satisfied (A/B), and prioritize Core Jobs with criteria, Consideration Activators, value, Aha Moment, and Barriers ([segmentation.md §13](../AJTBD/segmentation.md)). Output: everything you need for landing pages, communication, funnels, and onboarding.
-- **Finding segments from scratch** (no sales, or looking outside the base): recruit people who already pay a competing Solution — and choose the altitude you sample at ([segmentation.md §3, §14](../AJTBD/segmentation.md)):
+- **Research among paying customers:** segment the base by margin and satisfaction, interview the profitable-and-satisfied (A/B), and prioritize Core Jobs with criteria, Consideration Activators, value, Aha Moment, and Barriers ([Segmentation §13](../Advanced-Jobs-To-Be-Done/segmentation.md)). Output: everything you need for landing pages, communication, funnels, and onboarding.
+- **Finding segments from scratch** (no sales, or looking outside the base): recruit people who already pay a competing Solution — and choose the altitude you sample at ([Segmentation §3, §14](../Advanced-Jobs-To-Be-Done/segmentation.md)):
   - **From the broad Big Job** — the widest net: it surfaces Core Jobs and segments you'd never have imagined, but it's the longer, more expensive search *and* it raises the odds you'll end up reshaping the product to fit what you find.
   - **From the current Core Job in all its success-criteria variants, with the narrowing factors stripped off** — faster and cheaper, but a lower chance of a radically new discovery, because you're searching close to what you already do.
 
   Either way: sell on every interview, run ~60 interviews comparing segment against segment, and stop when ten in a row produce no new Jobs. Output: a Map of Segments and the choice of focus segment.
 
-Across both, the per-Job questions are universal; you choose which Jobs to dig. All else equal, importance order is **success criteria > Consideration Activators > value > Aha Moment > Barriers** — and discover the broad market before you narrow, so a filter applied too early doesn't delete an attractive segment unseen ([segmentation.md §2](../AJTBD/segmentation.md)).
+Across both, the per-Job questions are universal; you choose which Jobs to dig. All else equal, importance order is **success criteria > Consideration Activators > value > Aha Moment > Barriers** — and discover the broad market before you narrow, so a filter applied too early doesn't delete an attractive segment unseen ([Segmentation §2](../Advanced-Jobs-To-Be-Done/segmentation.md)).
 
 ---
 
 ## Cross-references
 
-- [ajtbd-key-theses.md](../AJTBD/ajtbd-key-theses.md) — the conceptual base: the eight-element Job (§3), the four levels (§9), the Critical Chain (§10), segmentation by Jobs (§12), Consideration Activators (§18), past-payment recruiting (§15), B2B specifics (§25).
-- [job-structure.md](../AJTBD/job-structure.md) — the eight elements and the per-element interview questions (§3–§10).
-- [job-graph.md](../AJTBD/job-graph.md) — the six-direction Graph-study question set (§17), the climb test (§3), Graph validation (§18), the real competitive set (§15).
-- [critical-chain.md](../AJTBD/critical-chain.md) — researching the chain in an interview (§11).
-- [segmentation.md](../AJTBD/segmentation.md) — define the broad market before narrowing, at the Big-Job or current-Core-Job altitude (§2, §3, §14); ABCDX before AJTBD-on-A/B (§13).
-- [consideration-activators.md](../AJTBD/consideration-activators.md) — the five Activators (§1) and the surfacing question (§12).
-- [behaviour-change.md](../AJTBD/behaviour-change.md) — Aha Moment and Problem (§7); receptivity windows / triggers (§8).
-- [barrier-removal.md](../AJTBD/barrier-removal.md) — Barrier vs Fear (§1, §3); Barrier interview questions (§7).
-- [job-types-and-properties.md](../AJTBD/job-types-and-properties.md) — Fake Jobs and the past-payment filter (§8).
-- [scientific-foundations.md](../AJTBD/scientific-foundations.md) — why direct "why" questions are unreliable (§10).
-- [b2b.md](../AJTBD/b2b.md) — the B2B roles / deals / budget block and personal Jobs.
+- [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — the conceptual base: the eight-element Job (§3), the four levels (§9), the Critical Chain (§10), segmentation by Jobs (§12), Consideration Activators (§18), past-payment recruiting (§15), B2B specifics (§25).
+- [Job Structure](../Advanced-Jobs-To-Be-Done/job-structure.md) — the eight elements and the per-element interview questions (§3–§10).
+- [Job Graph](../Advanced-Jobs-To-Be-Done/job-graph.md) — the six-direction Graph-study question set (§17), the climb test (§3), Graph validation (§18), the real competitive set (§15).
+- [Critical Chain](../Advanced-Jobs-To-Be-Done/critical-chain.md) — researching the chain in an interview (§11).
+- [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md) — define the broad market before narrowing, at the Big-Job or current-Core-Job altitude (§2, §3, §14); ABCDX before AJTBD-on-A/B (§13).
+- [Consideration Activators](../Advanced-Jobs-To-Be-Done/consideration-activators.md) — the five Activators (§1) and the surfacing question (§12).
+- [Behaviour Change](../Advanced-Jobs-To-Be-Done/behaviour-change.md) — Aha Moment and Problem (§7); receptivity windows / triggers (§8).
+- [Barrier Removal](../Advanced-Jobs-To-Be-Done/barrier-removal.md) — Barrier vs Fear (§1, §3); Barrier interview questions (§7).
+- [Job Types and Properties](../Advanced-Jobs-To-Be-Done/job-types-and-properties.md) — Fake Jobs and the past-payment filter (§8).
+- [Scientific Foundations](../Advanced-Jobs-To-Be-Done/scientific-foundations.md) — why direct "why" questions are unreliable (§10).
+- [B2B](../Advanced-Jobs-To-Be-Done/b2b.md) — the B2B roles / deals / budget block and personal Jobs.

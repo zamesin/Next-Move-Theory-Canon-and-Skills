@@ -1,6 +1,6 @@
 # Product Communication
 
-This file is the canon page on **communication** in AJTBD: how delivered value becomes understandable before purchase, why copy is derived from Job research rather than invented, and how pre-purchase expectations shape the first Aha Moment. It expands [ajtbd-key-theses.md §24](ajtbd-key-theses.md) and sits on top of [segmentation.md](segmentation.md), [value-creation.md](value-creation.md), [consideration-activators.md](consideration-activators.md), and [critical-chain.md](critical-chain.md) (the operational core — where the customer's walk from State A to State B lives).
+This file is the canon page on **communication** in AJTBD: how delivered value becomes understandable before purchase, why copy is derived from Job research rather than invented, and how pre-purchase expectations shape the first Aha Moment. It expands [AJTBD key theses §24](ajtbd-key-theses.md) and sits on top of [Segmentation](segmentation.md), [Value Creation](value-creation.md), [Consideration Activators](consideration-activators.md), and [Critical Chain](critical-chain.md) (the operational core — where the customer's walk from State A to State B lives).
 
 ---
 
@@ -34,7 +34,7 @@ This file is the canon page on **communication** in AJTBD: how delivered value b
 
 **Real blockers and fears are different objects.** A real blocker is a fact that prevents the Critical Chain from running: financing path, documents, logistics, compliance, payment method, data format, migration path. It is fixed by changing reality. A fear is the customer's prediction of a chain-break, unmet promise, Tax Job, personal risk, or irreversible loss: *"this broker feels shady," "I won't pull off buying a car from another state," "this workflow will fail in front of my team."* Once reality can hold the claim, communication names the fear and shows why it is prevented, absorbed, reversible, insured, or irrelevant for this Solution.
 
-**The seventh assumption is not marketing polish.** A broken chain after the customer already decided to move creates disappointment against the whole Solution. The customer does not say *"the CTA had a bug";* they update the prediction to *"this company may not perform the Big Jobs reliably"* (see [critical-chain.md §2](critical-chain.md)).
+**The seventh assumption is not marketing polish.** A broken chain after the customer already decided to move creates disappointment against the whole Solution. The customer does not say *"the CTA had a bug";* they update the prediction to *"this company may not perform the Big Jobs reliably"* (see [Critical Chain §2](critical-chain.md)).
 
 ## 3. Every message names the Core Jobs, the value, and the specific-fear work
 
@@ -86,7 +86,7 @@ Examples: **Fandango** — *movie-ticketing app for finding showtimes and buying
 
 ## 7. Consideration Activators is the content layer under ads, landing pages, content, and sales
 
-**Communication loads Consideration Activators before the customer reaches the product.** Ads, content marketing, sales scripts, demos, review pages, peer stories, and offline environments all carry the same five components (detailed canon in [consideration-activators.md](consideration-activators.md)):
+**Communication loads Consideration Activators before the customer reaches the product.** Ads, content marketing, sales scripts, demos, review pages, peer stories, and offline environments all carry the same five components (detailed canon in [Consideration Activators](consideration-activators.md)):
 
 1. **The new Job Graph is visible** — the customer sees which Core Jobs they would now perform for their Big Jobs.
 2. **The value delta is concrete** — the customer sees how much better the Big Jobs and Core Jobs land by their success criteria.
@@ -118,7 +118,7 @@ Examples: **Fandango** — *movie-ticketing app for finding showtimes and buying
 
 ## 9. Communication sets the customer's prediction before the product can beat it
 
-**Pre-purchase communication shapes the prediction the product must beat.** Brand, ads, peer stories, screenshots, pricing, reviews, sales promises, and the landing page all enter the customer's predicted value calculation before first use. The first Aha Moment is then measured against that prediction (see [value-creation.md §4–§6](value-creation.md) and [scientific-foundations.md §3, §4, §11](scientific-foundations.md) — common currency, purchase decisions, reward prediction error).
+**Pre-purchase communication shapes the prediction the product must beat.** Brand, ads, peer stories, screenshots, pricing, reviews, sales promises, and the landing page all enter the customer's predicted value calculation before first use. The first Aha Moment is then measured against that prediction (see [Value Creation §4–§6](value-creation.md) and [Scientific Foundations §3, §4, §11](scientific-foundations.md) — common currency, purchase decisions, reward prediction error).
 
 **Expectation management is therefore a value lever.** Overstated communication creates an expectation the product cannot exceed; reality lands below prediction; the customer experiences disappointment even if the product performs the Core Jobs objectively well. Under-specified communication can also fail — the customer never predicts enough value to enter the transition. The target is an honest prediction that the product can beat early.
 
@@ -132,11 +132,11 @@ Examples: **Fandango** — *movie-ticketing app for finding showtimes and buying
 
 ## Cross-references
 
-- [ajtbd-key-theses.md §24](ajtbd-key-theses.md) — short form: communication through Jobs, landing-page blocks, creative formulas.
-- [segmentation.md](segmentation.md) — focus segment, causal segmentation criteria, and proxy audiences.
-- [value-creation.md](value-creation.md) — value as energy efficiency (outcome/cost), predict-and-compare driving behaviour change, Aha Moment, expectation management.
-- [consideration-activators.md](consideration-activators.md) — the five Consideration Activators components, channels, and category-creation mechanics.
-- [critical-chain.md](critical-chain.md) — the operational core: chain structure (breaks, hand-offs, cycles, time-gaps), chain execution (predictions, interruptions, drop-offs, Solution switches, per-step emotions, knows-how vs first-time), and Previous Job / Next Job strategy.
-- [behaviour-change.md](behaviour-change.md) — behavior-change forces, trigger timing, and the familiar vs. unfamiliar Core Jobs distinction.
-- [job-structure.md](job-structure.md) — eight elements of a Job, success criteria, triggers, emotions, and the Big/Core/Small/Micro hierarchy.
-- [HowTos/increase-conversion.md](../HowTos/increase-conversion.md) — operational HowTo for repairing the path from trigger to first Aha Moment.
+- [AJTBD key theses §24](ajtbd-key-theses.md) — short form: communication through Jobs, landing-page blocks, creative formulas.
+- [Segmentation](segmentation.md) — focus segment, causal segmentation criteria, and proxy audiences.
+- [Value Creation](value-creation.md) — value as energy efficiency (outcome/cost), predict-and-compare driving behaviour change, Aha Moment, expectation management.
+- [Consideration Activators](consideration-activators.md) — the five Consideration Activators components, channels, and category-creation mechanics.
+- [Critical Chain](critical-chain.md) — the operational core: chain structure (breaks, hand-offs, cycles, time-gaps), chain execution (predictions, interruptions, drop-offs, Solution switches, per-step emotions, knows-how vs first-time), and Previous Job / Next Job strategy.
+- [Behaviour Change](behaviour-change.md) — behavior-change forces, trigger timing, and the familiar vs. unfamiliar Core Jobs distinction.
+- [Job Structure](job-structure.md) — eight elements of a Job, success criteria, triggers, emotions, and the Big/Core/Small/Micro hierarchy.
+- [Increase Conversion](../HowTos/increase-conversion.md) — operational HowTo for repairing the path from trigger to first Aha Moment.

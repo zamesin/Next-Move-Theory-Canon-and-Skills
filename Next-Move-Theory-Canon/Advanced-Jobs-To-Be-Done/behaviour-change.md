@@ -108,7 +108,7 @@ Three operational consequences follow, on three different planes — comparison,
 
 **Design flows top-down: Big-Job criteria → Core-Job criteria, not the other way.** The success criteria of *our* Core Jobs are downstream of — and must be derived against — the criteria of the Big Jobs and Super Big Jobs they serve. Every Core-Job criterion must **ladder up** to a Big-Job (or Super-Big-Job) criterion the customer cares about. *"App loads in 800 ms"* doesn't ladder up to *"generate predictable monthly income"* — and so, however true, it's irrelevant to behavior change. The common error is to optimize Core-Job criteria in isolation; local metrics look healthy, customer still doesn't switch.
 
-**Communication (Consideration Activators) goes through Big Jobs and Super Big Jobs, with *their* criteria.** Messaging at the Core-Job level alone doesn't activate; messaging that lands on the Big-Job and Super-Big-Job criteria does. (This is why Consideration Activators doctrine emphasizes Big-Job framing — see §5 and [consideration-activators.md](consideration-activators.md).)
+**Communication (Consideration Activators) goes through Big Jobs and Super Big Jobs, with *their* criteria.** Messaging at the Core-Job level alone doesn't activate; messaging that lands on the Big-Job and Super-Big-Job criteria does. (This is why Consideration Activators doctrine emphasizes Big-Job framing — see §5 and [Consideration Activators](consideration-activators.md).)
 
 **Without this condition holding, nothing downstream compounds.** Neurobiology, forces, durability, B2B specifics — they're all built on this gate. The Big-Job and Super-Big-Job success criteria are where the customer evaluates, where you must design, and where you must communicate. Get all three lined up and the rest of the document is operationalizable; miss any one of them and the rest is decoration.
 
@@ -116,13 +116,13 @@ Three operational consequences follow, on three different planes — comparison,
 
 ## 5. Consideration Activators — the mechanism that loads new Core Jobs into the customer's head
 
-Behavior change happens when **Consideration Activators** lands in the customer's head — the knowledge (or lived realization) that a more energy-efficient way to perform their Big Jobs exists, in a form they can act on. Consideration Activators can be loaded through any channel that lets the customer encounter the new way: communication (advertising, content, salesperson, peer story), social observation (seeing someone else use it), **or first-hand trial** ("I tried it, and — *oh, it actually works*"). Every act of behavior change is, in its core, an act of Consideration Activators loading — propositional or experiential. **Loading Consideration Activators, by any of these channels, is the operational lever for changing customer behavior.** (Full treatment: [consideration-activators.md](consideration-activators.md). Algorithms for loading: [`HowTos/load-consideration-activators.md`](../HowTos/load-consideration-activators.md). A parallel treatment in [`ajtbd-key-theses.md`](ajtbd-key-theses.md).)
+Behavior change happens when **Consideration Activators** lands in the customer's head — the knowledge (or lived realization) that a more energy-efficient way to perform their Big Jobs exists, in a form they can act on. Consideration Activators can be loaded through any channel that lets the customer encounter the new way: communication (advertising, content, salesperson, peer story), social observation (seeing someone else use it), **or first-hand trial** ("I tried it, and — *oh, it actually works*"). Every act of behavior change is, in its core, an act of Consideration Activators loading — propositional or experiential. **Loading Consideration Activators, by any of these channels, is the operational lever for changing customer behavior.** (Full treatment: [Consideration Activators](consideration-activators.md). Algorithms for loading: [Load Consideration Activators](../HowTos/load-consideration-activators.md). A parallel treatment in [AJTBD key theses](ajtbd-key-theses.md).)
 
 For behavior change to start, the customer must learn five units of information:
 
 1. **A new Job Graph for performing their Big Jobs exists.** Specifically: with *this* Job Graph, with *these* Small Jobs and Core Jobs (ours), to *these* concrete success criteria. This is the customer's knowledge of *what* they would now perform — *rent a car through Zipcar*, *outsource the rental to Belong*, *file through TurboTax* — not yet the value claim.
 2. **The new Job Graph performs the Big Job more efficiently than the customer's current way.** The Core Jobs in our Graph sit one level below the Big Job and deliver it at better success criteria — cheaper enough, faster enough, higher-status enough, or more reliable enough to overweight the cost of switching. Abstract *"more efficient"* doesn't activate — the brain doesn't switch on a directional claim; it switches on a meaningful, criteria-anchored delta. The pitch is in the language of *our Core Jobs and their criteria with the delta attached*, not features.
-3. **A concrete named product performs that Job Graph, and here is the door.** A *name* (the product / service / brand that runs the Core Jobs at the criteria) and a *first concrete step* (download the app, book a 15-min call, sign up at this URL, ask the bank teller). Without name + door, components 1 and 2 stay unactable — the customer knows a better graph exists and why it matters, but has no handle to move (solution-aware but not product-aware, in Hunt's Pyramid terms — see [load-consideration-activators.md](../HowTos/load-consideration-activators.md)).
+3. **A concrete named product performs that Job Graph, and here is the door.** A *name* (the product / service / brand that runs the Core Jobs at the criteria) and a *first concrete step* (download the app, book a 15-min call, sign up at this URL, ask the bank teller). Without name + door, components 1 and 2 stay unactable — the customer knows a better graph exists and why it matters, but has no handle to move (solution-aware but not product-aware, in Hunt's Pyramid terms — see [Load Consideration Activators](../HowTos/load-consideration-activators.md)).
 4. **Specific fears about this new Job Graph are reduced.** A fear is the customer's prediction that the Big Job won't be performed well through our new graph — a Critical Chain break, Problem, Tax Job, personal risk, or irreversible loss along the way. The message names the specific feared break, then shows why it is prevented, absorbed, reversible, insured, or irrelevant for this Solution. If the break is real, communication cannot reduce it — the team must change reality first.
 5. **Alternative Job Graphs are fired** — competing Job Graphs for performing the same Big Jobs (per §2, the everyday-language label *Solution* names the Job Graph the customer walks under it) are shown to be *less* energy-efficient by the Big Jobs' success criteria. *Concretely:* the firing names the specific Problems (failures that produce Problems — see §7) and Risks (forced Tax Jobs, criteria the alternative cannot hit, chain-breaks it leaves open) that follow from sticking with it. Abstract *"they're worse"* doesn't fire anything — the customer's brain doesn't down-weight an option without a concrete reason. The fire lands when the customer can name, in their own words, *which* Big-Job criterion the alternative misses and *what* it costs them when it misses.
 
@@ -142,7 +142,7 @@ The general principle: **environmental context can mass-activate Jobs the custom
 
 **The brain runs as an energy-budget investor that predicts both cost and outcome on every Job performance, then compares reality against both predictions and registers a signed delta on each.** Positive delta → **Aha Moment** (the customer-experience side of a Positive Prediction Error). Negative delta → **Problem** (the customer-experience side of a Negative Prediction Error; structural cause = a Solution hired for a Job performed below its success criteria). Value is the more energy-efficient experience itself; the Aha Moment and the Problem are the brain's *noticing* of value delivered above or below the prediction the customer arrived with.
 
-Full neuroscience grounding: [scientific-foundations.md §1, §11](scientific-foundations.md). Full value canon: [value-creation.md §2–§7](value-creation.md). Short version: [ajtbd-key-theses.md §6, §7](ajtbd-key-theses.md).
+Full neuroscience grounding: [Scientific Foundations §1, §11](scientific-foundations.md). Full value canon: [Value Creation §2–§7](value-creation.md). Short version: [AJTBD key theses §6, §7](ajtbd-key-theses.md).
 
 ---
 
@@ -156,12 +156,12 @@ Full neuroscience grounding: [scientific-foundations.md §1, §11](scientific-fo
 4. **The brain registers the signed delta as a teaching signal — and bifurcates:**
    - **Positive delta → Aha Moment.** Dopamine spike fires ([Schultz RPE, *Current Biology* 2017](https://www.cell.com/current-biology/fulltext/S0960-9822%2817%2930266-X)); teaching signal: *"this Job Graph performs the Big Job well — repeat it."* Habit autopilot loosens; conscious evaluation engages.
    - **Negative delta → Problem.** Dopamine dips below baseline; negative emotions fire (irritation, anxiety, anger). Teaching signal inverts: *"this Job Graph performs the Big Job worse than I thought — avoid it next time."* The most toxic case is when the Job isn't performed at all and the customer is forced into a **Tax Job** the Solution promised to absorb.
-5. **Re-learning runs in the direction of the signal.** *Positive:* a window opens in which the customer is biologically inclined to perform the new Job Graph again — *if reinforced*; without reinforcement the old habit reasserts and the customer reverts (see [scientific-foundations.md §15](scientific-foundations.md)). *Negative:* behavior shifts away from the Graph, and if the Problem is severe or repeated the customer abandons it — or generalizes (*"the whole class of Solutions is a Tax-Job factory"*) and avoids the category in the future.
+5. **Re-learning runs in the direction of the signal.** *Positive:* a window opens in which the customer is biologically inclined to perform the new Job Graph again — *if reinforced*; without reinforcement the old habit reasserts and the customer reverts (see [Scientific Foundations §15](scientific-foundations.md)). *Negative:* behavior shifts away from the Graph, and if the Problem is severe or repeated the customer abandons it — or generalizes (*"the whole class of Solutions is a Tax-Job factory"*) and avoids the category in the future.
 
 ### What this means for the product
 
-- **One Aha Moment is necessary but may not be sufficient.** Durable behavior change typically requires a *stream* of Aha Moments against the rising prediction bar (Red Queen — [value-creation.md §6](value-creation.md)).
-- **A single severe Problem can undo months of Aha Moments.** The brain's negative-learning rate is faster than its positive-learning rate (loss aversion has a neurobiological substrate — [scientific-foundations.md §13](scientific-foundations.md)). Tax Jobs are especially toxic.
+- **One Aha Moment is necessary but may not be sufficient.** Durable behavior change typically requires a *stream* of Aha Moments against the rising prediction bar (Red Queen — [Value Creation §6](value-creation.md)).
+- **A single severe Problem can undo months of Aha Moments.** The brain's negative-learning rate is faster than its positive-learning rate (loss aversion has a neurobiological substrate — [Scientific Foundations §13](scientific-foundations.md)). Tax Jobs are especially toxic.
 - **Activation = engineered first Aha Moment; retention = a sustained Aha-stream, reinforced by the habit and switching cost that can hold a customer even when fresh Aha Moments thin out; churn = accumulated Problems overwhelming all three.**
 - **Overpromise is a manufactured-Problem machine.** Inflated expectations → reality below them → Problem → re-learning in the wrong direction. **Match the promise to what the chain actually delivers** (§4).
 
@@ -173,12 +173,12 @@ A behavior-change event has a *moment of launch* — the point at which the cust
 
 The methodology recognizes the following triggers of behavior-change evaluation. Some are events in the customer's life, some are events created by the world, some are events we can deliberately engineer.
 
-- **A break in the customer's Critical Chain** — the current solution stops performing one of the Jobs in the chain to a Big Job. The chain breaks; the Big Job is at risk; the customer launches an Orientation Job (*"what else can I use?"*) and becomes much more receptive to Consideration Activators. (See [critical-chain.md](critical-chain.md).)
+- **A break in the customer's Critical Chain** — the current solution stops performing one of the Jobs in the chain to a Big Job. The chain breaks; the Big Job is at risk; the customer launches an Orientation Job (*"what else can I use?"*) and becomes much more receptive to Consideration Activators. (See [Critical Chain](critical-chain.md).)
 - **Accumulated Problems with the current solution** — even when the chain isn't broken, a steady drip of failures produces repeated Negative Prediction Errors until the threshold is crossed. The customer reframes: *"this isn't working well enough; I should look for something else."* (See section 7 on Problem dynamics.)
-- **Life events and context shifts** — a move, a new role, a child, a new market entry, a new regulation. The person ends up in a new context where **new Jobs appear and old Jobs change** (different success criteria, different triggers, different Big Jobs above). The previously fine Job Graph stops fitting. (Maps to the Job-structure element *Trigger* — see [job-structure.md](job-structure.md).)
+- **Life events and context shifts** — a move, a new role, a child, a new market entry, a new regulation. The person ends up in a new context where **new Jobs appear and old Jobs change** (different success criteria, different triggers, different Big Jobs above). The previously fine Job Graph stops fitting. (Maps to the Job-structure element *Trigger* — see [Job Structure](job-structure.md).)
 - **Status or identity shift** — promotion, new role, life-stage change, social-group change. Who the customer wants to be has shifted; the Job Graph that fit the old identity no longer fits the new one. (Related to Life events but distinct — the trigger is internal identity reformation, not external context.)
 - **External shock or forced switch** — a regulatory change, a vendor discontinuation, a supplier failure, a price hike, a merger. The customer is *forced* to evaluate alternatives whether or not they wanted to.
-- **External Consideration Activators load** — an advertisement, a peer's story, a piece of content, a salesperson's outreach surfaces a new Job Graph the customer didn't know existed. The new Consideration Activators wakes up an Orientation Job: *"wait, what robot vacuums are out there?"* (See [consideration-activators.md § Sources of Consideration Activators](consideration-activators.md) and [`HowTos/load-consideration-activators.md`](../HowTos/load-consideration-activators.md).)
+- **External Consideration Activators load** — an advertisement, a peer's story, a piece of content, a salesperson's outreach surfaces a new Job Graph the customer didn't know existed. The new Consideration Activators wakes up an Orientation Job: *"wait, what robot vacuums are out there?"* (See [Consideration Activators § Sources of Consideration Activators](consideration-activators.md) and [Load Consideration Activators](../HowTos/load-consideration-activators.md).)
 - **First-hand trial of a new way** — the customer encounters the new Job Graph directly (free trial, demo, friend's product) and experiences a strong Aha Moment. The Aha Moment itself becomes a trigger — behavior change can begin from the experience side, not only from the information side. (See §5.)
 
 Two practical implications:
@@ -201,8 +201,8 @@ Forces below are grouped **by lever type** — what kind of intervention works a
 **Brain-side (neurobiological — the dopamine machinery itself):**
 
 - **Positive Prediction Error — the Aha Moment from our product.** Strongest single driver; neurobiologically primary (see §7).
-- **Curiosity.** A genuinely curious customer treats an unfamiliar Solution as opportunity rather than threat. Perceived switching risk drops, and Consideration Activators are easier to absorb — curiosity opens a brief learning window *before* the answer arrives, not after. (Neuroscience: [scientific-foundations.md §17](scientific-foundations.md).)
-- **Positive emotions during use.** Joy, calm, relief, satisfaction, status uplift — the brain seeks to repeat experiences that produced them ([scientific-foundations.md §9, §11](scientific-foundations.md)).
+- **Curiosity.** A genuinely curious customer treats an unfamiliar Solution as opportunity rather than threat. Perceived switching risk drops, and Consideration Activators are easier to absorb — curiosity opens a brief learning window *before* the answer arrives, not after. (Neuroscience: [Scientific Foundations §17](scientific-foundations.md).)
+- **Positive emotions during use.** Joy, calm, relief, satisfaction, status uplift — the brain seeks to repeat experiences that produced them ([Scientific Foundations §9, §11](scientific-foundations.md)).
 
 **Information-side (Consideration Activators):**
 
@@ -211,24 +211,24 @@ Forces below are grouped **by lever type** — what kind of intervention works a
 
 **Identity-side:**
 
-- **Identity alignment with the new Job Graph.** When our Big-Job framing matches who the customer thinks they are (*"I'm a person who takes care of their health"*; *"I'm a founder who decides on data"*), motivation is significantly stronger and more durable than at the outcome level ([scientific-foundations.md §7, §8](scientific-foundations.md)).
+- **Identity alignment with the new Job Graph.** When our Big-Job framing matches who the customer thinks they are (*"I'm a person who takes care of their health"*; *"I'm a founder who decides on data"*), motivation is significantly stronger and more durable than at the outcome level ([Scientific Foundations §7, §8](scientific-foundations.md)).
 
 ### Blockers: forces that block behavior change
 
 **Brain-side (neurobiological):**
 
 - **Negative Prediction Error from the new Job Graph — the Problem.** Strongest single blocker; mirror of the Aha Moment. When reality from our Graph falls below prediction (or the Job isn't performed at all → forced Tax Job), the brain re-learns *not* to perform it next time. A single severe Problem can undo months of Aha Moments (§7).
-- **Cost asymmetry (price-as-pain).** The brain registers price and effort in the same region it uses for physical pain ([scientific-foundations.md §4](scientific-foundations.md)). New Solutions demand investment now; gains are deferred. The brain overweights present pains against future gains.
-- **Negative emotions during use.** Frustration, anxiety, shame, anger, boredom while performing the new Graph. Brain learns not to repeat ([scientific-foundations.md §9, §11](scientific-foundations.md)).
+- **Cost asymmetry (price-as-pain).** The brain registers price and effort in the same region it uses for physical pain ([Scientific Foundations §4](scientific-foundations.md)). New Solutions demand investment now; gains are deferred. The brain overweights present pains against future gains.
+- **Negative emotions during use.** Frustration, anxiety, shame, anger, boredom while performing the new Graph. Brain learns not to repeat ([Scientific Foundations §9, §11](scientific-foundations.md)).
 
 **Habit & identity-side:**
 
-- **Habit.** Physical change in the brain — neural networks tuned to the current way of performing the current Job (§7; [scientific-foundations.md §15](scientific-foundations.md)). Customers and product teams systematically underestimate its strength.
+- **Habit.** Physical change in the brain — neural networks tuned to the current way of performing the current Job (§7; [Scientific Foundations §15](scientific-foundations.md)). Customers and product teams systematically underestimate its strength.
 - **Identity-as-current-solution.** When the customer identifies with the existing Solution (*"I'm an Apple person"*, *"I'm a Nike runner"*), switching threatens identity itself. Hardest blocker to address with logic alone.
 
 **Reality-side:**
 
-- **Objective barriers.** Facts on the ground that derail the new Job Graph regardless of customer belief — incompatible data schema, missing permit, unsupported ZIP, land unsuitable. Reduced *only* by changing reality, not by communication. (See [barrier-removal.md](barrier-removal.md).)
+- **Objective barriers.** Facts on the ground that derail the new Job Graph regardless of customer belief — incompatible data schema, missing permit, unsupported ZIP, land unsuitable. Reduced *only* by changing reality, not by communication. (See [Barrier Removal](barrier-removal.md).)
 
 **Mental-models-side (conscious predictions + unconscious commitments):**
 
@@ -315,7 +315,7 @@ Before designing communication for a behavior change, ask the segment: *"Have th
 
 **Don't substitute communication for product.** A positive prediction error has to be *experienced*, not promised. Communication loads Consideration Activators; the product delivers the prediction error. If communication promises a Big Job that the product only partly performs, the customer arrives with inflated expectations → negative prediction error → disappointment, no matter how well the Core Jobs were actually performed. **The promise must match what the chain actually delivers.** Overpromise is the single most common way teams manufacture their own churn.
 
-**Stack-rank behavior changes against unit economics.** Not all behavior changes are worth engineering. Some are too expensive (fighting habit, fighting identity, fighting Immunity to Change) for the per-unit margin they unlock. The decision to engineer a specific behavior change is itself a strategic choice — segment selection upstream determines which behavior changes a product is even *trying* to engineer (see [`ajtbd-key-theses.md § Strategy`](ajtbd-key-theses.md) and [segmentation.md](segmentation.md)).
+**Stack-rank behavior changes against unit economics.** Not all behavior changes are worth engineering. Some are too expensive (fighting habit, fighting identity, fighting Immunity to Change) for the per-unit margin they unlock. The decision to engineer a specific behavior change is itself a strategic choice — segment selection upstream determines which behavior changes a product is even *trying* to engineer (see [AJTBD key theses § Strategy](ajtbd-key-theses.md) and [Segmentation](segmentation.md)).
 
 ---
 
@@ -331,7 +331,7 @@ This question routes you upstream of the broken metric, into the actual cause:
 - *Customer activates but churns?* → no repeated reinforcement, habit reasserted — engineer more prediction errors over time.
 - *Customer doesn't even start to evaluate?* → Consideration Activators isn't loaded, or it doesn't land on their Big Jobs.
 - *Customer evaluates but doesn't switch?* → fears not reduced; competing solution not fired; identity-as-current-solution holding them; Immunity-to-Change protecting an unconscious commitment.
-- *Whole segment isn't moving?* → maybe the segment-and-Job choice is wrong. Switch segment (see [`ajtbd-key-theses.md` § Segmentation](ajtbd-key-theses.md)).
+- *Whole segment isn't moving?* → maybe the segment-and-Job choice is wrong. Switch segment (see [AJTBD key theses §12](ajtbd-key-theses.md)).
 
 ---
 

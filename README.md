@@ -2,7 +2,7 @@
 
 **An algorithm for any product and business decision — and the AI skills that run it.**
 
-By Ivan Zamesin ([X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/)). This repository is the open canon (the methodology, written as theses) plus a set of Claude Code skills that operationalize it. It is written for the people who decide *what to build*: founders, indie hackers, product managers, and product marketers.
+This repository is the open canon (the methodology, written as theses) plus a set of Claude Code skills that operationalize it. It is written for the people who decide *what to build*: founders, indie hackers, product managers, and product marketers. Author of the methodology and the skills — Ivan Zamesin ([X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/)).
 
 ---
 
@@ -10,7 +10,7 @@ By Ivan Zamesin ([X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.c
 
 **There is an algorithm for making any business decision.**
 
-Most product decisions today are guesswork — feeling your way through the fog, betting everything on the one idea that happened to land in your head from a book, a conference talk, or a friend's, a colleague's, or an investor's advice. With an algorithm you stop guessing: you lay out every strategy actually open to you and choose among them deliberately, weighing many factors, instead of going all-in on the first one you saw.
+Most product decisions today are guesswork — feeling your way through the fog, betting everything on the one idea that struck you, or an investor's advice. With an algorithm you stop guessing: you lay out every strategy actually open to you and choose among them deliberately, weighing many factors, instead of going all-in on the first one you saw.
 
 Next Move Theory is that algorithm. There is one for each of the questions that decide a product's fate:
 
@@ -27,11 +27,13 @@ Next Move Theory is that algorithm. There is one for each of the questions that 
 - How to improve retention
 - How to build an acquisition channel
 
-This canon is the result of the last eight years of my work. Eight years ago I discovered Jobs To Be Done, saw enormous potential in it, and made an unreasonable decision: rebuild it from scratch so it would finally yield an algorithm. I did — rebuilding it into a thousands of foundational theses. But Advanced Jobs To Be Done on its own still didn't produce the algorithm; to get there I had to fold in Unit Economics, the Riskiest Assumption Test, ABCDX segmentation, and other disciplines, and that integration became Next Move Theory. I've since taught this methodology to more than 13,000 people in my home country — and this public canon is how I give its foundations to the world.
+This canon is the result of the last eight years of my work. Eight years ago I discovered Jobs To Be Done, saw enormous potential in it, and made an unreasonable decision: rebuild it from scratch so it would finally yield an algorithm. Advanced Jobs To Be Done only realized that potential when I got lucky and found the scientific theories that explain what value actually is and how a person changes behavior — that body of science, gathered in [`scientific-foundations.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/scientific-foundations.md), is the foundation of everything that followed. On top of it I rebuilt JTBD into thousands of foundational theses. But Advanced Jobs To Be Done on its own still didn't produce the algorithm; to get there I had to fold in Unit Economics, the Riskiest Assumption Test, ABCDX segmentation, and other disciplines, and that integration became Next Move Theory. I've since taught this methodology to more than 13,000 people in my home country — and this public canon is how I give its foundations to the world.
 
-**This public canon is about 30% of the methodology's theses.** You won't find every one of those algorithms here yet — but you will find **the main algorithm** ([`Algorithms/the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md)) and the core theses the whole framework rests on. The step-by-step algorithms for the tasks above will keep appearing at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=github&utm_medium=readme&utm_campaign=canon).
+**The main algorithm is here in full — read it in [`the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md).** But reading the steps isn't enough: for the algorithm to actually work for you, you have to understand the foundations it runs on — what a Job is, what value is, how to segment, how to test the riskiest assumption first. That is what the rest of this canon is — the foundational theses the algorithm stands on, so it works for you instead of reading like an empty checklist. (This public canon is about 30% of the methodology's theses; the step-by-step algorithms for the specific tasks above keep appearing at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github).)
 
-The canon is the algorithm written out — Jobs, the Job Graph, value, and segments, built up thesis by thesis. The **skills** are that algorithm turned into tools: feed in a product idea and get back a *decision*, not a description.
+The **skills** turn that algorithm into tools: feed in a product idea and get back a *decision*, not a description.
+
+I find this methodology incredibly beautiful and powerful, and sharing it with the world is my mission. I hope it brings you a great deal of value — and lets you clearly see the moves available to you.
 
 ---
 
@@ -96,14 +98,26 @@ cp -r Skills/* ~/.claude/skills/
 
 ---
 
+## Make your AI agent methodology-aware
+
+This repo also ships **[`CLAUDE.md`](CLAUDE.md)** and **[`AGENTS.md`](AGENTS.md)** — a compact rules file that teaches a coding agent (Claude Code, Codex, Cursor, and others) to do product work with *this* methodology instead of the generic, often-wrong Jobs To Be Done in its training data.
+
+- **What it is** — the non-negotiable theses (what a Job is, what value is, how to segment) plus a routing table that tells the agent *which canon file to read* for a given task, so it avoids the common JTBD mistakes.
+- **How to use it** — copy `CLAUDE.md` (Claude Code) or `AGENTS.md` (Codex and most other agents) into your own project, or paste its contents into the file you already have. Keep a clone of `Next-Move-Theory-Canon/` reachable so the agent can open the files it routes to.
+- **Why** — out of the box an agent pattern-matches to generic JTBD and gets the theses wrong. This file points it at the correct definitions and the canon, so its product reasoning is grounded in the methodology.
+
+---
+
 ## How to read the canon
+
+> **Prefer a nicer reading experience?** The same canon is available in a cleaner, more readable form on the site — [read it at nextmovetheory.com/library/canon](https://nextmovetheory.com/library/canon?utm_source=canon&utm_medium=github).
 
 The canon lives in [`Next-Move-Theory-Canon/`](Next-Move-Theory-Canon/) — around two dozen interlinked files. You don't have to read them in order. If you want the fastest path to understanding, read these four key-theses files first, in order:
 
-1. **[`Next-Move-Theory/nmt-key-theses.md`](Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md)** — the integrative root: what the whole framework is and how its pillars (AJTBD, Unit Economics, RAT, ABCDX) fit into one system. *Start here for the big picture.*
-2. **[`AJTBD/ajtbd-key-theses.md`](Next-Move-Theory-Canon/AJTBD/ajtbd-key-theses.md)** — the substrate the rest stands on: Jobs, the Job Graph, value and the Aha Moment, segmentation. The core you'll use most.
+1. **[`Next-Move-Theory/nmt-key-theses.md`](Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md)** — the integrative root: what the whole framework is and how its pillars (AJTBD, Unit Economics, RAT, ABCDX) plus Theory of Constraints — with OKR (Objectives & Key Results) as a supporting methodology — fit into one system. *Start here for the big picture.*
+2. **[`Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md)** — the substrate the rest stands on: Jobs, the Job Graph, value and the Aha Moment, segmentation. The core you'll use most.
 3. **[`Riskiest-Assumption-Test/rat-key-theses.md`](Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md)** — before you build: list the assumptions the idea rests on, rank them by how lethal they are if wrong, and buy the cheapest evidence against the deadliest first.
-4. **[`ABCDX/abcdx-segmentation-key-theses.md`](Next-Move-Theory-Canon/ABCDX/abcdx-segmentation-key-theses.md)** — the theory turned into a concrete operating move on a real customer base: focus the high-margin A/B, fire C/D, and read X as the signal of where to grow next.
+4. **[`ABCDX-Segmentation/abcdx-segmentation-key-theses.md`](Next-Move-Theory-Canon/ABCDX-Segmentation/abcdx-segmentation-key-theses.md)** — the theory turned into a concrete operating move on a real customer base: focus the high-margin A/B, fire C/D, and read X as the signal of where to grow next.
 
 Then read the rest in whichever cluster matches your problem.
 
@@ -111,48 +125,48 @@ Then read the rest in whichever cluster matches your problem.
 
 | File | What it teaches |
 |---|---|
-| [`AJTBD/ajtbd-key-theses.md`](Next-Move-Theory-Canon/AJTBD/ajtbd-key-theses.md) | The foundational theses — the methodology in one document. The map to everything else. |
-| [`AJTBD/scientific-foundations.md`](Next-Move-Theory-Canon/AJTBD/scientific-foundations.md) | The brain as an energy-budget investor; why needs fail as a unit and Jobs succeed. |
-| [`AJTBD/job-structure.md`](Next-Move-Theory-Canon/AJTBD/job-structure.md) | The eight elements that fully specify a single Job, element by element, with interview questions. |
+| [`Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) | The foundational theses — the methodology in one document. The map to everything else. |
+| [`Advanced-Jobs-To-Be-Done/scientific-foundations.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/scientific-foundations.md) | The brain as an energy-budget investor; why needs fail as a unit and Jobs succeed. |
+| [`Advanced-Jobs-To-Be-Done/job-structure.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md) | The eight elements that fully specify a single Job, element by element, with interview questions. |
 
 ### The Job Graph — where strategy lives
 
 | File | What it teaches |
 |---|---|
-| [`AJTBD/job-graph.md`](Next-Move-Theory-Canon/AJTBD/job-graph.md) | The hierarchy of Jobs around your product; the four levels, defined *relative to your product's reach*. |
-| [`AJTBD/job-types-and-properties.md`](Next-Move-Theory-Canon/AJTBD/job-types-and-properties.md) | The taxonomy of Jobs — Regular, Orientation, Tax, Fake, Emotional, Viral — as a diagnostic instrument. |
-| [`AJTBD/critical-chain.md`](Next-Move-Theory-Canon/AJTBD/critical-chain.md) | The Job Graph projected onto time — the lived path a team actually ships, where the Aha Moment fires. |
+| [`Advanced-Jobs-To-Be-Done/job-graph.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-graph.md) | The hierarchy of Jobs around your product; the four levels, defined *relative to your product's reach*. |
+| [`Advanced-Jobs-To-Be-Done/job-types-and-properties.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-types-and-properties.md) | The taxonomy of Jobs — Regular, Orientation, Tax, Fake, Emotional, Viral — as a diagnostic instrument. |
+| [`Advanced-Jobs-To-Be-Done/critical-chain.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md) | The Job Graph projected onto time — the lived path a team actually ships, where the Aha Moment fires. |
 
 ### Creating value
 
 | File | What it teaches |
 |---|---|
-| [`AJTBD/value-creation.md`](Next-Move-Theory-Canon/AJTBD/value-creation.md) | The deep canon on value: energy efficiency, success criteria as the specification of value, the Aha Moment. |
-| [`AJTBD/value-creation-mechanics.md`](Next-Move-Theory-Canon/AJTBD/value-creation-mechanics.md) | The foundational catalog of value-creation mechanics — kill a Job, take a Job off the customer, climb a level. |
-| [`AJTBD/behaviour-change.md`](Next-Move-Theory-Canon/AJTBD/behaviour-change.md) | Why switching is swapping one Job Graph for another; a Solution as a *label* for the sub-graph it installs. |
-| [`AJTBD/customers-attention-management.md`](Next-Move-Theory-Canon/AJTBD/customers-attention-management.md) | Attention as the metabolic resource every value-creation mechanism routes through. |
+| [`Advanced-Jobs-To-Be-Done/value-creation.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md) | The deep canon on value: energy efficiency, success criteria as the specification of value, the Aha Moment. |
+| [`Advanced-Jobs-To-Be-Done/value-creation-mechanics.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md) | The foundational catalog of value-creation mechanics — kill a Job, take a Job off the customer, climb a level. |
+| [`Advanced-Jobs-To-Be-Done/behaviour-change.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md) | Why switching is swapping one Job Graph for another; a Solution as a *label* for the sub-graph it installs. |
+| [`Advanced-Jobs-To-Be-Done/customers-attention-management.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/customers-attention-management.md) | Attention as the metabolic resource every value-creation mechanism routes through. |
 
 ### Reaching and converting customers
 
 | File | What it teaches |
 |---|---|
-| [`AJTBD/consideration-activators.md`](Next-Move-Theory-Canon/AJTBD/consideration-activators.md) | The five Consideration Activators — what you load into the customer's head to move their choice your way. |
-| [`AJTBD/barrier-removal.md`](Next-Move-Theory-Canon/AJTBD/barrier-removal.md) | Removing the objective barriers that make a better Job Graph non-executable for a segment. |
-| [`AJTBD/communication.md`](Next-Move-Theory-Canon/AJTBD/communication.md) | Communication in the language of Jobs — the value-proposition formula and the landing-page structure. |
+| [`Advanced-Jobs-To-Be-Done/consideration-activators.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/consideration-activators.md) | The five Consideration Activators — what you load into the customer's head to move their choice your way. |
+| [`Advanced-Jobs-To-Be-Done/barrier-removal.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/barrier-removal.md) | Removing the objective barriers that make a better Job Graph non-executable for a segment. |
+| [`Advanced-Jobs-To-Be-Done/communication.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/communication.md) | Communication in the language of Jobs — the value-proposition formula and the landing-page structure. |
 
 ### Choosing where to compete
 
 | File | What it teaches |
 |---|---|
-| [`AJTBD/segmentation.md`](Next-Move-Theory-Canon/AJTBD/segmentation.md) | Segmentation by Job Graph similarity, not demographics — the most expensive cut to get wrong. |
-| [`ABCDX/abcdx-segmentation-key-theses.md`](Next-Move-Theory-Canon/ABCDX/abcdx-segmentation-key-theses.md) | ABCDX — splitting your paying base by margin × satisfaction; refocus on A/B, fire C/D, read X as a signal. |
+| [`Advanced-Jobs-To-Be-Done/segmentation.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md) | Segmentation by Job Graph similarity, not demographics — the most expensive cut to get wrong. |
+| [`ABCDX-Segmentation/abcdx-segmentation-key-theses.md`](Next-Move-Theory-Canon/ABCDX-Segmentation/abcdx-segmentation-key-theses.md) | ABCDX — splitting your paying base by margin × satisfaction; refocus on A/B, fire C/D, read X as a signal. |
 | [`Riskiest-Assumption-Test/rat-key-theses.md`](Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md) | RAT — list the assumptions an idea rests on, rank them by lethality, and buy the cheapest evidence first. |
 
 ### Next Move Theory — the meta-framework above AJTBD
 
 | File | What it teaches |
 |---|---|
-| [`Next-Move-Theory/nmt-key-theses.md`](Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md) | The integrative root — how AJTBD, Unit Economics, RAT, and ABCDX combine into one system. *The product is a single organism.* |
+| [`Next-Move-Theory/nmt-key-theses.md`](Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md) | The integrative root — how AJTBD, Unit Economics, RAT, ABCDX, and Theory of Constraints combine into one system, with OKR as a supporting methodology. *The product is a single organism.* |
 | [`Next-Move-Theory/focus-as-company-attention-management.md`](Next-Move-Theory-Canon/Next-Move-Theory/focus-as-company-attention-management.md) | Focus as pointing the whole company's attention at specific Core Jobs of one segment; the Innovator's Dilemma as focus that ossified. |
 | [`Next-Move-Theory/subtraction.md`](Next-Move-Theory-Canon/Next-Move-Theory/subtraction.md) | Subtraction as the meta-operator across all four pillars — removing Jobs, unprofitable units, risky assumptions, and C/D customers. |
 
@@ -161,10 +175,10 @@ Then read the rest in whichever cluster matches your problem.
 | File | What it teaches |
 |---|---|
 | [`HowTos/basic-ajtbd-interview-guide-and-principles.md`](Next-Move-Theory-Canon/HowTos/basic-ajtbd-interview-guide-and-principles.md) | The practical interview guide — principles and a question bank that reconstruct Jobs, criteria, Aha Moments, and Barriers from what a customer actually did. |
-| [`AJTBD/b2b.md`](Next-Move-Theory-Canon/AJTBD/b2b.md) | The B2B deal as a Job Graph across roles — and why personal Jobs usually outweigh business Jobs. |
+| [`Advanced-Jobs-To-Be-Done/b2b.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/b2b.md) | The B2B deal as a Job Graph across roles — and why personal Jobs usually outweigh business Jobs. |
 | [`Algorithms/the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md) | How the pieces combine into a single cyclical algorithm — and the anti-patterns that kill products. |
 
-> The public canon covers the most foundational theses and mechanics. The full methodology — the 100+-mechanic catalog, full unit-economics integration, and more — expands over time. **For new theses and book chapters as they're published, subscribe at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=github&utm_medium=readme&utm_campaign=canon)** — home to the canon, the books, and the newsletter.
+> The public canon covers the most foundational theses and mechanics. The full methodology — the 100+-mechanic catalog, full unit-economics integration, and more — expands over time. **For new theses and book chapters as they're published, subscribe at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github)** — home to the canon, the books, and the newsletter.
 
 ---
 
@@ -172,14 +186,14 @@ Then read the rest in whichever cluster matches your problem.
 
 ```
 Next-Move-Theory-Canon-and-Skills/
-├── Next-Move-Theory-Canon/        # the methodology, written as theses
-│   ├── AJTBD/                      #   the Jobs framework — start with ajtbd-key-theses.md
-│   ├── ABCDX/                      #   segmenting a paying base by margin × satisfaction
-│   ├── Riskiest-Assumption-Test/   #   validating ideas before you build them
-│   ├── Next-Move-Theory/           #   the integrative meta-framework above AJTBD
-│   ├── HowTos/                     #   practical guides — start with the interview guide
-│   └── Algorithms/                 #   how the pieces combine into one loop
-└── Skills/                         # Claude Code skills that run the methodology
+├── Next-Move-Theory-Canon/             # the methodology, written as theses
+│   ├── Advanced-Jobs-To-Be-Done/       #   the Jobs framework — start with ajtbd-key-theses.md
+│   ├── ABCDX-Segmentation/             #   segmenting a paying base by margin × satisfaction
+│   ├── Riskiest-Assumption-Test/       #   validating ideas before you build them
+│   ├── Next-Move-Theory/               #   the integrative meta-framework above AJTBD
+│   ├── HowTos/                         #   practical guides — start with the interview guide
+│   └── Algorithms/                     #   how the pieces combine into one loop
+└── Skills/                             # Claude Code skills that run the methodology
     ├── market-research/
     ├── craft-value-proposition/
     └── product-requirements/
@@ -189,15 +203,23 @@ Next-Move-Theory-Canon-and-Skills/
 
 ## How this methodology came to be
 
-By 2018, companies already paid me to teach product — customer research, segmentation, interviews. Then one interview made something embarrassing obvious: I didn't actually know, at the root, how products get created. We were interviewing entrepreneurs who had already published business books, hunting for the *problems* I was trained to find and fix. They reported none — they liked the process, the publisher was good, the book came out well. And then they bought more, twenty or thirty thousand dollars, right there in the conversation. Satisfied customers, no problem to solve, buying anyway. The model I taught — find the pain, build the painkiller — had no explanation for it.
+By 2018 I taught product for a living — customer research, segmentation, interviews — yet I didn't actually know, at the root, how products get created. The model I taught was *find the pain, build the painkiller* — but I kept watching satisfied customers with no problem to solve buy anyway, and I had no explanation for it. Building my own company against a stronger competitor, I also had no rule for *choosing* a strategy, only a pile of plausible advice. So I made an unreasonable decision: build the methodology from scratch.
 
-Then the same confusion got personal. I was building a service that matched people with therapists, with my own money, against a larger competitor whose unit margin was roughly twice mine. Every advisor I trusted offered a different move — change pricing, change the channel, kill the segment, move upmarket, copy the leader — and not one came with a rule for *choosing*. I had options and no way to decide, and the wrong bet could end the company.
+I went deep into Jobs To Be Done and kept its deepest intuition — a person sits in a situation and wants to *transition* into a different state — but left the existing machinery behind, because it never told me how to research, segment, choose where to compete, or create value.
 
-So in 2018 I made an unreasonable decision: build the methodology from scratch. I went deep into Jobs To Be Done and kept its deepest intuition — a person sits in a situation and wants to *transition* into a different state — but deliberately left the existing machinery behind, because it never told me how to research, segment, choose where to compete, or create value.
+It only came together when I got lucky and found the right science. Lisa Feldman Barrett's work led me to allostasis, prediction, and reward prediction error — what *value* actually is to a brain managing an energy budget — and to the theories of needs, emotions, habit, identity, and loss aversion that explain how a person changes behavior. That body of science, gathered in [`scientific-foundations.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/scientific-foundations.md), is the foundation everything stands on. On top of it I could finally build a real algorithm for creating value — the core I called **Advanced Jobs To Be Done (AJTBD)**.
 
-I spent eight years studying that transition — consulting, teaching, interviewing customers, watching my own behavior. It started to come together when I read the right books at the right time: Lisa Feldman Barrett's work pushed me into allostasis, prediction, reward prediction error, the science of needs and emotions, habit, identity, and loss aversion — the foundations that turned a good intuition into a buildable algorithm. I called it **Advanced Jobs To Be Done (AJTBD)**.
+AJTBD alone still wasn't enough; three more methodologies turned out to be fundamental. First the **Riskiest Assumption Test**: every initiative is a stack of risky assumptions, any of which might not hold, so you don't just launch and hope. In a sense the idea is already dead — you simply don't yet know what will kill it — and RAT is how you find out cheaply, before you've paid for the build. Then **Unit Economics**: only by competing for the Jobs of segments where you can actually earn a target margin can a company grow and fund its next bets. Later I added **goal-setting** — an algorithm for finding a company's real growth points. Together, all of it became **Next Move Theory**.
 
-I had hoped AJTBD would answer every product and business question on its own. It couldn't — and reaching past it is what eventually became Next Move Theory, with AJTBD as its skeleton. The first thing I had to give up to get there was the word that had built my career: *problem.* The full story — the scenes, the mistakes, the breaks where the wrong model stopped working — is the subject of the book; see [nextmovetheory.com](http://nextmovetheory.com/?utm_source=github&utm_medium=readme&utm_campaign=canon).
+Today thousands of companies in my home country run on this work, with dozens of cases documented at [nextmovetheory.com/cases](http://nextmovetheory.com/cases?utm_source=canon&utm_medium=github). My goal now is to give the methodology to the world — so that your product work stops being guesswork and becomes something you genuinely enjoy. The full story — the scenes, the mistakes, the breaks where the wrong model stopped working — is the subject of my book.
+
+---
+
+## The book — *The Nature of Product*
+
+**[*The Nature of Product*](https://nextmovetheory.com/library/the-nature-of-product?utm_source=canon&utm_medium=github)** is free to read on the site. It's the **first book in a series**, and it covers the foundation — **Advanced Jobs To Be Done (AJTBD)** — not the whole of Next Move Theory; the broader framework comes in later books. Where the canon states the methodology as theses, the book tells the *story of how it was discovered* — a chain of insights, each one a moment where the wrong model stopped working and a better one had to be built, with a recurring skeptic (**Wes**) attacking the ideas with the exact questions real students used.
+
+It's for founders, indie hackers, PMs, marketers, and designers making product decisions on incomplete evidence, and it assumes no prior Jobs-To-Be-Done background — read it on the couch; the canon and skills are here when you want to get operational.
 
 ---
 
@@ -205,7 +227,7 @@ I had hoped AJTBD would answer every product and business question on its own. I
 
 **Want me to speak?** If you'd like me to walk your team, company, or event through the methodology — a talk, a workshop, or a conversation about how it applies to your product — I'd genuinely welcome that. Email me at [ivan@nextmovetheory.com](mailto:ivan@nextmovetheory.com) or reach out on [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/).
 
-Same channels for anything else — where to start, how the methodology applies to your product, or a disagreement with a thesis. Found an error in a thesis or a broken link? Open an issue or a pull request.
+Found an error in a thesis or a broken link? Open an issue or a pull request.
 
 ## License
 
@@ -217,6 +239,6 @@ The canon and the skills are licensed under [**CC BY-NC-SA 4.0**](https://creati
 
 ---
 
-*A note on how this was written. The methodology is mine, built over years of practice. But a canon this size is an enormous number of theses to put into words — and Claude Code is how I got them onto the page. I leaned on it not to manufacture volume, but because it was the only realistic way for me to write all of this down. There's a lot of material here; without that help, this canon wouldn't exist yet.*
+*A note on how this was written. Every thesis here is mine — built by a human over years of practice, and verified for accuracy. Claude Code turned those theses into a readable text. So if your first thought is "an LLM wrote this" — the wording, yes; the thinking, no.*
 
-*Built by Ivan Zamesin — [nextmovetheory.com](http://nextmovetheory.com/?utm_source=github&utm_medium=readme&utm_campaign=canon) · [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/). The canon is a living document — it grows as new theses are validated in practice.*
+*Built by Ivan Zamesin — [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github) · [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · [ivan@nextmovetheory.com](mailto:ivan@nextmovetheory.com). The canon is a living document — it grows as new theses are validated in practice.*
