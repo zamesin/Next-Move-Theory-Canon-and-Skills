@@ -1,6 +1,6 @@
 ---
 name: market-research
-description: Run market research for a product or feature idea using Ivan Zamesin's AJTBD / Next Move Theory methodology (distinct from generic Christensen JTBD). Output — an A4 executive one-pager (verdict GO / NARROW / PIVOT) plus a detailed report: market sizing at the Big-Job level, customer segments scored on the value × demand × margin × size-and-switchability selection screen, competitors (direct on the Core Job, indirect on the Big Job), a differentiation hypothesis, an action-first RAT plan, and — as a primary result — alternative Big-Job markets that better fit the idea's technology, team, and resources. Use this skill whenever the user wants to size a market, find or evaluate customer segments and Jobs, assess competitors, decide whether an idea's segment+Jobs are worth pursuing, or explore which market to pivot into — even if they don't say "market research". Two modes — Quick (default; fast; no internet) and Deep (subagents + web research). Defaults to English; adapts to the user's language on request.
+description: Run market research for a product or feature idea using Ivan Zamesin's AJTBD / Next Move Theory methodology (distinct from generic Christensen JTBD). Output — an A4 executive one-pager (verdict GO / NARROW / PIVOT) plus a detailed report: market sizing at the Big-Job level, customer segments scored on the value × demand × margin × size-and-switchability selection screen, competitors (direct on the Core Job, indirect on the Big Job), a differentiation hypothesis, an action-first RAT plan, and — as a primary result — alternative Big-Job markets that better fit the idea's technology, team, and resources. Use this skill whenever the user wants to size a market, find or evaluate customer segments and Jobs, assess competitors, decide whether an idea's segment+Jobs are worth pursuing, or explore which market to pivot into — even if they don't say "market research". Two modes — Quick (default; fast; no internet) and Deep (subagents + web research). Writes the report in plain language the reader already uses, with methodology terms only in parentheses. Defaults to English; adapts to the user's language on request.
 user-invocable: true
 ---
 
@@ -51,27 +51,38 @@ One agent (the Strategy agent, Deep mode) additionally reads `Next-Move-Theory-C
 
 ---
 
-## Output files & naming
+## Plain-language output — segment words first, methodology in parentheses
 
-All output lives in `Skill-Results/market-research/{slug}/` in the **project root** (never in `TMP/` or `.claude/`).
+**The reader of this output is a product person, not a methodologist.** Write the user-facing document in the plain, everyday language the focal segments already use; when a methodology term genuinely adds precision, **lead with the plain meaning and put the term in parentheses the first time it appears** — never lead a sentence, bullet, or heading with a methodology label.
+
+- ❌ *"Red Queen value-gap compression…"* · *"the Critical Chain breaks at M4"* · *"load the Consideration Activators."*
+- ✅ *"The free do-it-yourself option caught up, so your edge shrank even though you didn't get worse (in the methodology, a* Red Queen *effect)."*
+
+**Who reads it** — the focal segments (internal map: `Strategy/Segments-and-Jobs.md`): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
+
+**Plain ↔ methodology** (say the left; add the right in parentheses only when it earns its place): the result they're after *(the Job / Big Job)* · the main thing the product does for them *(the Core Job)* · the step-by-step path the customer walks *(the Critical Chain)* · the exact step where they get stuck *(a Critical Chain break)* · the moment it clicks / feels worth it *(the Aha Moment)* · getting the result for less time, effort, money, or stress than expected *(value)* · a pleasant surprise / a letdown vs. what they expected *(Positive / Negative Prediction Error — never PPE/NPE)* · the few things they must learn or believe before switching *(Consideration Activators)* · a real blocker vs. just a worry *(a Barrier vs. a fear)* · the assumption most likely to kill this, tested cheap first *(the riskiest assumption / RAT)*.
+
+**Precision still holds in the methodology layer.** Job-grammar discipline (Jobs as *"I want to + verb,"* levels named, terms capitalized) governs the internal-reasoning / debug files and any explicit **methodology appendix**, where full methodology language is expected. The *lead the reader sees* is plain; the *parenthetical and the appendix* carry the precise terms.
+
+---
+
+## Output file (one file per run — `CLAUDE.md` Rule 4)
+
+The skill writes **exactly one** file, in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skill-Results/market-research/{slug}/
-  ├── 00-input.md                                   — what the user provided (idea, language, country, type, ambition, assets)
-  ├── debug.md                                      — all reasoning, internal checks, methodology citations, milestone log (long)
-  └── {product-slug}-market-research-result.md      — the user-facing report (one-pager + detailed report + short appendix)
+Skill-Results/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md
 ```
 
-- `{slug}` = `YYYY-MM-DD_HH-MM_{product-slug}` (date + 24h time + ~30-char kebab product slug), computed at run start. Every run gets a new folder; old runs are never overwritten.
-- The result file name carries product + skill + "result" so it's identifiable when shared.
-- `debug.md` holds everything internal: discarded hypotheses, the antisegment checks, Big-Job validation, the full sizing method tables, and **all methodology citations** (which never appear in the user-facing report — see "Readability" below).
-- Deep mode adds intermediate per-agent files in the same folder (listed in the Deep pipeline section).
+- `{YYYY-MM-DD_HH-MM}` (24h local time) makes each run's file unique; reruns never overwrite.
+- Everything internal — what the user provided, discarded hypotheses, antisegment checks, Big-Job validation, the full sizing tables, milestone notes, and **all methodology citations** (which never appear in the user-facing report — see "Readability") — **stays in-context**, never in a separate file.
+- Deep mode adds no intermediate files: subagents return their results in-message and the orchestrator writes the one file (see the Deep pipeline section).
 
 ---
 
 ## STAGE 0 — Document language
 
-Default to **English**. If the user is writing in another language, the skill's first message offers to work in that language, then asks via `AskUserQuestion` (English / their language / Other). Save the choice in `00-input.md`. All communication and the report use the chosen language; canon files and source URLs stay as-is.
+Default to **English**. If the user is writing in another language, the skill's first message offers to work in that language, then asks via `AskUserQuestion` (English / their language / Other). Hold the choice in context. All communication and the report use the chosen language; canon files and source URLs stay as-is.
 
 ---
 
@@ -98,9 +109,9 @@ Collect in a short stream + two batched `AskUserQuestion` calls (max 4 questions
 Ask once (free text is fine), capturing the idea's **transferable assets and hard constraints** — used by the pivot sub-pipeline (STAGE 9):
 > What does this idea have going for it that could carry into *other* markets? Name your (1) core technology / unique capability, (2) the team's expertise and unfair advantages, (3) resources already in hand — money/runway, partners, traction, distribution, data, brand, and (4) any hard constraints or non-negotiables (regulatory, geographic, ethical).
 
-If the user skips, extract the assets from the idea stream and project context as best you can, and flag in `debug.md` that assets were inferred.
+If the user skips, extract the assets from the idea stream and project context as best you can, and note in-context that assets were inferred.
 
-**Save** everything to `00-input.md`.
+**Hold** everything in context.
 
 ---
 
@@ -158,7 +169,7 @@ Source-link rule (project `CLAUDE.md` Rule 2): every named source in the report 
 
 ## Readability rules (the report is for a customer who doesn't know the methodology)
 
-- **No internal methodology citations in the user-facing report.** Never write "per b2b.md §6", "per Rule 14", or any canon file path in the report. All such traceability goes to `debug.md`.
+- **No internal methodology citations in the user-facing report.** Never write "per b2b.md §6", "per Rule 14", or any canon file path in the report. All such traceability stays in-context, never in the file.
 - **Plain language first, term second.** On first use, gloss a methodology term in 3–5 words in parentheses — e.g., *"the Big Job (the life or business outcome the customer is really after)"*. Link `references/glossary.md` once at the top of the report.
 - **Keep source links** for external facts (Rule 2).
 
@@ -166,7 +177,7 @@ Source-link rule (project `CLAUDE.md` Rule 2): every named source in the report 
 
 # Report structure (shared by both modes)
 
-Assemble `{product-slug}-market-research-result.md` in this exact order.
+Assemble the single output file in this exact order.
 
 ## Page 1 — the A4 one-pager
 
@@ -223,7 +234,7 @@ Ambition fits? {share of SAM needed → ✅ / ⚠️ / ❌}
 **Ambition vs. share:** target {revenue} → needs {Y%} of SAM → {✅ <10% / ⚠️ 10–30% / ❌ >30%}.
 **Takeaway:** {1 sentence — is the market big enough, and what's the binding constraint instead?}
 
-> Full 3-method tables + verification are in the Appendix; the market-level Big Job is validated internally (debug.md), not shown here.
+> Full 3-method tables + verification are in the Appendix; the market-level Big Job is validated internally (in-context), not shown here.
 ```
 
 ## Section 2 — Map of Segments (every segment expanded at equal depth)
@@ -381,7 +392,7 @@ Repeat the two-part disclaimer; then a checklist covering: run the 3-method sizi
 
 ## Appendix — sizing methods (short)
 
-For each of TAM / SAM / SOM, and for each segment's size + budget, **one compact table**: the three method names, each one-line result + the single key assumption + the linked source, then the average; plus **one runnable verification line** ("open {source}, take {figure}, × {assumption} → within 30% confirms"). Full input breakdowns and divergence notes live in `debug.md`, not here.
+For each of TAM / SAM / SOM, and for each segment's size + budget, **one compact table**: the three method names, each one-line result + the single key assumption + the linked source, then the average; plus **one runnable verification line** ("open {source}, take {figure}, × {assumption} → within 30% confirms"). Full input breakdowns and divergence notes stay in-context, not in the file.
 
 ---
 
@@ -400,19 +411,20 @@ Methodology only — format is guaranteed by the templates above, so it is not r
 9. **Wedge = an underserved success-criterion intersection**, delivered via a *published* mechanic; features follow from criteria + mechanic.
 10. **RAT walks the cause-and-effect chain**, each risk positive + falsifiable + paired with a validation action; riskiest-and-cheapest-to-falsify ordered first.
 11. **Pivot markets evaluated on the same selection screen** against the extracted assets; existential-risk gate applied; each is a concrete Segment + Big-Job pair.
+- [ ] Plain-language-led — every user-facing point leads in the reader's own words; methodology terms only in parentheses (never jargon-first); the methodology appendix / debug may stay in full terms.
 
 ---
 
 ## Quick mode (default)
 
 One Claude, no internet, no subagents. Steps:
-1. Create the run folder + `00-input.md`.
+1. Hold the user's input in context (no `00-input.md` file).
 2. Read the four canon files (read set above).
-3. Fill every template section directly from reasoning: market snapshot → Map of Segments (all segments, selection screen) → differentiation → **pivot** (extract assets from `00-input.md`, generate 3–5 alternative Big-Job markets with segment+Jobs hypotheses, score them on the selection screen) → action-first RAT → appendix.
-4. Run the 11 self-critic criteria over the draft; fix in place; record the methodology trace in `debug.md`.
+3. Fill every template section directly from reasoning: market snapshot → Map of Segments (all segments, selection screen) → differentiation → **pivot** (extract assets from the input, generate 3–5 alternative Big-Job markets with segment+Jobs hypotheses, score them on the selection screen) → action-first RAT → appendix.
+4. Run the 11 self-critic criteria over the draft; fix in place; keep the methodology trace in-context.
 5. Compute the **one-pager last** from the finished analysis.
-6. Write `debug.md` and the result file.
-7. In the chat: print the brief outcome + the one-pager + rerun suggestions + the file paths (see "End-of-run chat output").
+6. Write the single result file.
+7. In the chat: print the brief outcome + the one-pager + rerun suggestions + the file path (see "End-of-run chat output").
 
 Quick mode does not access the internet, run subagents, or do quantitative validation. For those → Deep mode.
 
@@ -423,25 +435,15 @@ Quick mode does not access the internet, run subagents, or do quantitative valid
 Triggered when the user picks Deep. A team of subagents with web access fills the same templates with real data. Runs straight through without pausing for the user.
 
 **Principles:**
-- Run folder `Skill-Results/market-research/{slug}/`; new folder per run.
+- Writes one file `Skill-Results/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md`; new file per run.
 - Agents are spawned with the `Agent` tool, `subagent_type: "general-purpose"`, `run_in_background: true`. Within a wave, independent agents run in parallel; the orchestrator waits for a wave to finish before the next.
-- Each agent reads only the **four canon files** (read set above; the Strategy agent also reads `value-creation-mechanics.md`), writes its own file(s), and appends a few **milestone lines** to `debug.md` (start / end / key counts). No heavy live-tail / `Monitor` machinery, no per-minute log mandate.
+- Each agent reads only the **four canon files** (read set above; the Strategy agent also reads `value-creation-mechanics.md`) and **returns its result in its final message — no per-agent files.** The orchestrator holds those returns in context. No live-tail / `Monitor` machinery.
 - Web caps (hold the longest legs): reviews-mining ≤ 12 `WebFetch` / ~10 min; synthesis ≤ 6; strategy ≤ 4. Pivot agents are reasoning-bound (≤ 2 fetches if any).
 - Source links mandatory (Rule 2); never invent sources or figures.
 
-### Run-folder files (Deep)
-```
-00-input.md
-01-market-sizing.md            01-market-sizing-appendix.md     [1A]
-02a-competitors-raw.md         02a-reviews-data.md              [1B]
-P1-assets.md                                                    [P1]
-P2-candidate-markets.md                                         [P2]
-02-segments.md                 02-segments-appendix.md          [2]
-04-strategy.md                 (differentiation + action-RAT)   [3]
-P3-pivot-ranking.md                                             [P3]
-debug.md
-{product-slug}-market-research-result.md                        [orchestrator]
-```
+### No run-folder files (Deep)
+
+Deep mode writes **no intermediate files**. Each agent below returns its result in its final message; the orchestrator holds all returns in context and writes the single `{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md` at the end.
 
 ### Waves
 ```
@@ -457,31 +459,30 @@ Orchestrator:       assemble report → compute one-pager last → chat summary
 ### Agent prompts
 
 Each prompt opens with the shared preamble:
-> You work with Ivan Zamesin's AJTBD / Next Move Theory methodology. Use ONLY these canon files as the methodology source — do NOT use generic JTBD from the internet or prior training: `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md`, `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md`, `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md`, `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md`. (If not found, retry with a `1-` prefix on the canon folder.) Never write methodology citations or canon paths into user-facing files — those go to `debug.md`. Every named external source is a clickable Markdown link. Append a start line and an end line (with key counts) to `debug.md`.
+> You work with Ivan Zamesin's AJTBD / Next Move Theory methodology. Use ONLY these canon files as the methodology source — do NOT use generic JTBD from the internet or prior training: `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md`, `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md`, `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md`, `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md`. (If not found, retry with a `1-` prefix on the canon folder.) Keep methodology citations and canon paths out of the report — hold them in context. Every named external source is a clickable Markdown link. Return your full result in your final message — do not write any files.
 
-**[1A] Market & Sizing.** Read `00-input.md` + the read set. Formulate and validate the market-level Big Job internally (debug.md only). Compute TAM / SAM / SOM, each via 3 methods (top-down / bottom-up / analog), averaged (median if methods diverge >2×). Compare to the user's ambition. Write the **compact** body to `01-market-sizing.md` (summary table + landscape + ambition + takeaway) and the **short** method tables + one-line verifications to `01-market-sizing-appendix.md`. ≤12 fetches.
+**[1A] Market & Sizing.** Given the user input + the read set. Formulate and validate the market-level Big Job internally (in-context only). Compute TAM / SAM / SOM, each via 3 methods (top-down / bottom-up / analog), averaged (median if methods diverge >2×). Compare to the user's ambition. Return, in your final message, the **compact** body (summary table + landscape + ambition + takeaway) and the **short** method tables + one-line verifications. ≤12 fetches.
 
-**[1B] Competitors & Reviews mining.** Read `00-input.md` + `ajtbd-key-theses.md` + `segmentation.md`. Find 5–10 competitors (direct on the Core Job + Big-Job-level / non-obvious), picking country- and query-specific sources at runtime. Harvest customer reviews; extract **raw signals only** (do NOT synthesize segments): distinct Core Jobs, success criteria, causal real-criterion candidates, and 5–10 quotable quotes per competitor with source URLs. Write `02a-competitors-raw.md` + `02a-reviews-data.md`. ≤12 fetches / ~10 min.
+**[1B] Competitors & Reviews mining.** Given the user input + `ajtbd-key-theses.md` + `segmentation.md`. Find 5–10 competitors (direct on the Core Job + Big-Job-level / non-obvious), picking country- and query-specific sources at runtime. Harvest customer reviews; extract **raw signals only** (do NOT synthesize segments): distinct Core Jobs, success criteria, causal real-criterion candidates, and 5–10 quotable quotes per competitor with source URLs. Return the competitor list + raw review signals in your final message. ≤12 fetches / ~10 min.
 
-**[P1] Asset Extraction.** Read `00-input.md` (idea + assets) + `nmt-key-theses.md`. From first principles, extract and name the idea's **essence**, **technology / capability**, **team expertise & unfair advantages**, **resources in hand** (money, partners, traction, distribution, data, brand), and **hard constraints**. Tag each asset **transferable** vs **idea-specific**. Write `P1-assets.md`. No web.
+**[P1] Asset Extraction.** Given the user input (idea + assets) + `nmt-key-theses.md`. From first principles, extract and name the idea's **essence**, **technology / capability**, **team expertise & unfair advantages**, **resources in hand** (money, partners, traction, distribution, data, brand), and **hard constraints**. Tag each asset **transferable** vs **idea-specific**. Return the asset inventory in your final message. No web.
 
-**[P2] Market & Segment-Jobs Generation.** Read `P1-assets.md` + the read set. Generate **5–8 candidate Big-Job markets** where the assets create value, across diverse angles (where the tech applies · where the team's expertise/access/partners apply · adjacent Big Jobs / climb-a-level moves). For **each** candidate, also generate the **Segment-and-Jobs hypothesis** — a named focus segment (causal criteria) + its Core Jobs + success criteria — and which assets transfer. (Segment+Job is one analytical entity; a bare market name is not evaluable.) Depth = hypothesis, not deep research. Write `P2-candidate-markets.md`. ≤2 fetches.
+**[P2] Market & Segment-Jobs Generation.** Given the [P1] asset inventory + the read set. Generate **5–8 candidate Big-Job markets** where the assets create value, across diverse angles (where the tech applies · where the team's expertise/access/partners apply · adjacent Big Jobs / climb-a-level moves). For **each** candidate, also generate the **Segment-and-Jobs hypothesis** — a named focus segment (causal criteria) + its Core Jobs + success criteria — and which assets transfer. (Segment+Job is one analytical entity; a bare market name is not evaluable.) Depth = hypothesis, not deep research. Return the candidate markets in your final message. ≤2 fetches.
 
-**[2] Segments Synthesis & Self-Critic.** Read `00-input.md` + `01-market-sizing.md` + `02a-*` + the read set. Group customers from the mined signals into segments by **similar Core Jobs + similar success criteria + causal criteria**. Build each segment block per the Section-2 template (persona → Core Jobs → Big Jobs → size+budget+switchable share → **selection screen** → competitors inline). Order ✅ → ⚠️ → ❌. Write the cross-segment themes block. Run the **11 self-critic criteria** over the draft and fix in place. Internal-only items (Big-Job validation, antisegment causality, discarded segments) → `debug.md`. Write `02-segments.md` + `02-segments-appendix.md` (short method tables).
+**[2] Segments Synthesis & Self-Critic.** Given the user input + the [1A] sizing + the [1B] competitor/review returns + the read set. Group customers from the mined signals into segments by **similar Core Jobs + similar success criteria + causal criteria**. Build each segment block per the Section-2 template (persona → Core Jobs → Big Jobs → size+budget+switchable share → **selection screen** → competitors inline). Order ✅ → ⚠️ → ❌. Include the cross-segment themes block. Run the **11 self-critic criteria** over the draft and fix in place. Keep internal-only items (Big-Job validation, antisegment causality, discarded segments) in your reasoning, not the output. Return the segment blocks + short method tables in your final message.
 
-**[3] Strategy (Differentiation + action-RAT).** Read `00-input.md` + `01-market-sizing.md` + `02-segments.md` + `02a-reviews-data.md` + the read set + `value-creation-mechanics.md`. Pick the focal segment (selection-screen composition + asset fit). Produce Section 3 (positioning headline → why focal → criteria×competitors matrix → underserved wedge → published mechanic → features → Big-Job-level threat) and Section 5 (action-first RAT on the cause-and-effect chain: each risk positive + falsifiable + paired with its validation action; then the Step 1/2/3 action plan, ordered by RAT priority; drop any "≤1 week" constraint). Write `04-strategy.md`. ≤4 fetches.
+**[3] Strategy (Differentiation + action-RAT).** Given the user input + the [1A] sizing + the [2] segments + the [1B] review signals + the read set + `value-creation-mechanics.md`. Pick the focal segment (selection-screen composition + asset fit). Produce Section 3 (positioning headline → why focal → criteria×competitors matrix → underserved wedge → published mechanic → features → Big-Job-level threat) and Section 5 (action-first RAT on the cause-and-effect chain: each risk positive + falsifiable + paired with its validation action; then the Step 1/2/3 action plan, ordered by RAT priority; drop any "≤1 week" constraint). Return Section 3 + Section 5 in your final message. ≤4 fetches.
 
-**[P3] Pivot Evaluation & Ranking.** Read `P2-candidate-markets.md` + `P1-assets.md` + `01-market-sizing.md` + `02-segments.md` + the read set. Score every candidate market on the **selection screen** (added value · demand · margin · size×switchability · existential-risk gate); drop gate-failures; rank; select top 3–5. Reuse main-pipeline sizing where a candidate overlaps a researched market. For each pick state **what changes vs. the original idea** (channel · UE · build · which assets carry) and a confidence level. Write `P3-pivot-ranking.md`. ≤2 fetches.
+**[P3] Pivot Evaluation & Ranking.** Given the [P2] candidate markets + the [P1] assets + the [1A] sizing + the [2] segments + the read set. Score every candidate market on the **selection screen** (added value · demand · margin · size×switchability · existential-risk gate); drop gate-failures; rank; select top 3–5. Reuse main-pipeline sizing where a candidate overlaps a researched market. For each pick state **what changes vs. the original idea** (channel · UE · build · which assets carry) and a confidence level. Return the ranked pivot markets in your final message. ≤2 fetches.
 
 ### Orchestrator
-1. Create the folder + `00-input.md`; record start time.
-2. Spawn Wave 1 (1A, 1B, P1→P2) in background; wait for all.
-3. Spawn Wave 2 (Segments); wait.
+1. Hold the user's input in context; record start time.
+2. Spawn Wave 1 (1A, 1B, P1→P2) in background; wait for all; collect their returns.
+3. Spawn Wave 2 (Segments) with the Wave-1 returns; wait.
 4. Spawn Wave 3 (Strategy + P3) in parallel; wait.
-5. Assemble `{product-slug}-market-research-result.md`: one-pager (computed LAST from the finished sections) → Section 1 (`01-market-sizing.md`) → Section 2 (`02-segments.md`) → Section 3 (from `04-strategy.md`) → Section 4 (within-segment switches from `02-segments.md` Job Graph + alternative markets from `P3-pivot-ranking.md`) → Section 5 (action-RAT from `04-strategy.md`) → Section 6 → Appendix (merge `01-market-sizing-appendix.md` + `02-segments-appendix.md`, kept short).
+5. Assemble the single file from the agents' returns: one-pager (computed LAST) → Section 1 (sizing) → Section 2 (segments) → Section 3 (differentiation) → Section 4 (within-segment switches + alternative markets) → Section 5 (action-RAT) → Section 6 → Appendix (sizing + segment method tables, kept short).
 6. Source-link audit; flag any bare or "URL TBD" sources in the checklist.
-7. Append a short timing + counts summary to `debug.md`.
-8. Chat output (below).
+7. Chat output (below).
 
 ---
 
@@ -491,7 +492,7 @@ In the chat, output **only**:
 1. **Brief outcome** — 3–5 lines: the verdict, the focus pick, the top risk, and whether a pivot market looks more promising than the original idea.
 2. **The one-pager**, printed verbatim.
 3. **Concrete rerun suggestions** — e.g., *"Re-run for the Big-Job market `{X}` where your `{asset}` also applies, or with a `{per-worker / subscription}` model for `{segment}`?"*
-4. **Paths** — the result file, `debug.md`, and the run folder.
+4. **Path** — the single result file.
 
 Framing: the goal is the success of the whole business initiative, not only the first idea (local-vs-global optimum) — so the reruns are a first-class invitation, not an afterthought.
 

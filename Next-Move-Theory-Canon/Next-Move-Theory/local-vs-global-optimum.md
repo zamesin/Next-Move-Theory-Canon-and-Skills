@@ -81,3 +81,7 @@
 - **Studying the graph and applying strategic mechanics --- a way out of the Innovator's Dilemma**.
 - Next Move Theory helps you make this jump deliberately.
 - **When to switch**: If the local optimum is exhausted (growth has stalled, competition has intensified, the market has shrunk) --- it's time to look for the global one.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

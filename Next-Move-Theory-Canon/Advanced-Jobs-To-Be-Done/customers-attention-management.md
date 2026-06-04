@@ -231,3 +231,7 @@ The advertising business model has one foundational economic structure: **a free
 - [Subtraction](../Next-Move-Theory/subtraction.md) — subtraction as the meta-operator; cognitive substrate of the addition bias.
 - [Mechanics Catalog](../Next-Move-Theory/mechanics-catalog.md) — full mechanics catalog; *Direct customer attention to where you need it* (§8); *Lower the start-cost of the Next Job* (§1).
 - [Focus & Attention Management](../Next-Move-Theory/focus-as-company-attention-management.md) — meta-framework view: focus and attention management as the same operation; subtraction as mechanism; fractal of scopes (customer · company · department · product portfolio · employee); focus at segment and Job levels; Innovator's Dilemma; sustaining focus over time; two-track investment discipline.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

@@ -459,3 +459,7 @@ This single layer compounds across the funnel — uplift in **deal close rate**,
 - **The deal itself is the constraint.** B2B decision-makers often experience the buying process itself as difficult, slow, and politically risky. Bringing useful information into the deal (competitor comparisons, objection handlers, stakeholder briefs) materially increases close probability because it directly performs the personal Job *"I won't be embarrassed defending this internally."*
 
 For the full B2B treatment (role-by-role Job analysis, the integrator model, B2B vs B2B2C dynamics, the "ex" rule for end-user weight, common B2B mistakes) — see [B2B](b2b.md).
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

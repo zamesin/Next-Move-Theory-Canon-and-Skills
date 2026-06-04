@@ -196,3 +196,7 @@ The common failure modes:
 - [ABCDX segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md) — existing-product local-optimum segmentation by margin × satisfaction before AJTBD-on-A/B.
 - [Find segmentation criteria](../HowTos/find-segmentation-criteria.md) — operational checklist for extracting causal segmentation criteria.
 - [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — interview mechanics for surfacing Jobs, criteria, Consideration Activators, and Critical Chains.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

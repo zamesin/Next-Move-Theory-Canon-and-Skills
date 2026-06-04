@@ -163,3 +163,7 @@ ABCDX's firing of C/D customers ([ABCDX Segmentation](../ABCDX-Segmentation/abcd
 - [Job Types and Properties §9](../Advanced-Jobs-To-Be-Done/job-types-and-properties.md) — Viral Jobs as substrate of viral capture.
 - [ABCDX Segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md) — firing C/D customers as attentional triage.
 - [Scientific Foundations §§1, 15, 18](../Advanced-Jobs-To-Be-Done/scientific-foundations.md) — allostasis substrate; habit physiology; variable-ratio reinforcement.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

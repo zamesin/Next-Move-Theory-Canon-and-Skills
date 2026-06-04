@@ -192,3 +192,7 @@ Market with money
 ## 7. Fractality of strategies
 
 The same mechanic works at every level — *move to the Next Job* is a button in the UI or a company strategy (design → design + renovation). **Level of application = scale:** at the Big Job it's strategy; at the Micro Job it's micro-optimization. Once you understand the mechanics, you apply them everywhere — from copywriting to picking a market.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

@@ -29,7 +29,7 @@ Next Move Theory is that algorithm. There is one for each of the questions that 
 
 This canon is the result of the last eight years of my work. Eight years ago I discovered Jobs To Be Done, saw enormous potential in it, and made an unreasonable decision: rebuild it from scratch so it would finally yield an algorithm. Advanced Jobs To Be Done only realized that potential when I got lucky and found the scientific theories that explain what value actually is and how a person changes behavior — that body of science, gathered in [`scientific-foundations.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/scientific-foundations.md), is the foundation of everything that followed. On top of it I rebuilt JTBD into thousands of foundational theses. But Advanced Jobs To Be Done on its own still didn't produce the algorithm; to get there I had to fold in Unit Economics, the Riskiest Assumption Test, ABCDX segmentation, and other disciplines, and that integration became Next Move Theory. I've since taught this methodology to more than 13,000 people in my home country — and this public canon is how I give its foundations to the world.
 
-**The main algorithm is here in full — read it in [`the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md).** But reading the steps isn't enough: for the algorithm to actually work for you, you have to understand the foundations it runs on — what a Job is, what value is, how to segment, how to test the riskiest assumption first. That is what the rest of this canon is — the foundational theses the algorithm stands on, so it works for you instead of reading like an empty checklist. (This public canon is about 30% of the methodology's theses; the step-by-step algorithms for the specific tasks above keep appearing at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github).)
+**The main algorithm is here in full — read it in [`the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md).** But reading the steps isn't enough: for the algorithm to actually work for you, you have to understand the foundations it runs on — what a Job is, what value is, how to segment, how to test the riskiest assumption first. That is what the rest of this canon is — the foundational theses the algorithm stands on, so it works for you instead of reading like an empty checklist.
 
 The **skills** turn that algorithm into tools: feed in a product idea and get back a *decision*, not a description.
 
@@ -51,17 +51,46 @@ If you build, market, or decide the direction of a product, this is for you. You
 
 ---
 
+## What's here — and what's coming
+
+**This public canon is the foundation, not the whole methodology — about 30% of it.** What you have here are the foundational theses of Advanced Jobs To Be Done and Next Move Theory — what a Job is, what value is, how segmentation, behavior change, the Job Graph, and the Riskiest Assumption Test work — plus the main algorithm itself ([`the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md)).
+
+Beyond that, what is **not here yet:**
+
+- the **product-diagnosis algorithm** and the step-by-step algorithms for the questions listed at the top — launch and find Product-Market Fit, scale, save a dying product, position, exit competition, grow conversion, raise average order value, improve retention, build an acquisition channel, and the rest;
+- the **full 100+ mechanics catalog**;
+- the algorithms for **rolling the methodology out across a company**;
+- the full unit-economics integration, and more.
+
+All of it will keep appearing on **[nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github)**. **Subscribe to the newsletter** there so you don't miss new free materials and courses as they go live.
+
+---
+
 ## The skills
 
 The `Skills/` directory holds Claude Code skills that run the methodology for you. Each one reads the canon at runtime, so its output is grounded in *this* methodology — not in the generic JTBD an LLM would otherwise reach for.
 
 | Skill | What it does |
 |---|---|
-| **[`market-research`](Skills/market-research/)** | Sizes a market and scores customer segments to answer *"which Jobs of which segment should we compete for first?"* Output: an A4 one-pager with a **GO / NARROW / PIVOT** verdict, segments scored on a five-factor screen, direct and indirect competitors, a differentiation hypothesis, an action-first RAT plan, and alternative Big-Job markets to pivot into. |
-| **[`craft-value-proposition`](Skills/craft-value-proposition/)** | Turns a chosen segment + Job into a sharp **Value Proposition Statement**. Output: the Job Graph one level below the Core Job, three ranked value-prop candidates scored against the methodology's value-creation mechanics, the chosen statement (mechanic × Core Job × alternative), an Aha Moment hypothesis, and the top-3 RAT cards to test it. |
-| **[`product-requirements`](Skills/product-requirements/)** | Turns a product idea into a full PRD package via a team of agents — segment analysis, risks, competitors, an analytics plan, landing copy, marketing hypotheses, and unit economics. |
+| **[`ask-nmt`](Skills/ask-nmt/)** | A conversational **advisor** you can talk to — ask any product, strategy, segmentation, value, pricing, growth, positioning, B2B, or methodology question and get an answer grounded in the canon (not generic JTBD). It explains concepts, diagnoses your real situation, pressure-tests your hypotheses like a skeptical senior PM, and hands off to the producer skills below when you want a full artifact. |
+| **[`market-research`](Skills/market-research/)** | Sizes the market and scores segments to answer *"which Jobs of which segment should we compete for first?"* Output: a **GO / NARROW / PIVOT** one-pager, segments scored on a five-factor screen, direct and indirect competitors, an action-first RAT plan, and alternative Big-Job markets to pivot into. |
+| **[`craft-value-proposition`](Skills/craft-value-proposition/)** | Takes a chosen segment + Jobs and builds the strongest **Value Proposition** — value hypotheses mapped over the Job Graph and the value-creation mechanics, filtered on feasibility, unit-economics, and competitiveness, ranked, with the top RAT cards. Output includes a PRD-ready implementation spec. |
+| **[`product-requirements`](Skills/product-requirements/)** | Turns the chosen segment + value into a build-ready **PRD** (full functionality + edge cases). First runs a *"challenge the build"* gate that hunts for a cheaper way to hit the same business goal before specifying the build. |
+| **[`craft-go-to-market`](Skills/craft-go-to-market/)** | Turns the value proposition into ready-to-publish **go-to-market** — landing-page copy, ad / creative formulas, and an acquisition + growth-communication plan (channels loaded with Consideration Activators, lead magnets, viral loops, retention messaging). |
 
-All three are **user-invocable**: once installed, type `/market-research`, `/craft-value-proposition`, or `/product-requirements` in Claude Code. `market-research` and `craft-value-proposition` each have a fast **Quick** mode (no internet) and a deeper **Deep** mode (subagents + web research).
+**`/ask-nmt` is the conversational front door** — talk to it any time for advice, a diagnosis of your real situation, or to pressure-test an idea; it answers from the canon and points you to the right producer skill when you need a full artifact.
+
+**The four producer skills form a pipeline**, each one building on the artifact the one before it produced:
+
+1. **`/market-research`** → pick the segment and the Core Jobs to compete for (with the GO / NARROW / PIVOT verdict and the riskiest assumptions to test).
+2. **`/craft-value-proposition`** → feed it the market-research result; get the value proposition plus a PRD-ready implementation spec.
+3. From the value proposition, branch to either (or both):
+   - **`/product-requirements`** → the build-ready PRD — *what to build*. It consumes the segment from step 1 and the value from step 2.
+   - **`/craft-go-to-market`** → the landing page, ads, and growth plan — *how to sell it*. Works best from the value proposition; also accepts the PRD or the market-research result.
+
+You can also jump in mid-pipeline if you already know your segment and Jobs — each skill takes what you hand it, or routes you back to the step it needs first.
+
+All five are **user-invocable** in Claude Code (`/ask-nmt`, `/market-research`, `/craft-value-proposition`, `/product-requirements`, `/craft-go-to-market`). The four producers each have a fast **Quick** mode (no internet) and a deeper **Deep** mode (subagents + web research).
 
 > The skills produce **hypotheses, not conclusions.** Every number is an LLM-generated estimate with a verification path attached. Validate before any decision with expensive consequences — that's the RAT discipline the methodology is built on.
 

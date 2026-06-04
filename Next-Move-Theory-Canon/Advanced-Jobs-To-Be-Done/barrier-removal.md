@@ -82,3 +82,7 @@ Concrete Consideration-Activators-loading acts that reduce specific fears — li
 - [Consideration Activators](consideration-activators.md) — Consideration Activators components and why real blockers are not Consideration Activators.
 - [Communication](communication.md) — how Barrier reality and fear-reduction claims show up in messages, landing pages, and sales.
 - [Behaviour Change](behaviour-change.md) — forces that drive and block behavior change.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

@@ -6,8 +6,6 @@
 
 **The methodology is being built with the goal of providing an algorithm for solving absolutely any business task.** It is in active development — significant parts already exist ([The Algorithm](../Algorithms/the-algorithm.md) for v1.0 of the cycle; ~80 strategies catalogued in [Mechanics Catalog](mechanics-catalog.md)); open frontiers include cross-function goal-setting alignment and the universal decision-tree tool. The goal is the *vector*, not the current state.
 
-> The acronym A-U-R-A (Advanced Jobs To Be Done · Unit Economics · Riskiest Assumption Test · ABCDX Segmentation) came to the author in a dream a month before the integration was articulated.
-
 ---
 
 ## 1. The unit of analysis is the Company Strategy — a sequence of cross-function actions leading the company toward an expected outcome
@@ -232,3 +230,7 @@ A company that answers *"yes"* to all of these compounds. A company that can't b
 - [Riskiest Assumption Test](../Riskiest-Assumption-Test/rat-key-theses.md) — integrative validation.
 - [Unit Economics](../UnitEconomics/unit-economics.md) — financial filter.
 - [ABCDX Segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md) — resource allocation discipline.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

@@ -206,3 +206,7 @@ The default disposition is *drop it unless we can show the product cannot exist 
 **Sequencing principle.** A broader, scrappier version first; a narrower one next. When the broad version finds traction, the team has validated other risky assumptions along the way (segment, channel, unit-economics direction); a narrower version can then be built *on top of* the validated evidence. Starting narrow with everything custom multiplies risk by stacking specificity on top of unknowns.
 
 ---
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

@@ -140,3 +140,7 @@ Examples: **Fandango** — *movie-ticketing app for finding showtimes and buying
 - [Behaviour Change](behaviour-change.md) — behavior-change forces, trigger timing, and the familiar vs. unfamiliar Core Jobs distinction.
 - [Job Structure](job-structure.md) — eight elements of a Job, success criteria, triggers, emotions, and the Big/Core/Small/Micro hierarchy.
 - [Increase Conversion](../HowTos/increase-conversion.md) — operational HowTo for repairing the path from trigger to first Aha Moment.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

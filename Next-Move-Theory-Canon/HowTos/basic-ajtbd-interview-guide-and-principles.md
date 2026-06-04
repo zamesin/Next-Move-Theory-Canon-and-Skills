@@ -173,3 +173,7 @@ Across both, the per-Job questions are universal; you choose which Jobs to dig. 
 - [Job Types and Properties](../Advanced-Jobs-To-Be-Done/job-types-and-properties.md) — Fake Jobs and the past-payment filter (§8).
 - [Scientific Foundations](../Advanced-Jobs-To-Be-Done/scientific-foundations.md) — why direct "why" questions are unreliable (§10).
 - [B2B](../Advanced-Jobs-To-Be-Done/b2b.md) — the B2B roles / deals / budget block and personal Jobs.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

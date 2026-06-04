@@ -333,3 +333,7 @@ When analyzing a real customer (an interview, a churn analysis, a win/loss revie
 - [Load Consideration Activators](../HowTos/load-consideration-activators.md) — operational checklist for loading Consideration Activators.
 - [Formulate Jobs correctly](../HowTos/formulate-jobs-correctly.md) — catch-and-correct moves for the most common formulation mistakes.
 - [Scientific Foundations](scientific-foundations.md) — the neuroscience underneath emotions, needs, and the brain-as-investor framework (allostasis, RPE, Jobs as need-serving goal representations, status as rank-position motivation).
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

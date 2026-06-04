@@ -337,3 +337,7 @@ For deeper unpacks of specific topics referenced above:
 - [Communication](communication.md) — how to convey delivered value, formulas, landing-page structure
 - [Subtraction](../Next-Move-Theory/subtraction.md) — subtraction as the meta-operator across all four NMT pillars; the four-way ROI asymmetry that makes removing beat adding; the invisible-product asymptote; the structural team bias against subtraction
 - [Create Value](../Algorithms/create-value.md) — step-by-step algorithm for applying these mechanics to a real product situation
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

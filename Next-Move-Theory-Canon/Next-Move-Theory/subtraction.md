@@ -180,3 +180,7 @@ Subtraction shows up across the canon in its pillar-specific forms. The most rel
 - [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md) — focus as the subtraction of all non-focus segments.
 - [Local vs Global Optimum](local-vs-global-optimum.md) — the global optimum is subtractive; the local optimum is additive.
 - [Scientific Foundations](../Advanced-Jobs-To-Be-Done/scientific-foundations.md) — allostasis (§1), reward prediction error (§11), habit physiology (§15), loss aversion (§13), TRIZ parallel (§21).
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

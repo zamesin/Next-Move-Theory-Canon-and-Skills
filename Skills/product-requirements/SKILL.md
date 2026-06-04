@@ -1,1076 +1,358 @@
 ---
 name: product-requirements
-description: Generate product requirements (PRD) through segment analysis, risks, and competitors using a team of 6 agents. Use when you need to turn a product idea into a full requirements package — PRD, analytics plan, landing copy, marketing hypotheses, unit economics. Built on Ivan Zamesin's AJTBD/Next Move Theory methodology — distinct from canonical Christensen JTBD.
+description: Turn a chosen segment + Core Jobs into a build-ready PRD (full functionality + edge cases) using Ivan Zamesin's AJTBD / Next Move Theory methodology (distinct from generic Christensen JTBD). It CONSUMES upstream work — segments from a /market-research result and the value from a /craft-value-proposition result — and never re-derives them. It runs no research itself: if you haven't done the research, it routes you to run /market-research then /craft-value-proposition first; if you'd rather skip research and just write requirements fast, you describe the segment + Jobs + value you already know and it goes straight to the PRD. Before writing requirements it runs a "challenge the build" gate (5 Whys up the business goal + subtraction-first + local-vs-global + a walk of the value-creation mechanics) that proposes more-effective ways to hit the same business Job than building the thing as specified; if a better way wins, the PRD is written for THAT. Output — a single PRD document — full functionality mapped Core Job → Big Job → value mechanic → success criteria → Aha Moment, built on the Critical Chain, plus edge cases covering ~90% of use cases across people, contexts, and conditions. Writes the PRD in plain language the reader already uses, with methodology terms only in parentheses. Two modes — Quick (default, no internet) and Deep (subagents + web parity check). Defaults to English; adapts to the user's language on request. Use when turning a validated segment+value into a build spec, a feature into requirements, or when the user says "write the PRD / product requirements".
 user-invocable: true
 ---
 
-# Product Requirements (PRD) v3 — English / US edition
+# Product Requirements (PRD) v4 — English / US edition
 
-Turns a product idea into a full product package via this fast process:
-1. Collect idea and settings (1 question round)
-2. Collect business context (2 rounds of 4 questions)
-3. Auto-generate: Next Move Theory recommendations + segments (~80% market coverage) + risks
-4. User confirmation (1 round)
-5. Run a team of 6 agents with cross-verification
+> **v4 in one breath.** The skill no longer re-derives segments (that is `/market-research`) or invents value (that is `/craft-value-proposition`) — it **consumes** their output, and it runs **no research itself**. With no upstream artifact it does one of two things: **route** the user to run `/market-research` → `/craft-value-proposition` first (the proper path), or — if the user just wants requirements fast and already knows their segment and value — take the **segment + Jobs + value straight from the user's description** (the fast path) and skip research entirely. It then adds a **"challenge the build"** gate before any requirement is written — *is building this even the right move, or is there a more energy-efficient way to perform the business Job?* — and writes the PRD for whatever wins. The deliverable is a **single PRD only**: full functionality (every feature laddered Core Job → Big Job → value mechanic → success criteria → Aha Moment, on the Critical Chain) + edge cases covering ~90% of use cases across people, contexts, and conditions. Landing/ad/GTM copy moved to `/craft-go-to-market`; analytics and a standalone unit-economics model are out of scope in this version (unit economics survives only as a reasoning filter).
 
-**Speed principle:** questions are batched (up to 4 at a time), not asked one at a time. Total of 4-5 user touchpoints before agents kick off.
-
-**Output — a folder with 5 files:**
-- `01-prd.md` — product requirements + edge cases
-- `02-analytics-plan.md` — analytics system with event code
-- `03-landing-copy.md` — full landing copy per Next Move Theory
-- `04-marketing-hypotheses.md` — marketing hypotheses + cross-sell / upsell / retention
-- `05-unit-economics.md` — unit economics model
-
----
-
-## Core methodological principle
-
-**Source of truth — `Next-Move-Theory-Canon/` in the project root.** Do NOT use generic interpretations of Jobs To Be Done from the internet or the LLM's prior training. Ivan Zamesin's methodology diverges substantially from those. See `CLAUDE.md` in the project root.
-
-Methodological invariants this skill **must** enforce:
-- **Every feature must link Core Job → Big Job** (a feature with no declared Big Job is invalid)
-- **Aha Moment is a positive prediction error event**, not signup, not login, not "first action"
-- **Critical Chain of Jobs is explicitly constructed per Core Job** (not just listed sequence)
-- **No feature dilution** — every feature serves the focal segment or is explicitly marked as later-phase
-- **Big Job consistency** — Big Job stated in the landing must match the Big Job in the PRD
-- **Competitors at Big Job level** — non-obvious competitors (other ways to close the Big Job) must be present, not just direct Core Job competitors
-
----
-
-## Anti-Compaction protocol (context preservation)
-
-All intermediate results saved to disk to survive context compaction.
-
-**Temp folder:** `TMP/prd-{short-product-name}/`
-
-| File | When saved | Contents |
-|------|------------|----------|
-| `00-product-idea.md` | After STAGE 0 | Product idea + language + analytics tool |
-| `01-business-context.md` | After STAGE 1 | Full business context + chosen Next Move Theory variant |
-| `02-segments.md` | After STAGE 2 | ALL generated segments + which were selected |
-| `03-risks.md` | After STAGE 2 | Ranked risks + which were selected |
-| `04-competitors.md` | After Agent 1 | Competitor analysis + their feature set |
-| `05-prd.md` | After Agent 2 | Product requirements |
-| `06-edge-cases.md` | After Agent 3 | Edge cases |
-| `07-analytics-plan.md` | After Agent 4 | Analytics plan with event code |
-| `08-landing-copy.md` | After Agent 5 | Landing copy + marketing hypotheses + growth mechanics |
-| `09-cross-verify.md` | After Agent 6 | Cross-check of all documents |
-| `_spring-context.md` | After every stage | Current state summary for restoration |
-
-**Rules:**
-- After completing each stage — save the result to the corresponding file via `Write`
-- Before starting each stage — read `_spring-context.md` to restore context
-- Update `_spring-context.md` after every stage: current stage, key decisions, what's done, what's next
-- `_spring-context.md` must always include `language` and `analytics_tool` fields
-
----
-
-## STAGE 0: Idea and settings
-
-Ask all 3 questions in ONE `AskUserQuestion` call:
+## Where this skill sits in the chain
 
 ```
-AskUserQuestion:
-  questions:
-    - question: "Output language for all documents?"
-      header: "Language"
-      options:
-        - label: "English"
-          description: "All documents in English (default)"
-        - label: "Русский"
-          description: "Все документы на русском"
-        - label: "Other"
-          description: "Skill will ask which one"
-      multiSelect: false
-
-    - question: "Which analytics tool to generate event code for?"
-      header: "Analytics"
-      options:
-        - label: "PostHog (recommended)"
-          description: "Open-source, popular in startups"
-        - label: "Amplitude"
-          description: "Enterprise-grade product analytics"
-        - label: "Mixpanel"
-          description: "Event-based analytics"
-        - label: "Skip analytics"
-          description: "Skip analytics plan generation"
-      multiSelect: false
-
-    - question: "How will you describe the product idea?"
-      header: "Idea"
-      options:
-        - label: "I'll describe in text"
-          description: "Free-form description"
-        - label: "I have a website / landing URL"
-          description: "I'll give a link, you'll explore"
-      multiSelect: false
+/market-research   →   /craft-value-proposition   →   product-requirements   →   /craft-go-to-market
+(segment + Jobs +      (the value hypothesis +          (THIS SKILL:               (landing + ad +
+ wedge + competitors)   §11 implementation spec)         the build spec)            GTM/growth comms)
 ```
 
-After the user replies — ask for the idea description (or the URL). If a URL — use `WebFetch` to study the site.
+This skill is the **build** step. It takes a chosen segment with its Core Jobs and a value direction, challenges whether building is even the right move, and produces the requirements engineers and designers build against. It **does not** re-run segmentation, re-invent the value proposition, or write any customer-facing copy — those are the skills around it. **Never regenerate what an upstream artifact already contains; load it and build on it.**
 
-**Save** to `00-product-idea.md`:
+## What this skill produces
+
+**One file — the PRD** (`{product-slug}-product-requirements-result.md`):
+- **Full functionality** for the selected Core Jobs — every requirement laddered Core Job → Big Job → value mechanic → concrete success criteria, with the Aha Moment placed as far left in the Critical Chain as possible.
+- **Edge cases covering ~90% of use cases** — derived from Critical-Chain break sites × context variations × Job-types, across the different people, contexts, and conditions the segment performs the Jobs in.
+- Plus: target users by Job, competitive parity (reused from upstream), success metrics (criteria → metrics), risk handling (the RAT carried from upstream / the challenge step), and an explicit out-of-scope (anti-segment + deferred Jobs).
+
+**Not produced (this version):** landing/ad/GTM copy → `/craft-go-to-market`; analytics plan → out of scope; standalone unit-economics model → out of scope (unit economics is used only as a *filter* inside the challenge and ranking, never emitted as a document).
+
+**Two modes:**
+- **Quick (default, ~5–10 min):** one Claude, no internet, no subagents. Fills the PRD directly from the loaded artifacts + reasoning.
+- **Deep (opt-in, longer):** subagents with web access refresh competitor parity and stress-test edge cases against real reviews. See "Deep mode" at the end.
+
+---
+
+## Methodology — source of truth
+
+The **only** source of methodology is the Next Move Theory canon, read at runtime (relative paths; the skill ships in the same repo). **Path note:** if a file is not found, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix the public repo strips.
+
+**Core read set (every run):**
+
+| File | What the skill uses it for |
+|---|---|
+| `Next-Move-Theory-Canon/Algorithms/the-algorithm.md` | The 10-step spine; **Step 1 — Challenge the business goal** (5 Whys, local-vs-global gate) is the challenge step's home |
+| `Next-Move-Theory-Canon/Next-Move-Theory/subtraction.md` | The subtraction-first question + invisible-product asymptote — the heart of the challenge |
+| `Next-Move-Theory-Canon/Next-Move-Theory/local-vs-global-optimum.md` | Is this an additive local-optimum build when a global-optimum move returns more? |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md` | Value formula (§3), success criteria (§9), criteria→mechanics map (§11), Aha Moment (§12), the two dominant mechanics (§14), value-lives-outside-Core-Jobs (§17) |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` | The mechanics catalog — the menu for the challenge AND the feature→mechanic mapping |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` | The chain the functionality is built on; **break sites = the edge-case source** (§5, §7) |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md` | The 8 Job elements; context→criteria (§3); criteria→metrics (§8); fidelity levels |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-types-and-properties.md` | Tax / Orientation / Emotional / Viral Jobs — edge-case and functionality sources |
+| `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` | Risk handling; the drop-it exercise (used in the challenge); MVP = probe |
+
+**As-needed read set:**
+
+| File | When |
+|---|---|
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-graph.md` | When the Job-Graph slice needs care (level placement, many-to-many, directional moves) |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md` | Path D — sharpening a manually-described segment; confirming Core-Job level placement |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` | Aha Moment placement, triggers, the seven behavior-change triggers |
+| `Next-Move-Theory-Canon/UnitEconomics/unit-economics.md` | The financial filter inside the challenge + ranking (filter only — not an output) |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/b2b.md` | When the buyer is a company — role-chain edge cases, two parallel Job Graphs |
+
+**This skill runs no research and performs no segmentation.** With no upstream artifact it either **routes** the user to `/market-research` → `/craft-value-proposition` (the proper path), or takes a **manually-described** segment + Jobs + value (the fast path) and writes the PRD directly. The canon files above are read to *build the PRD on* a segment+value that already exists — not to discover one.
+
+**Do NOT use generic JTBD from the internet or prior training.** Ivan Zamesin's AJTBD diverges substantially. Five mis-defaults to never propagate (per project `CLAUDE.md`):
+- A **Job** is a desired *transition* — State A (situation) → expected outcome (State B), in order to perform a higher-level Job. Not "a struggle for progress."
+- **Value** is greater energy efficiency for the brain in performing a Job, measured against the brain's prediction. The **Aha Moment** is the customer-experience of value beating prediction; the **Problem** is value falling below it. **Never use the abbreviations PPE / NPE** (Rule 22) — write *Aha Moment* / *Problem*.
+- `I want to + verb` is the **primary element** of an eight-element Job, not the whole Job. Each infinitive verb is a separate Job (Rule 7); parse multi-verb statements into the hierarchy.
+- A **Problem** is a consequence of a Solution hired for a Job and underperforming its success criteria — not a root cause.
+- A **Solution** is a real thing in the world *and*, inside the Job Graph, a label for the sub-graph of Core + Micro Jobs it installs.
+
+**Methodological invariants — the PRD is invalid if any is violated:**
+- **Every feature links Core Job → Big Job** AND names the **value mechanic** it implements (from `value-creation-mechanics.md`). A feature with no Big-Job ladder and no mechanic is not a requirement — it's feature thinking (`value-creation.md §1`).
+- **The Aha Moment is a positive-prediction-error event**, never signup / login / "first action", placed as far left in the Critical Chain as possible (`value-creation.md §12`).
+- **The Critical Chain is explicitly constructed per Core Job** (`critical-chain.md`) — functionality and edge cases are both read off it.
+- **Success criteria are concrete** (direction + level) and translate into the success metrics (`job-structure.md §8`).
+- **Segmentation is never re-derived here** — it is consumed (Core Jobs + success criteria as the root; Big Job is motivation context, not the segmentation cut).
+- **The challenge step runs before any requirement is written** — and the PRD is written for the *winning* way to perform the business Job, not necessarily the originally-specified build.
+
+Per `CLAUDE.md`: every named external source is a clickable Markdown link (Rule 2); US-context analogs and recognition test for examples (Rules 6, 19); two-part disclaimer at the top of the result (Rule 3).
+
+---
+
+## Plain-language output — segment words first, methodology in parentheses
+
+**The reader of this output is a product person, not a methodologist.** Write the user-facing document in the plain, everyday language the focal segments already use; when a methodology term genuinely adds precision, **lead with the plain meaning and put the term in parentheses the first time it appears** — never lead a sentence, bullet, or heading with a methodology label.
+
+- ❌ *"Red Queen value-gap compression…"* · *"the Critical Chain breaks at M4"* · *"load the Consideration Activators."*
+- ✅ *"The free do-it-yourself option caught up, so your edge shrank even though you didn't get worse (in the methodology, a* Red Queen *effect)."*
+
+**Who reads it** — the focal segments (internal map: `Strategy/Segments-and-Jobs.md`): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
+
+**Plain ↔ methodology** (say the left; add the right in parentheses only when it earns its place): the result they're after *(the Job / Big Job)* · the main thing the product does for them *(the Core Job)* · the step-by-step path the customer walks *(the Critical Chain)* · the exact step where they get stuck *(a Critical Chain break)* · the moment it clicks / feels worth it *(the Aha Moment)* · getting the result for less time, effort, money, or stress than expected *(value)* · a pleasant surprise / a letdown vs. what they expected *(Positive / Negative Prediction Error — never PPE/NPE)* · the few things they must learn or believe before switching *(Consideration Activators)* · a real blocker vs. just a worry *(a Barrier vs. a fear)* · the assumption most likely to kill this, tested cheap first *(the riskiest assumption / RAT)*.
+
+**Precision still holds in the methodology layer.** Job-grammar discipline (Jobs as *"I want to + verb,"* levels named, terms capitalized) governs the internal-reasoning / debug files and any explicit **methodology appendix**, where full methodology language is expected. The *lead the reader sees* is plain; the *parenthetical and the appendix* carry the precise terms.
+
+---
+
+## Output file (one file per run — `CLAUDE.md` Rule 4)
+
+The skill writes **exactly one** file, in the project root (never `TMP/` or `.claude/`):
+
+```
+Skill-Results/product-requirements/{YYYY-MM-DD_HH-MM}_{product-slug}-product-requirements-result.md
+```
+
+Everything internal — the normalized input, the challenge (business-goal ladder, subtraction-first, the more-effective ways and which won, the locked build subject), the Critical Chain per Core Job, dropped alternatives, and the self-critic verdicts — **stays in-context**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.
+
+---
+
+## The pipeline (S0 → S5)
+
+```
+S0  Intake & route ──────(human: language, mode, input path) ──► [no research path? → route OUT
+     │                                                              to /market-research → /craft-value-
+     │                                                              proposition, OR take a manual
+     │                                                              segment+Jobs+value to write fast]
+S1  Select segment + Core Jobs ─(human: pick segment → pick Core Jobs)
+     │
+S2  Business context ────(human: ≤4 batched Qs — only the fields not already supplied)
+     │
+S3  CHALLENGE THE BUILD ─(human: pick the build subject — the original, or a more-effective way)
+     │
+S4  PRD generation ──────(functionality on the Critical Chain + ~90% edge cases — no questions)
+     │
+S5  Assemble + self-critic + summary ──(human: optional tweaks)
+```
+
+Question budget: **3–5 human touchpoints**, fewer when an upstream artifact already carries the segment/value/context. The skill never runs research inside itself — it routes out for it (S0) or takes a manual segment+value. Quick mode runs S4 in a single pass.
+
+---
+
+## S0 — Intake & route
+
+### Language
+Default **English**. If the user writes in another language, offer to work in it (English / their language / Other). Hold the choice in context. The PRD uses the chosen language; canon files and source URLs stay as-is.
+
+### One batched `AskUserQuestion`
+
+```
+Q1 "Where are you starting from?"
+  - "I have a /craft-value-proposition result"   → Path A (best — segments AND value present)
+  - "I have a /market-research result"            → Path B (segments present; value not yet crafted)
+  - "I haven't done research and want to"         → Path C (ROUTE OUT — run the chain first)
+  - "Skip research — I know my segment & value"   → Path D (fast path — I'll describe them)
+
+Q2 "Mode?"
+  - "Quick (default — fast, no internet)"
+  - "Deep (subagents + web parity check)"
+
+Q3 (Paths A/B only) "Path to the result file?"  → free text; Read it.
+```
+
+### Resolve the input path
+
+- **Path A — craft-value-proposition result.** Read it. Its **§11 Implementation spec** already carries the product shape, the feature table (Core Job / criterion / mechanic / Aha link), Critical Chain & Aha placement, cost-to-build & cheapest probe, unit-econ direction, and anti-segment — **plus** the focal segment, Big Job(s), competitors, proof, and RAT cards in the body. **This is the richest input — segments AND value are both present.** Most of S1/S2 is already answered; confirm rather than re-ask, then go to S3.
+- **Path B — market-research result.** Read it. Parse the focal segment(s) (✅/⚠️), their Core Jobs + success criteria, Big Jobs, competitors (direct/indirect/turnkey), the wedge, and the action-first RAT — **carry all of it forward, never regenerate it.** The value layer is *not yet crafted*, so say so: *"You have segments but no crafted value proposition. Strongly recommended: run `/craft-value-proposition` on the focal segment first — the PRD is much sharper from a real value hypothesis. Run it now, or proceed using the market-research wedge as the value direction?"* If the user proceeds, use the wedge/differentiation hypothesis as the value direction; flag the reduced confidence at the top of the PRD.
+- **Path C — no research yet, wants it (ROUTE OUT — do not run research here).** Reply: *"The right order is `/market-research` → `/craft-value-proposition` → back here. Run `/market-research` first (it finds and scores the segments), then `/craft-value-proposition` (it builds the value hypothesis + a PRD-ready spec), then return and pick Path A. Want me to open the `/market-research` input prompt now?"* Hand off and stop — this skill does not size markets or discover segments.
+- **Path D — fast path, manual segment + Jobs + value (no research).** For the user who already knows the segment and the value and just wants requirements. Collect, by description/dictation: product (1–2 sentences) + URL if any; focal segment NAME + causal criteria (behaviour/characteristic, **not** demographics); Big Job(s) + criteria; top 1–3 **Core Jobs** in canonical `When … I want to {outcome} with success criteria {direction+level}, in order to {Big Job}` form; **the value** (what value we create + roughly via which mechanic — this stands in for `/craft-value-proposition`); ≥3 known alternatives (direct/indirect/turnkey if known); the business goal. Validate against the invariants — fix multi-verb Jobs (Rule 7), demographic "criteria", and adjective "value" before proceeding. Then go straight into S1→S5. Flag reduced confidence at the top of the PRD (*"generated from a manually-described segment + value, not a research-backed one"*).
+
+**Hold** the normalized input in context.
+
+---
+
+## S1 — Select segment + Core Jobs
+
+**If a single focal segment arrives from Path A (or a clearly-focal ✅ segment from Path B, or the one segment described on Path D)** — skip the segment pick; confirm it in one line and go straight to Core-Job selection.
+
+**Otherwise** present the segments on the table and ask:
+
+```
+Q "Which segment do we build for?"
+  - [Segment 1 — one line: who they are + their dominant criteria]
+  - [Segment 2 — …]
+  - …
+  - "None of these"
+```
+
+If the user picks **"None of these"**, the skill does **not** go discover a new market itself — it offers the two real options: *describe a different segment now (continue on the fast path), or run `/market-research` to find and score better segments and come back.* Never force a segment.
+
+Then select the **Core Jobs** to design for (these are what the product performs fully — `job-graph.md §2`):
+
+```
+Q "Which Core Jobs of {segment} should the PRD cover?"
+  - [Core Job 1 — When … I want to … with success criteria …]
+  - [Core Job 2 — …]
+  - "All of the above"
+  - "I'll adjust"
+```
+
+Keep the focus tight — **1–3 Core Jobs**. Push back on "all of everything"; focus is the subtraction of non-focal Jobs (`subtraction.md §1`, `segmentation.md §9`). Hold the chosen segment + Core Jobs (canonical form, with success criteria) in context.
+
+---
+
+## S2 — Business context (only the gaps)
+
+Gather only what an upstream artifact didn't already supply, in **one batch of ≤4** `AskUserQuestion`. Skip any field already known.
+
+- **Business goal / business Job** — why are we building this? (launch / grow an existing product / new feature / expand to a new segment). *This is the anchor the S3 challenge ladders up from.*
+- **Constraints** — team, budget, build horizon (<2 wks / 1–2 mo / 3–6 mo / 6+ mo). Sets MVP-vs-full scope and the cheapest-probe framing.
+- **Stage / traction** — idea on paper / interviews done / early users / live with traffic. Sets PMF context (`the-algorithm.md §5`).
+- **Product type & monetization** — SaaS / mobile / service / marketplace / course; subscription / one-off / freemium / lead-gen. (B2B? → load `b2b.md` for the role-chain edge cases.)
+
+"Don't know" is fine — capture as a hypothesis (in context).
+
+---
+
+## S3 — Challenge the build (the gate)
+
+**This runs before any requirement is written.** Source: `the-algorithm.md §4 Step 1`, `subtraction.md`, `local-vs-global-optimum.md`, `rat-key-theses.md §10`, `value-creation.md §1, §14, §17`. The point is not to talk the user out of building — it is to make sure the build is the **most energy-efficient way to perform the business Job**, because *the planning unit is the value hypothesis, not the feature.*
+
+Run these four moves (hold the result in context):
+
+1. **Ladder the business goal up (5 Whys).** *Why build this? → in order to do what? →* climb 3–5 levels (feature → conversion → sales → margin → the strategic goal). Name the **real business Job** the build is meant to serve. The thing handed to you is frequently a mis-set goal; analyzing *how* to hit a mis-set goal is the most expensive early waste (`the-algorithm.md` Step 1).
+2. **Subtraction-first.** Ask the one question that travels across pillars: *"What can we **remove** from this product / segment / chain / assumption-stack that would produce a comparable or larger effect for less cost?"* Hold the invisible-product asymptote: *"What would it look like for the customer to reach this outcome with no product to interact with at all?"* (`subtraction.md §2–§3`).
+3. **Local-vs-global check.** Is the proposed build an **additive local-optimum** move (improve the current product/segment/model — low risk, capped return) when a **global-optimum** move (move-up-a-level, change segment, change business model, capture Previous/Next Job) would return multiplicatively more? Name the choice explicitly; don't drift into local by default (`local-vs-global-optimum.md`).
+4. **Generate the more-effective ways.** Walk the value-creation mechanics over the segment's Job Graph and generate **2–4 alternatives** to building the thing as specified — each one a concrete way to perform the business Job *more energy-efficiently*. Lead with the two dominant mechanics (**move up a level**, **kill a Job**) and the cheapest-probe forms (concierge, no-code, done-for-you, partner, capture the Previous Job, "do nothing"). For each alternative state: the **mechanic**, **what it removes/adds**, **cost-to-build vs. the original**, a **unit-economics-direction** sanity check (does the value convert to margin?), and the **riskiest assumption** it carries (RAT drop-it: which alternative removes risk rather than adding it).
+
+Then present the choice:
+
+```
+Q "Here's the build as specified, plus {N} potentially more-effective ways to hit
+   the business Job '{laddered business Job}'. Which do we write the PRD for?"
+  - "Build it as specified"           [+ one line on why it's the right call]
+  - "{More-effective way 1}"           [mechanic — what it removes — cost vs. original]
+  - "{More-effective way 2}"           […]
+  - "Blend — I'll describe"
+```
+
+**Lock the winning build subject.** If a more-effective way wins, the PRD is written **for that** — re-anchor the Core Jobs / Critical Chain on the chosen approach before S4. Hold the decision (and the alternatives not taken, with reasons) in context.
+
+> Keep this proportionate. For a small, well-validated feature on a working product the challenge may be one paragraph that confirms the build; for a from-scratch product it is the highest-leverage step in the run. Do not manufacture alternatives for symmetry — if the specified build genuinely is the most efficient way, say so and move on (`CLAUDE.md` Rule 12).
+
+---
+
+## S4 — PRD generation
+
+Generate against the **locked build subject** for the **selected Core Jobs**. In Quick mode this is one pass; in Deep mode it is parallelized (below). Build the Critical Chain first (held in context), then write the PRD sections.
+
+### 4.0 Build the Critical Chain per Core Job
+For each selected Core Job, construct the **Critical Chain** — the sequence of Micro Jobs that must all complete for the Big Job to land (`critical-chain.md §1–§2`). Mark the **shape** of each segment (AND-parallel / OR-alternative / conditional) and the **break sites** (hand-offs, cycles, slowest link, external-interruption points). Mark the **Aha-Moment position** and how far left it can be shifted. This chain is the substrate for both functionality (§4.3) and edge cases (§4.4).
+
+### PRD structure (the result file)
 
 ```markdown
-# Product idea
+# Product Requirements — {product / build subject}
 
-## Settings
-- **Language:** {chosen language}
-- **Analytics:** {chosen tool}
-
-## Description
-{user description}
+> **Numerical disclaimer.** All numerical estimates are LLM-generated hypotheses, each with a runnable verification path. Validate before any major decision.
+> **Hallucination disclaimer.** Generated by an LLM; may contain hallucinations in unknown places. For expensive decisions, run a full research pass; do not act on this document alone.
+> ⚠️ {Path D → reduced-confidence flag; Path A/B → name the source artifact file path; if the challenge changed the build subject, say so in one line.}
 ```
 
-Update `_spring-context.md`.
+**1. Overview**
+- What we're building (the build subject locked in S3) and the **business Job** it serves (from the S3 ladder).
+- Target segment(s) + the selected Core Jobs (canonical form, with success criteria).
+- **Aha Moment per segment** — the positive-prediction-error event, where it fires on the Critical Chain, how far left it's shifted. (Never signup/login.)
+- If the challenge changed the approach: one line on what was *not* built and why.
+
+**2. Target users (by Job, not demographics)**
+- Per segment: causal criteria; the Core Jobs they hire us for; their dominant success criteria (direction + level); the Big Job(s) above (motivation).
+- B2B: business Job *and* personal Job per relevant role; the role chain (`b2b.md §5, §7`).
+
+**3. Functional requirements** *(the core)*
+For each selected Core Job:
+- **The Critical Chain** (the Micro-Job sequence from §4.0, shape marked).
+- Requirements phrased from the user's side — *"User can {Micro Job}"* — each with **acceptance criteria = the success criteria (direction + level)**.
+- **Every requirement declares:** (a) which Core Job it serves, (b) **which Big Job it ladders to** (mandatory), (c) **which value mechanic it implements** (from `value-creation-mechanics.md`), (d) its link to the Aha Moment.
+- **Onboarding → value activation:** the shortest path to the first Aha Moment; what to remove/simplify to shift it left; the Aha validity check (*what does the user predict here? what do they get? is the actual better than the prediction?* — if nothing is surprising, it isn't an Aha Moment).
+- **No feature dilution:** every requirement serves the focal segment, or is moved to §7 deferred.
+
+**4. Edge cases — ~90% of use cases across people, contexts, conditions**
+Edge cases in AJTBD are **where the Critical Chain breaks or produces a Problem (a Negative Prediction Error)** under a real variation — not a generic QA checklist. Generate from five sources, then cover the standard technical/operational categories *as they hit the chain*:
+
+- **(a) Context variations** — same expected outcome, different **context** → different success criteria → effectively a different Job (`job-structure.md §3, §11`). Enumerate the contexts the segment + adjacent users actually hit: new vs returning user; B2B roles; regulatory contexts (HIPAA / FERPA / state-by-state); locale / device / language; scale (0 items / 1 / many / 10,000); free vs paid tier; first-time (Orientation-Job-heavy) vs Nth-time.
+- **(b) Critical-Chain break sites** (`critical-chain.md §7`) — hand-offs (ownership ambiguity, latency, information loss), cycles (return-for-rework), the slowest link, external interruptions (a higher-priority Job bursts in; criteria change mid-walk; a competitor surfaces mid-walk).
+- **(c) Tax Jobs** (`job-types-and-properties.md §7`) — work forced on the customer when a chain link fails; each is a Problem and a churn/abandonment trigger.
+- **(d) Job-type branches** — Orientation Jobs for first-timers; Emotional Jobs (anxiety states); Viral Jobs (the Job performed for/with another person); conditional chain steps that exist only for a sub-context.
+- **(e) B2B role-chain breaks** (if B2B) — breaks at role boundaries, mostly *personal-Job* failures (IT security veto, procurement/legal late stalls) (`b2b.md §9`).
+- **Standard categories, framed as chain-breaks:** empty/oversized/malformed input; no/slow/lost network; concurrency & conflicting operations; auth & permissions; payments (cancelled / partial refund / lapsed sub / double charge); security (injection, unauthorized access, rate limits).
+
+Render as a table, sorted by **importance-driven severity** (`critical-chain.md §5` — high-importance break → same-day churn trigger; medium → silent churn; low → the customer drops the Job):
+
+```
+| # | Use-case / context | Where in the Critical Chain | What breaks (the Problem / Tax Job) | Severity (Critical/High/Med/Low) | Requirement to handle it |
+```
+
+**Critical and High edge cases become core requirements in §3**; Medium/Low live in this section. Target ~90% coverage of the likely use cases; if you cap coverage, say what was dropped (`CLAUDE.md` — no silent truncation).
+
+**5. Competitive parity** *(reused from upstream — do not re-mine in Quick mode)*
+- Functionality that must at least match competitors (from the upstream competitor set).
+- Functionality competitors close poorly = our wedge (the underserved success-criterion intersection).
+- (Deep mode refreshes this against live competitor sites + reviews.)
+
+**6. Success metrics**
+- Per Core Job: the success criteria **translated into measurable activation / value-delivery metrics** (`job-structure.md §8` — criteria *are* the metric set).
+- **Aha-Moment rate** (share of new users who reach it, and how far left it fires).
+- North Star: the focus segment performing the Core Job at criteria, repeatedly.
+
+**7. Risk handling & out of scope**
+- **Risks:** the RAT carried from upstream (or generated here) — for each, how the PRD minimizes/accounts for it, and **the single riskiest assumption to validate (cheaply) before the build** (`rat-key-theses.md §8` — kill the product, don't launch it; the MVP is a probe, name what it tests).
+- **Anti-segment / out of scope:** who this is explicitly NOT for (2–3 groups); Jobs/segments deliberately subtracted to hold focus; features deferred to a later phase (the non-focal Jobs from §3).
+
+**8. Non-functional requirements** *(only when relevant)* — performance, security, scalability, compliance, expressed against the chain where they bite.
 
 ---
 
-## STAGE 1: Business context
+## S5 — Assemble, self-critic, summarize
 
-8 questions in 2 batches of 4. The user can answer "don't know" — that's fine, we'll use assumptions.
+Run the **self-critic** over the draft (Quick: a self-critique pass; Deep: a separate critic agent), fix in place, keep verdicts in-context. Then write the single result file and give the user a brief chat summary: what the challenge decided, what the PRD covers, the Aha Moment, the riskiest assumption to validate first, and the file path. Offer the handoff: *"Feed this PRD to `/craft-go-to-market` for landing + ad + GTM copy."*
 
-### Batch 1: Business and monetization
+### Self-critic criteria (methodology only — format is guaranteed by the template)
+1. **No segment re-derivation** — the segment/Core Jobs were consumed from an upstream artifact or taken from the user's description; never discovered, sized, or scored inside this skill.
+2. **Challenge ran first** — the business goal was laddered, subtraction-first asked, local-vs-global named, and the PRD is written for the *winning* build subject.
+3. **Every feature ladders Core Job → Big Job AND names a value mechanic** — no bare features.
+4. **Aha Moment is a real positive-prediction-error event**, placed as far left as the chain allows — not signup/login.
+5. **The Critical Chain is explicit per Core Job**, with shape and break sites marked.
+6. **Edge cases are chain-break-driven and context-spanning**, ~90% coverage, severity by importance — not a generic QA list.
+7. **Success criteria are concrete** (direction + level) and map to the success metrics.
+8. **Out-of-scope names the anti-segment and the subtracted Jobs** — focus is visible.
+9. **Disclaimers present; external sources are clickable links; US-context analogs; no PPE/NPE** (`CLAUDE.md` Rules 2, 3, 6, 19, 22).
 
-```
-AskUserQuestion:
-  questions:
-    - question: "Why are you building this? What business job are you solving?"
-      header: "Business job"
-      options:
-        - label: "Launch a new product"
-          description: "Building from scratch, need to find PMF"
-        - label: "Grow an existing product"
-          description: "Want to grow revenue / users"
-        - label: "New feature in an existing product"
-          description: "Adding capability to a working product"
-        - label: "Expand to a new segment / market"
-          description: "Reaching a new audience or geography"
-      multiSelect: false
-
-    - question: "Product type?"
-      header: "Type"
-      options:
-        - label: "Landing / sales page"
-          description: "Single page for sales or lead gen"
-        - label: "SaaS / web app"
-          description: "Service with signup and subscription"
-        - label: "Mobile app"
-          description: "iOS / Android"
-        - label: "Online course / educational product"
-          description: "Course, training, intensive"
-      multiSelect: false
-
-    - question: "Monetization?"
-      header: "Monetization"
-      options:
-        - label: "Subscription (SaaS / recurring)"
-          description: "Monthly / yearly billing"
-        - label: "One-time purchase"
-          description: "Course, license, fixed-price product"
-        - label: "Freemium → paid conversion"
-          description: "Free entry, paid features"
-        - label: "Lead generation"
-          description: "Free product, monetize via sales"
-      multiSelect: false
-
-    - question: "Constraints? (team, budget, deadline)"
-      header: "Constraints"
-      options:
-        - label: "Solo / vibe-coding"
-          description: "One person, no-code or AI-coding"
-        - label: "Small team (1-3 people)"
-          description: "Few people, limited resources"
-        - label: "Team and budget"
-          description: "I'll describe"
-        - label: "Skip"
-          description: "Don't constrain scope"
-      multiSelect: false
-```
-
-### Batch 2: Context and channels
-
-```
-AskUserQuestion:
-  questions:
-    - question: "Do you have data already? (customers, interviews, sales, traffic)"
-      header: "Data"
-      options:
-        - label: "No — idea on paper"
-          description: "Pure hypothesis, no data"
-        - label: "I've done interviews"
-          description: "Insights from customer conversations"
-        - label: "Early users / first sales"
-          description: "Some traction, but small"
-        - label: "Live product with traffic"
-          description: "Product is live, analytics exist"
-      multiSelect: false
-
-    - question: "When do you need the first working result?"
-      header: "Horizon"
-      options:
-        - label: "< 2 weeks"
-          description: "Need it yesterday, fast MVP"
-        - label: "1-2 months"
-          description: "Time for proper development"
-        - label: "3-6 months"
-          description: "Strategic product, build it solidly"
-        - label: "6+ months"
-          description: "Long-term project"
-      multiSelect: false
-
-    - question: "Where will you acquire customers?"
-      header: "Channels"
-      options:
-        - label: "SEO / content marketing"
-          description: "Organic traffic via content"
-        - label: "Paid ads"
-          description: "Performance marketing"
-        - label: "Community / word of mouth / social"
-          description: "Organic via community"
-        - label: "Sales / outbound"
-          description: "Direct sales, cold outreach"
-      multiSelect: false
-
-    - question: "What competitors do you already know? How do people solve the Job today?"
-      header: "Competitors"
-      options:
-        - label: "I know direct competitors"
-          description: "I'll name specific products"
-        - label: "I see indirect competitors"
-          description: "People solve the Job other ways"
-        - label: "Don't know any"
-          description: "Help me find them"
-      multiSelect: false
-```
-
-**If the user answers "don't know"** — that's fine. Capture what's known and what isn't. Missing pieces will be generated later.
-
-**Save** to `01-business-context.md`:
-
-```markdown
-# Business context
-
-## Batch 1: Business and monetization
-- **Business job:** {answer}
-- **Product type:** {answer}
-- **Monetization:** {answer}
-- **Constraints:** {answer}
-
-## Batch 2: Context and channels
-- **Data / traction:** {answer}
-- **Horizon:** {answer}
-- **Channels:** {answer}
-- **Competitors (known):** {answer}
-```
-
-Update `_spring-context.md`.
+- [ ] Plain-language-led — the PRD leads in the reader's own words; methodology terms only in parentheses (never jargon-first); any methodology appendix / debug may stay in full terms.
 
 ---
 
-## STAGE 2: Auto-generate (Next Move Theory + segments + risks)
+## Deep mode (subagents + web)
 
-This stage runs WITHOUT user questions. Generate everything based on the idea and business context.
-
-### Step 2.1: Next Move Theory recommendations for the business goal
-
-Read the canon:
-- `Next-Move-Theory-Canon/Next Move Theory/overview.md` — meta-framework
-- `Next-Move-Theory-Canon/Next Move Theory/product-strategy.md` — product strategy
-- `Next-Move-Theory-Canon/Algorithms/the-algorithm.md` — main algorithm
-- `Next-Move-Theory-Canon/Algorithms/launch-product.md` — launch algorithm
-
-Based on the idea and business context, generate 3 business goal variants:
-
-**Variant A:** [Concrete formulation with numbers: what to prove, for which segment, with which metric, by when]
-**Variant B:** [Alternative strategy — e.g., a different segment or different entry point]
-**Variant C:** [Most ambitious formulation — Big Job-level expansion]
-
-### Step 2.2: Generate segments (~80% market coverage)
-
-Read the canon:
-- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md`
-- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md`
-- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md`
-- `Next-Move-Theory-Canon/UnitEconomics/growth-points.md`
-
-**Generation rules:**
-- Generate **all significant segments** covering ~80% of potential customers. Usually 4-8 segments.
-- Do NOT cap at 3 — produce as many as actually exist.
-- Account for the full business context from STAGE 1
-- If the user already named segment hypotheses in the idea — use them as starting points and expand
-- For each segment, score attractiveness on the 10 factors from `growth-points.md`
-
-**Segment format:**
-
-```markdown
-### Segment N: [Name]
-
-**Big Jobs (multiple by design):**
-- **I want** {verb + noun}, **so that** {higher level — life outcome / business outcome}
-- **I want** {verb + noun}, **so that** {higher level}
-- ... (cover ≥80% of motivation)
-
-**Big Job validation:**
-- [ ] Each is verb + noun (not a feature)
-- [ ] Each is one level above Core Jobs (passes "in order to what?")
-- [ ] Each is a life-state change (B2C) or business outcome (B2B)
-- [ ] For B2B: business + personal Big Jobs split
-- [ ] Together they cover ≥80% of motivation
-
-**Core Jobs:**
-- **When** {context + trigger}, **I want** {result with success criteria inside}, **so that** {Big Job + emotions after}
-
-**Success criteria (inside the "I want"):** measurable parameters, not abstractions ("fast < 5 min", "no errors > 99%")
-
-**Real segmentation criteria (causes, not consequences):**
-- {criterion 1 — a behavior or characteristic that is a CAUSE}
-- {criterion 2}
-
-**Antisegment (mandatory, validates causality):**
-| Parameter | Segment | Antisegment |
-|-----------|---------|-------------|
-| {criterion} | {value} | {opposite} |
-
-Would the antisegment pay for the same value? {No, because [clear cause] / Yes — criterion is weak, narrow it down}
-
-**Job graph (simplified):**
-- Previous Job → Core Job → Next Job
-- Big Job (above Core Job)
-- Micro Jobs (inside Core Job): [step list]
-
-**TAM / SAM / SOM:**
-- TAM: [estimate + logic]
-- SAM: [estimate + logic]
-- SOM: [estimate + logic]
-
-**Attractiveness (1-10 each):**
-| Factor | Score | Justification |
-|--------|-------|---------------|
-| Size | N | ... |
-| Job budget | N | ... |
-| Frequency | N | ... |
-| Reachability | N | ... |
-| Acuteness | N | ... |
-| Competition | N | ... |
-| Ability to create value | N | ... |
-| Sustainable advantage | N | ... |
-| Strategic value | N | ... |
-| Team motivation | N | ... |
-| **Total** | **N/100** | |
-
-**Why attractive:** [1-2 paragraphs]
-```
-
-### Step 2.3: Generate risks (RAT)
-
-Based on idea, business context, and generated segments — generate risky assumptions.
-
-**Risk categories:**
-- Demand on the market
-- Economically attractive segment
-- Segment willingness to pay (value hypothesis)
-- Unit economics (margin)
-- Demand scaling
-- Operational / regulatory / technological
-
-**Ranking formula:**
-```
-Score = (P × I) / C
-```
-- **P** (1-5) — probability of risk
-- **I** (1-5) — cost of impact
-- **C** (1-5) — cost of testing
-
-**Risk card format:**
-
-```markdown
-### Risk N: [Name]
-
-**Assumption:** [concrete testable hypothesis with numbers/conditions]
-**Risk:** [why this is critical to the business]
-**Category:** [one of 6]
-**P:** N/5 — [justification]
-**I:** N/5 — [justification]
-**C:** N/5 — [justification]
-**Score = P×I/C = [value]**
-**Validation methods:** [2-5 cheap experiments]
-```
-
-Sort by Score descending. Output all risks.
-
-### Step 2.4: Show and confirm
-
-Show the user the generated results in text:
-1. **3 Next Move Theory goal variants** (brief description of each)
-2. **Segment list** (name + total score for each)
-3. **Risk list** (name + Score for each)
-
-Then ask one batch of confirmation questions:
+Same S0→S3 with the human; S4 parallelized and web-grounded. Agents are spawned with the `Agent` tool, `subagent_type: "general-purpose"`, `run_in_background: true`. Each reads the core canon set, **returns its result in its final message — no files**, links every external source. The orchestrator holds all returns in context and writes the single output file.
 
 ```
-AskUserQuestion:
-  questions:
-    - question: "Which Next Move Theory business goal variant resonates?"
-      header: "Next Move Theory goal"
-      options:
-        - label: "Variant A"
-          description: "[brief A description]"
-        - label: "Variant B"
-          description: "[brief B description]"
-        - label: "Variant C"
-          description: "[brief C description]"
-      multiSelect: false
-
-    - question: "Which segments to take into the PRD? (N segments generated)"
-      header: "Segments"
-      options:
-        - label: "All segments"
-          description: "Use all N in the PRD"
-        - label: "Top by score (priority)"
-          description: "Top 3-4 by attractiveness"
-        - label: "I'll adjust"
-          description: "I'll say which to remove or add"
-      multiSelect: false
-
-    - question: "Which risks to factor into the PRD?"
-      header: "Risks"
-      options:
-        - label: "All risks (recommended)"
-          description: "Account for every risky assumption"
-        - label: "None"
-          description: "Skip risk validation, design directly"
-        - label: "I'll adjust"
-          description: "I'll specify which ones"
-      multiSelect: false
+Wave 1 (parallel):
+  [PARITY]  Competitor-parity refresh — only if upstream parity is stale or absent. Given the upstream
+            competitor set, confirm/extend the parity table from live sites + reviews; mark what
+            competitors close poorly (the wedge). ≤8 fetches. → returns the parity table in-message.
+  [CHAIN]   Critical-Chain builder — given the input + the challenge + critical-chain.md + job-structure.md,
+            build the chain per Core Job (shapes + break sites + Aha placement). → returns the chain in-message.
+Wave 2 (sequential): PRD designer — given the input + the challenge + the chain + the parity return + core set,
+            write functionality (§1–§3, §5–§8). → returns the PRD body in-message.
+Wave 3 (parallel):
+  [EDGE]    Edge-case analyst — given the chain + the PRD body + reviews (web), generate the ~90%
+            edge-case table, chain-break-driven, severity by importance. → returns the table in-message.
+  [CRITIC]  Adversarial self-critic — run the 9 criteria; return fix_instructions (≤2 rounds, then escalate).
+Orchestrator: hold all returns in context; merge §3 with Critical/High edge cases; apply critic fixes; write the single result file; chat summary.
 ```
 
-If user picks "I'll adjust" — ask for free-form clarification.
-
-**Save** the results:
-- All segments (with selection markers) → `02-segments.md`
-- All risks (with selection markers) → `03-risks.md`
-- Chosen Next Move Theory variant → append to `01-business-context.md` under "Next Move Theory recommendations"
-
-Update `_spring-context.md`.
+Web caps: parity ≤8 fetches; edge-case review mining ≤8. Source links mandatory (Rule 2); never invent sources or numbers.
 
 ---
 
-## STAGE 3: Team of 6 agents
-
-### Execution order
-
-```
-Agent 1 (Competitive analyst)
-    ↓
-Agent 2 (PRD designer)
-    ↓
-Agent 3 (Edge-case analyst)
-    ↓
-Agent 4 (Analytics architect)  ─┐ IN PARALLEL
-Agent 5 (Copywriter & marketer) ─┘
-    ↓
-Agent 6 (Cross-verifier) — AFTER ALL FIVE
-```
-
-**Important:** Agents 4 and 5 run **in parallel** (simultaneously) after Agent 3 finishes. Agent 6 runs only after all five preceding agents are done.
-
-**Language rule:** Every agent prompt ends with: `Output language: {language from 00-product-idea.md}.`
-
-**Path rule:** Before spawning agents, compute the concrete temp folder path: `TMP/prd-{short-product-name}/`, where `{short-product-name}` is taken from `00-product-idea.md`. Substitute the concrete path into all prompts instead of `{temp path}`. Agents must receive a real path, not a placeholder.
-
----
-
-### Agent 1: Competitive analyst
-
-**Acceptance criteria:** find 80% of the largest competitors for the chosen segments and Jobs. Study their feature set via their websites. **Methodology fix v3 — explicitly include indirect (Big Job-level) competitors, not just direct ones.**
-
-Spawn via `Agent` with `subagent_type: "general-purpose"`:
-
-```
-You are a competitive analyst working with Ivan Zamesin's AJTBD/Next Move Theory methodology.
-
-IMPORTANT: methodology source is `Next-Move-Theory-Canon/`. Do NOT use generic JTBD interpretations.
-
-## Context
-Product idea: {paste 00-product-idea.md}
-Target segments and Jobs: {paste selected segments from 02-segments.md}
-
-## Methodology rule (MANDATORY)
-Competitors are defined by Jobs, not by product category:
-- **Direct competitors** — at the Core Job level: same Job, same segment, different solution
-- **Indirect competitors (non-obvious)** — at the Big Job level: a different way to close the Big Job (different Core Job, different solution category, "do nothing", "postpone")
-- **Big Job-level players (turnkey)** — players who close the entire Big Job, not just part
-
-You MUST find competitors at all three levels. Skipping indirect or Big Job-level competitors invalidates the analysis.
-
-## Task
-1. Via WebSearch, find competitors solving the same or similar Jobs for the same or similar segments.
-2. **Direct competitors:** find at least 5-10 (target: cover 80% of the largest direct players at the Core Job level).
-3. **Indirect competitors (Big Job-level):** answer the question — "What other ways do customers in this segment close this Big Job?" Find at least 3-5 indirect competitors. They may be Excel, manual workflow, hiring an assistant, or "do nothing".
-4. **Big Job-level turnkey players:** are there any players who close the entire Big Job (not just part)? How well do they scale?
-
-5. For each competitor, via WebFetch study the site and capture:
-   - Name and URL
-   - Type: direct / indirect / Big Job-level
-   - Which Jobs it covers (Core Job for direct; Big Job + alternative path for indirect)
-   - Key feature set
-   - Pricing model (if available)
-   - Strengths
-   - Weaknesses / unaddressed Jobs (by success criteria)
-
-## Output format
-
-For each competitor:
-
-### [Competitor name] [Type: Direct / Indirect / Big Job-level turnkey]
-- **URL:** [link]
-- **Jobs covered:** [list]
-- **Key features:** [list]
-- **Pricing:** [description]
-- **Strengths:** [list]
-- **Weaknesses / unaddressed Jobs:** [list]
-
-End with a summary table: competitor × feature (yes/no), grouped by Direct / Indirect / Turnkey.
-
-Output language: {language}.
-
-Save via Write to: {temp path}/04-competitors.md
-```
-
----
-
-### Agent 2: PRD designer
-
-**Acceptance criteria:** write product requirements covering 90% of the value-creating functionality on the chosen Jobs. Functionality level — at least matching competitors. **Methodology fix v3 — every feature must explicitly link Core Job → Big Job. Aha Moment must be a positive prediction error event. Critical Chain of Jobs explicitly constructed per Core Job.**
-
-Spawn via `Agent` with `subagent_type: "general-purpose"` AFTER Agent 1:
-
-```
-You are a product designer working with Ivan Zamesin's AJTBD/Next Move Theory methodology.
-
-IMPORTANT: methodology source is `Next-Move-Theory-Canon/`. Do NOT use generic JTBD interpretations.
-
-## Context
-Product idea: {paste 00-product-idea.md}
-Business context: {paste 01-business-context.md}
-Selected segments and Jobs: {paste selected segments from 02-segments.md}
-Risks to account for: {paste selected risks from 03-risks.md}
-Competitor analysis: {paste 04-competitors.md}
-
-## Methodology rules (MANDATORY)
-
-1. **Every feature must link Core Job → Big Job.** A feature with no declared Big Job is invalid.
-2. **Aha Moment is a positive prediction error event.** It is NOT signup, NOT login, NOT "user logged in for the first time". It is a concrete moment where the customer observes the value they came for and experiences "wow, this is unexpectedly good". Validation: "What does the user expect at this point? What do they actually get? Is the actual better than expected?"
-3. **Critical Chain of Jobs is explicitly constructed per Core Job.** It's the sequence of sub-Jobs that MUST all be performed for the Big Job to be achieved. If any link breaks, the Big Job fails. Identify every link and check for breaks.
-4. **No feature dilution.** Every feature serves the focal segment OR is explicitly marked "later phase".
-
-## Task
-Write a PRD that:
-1. Covers 90% of value-creating functionality on the selected Core Jobs.
-2. Matches competitor functionality at minimum (use the competitor analysis).
-3. Accounts for selected risks (if any).
-4. Explicitly defines the Aha Moment per segment as a positive prediction error event, shifted as close to the first session as possible.
-5. Constructs the Critical Chain of Jobs per Core Job.
-
-## PRD structure
-
-### 1. Product overview
-- Name
-- Product purpose (what value it creates)
-- Target segments and Jobs
-- **Aha Moment for each segment** (positive prediction error: what user expected vs. what they got)
-
-### 2. Target users
-- Per segment: who they are, which Jobs, success criteria
-
-### 3. Functional requirements
-
-For each Core Job from selected segments:
-- What the product must do to perform the Job
-- **Critical Chain of Jobs:** the sequence of sub-Jobs that all must be performed (if any breaks — Big Job fails)
-  - Sub-Job 1
-  - Sub-Job 2
-  - ...
-- Acceptance criteria per requirement
-- **For each requirement, declare:**
-  - Which Core Job it serves
-  - **Which Big Job it ultimately ladders to** (mandatory — feature without Big Job link is invalid)
-  - Which value mechanic from `Advanced-Jobs-To-Be-Done/value-creation.md` it implements (one of 19)
-- Connection to Aha Moment: which steps lead to value activation
-
-### 4. Onboarding and value activation
-- New user path from signup to Aha Moment
-- Shortest path to first value (count steps)
-- What to remove / simplify to shift Aha Moment leftward
-- **Aha Moment validity check:** is it a positive prediction error? Does the user notice "wow"? If you can't say what's surprising about it — it's not an Aha Moment.
-
-### 5. Competitive parity
-- Functionality that must match competitors (per analysis)
-- Functionality competitors lack (our advantage)
-
-### 6. Non-functional requirements
-- Performance, security, scalability (if relevant)
-
-### 7. Risk handling
-- Per selected risk: how the PRD minimizes or accounts for it
-
-### 8. Success metrics
-- How to measure that the product creates value on selected Jobs
-- North Star Metric for the product
-- Key metrics per segment
-
-### 9. Out of scope
-- Explicit exclusions
-- **Features deferred (next phase):** features that serve other segments or non-focal Jobs — explicitly listed here, not built into v1
-
-## Rules
-- Be concrete, with acceptance criteria.
-- Phrase requirements from the user's perspective: "User can..."
-- **Every requirement must link to a specific Job AND a specific Big Job** (this is a hard methodology gate)
-- Don't add functionality that doesn't create value on selected Jobs
-- Aha Moment is never just "user signed up"
-
-Output language: {language}.
-
-Save via Write to: {temp path}/05-prd.md
-```
-
----
-
-### Agent 3: Edge-case analyst
-
-**Acceptance criteria:** generate 90% of likely edge cases for the chosen segments and Jobs.
-
-Spawn via `Agent` with `subagent_type: "general-purpose"` AFTER Agent 2:
-
-```
-You are an edge-case analyst. Your task is to find every important boundary case.
-
-## Context
-Selected segments and Jobs: {paste selected segments from 02-segments.md}
-PRD: {paste 05-prd.md}
-
-## Task
-Generate edge cases — situations that could break the product or create a negative user experience. Goal: cover 90% of the most likely edge cases.
-
-## Edge case categories
-
-For each functional requirement in the PRD, check:
-
-1. **Input data:** Empty input? Excessively long? Special characters? Other languages? Zero? Negative number?
-2. **Network and infrastructure:** No internet? Slow internet? Server timeout? Connection lost mid-process?
-3. **User state:** New user? Returning? Blocked? Multiple sessions? Different time zone?
-4. **Business logic:** 0 items? 1 item? 10000 items? Concurrent actions? Conflicting operations?
-5. **Security:** Prompt injection? XSS? SQL injection? Unauthorized access? Rate-limit breach?
-6. **Payments and economics (if applicable):** Cancelled payment? Partial refund? Lapsed subscription? Double charge?
-7. **Multi-user scenarios:** Two users at once? Permission conflict? Shared resource?
-8. **Segment context:** Situations specific to selected segments that could cause problems
-
-## Output format
-
-For each edge case:
-
-| # | PRD requirement | Edge case | What can go wrong | Recommendation | Priority (Critical/High/Medium/Low) |
-
-Sort by priority: Critical → High → Medium → Low.
-
-Output language: {language}.
-
-Save via Write to: {temp path}/06-edge-cases.md
-```
-
----
-
-### Agent 4: Analytics architect
-
-**Acceptance criteria:** design a complete analytics system with ready-to-paste event code, funnels, cohort analysis, and unit-economics tracking. **Methodology fix v3 — Aha Moment event must be a positive prediction error event, not signup or login.**
-
-**If the user picked "Skip analytics" in STAGE 0 — SKIP this agent.**
-
-Spawn via `Agent` with `subagent_type: "general-purpose"` AFTER Agent 3, IN PARALLEL with Agent 5:
-
-```
-You are a product analyst. Your task: design a complete analytics system with ready-to-paste code.
-
-## Context
-Product idea: {paste 00-product-idea.md}
-Analytics tool: {analytics_tool from 00-product-idea.md}
-Business context: {paste 01-business-context.md}
-Segments and Jobs: {paste selected segments from 02-segments.md}
-PRD: {paste 05-prd.md}
-
-## Methodology rule (MANDATORY)
-The `aha_moment_reached` event must fire on a **concrete user action that produces a positive prediction error** — i.e., the user sees something unexpectedly good, not "user signed up" or "user logged in". The event must be the same event referenced as the Aha Moment in the PRD (cross-document consistency required).
-
-## Task
-Design an analytics system that lets you:
-1. See conversion at each funnel step
-2. Detect the Aha Moment (value activation, not signup)
-3. Measure conversion to purchase and to repeat purchase
-4. Run cohort analysis (retention by cohorts)
-5. Compute cohort-level unit economics (CAC, LTV, payback period)
-6. Find growth points in the funnel
-
-## Output structure
-
-### 1. Key funnels
-
-Per segment, describe the AARRR funnel:
-- **Acquisition** — how the user enters the product
-- **Activation** — what is the Aha Moment (first value activation). Define the concrete in-product action where the user notices a positive prediction error. Justify via the segment's Core Job. Cross-check: this MUST match the Aha Moment in the PRD.
-- **Revenue** — what is the moment of payment, which events to track
-- **Retention** — what "returned" means for this product (day, week, month)
-- **Referral** — how a user can bring others
-
-### 2. Full event plan
-
-Per event:
-
-| Event name | Description | When fired | Properties | Type (funnel/cohort/revenue) |
-
-**Mandatory minimum set:** Acquisition (page_viewed, signup_started, signup_completed), Activation (onboarding_step_completed, **aha_moment_reached** — must match PRD Aha Moment, core_job_completed), Revenue (purchase_initiated, purchase_completed, subscription_renewed, upgrade_completed), Retention (session_started, feature_used, value_received), Churn (churn_risk_detected, subscription_cancelled), Referral (referral_sent, referral_converted). Plus Job-specific events for each Core Job in the PRD.
-
-### 3. Code for {analytics_tool}
-
-For each event, write ready-to-paste TypeScript. Code must be copy-paste ready, no rework needed. Include user properties (identify) and group properties (if B2B).
-
-### 4. Dashboards
-
-Describe 5-7 key dashboards: activation funnel, cohort retention, cohort unit economics, conversion by segment, revenue breakdown, Aha Moment, acquisition channels.
-
-### 5. Triggers for automated communications
-
-Describe triggers for: onboarding, retention, upsell.
-
-## Rules
-- Code is paste-ready
-- Each event maps to a concrete funnel step
-- Aha Moment = 1 concrete action, justified through Core Job AND identical to the Aha Moment in the PRD
-- Event naming: snake_case, verb in past tense
-
-Output language: {language}.
-
-Save via Write to: {temp path}/07-analytics-plan.md
-```
-
----
-
-### Agent 5: Copywriter and marketer
-
-**Acceptance criteria:** write the full landing copy in the 11-block Next Move Theory structure + generate marketing hypotheses + cross-sell / upsell / retention mechanics. **Methodology fix v3 — the Big Job in the landing must match the Big Job in the PRD (cross-document consistency).**
-
-Spawn via `Agent` with `subagent_type: "general-purpose"` AFTER Agent 3, IN PARALLEL with Agent 4:
-
-```
-You are a product copywriter and marketer working with Ivan Zamesin's Next Move Theory (Advanced Jobs To Be Done).
-
-## Preparation: load Next Move Theory canon
-Before starting, read:
-- `Next-Move-Theory-Canon/Algorithms/position-product.md` — positioning, landing formulas, one-liner
-- `Next-Move-Theory-Canon/Algorithms/increase-conversion.md` — 7 conversion factors, Aha Moment, anxiety reduction
-- `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/communication.md` — communication principles
-- `Next-Move-Theory-Canon/Algorithms/create-acquisition-channel.md` — channels via Previous Job, viral Jobs, Activating Knowledge
-- `Next-Move-Theory-Canon/Algorithms/increase-average-check.md` — upsell mechanics
-- `Next-Move-Theory-Canon/Algorithms/increase-retention.md` — retention mechanics
-
-## Context
-Product idea: {paste 00-product-idea.md}
-Business context: {paste 01-business-context.md}
-Segments and Jobs: {paste selected segments from 02-segments.md}
-Competitor analysis: {paste 04-competitors.md}
-PRD: {paste 05-prd.md}
-
-## Methodology rules (MANDATORY)
-
-1. **Communicate through Big Job (motivation), not Core Job (steps).**
-2. **The Big Job named in the landing MUST match the Big Job declared in the PRD.** This is a cross-document consistency rule. If you name a different Big Job, you've broken the package.
-3. **3 base messages:** (1) which Jobs we perform, (2) which value we deliver with CONCRETE success criteria, (3) we remove anxieties.
-4. **No abstractions** ("fast", "high quality", "reliable") — only concretes.
-5. **Context and trigger:** the user must recognize themselves in the text.
-6. **Customer's language, not feature language.**
-
-## PART 1: Full landing copy (11 blocks)
-
-### Block 1: Hero
-- **One-liner** by formula: [What it is] + [Core Job] + [Value]
-- **Tagline** — 3 variants by Next Move Theory formulas
-- **Subtitle:** 1-2 sentences
-- **CTA button:** copy + what user gets
-- **Big Job declared (MANDATORY):** state the Big Job this landing addresses — must match the PRD Big Job
-
-### Block 2: Core Job + Value
-### Block 3: Micro Jobs (3-6)
-### Block 4: Aha Moment (give a taste of value on the landing)
-### Block 5: Value by Jobs
-### Block 6: "Recognize yourself?" (segments and triggers)
-### Block 7: How it works
-### Block 8: Point B (Big Job + emotions)
-### Block 9: Anxiety reduction (4-6 fears)
-### Block 10: Firing competitors
-### Block 11: Final CTA
-
-**Every block must contain FULL ready-to-publish copy, no placeholders or [insert here].**
-
-## PART 2: Marketing channel hypotheses (min 6-8)
-
-Per channel × segment:
-- Channel, Segment, Trigger, Format, Message (full copy), CTA, Success metric, Next Move Theory strategy
-
-## PART 3: Funnel strategy hypotheses
-
-- Previous Job → Lead Magnet
-- Activating Knowledge → Content
-- Viral Jobs
-- Aha Moment on the landing
-- 7 conversion factors (per Next Move Theory)
-
-## PART 4: Cross-sell, Upsell, Retention mechanics
-
-- Cross-sell (3-5) based on Next Job
-- Upsell (2-3) based on Big Job
-- Retention mechanics (3-5): Aha Moment leftward shift, Next Job, frequency, habits
-
-## Rules
-- All copy ready to publish (no placeholders)
-- Not a single claim without concrete success criteria
-- Customer's language (Jobs), not feature language
-- Big Job declared in Hero and consistent with PRD
-
-Output language: {language}.
-
-Save via Write to: {temp path}/08-landing-copy.md
-```
-
----
-
-### Agent 6: Cross-verifier
-
-**Acceptance criteria:** find every contradiction, gap, and weak spot across all preceding agents' documents. Score package consistency. **Methodology fix v3 — explicitly verify Big Job consistency between landing and PRD; verify Aha Moment consistency between PRD and analytics; verify every PRD feature links Core Job → Big Job.**
-
-Spawn via `Agent` with `subagent_type: "general-purpose"` AFTER ALL FIVE preceding agents:
-
-```
-You are a skeptic and product-decisions auditor. Your task: find ALL contradictions, gaps, and weak spots across the work of the previous 5 agents.
-
-## Context — read all files in {temp path}/:
-- 00-product-idea.md — idea and settings
-- 01-business-context.md — business context
-- 02-segments.md — segments
-- 03-risks.md — risks
-- 04-competitors.md — competitors
-- 05-prd.md — PRD
-- 06-edge-cases.md — edge cases
-- 07-analytics-plan.md — analytics (if present)
-- 08-landing-copy.md — landing and marketing
-
-## 8 checks (mandatory)
-
-### Check 1: PRD ↔ Analytics
-- All Core Jobs in the PRD covered by analytics events?
-- Aha Moment in PRD matches `aha_moment_reached` in analytics? (Same event, same definition.)
-- All success metrics from PRD tracked in the analytics plan?
-- Funnel in analytics covers the full user path from PRD?
-
-### Check 2: Segments ↔ Landing
-- All selected segments represented in the landing (block "Recognize yourself?")?
-- Jobs from segments correctly reflected in the landing copy?
-- No claims in the landing contradict the competitor analysis?
-
-### Check 3: Competitors ↔ PRD ↔ Landing
-- Functional parity met?
-- Claimed advantages on the landing actually delivered by PRD functionality?
-- "Firing competitors" on the landing relies on real weaknesses from the analysis?
-
-### Check 4: Risks ↔ PRD ↔ Analytics
-- All selected risks accounted for in the PRD?
-- Are there analytics events for early risk detection?
-
-### Check 5: Revenue events ↔ Business model
-- Monetization model reflected in revenue events?
-- Are key unit-economics metrics tracked?
-
-### Check 6: Edge cases ↔ PRD
-- Critical and High edge cases included in the PRD as requirements?
-- No edge cases that kill the key Jobs?
-
-### Check 7 [METHODOLOGY FIX v3]: Big Job consistency Landing ↔ PRD
-- The Big Job declared in the landing Hero (Block 1) matches the Big Job declared per segment in the PRD?
-- If the landing names a different Big Job — this is a CRITICAL break.
-- All Big Jobs the PRD claims to address are mentioned somewhere on the landing?
-
-### Check 8 [METHODOLOGY FIX v3]: Every PRD feature links Core Job → Big Job
-- Every functional requirement in the PRD declares which Core Job it serves AND which Big Job it ladders to?
-- Features with no Big Job link are flagged.
-- Aha Moment in the PRD is a positive prediction error event, not signup or login?
-
-## Output format
-
-### Critical breaks (MUST fix)
-| # | Doc A | Doc B | Contradiction / break | How to fix |
-
-### Important improvements (recommended)
-| # | Doc | What's missing | Recommendation |
-
-### Strengthening suggestions (nice to have)
-| # | Area | Idea | Expected effect |
-
-### Verdict
-**Package consistency score: N/10**
-- [Score justification]
-- [Top-3 strengths]
-- [Top-3 weaknesses]
-
-Output language: {language}.
-
-Save via Write to: {temp path}/09-cross-verify.md
-```
-
----
-
-## STAGE 4: Final assembly
-
-After all 6 agents complete:
-
-### Step 4.1: Cross-check analysis
-
-Read `09-cross-verify.md`.
-
-**If consistency score < 6/10:**
-
-```
-AskUserQuestion:
-  questions:
-    - question: "Cross-verifier found critical issues (score N/10). Fix now or get docs as-is?"
-      header: "Issues"
-      options:
-        - label: "Fix critical only"
-          description: "Apply fixes for critical breaks"
-        - label: "Fix everything"
-          description: "Apply critical + important fixes"
-        - label: "As-is"
-          description: "Get docs with [GAP] markers"
-      multiSelect: false
-```
-
-If user picks fixing — apply recommendations from `09-cross-verify.md`.
-
-**If score >= 6/10** — auto-fix critical breaks without asking.
-
-### Step 4.2: Generate unit economics
-
-Read `01-business-context.md` and `07-analytics-plan.md`. Generate the unit economics model:
-1. Identify business model type
-2. Plug in concrete values where data is known
-3. For unknowns — use benchmarks and mark `[VERIFY]`
-4. Compute LTV, CAC, payback period, breakeven point
-5. Fill 3 scenarios (optimistic / base / pessimistic)
-6. Define experiments for validation (per RAT)
-
-### Step 4.3: Final document assembly
-
-Ask the user where to save:
-
-```
-AskUserQuestion:
-  questions:
-    - question: "Where to save the final documents?"
-      header: "Folder"
-      options:
-        - label: "Project folder"
-          description: "Save to a project subfolder"
-        - label: "Temp folder"
-          description: "Leave in TMP/prd-{name}/"
-        - label: "Custom path"
-          description: "I'll specify the folder"
-      multiSelect: false
-```
-
-Write 5 final files:
-
-#### `01-prd.md` — Product requirements
-- Merge `05-prd.md` + Critical/High edge cases from `06-edge-cases.md`
-- Critical → into core requirements
-- High → into "Important edge cases"
-- Medium/Low → into appendix
-- Apply cross-check fixes
-
-#### `02-analytics-plan.md` — Analytics system
-- Take `07-analytics-plan.md`
-- Apply cross-check fixes
-
-#### `03-landing-copy.md` — Landing copy
-- Extract PART 1 from `08-landing-copy.md`
-- Apply cross-check fixes
-
-#### `04-marketing-hypotheses.md` — Marketing and growth mechanics
-- Extract PARTS 2, 3, 4 from `08-landing-copy.md`
-- Apply cross-check fixes
-
-#### `05-unit-economics.md` — Unit economics model
-
-Generate per template:
-
-```markdown
-# Unit economics: {product name}
-
-## Business model
-- **Type:** {from business context}
-- **Pricing:** {from business context or hypothesis}
-
-## Key assumptions
-| Metric | Value | Source | Status |
-|--------|-------|--------|--------|
-| Price (ARPU) | {value} | {source} | [VERIFY] |
-| CR visitor → signup | X% | Benchmark | [VERIFY] |
-| CR signup → activation | X% | Benchmark | [VERIFY] |
-| CR activation → paid | X% | Benchmark | [VERIFY] |
-| Monthly churn | X% | Benchmark | [VERIFY] |
-| CAC (per channel) | {value} | Assumption | [VERIFY] |
-| Gross margin | X% | Assumption | [VERIFY] |
-
-## LTV, CAC, Payback Period, breakeven
-## Cohort analysis (template)
-## Validation experiments (per RAT)
-## 3 scenarios (optimistic / base / pessimistic)
-```
-
-### Step 4.4: Final summary
-
-Show the user a brief summary:
-- What's in each file
-- Cross-verifier consistency score
-- Top-3 next-step recommendations
-
-Ask if any tweaks are needed.
-
----
-
-## Final result checklist
-
-- [ ] Product idea captured, language and analytics chosen
-- [ ] Business context collected (8 questions in 2 batches)
-- [ ] Next Move Theory business goal recommendations proposed and chosen
-- [ ] Segments generated (~80% market coverage), user confirmed
-- [ ] Each segment has multiple Big Jobs (≥80% motivation), validated as verb+noun, one level above Core Jobs
-- [ ] For B2B: business + personal Big Jobs split
-- [ ] Antisegment built and validated for every segment
-- [ ] Risky assumptions generated and ranked by P×I/C
-- [ ] User decided on risks
-- [ ] Competitors found (80%+ of largest), at three levels: direct (Core Job), indirect (Big Job alternatives), turnkey (Big Job-level players)
-- [ ] PRD covers 90%+ functionality for selected Jobs
-- [ ] **Every PRD feature links Core Job → Big Job (mandatory)**
-- [ ] **Critical Chain of Jobs explicitly constructed per Core Job**
-- [ ] **Aha Moment defined as a positive prediction error event** (not signup, not login)
-- [ ] Functionality matches competitors at minimum
-- [ ] Edge cases generated (90%+ likely)
-- [ ] Critical/High edge cases included in the PRD
-- [ ] Analytics plan with event code generated
-- [ ] **Aha Moment event in analytics matches PRD definition (cross-document)**
-- [ ] Landing copy written in the 11-block Next Move Theory structure
-- [ ] **Big Job in the landing matches the Big Job in the PRD (cross-document)**
-- [ ] Marketing channel hypotheses generated (min 6)
-- [ ] Cross-sell / upsell / retention mechanics described
-- [ ] Cross-check passed; critical breaks resolved
-- [ ] Unit economics model generated
-- [ ] 5 final files saved to the chosen folder
+## What this skill does NOT do
+
+- **Does not re-derive segments or size markets** → `/market-research`.
+- **Does not invent the value proposition or pick the focal segment** → `/craft-value-proposition` (it consumes the §11 implementation spec).
+- **Does not write landing, ad, or GTM/growth copy** → `/craft-go-to-market`.
+- **Does not produce an analytics plan** (out of scope this version) or a **standalone unit-economics model** (unit economics is used only as a reasoning filter in S3/ranking).
+- **Does not run interviews or execute the RATs** — it names the riskiest assumption to validate; the user runs it next.
+- Quick mode: no internet, no subagents.

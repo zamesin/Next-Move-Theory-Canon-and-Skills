@@ -486,3 +486,7 @@ This explains why moving the **Aha Moment** earlier in the customer's Critical C
 Canon files cite this document once with a single inline link (e.g., *"see [allostasis](scientific-foundations.md#1-allostasis-makes-the-brain-an-energy-budget-investor)"*) and continue in plain English. If a new theory enters the canon, add it here first with a verified link under the project source-link protocol, then reference it from the methodology file.
 
 **Verification status.** Every primary-citation link in this document has been verified against the source paper or book it references. Clithero & Rangel (2013) added and verified 2026-05-24. Links last verified 2026-05-24.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

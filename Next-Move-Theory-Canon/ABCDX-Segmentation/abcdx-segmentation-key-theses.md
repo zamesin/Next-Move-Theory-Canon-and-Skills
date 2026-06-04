@@ -335,3 +335,7 @@ The structure mirrors §2 and §8 of [Riskiest Assumption Test](../Riskiest-Assu
 - [Behaviour Change §8](../Advanced-Jobs-To-Be-Done/behaviour-change.md) — receptivity windows and triggers
 - [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — AJTBD interview guide
 - [AJTBD key theses §12](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — segmentation by Core Jobs and success criteria as primary; Big Job as motivation refinement
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

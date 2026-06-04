@@ -270,3 +270,7 @@ Perform a Job without the Problem the customer has been hitting in their current
 [Value Creation §11](value-creation.md) maps each segment's priority criterion (or criteria) to the lead mechanic(s) to test first. The full set above is what §11 picks from. Real value-design sessions layer two or three mechanics, but the *lead* mechanic is chosen against the segment's priority criterion (per [Value Creation §10](value-creation.md)).
 
 For operational how-tos — when to apply each mechanic, what to test before building, common failure modes, layered combinations, and the broader 100+ catalog including go-to-market, retention, pricing, scaling, exit-from-direct-competition — see internal-only [Mechanics Catalog](../Next-Move-Theory/mechanics-catalog.md).
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

@@ -298,3 +298,7 @@ The question is productive because it can only be answered by naming a real, lev
 - [Place Core and Big Jobs](../HowTos/place-core-and-big-jobs.md) — long-form Core-Job / Big-Job placement procedure, with worked cases.
 - [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — interview methodology for reconstructing a Graph from past-performance anchors.
 - [Riskiest Assumption Test](../Riskiest-Assumption-Test/rat-key-theses.md) — past-performance recruiting discipline.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

@@ -172,3 +172,7 @@ Types and properties are *diagnostic inputs*; the *dynamic process* that turns t
 - [AJTBD key theses](ajtbd-key-theses.md) — Job as the root cause of every product decision (§2); segmentation by Job Graph (§12); Big Job vs Core Job (§9).
 - [Subtraction](../Next-Move-Theory/subtraction.md) — Kill a Job and Move-up-a-level as the dominant mechanics for any Job in a Critical Chain.
 - [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — the past-payment recruitment discipline that filters Fake Jobs and low motivation in one pass.
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*

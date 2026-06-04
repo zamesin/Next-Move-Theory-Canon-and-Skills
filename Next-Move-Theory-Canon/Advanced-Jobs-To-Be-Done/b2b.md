@@ -254,3 +254,7 @@ Teams that run §3-style information enablement at the pre-sale stage often *als
 - [Riskiest Assumption Test §2](../Riskiest-Assumption-Test/rat-key-theses.md) — segments-and-Jobs as the root of the RAT chain; §5 on custom risks specific to B2B (Excel-switching, IT-veto)
 - [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — interview question discipline (recruitment lives here in §12 of this file; question discipline lives in the HowTo)
 - [AJTBD key theses §25](ajtbd-key-theses.md) — business + personal Jobs in B2B chains (short canonical form of §5 here)
+
+---
+
+*Methodology and text by **Ivan Zamesin** — [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · Learn more at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github). Distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*
