@@ -58,7 +58,7 @@ One agent (the Strategy agent, Deep mode) additionally reads `Next-Move-Theory-C
 - ❌ *"Red Queen value-gap compression…"* · *"the Critical Chain breaks at M4"* · *"load the Consideration Activators."*
 - ✅ *"The free do-it-yourself option caught up, so your edge shrank even though you didn't get worse (in the methodology, a* Red Queen *effect)."*
 
-**Who reads it** — the focal segments (internal map: `Strategy/Segments-and-Jobs.md` — private; the essentials are inline here so the skill stays self-contained and public-safe): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
+**Who reads it** — the focal segments (the essentials are inline here, so the skill stays self-contained and public-safe): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
 
 **Plain ↔ methodology** (say the left; add the right in parentheses only when it earns its place): the result they're after *(the Job / Big Job)* · the main thing the product does for them *(the Core Job)* · the step-by-step path the customer walks *(the Critical Chain)* · the exact step where they get stuck *(a Critical Chain break)* · the moment it clicks / feels worth it *(the Aha Moment)* · getting the result for less time, effort, money, or stress than expected *(value)* · a pleasant surprise / a letdown vs. what they expected *(Positive / Negative Prediction Error — never PPE/NPE)* · the few things they must learn or believe before switching *(Consideration Activators)* · a real blocker vs. just a worry *(a Barrier vs. a fear)* · the assumption most likely to kill this, tested cheap first *(the riskiest assumption / RAT)*.
 
@@ -68,10 +68,10 @@ One agent (the Strategy agent, Deep mode) additionally reads `Next-Move-Theory-C
 
 ## Output file (one file per run — `CLAUDE.md` Rule 4)
 
-The skill writes **exactly one** file, in the project root (never `TMP/` or `.claude/`):
+The skill writes **exactly one** file, grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skill-Results/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md
+Skills-Results/{product-slug}/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md
 ```
 
 - `{YYYY-MM-DD_HH-MM}` (24h local time) makes each run's file unique; reruns never overwrite.
@@ -437,7 +437,7 @@ Quick mode does not access the internet, run subagents, or do quantitative valid
 Triggered when the user picks Deep. A team of subagents with web access fills the same templates with real data. Runs straight through without pausing for the user.
 
 **Principles:**
-- Writes one file `Skill-Results/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md`; new file per run.
+- Writes one file `Skills-Results/{product-slug}/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md`; new file per run.
 - Agents are spawned with the `Agent` tool, `subagent_type: "general-purpose"`, `run_in_background: true`. Within a wave, independent agents run in parallel; the orchestrator waits for a wave to finish before the next.
 - Each agent reads only the **four canon files** (read set above; the Strategy agent also reads `value-creation-mechanics.md`) and **returns its result in its final message — no per-agent files.** The orchestrator holds those returns in context. No live-tail / `Monitor` machinery.
 - Web caps (hold the longest legs): reviews-mining ≤ 12 `WebFetch` / ~10 min; synthesis ≤ 6; strategy ≤ 4. Pivot agents are reasoning-bound (≤ 2 fetches if any).

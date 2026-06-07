@@ -36,7 +36,7 @@ It consumes a `/craft-value-proposition` result (best — it carries the positio
 
 The **only** source of methodology is the Next Move Theory canon, read at runtime (relative paths; the skill ships in the same repo). **Path note:** if a file is not found, retry with a `1-` prefix on the canon folder.
 
-**This is a public skill — it grounds only in the public canon.** Every file in the read sets below is a published canon file (the set whitelisted in `8-Tools/sync/PUBLIC_MANIFEST.yml`); the skill ships to the public mirror, where private files do not exist. **Never read or quote private canon** — e.g. the task-specific `Algorithms/*` (`position-product.md`, `increase-conversion.md`, `create-acquisition-channel.md`, `increase-retention.md`, `increase-average-check.md`). Their communication content lives in the public files below: positioning/landing/creatives in `communication.md`; conversion in `communication.md` + `customers-attention-management.md` + `barrier-removal.md`; acquisition/cross-sell/retention in `job-types-and-properties.md` + `critical-chain.md` + `consideration-activators.md`. This holds in **both** repos — even when running inside the Internal repo where those files exist on disk.
+**This is a public skill — it grounds only in the public canon.** Every file in the read sets below is a published canon file (the set whitelisted in `8-Tools/sync/PUBLIC_MANIFEST.yml`); the skill ships to the public mirror, where private files do not exist. **Never read or quote any canon file outside the read sets below** — the per-task algorithms (positioning, conversion, acquisition, retention, average-check) live behind the paywall, and their communication content is folded into the public files below: positioning/landing/creatives in `communication.md`; conversion in `communication.md` + `customers-attention-management.md` + `barrier-removal.md`; acquisition/cross-sell/retention in `job-types-and-properties.md` + `critical-chain.md` + `consideration-activators.md`. This holds in **both** repos — even when running inside the Internal repo where those files exist on disk.
 
 **Core read set (every run):**
 
@@ -80,7 +80,7 @@ Per `CLAUDE.md`: every named external source is a clickable Markdown link (Rule 
 - ❌ *"This banner uses the Trigger → Core Job formula and fires the competing Job Graph…"*
 - ✅ *"This banner hits them right at the moment they feel the problem, then shows why the usual option falls short (formula:* Trigger → Core Job *+ firing the alternative)."*
 
-**Who reads it** — the focal segments (internal map: `Strategy/Segments-and-Jobs.md` — private; the essentials are inline here so the skill stays self-contained and public-safe): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
+**Who reads it** — the focal segments (the essentials are inline here, so the skill stays self-contained and public-safe): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
 
 **Plain ↔ methodology** (say the left; add the right in parentheses only when it earns its place): the result they're after *(the Job / Big Job)* · the main thing the product does for them *(the Core Job)* · the step-by-step path the customer walks *(the Critical Chain)* · the exact step where they get stuck *(a Critical Chain break)* · the moment it clicks / feels worth it *(the Aha Moment)* · getting the result for less time, effort, money, or stress than expected *(value)* · a pleasant surprise / a letdown vs. what they expected *(Positive / Negative Prediction Error — never PPE/NPE)* · the few things they must learn or believe before switching *(Consideration Activators)* · a real blocker vs. just a worry *(a Barrier vs. a fear)* · the assumption most likely to kill this, tested cheap first *(the riskiest assumption / RAT)*.
 
@@ -90,10 +90,10 @@ Per `CLAUDE.md`: every named external source is a clickable Markdown link (Rule 
 
 ## Output file (one file per run — `CLAUDE.md` Rule 4)
 
-The skill writes **exactly one** file, in the project root (never `TMP/` or `.claude/`):
+The skill writes **exactly one** file, grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skill-Results/craft-go-to-market/{YYYY-MM-DD_HH-MM}_{product-slug}-craft-go-to-market-result.md
+Skills-Results/{product-slug}/craft-go-to-market/{YYYY-MM-DD_HH-MM}_{product-slug}-craft-go-to-market-result.md
 ```
 
 Everything internal — the normalized input (source artifacts, segment, Big/Core Jobs + criteria, Aha, competitors, proof, fears), dropped variants, review-mining notes, and the self-critic verdicts — **stays in-context**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.

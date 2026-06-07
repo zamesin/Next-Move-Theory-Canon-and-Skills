@@ -37,7 +37,7 @@ This skill is the **build** step. It takes a chosen segment with its Core Jobs a
 
 The **only** source of methodology is the Next Move Theory canon, read at runtime (relative paths; the skill ships in the same repo). **Path note:** if a file is not found, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix the public repo strips.
 
-**This is a public skill — it grounds only in the public canon.** Every file in the read sets below is a published canon file (the set whitelisted in `8-Tools/sync/PUBLIC_MANIFEST.yml`); the skill ships to the public mirror, where private files do not exist. **Never read or quote private canon** — e.g. `UnitEconomics/*`, `Next-Move-Theory/mechanics-catalog.md`, `Next-Move-Theory/product-strategy.md`, `Next-Move-Theory/cases.md`, the task-specific `Algorithms/*` (the unit-economics theory and the per-task algorithms are folded into the public files above). This holds in **both** repos — even when running inside the Internal repo where those files exist on disk.
+**This is a public skill — it grounds only in the public canon.** Every file in the read sets below is a published canon file (the set whitelisted in `8-Tools/sync/PUBLIC_MANIFEST.yml`); the skill ships to the public mirror, where private files do not exist. **Never read or quote any canon file outside the read sets below** — the unit-economics theory, the full mechanics catalog, the product-strategy material, the worked cases, and the per-task algorithms are folded into the public files above; their deeper private and paywalled forms are out of bounds. This holds in **both** repos — even when running inside the Internal repo where those files exist on disk.
 
 **Core read set (every run):**
 
@@ -91,7 +91,7 @@ Per `CLAUDE.md`: every named external source is a clickable Markdown link (Rule 
 - ❌ *"Red Queen value-gap compression…"* · *"the Critical Chain breaks at M4"* · *"load the Consideration Activators."*
 - ✅ *"The free do-it-yourself option caught up, so your edge shrank even though you didn't get worse (in the methodology, a* Red Queen *effect)."*
 
-**Who reads it** — the focal segments (internal map: `Strategy/Segments-and-Jobs.md` — private; the essentials are inline here so the skill stays self-contained and public-safe): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
+**Who reads it** — the focal segments (the essentials are inline here, so the skill stays self-contained and public-safe): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
 
 **Plain ↔ methodology** (say the left; add the right in parentheses only when it earns its place): the result they're after *(the Job / Big Job)* · the main thing the product does for them *(the Core Job)* · the step-by-step path the customer walks *(the Critical Chain)* · the exact step where they get stuck *(a Critical Chain break)* · the moment it clicks / feels worth it *(the Aha Moment)* · getting the result for less time, effort, money, or stress than expected *(value)* · a pleasant surprise / a letdown vs. what they expected *(Positive / Negative Prediction Error — never PPE/NPE)* · the few things they must learn or believe before switching *(Consideration Activators)* · a real blocker vs. just a worry *(a Barrier vs. a fear)* · the assumption most likely to kill this, tested cheap first *(the riskiest assumption / RAT)*.
 
@@ -101,10 +101,10 @@ Per `CLAUDE.md`: every named external source is a clickable Markdown link (Rule 
 
 ## Output file (one file per run — `CLAUDE.md` Rule 4)
 
-The skill writes **exactly one** file, in the project root (never `TMP/` or `.claude/`):
+The skill writes **exactly one** file, grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skill-Results/product-requirements/{YYYY-MM-DD_HH-MM}_{product-slug}-product-requirements-result.md
+Skills-Results/{product-slug}/product-requirements/{YYYY-MM-DD_HH-MM}_{product-slug}-product-requirements-result.md
 ```
 
 Everything internal — the normalized input, the challenge (business-goal ladder, subtraction-first, the more-effective ways and which won, the locked build subject), the Critical Chain per Core Job, dropped alternatives, and the self-critic verdicts — **stays in-context**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.
