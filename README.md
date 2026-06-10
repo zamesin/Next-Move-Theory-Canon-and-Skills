@@ -53,16 +53,22 @@ If you build, market, or decide the direction of a product, this is for you. You
 
 ## What's here — and what's coming
 
-**This public canon is the foundation, not the whole methodology — about 30% of it.** What you have here are the foundational theses of Advanced Jobs To Be Done and Next Move Theory — what a Job is, what value is, how segmentation, behavior change, the Job Graph, and the Riskiest Assumption Test work — plus the main algorithm itself ([`the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md)).
+**This public canon is the foundation, not the whole methodology — about 25% of it.** What you have here are the foundational theses of Advanced Jobs To Be Done and Next Move Theory — what a Job is, what value is, how segmentation, behavior change, the Job Graph, and the Riskiest Assumption Test work — plus the main algorithm itself ([`the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md)).
 
-Beyond that, what is **not here yet:**
+**The rest of the methodology is not coming to this public repo.** It lives in the full version — available through the products and courses at **[nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github)**. Beyond the foundations you have here, the full methodology covers:
 
-- the **product-diagnosis algorithm** and the step-by-step algorithms for the questions listed at the top — launch and find Product-Market Fit, scale, save a dying product, position, exit competition, grow conversion, raise average order value, improve retention, build an acquisition channel, and the rest;
+- the **product-diagnosis algorithm**;
+- the **step-by-step algorithms** for the questions listed at the top — launch and find Product-Market Fit, scale, save a dying product, position, exit competition, grow conversion, raise average order value, improve retention, build an acquisition channel, and the rest;
 - the **full 100+ mechanics catalog**;
-- the algorithms for **rolling the methodology out across a company**;
-- the full unit-economics integration, and more.
+- **generating product ideas and feature ideas**;
+- **goal-setting** — the algorithm for finding a company's real growth points;
+- **demand creation and acquisition channels** — how the methodology runs at the delivery stage;
+- **branding** — how to build and run a brand on Jobs;
+- **process principles** and the algorithms for **rolling the methodology out across a company**;
+- **Customer Success and Support** built on Jobs;
+- the full **unit-economics integration**, and more.
 
-All of it will keep appearing on **[nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github)**. **Subscribe to the newsletter** there so you don't miss new free materials and courses as they go live.
+**Subscribe to the newsletter at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github)** so you don't miss new free materials, courses, and products as they go live.
 
 ---
 
@@ -207,7 +213,7 @@ Then read the rest in whichever cluster matches your problem.
 | [`Advanced-Jobs-To-Be-Done/b2b.md`](Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/b2b.md) | The B2B deal as a Job Graph across roles — and why personal Jobs usually outweigh business Jobs. |
 | [`Algorithms/the-algorithm.md`](Next-Move-Theory-Canon/Algorithms/the-algorithm.md) | How the pieces combine into a single cyclical algorithm — and the anti-patterns that kill products. |
 
-> The public canon covers the most foundational theses and mechanics. The full methodology — the 100+-mechanic catalog, full unit-economics integration, and more — expands over time. **For new theses and book chapters as they're published, subscribe at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github)** — home to the canon, the books, and the newsletter.
+> The public canon covers the most foundational theses and mechanics. The full methodology — the product-diagnosis algorithm, the 100+-mechanic catalog, the full unit-economics integration, and more — lives in the products and courses at nextmovetheory.com. **For new theses and book chapters as they're published, subscribe at [nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github)** — home to the canon, the books, and the newsletter.
 
 ---
 
@@ -249,6 +255,19 @@ Today thousands of companies in my home country run on this work, with dozens of
 **[*The Nature of Product*](https://nextmovetheory.com/library/the-nature-of-product?utm_source=canon&utm_medium=github)** is free to read on the site. It's the **first book in a series**, and it covers the foundation — **Advanced Jobs To Be Done (AJTBD)** — not the whole of Next Move Theory; the broader framework comes in later books. Where the canon states the methodology as theses, the book tells the *story of how it was discovered* — a chain of insights, each one a moment where the wrong model stopped working and a better one had to be built, with a recurring skeptic (**Wes**) attacking the ideas with the exact questions real students used.
 
 It's for founders, indie hackers, PMs, marketers, and designers making product decisions on incomplete evidence, and it assumes no prior Jobs-To-Be-Done background — read it on the couch; the canon and skills are here when you want to get operational.
+
+---
+
+## About the author
+
+**Ivan Zamesin** is the author of Advanced Jobs To Be Done and Next Move Theory — ranked the #1 product expert in his home market by two independent industry studies.
+
+- **Led image search at his home market's largest tech company** — took 25% of the market from Google Images, growing share from 55% to 72%.
+- **Trained 13,000+ founders and product managers** through the most popular product course in his home market, running since 2017.
+- **Founded and sold a startup** — a therapist-matching service: built it, grew it, and exited to a larger marketplace.
+- **Product-strategy consulting for market leaders**, built on Jobs and unit economics.
+
+[nextmovetheory.com](http://nextmovetheory.com/?utm_source=canon&utm_medium=github) · [X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/) · [ivan@nextmovetheory.com](mailto:ivan@nextmovetheory.com)
 
 ---
 
