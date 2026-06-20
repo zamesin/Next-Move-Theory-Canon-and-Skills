@@ -27,6 +27,8 @@ The output is a single file in **three reading depths, linked top-to-bottom** (s
 2. **Layer 2 — The Reasoning** (2–4 pages, plain English): *how we got here* for each Layer-1 claim — what the segment wants most, the wedge, the before→after, the Aha in plain terms, the riskiest bet — each linking down to the full work.
 3. **Layer 3 — The Full Work** (the §0–§12 detail): the mechanic tables, before→after, competitor matrix, RAT cards, the **PRD-ready §11 implementation spec** `/product-requirements` consumes, and the §12 methodology appendix.
 
+> **Producer contract (binding) — `../PRODUCER-CONTRACT.md`.** Six cross-cutting behaviors shared by all producer skills, from user feedback: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block; (4) print **validation debt** and write any go-ahead as **`GO (to validation)`**, never a bare "build it now"; (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill; the contract is the source of truth for the wording.
+
 ---
 
 ## Core methodological principle
@@ -172,13 +174,15 @@ Binary verdicts only — no 1–5 scores.
 
 ## Output file (per `CLAUDE.md` Rule 4 — one file per run)
 
-The skill writes **exactly one** file, grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
+The skill writes **exactly one** file. Default location (used unless the user gave a custom output path in intake — `PRODUCER-CONTRACT.md §5`), grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skills-Results/{product-slug}/craft-value-proposition/{YYYY-MM-DD_HH-MM}_{product-slug}-craft-value-proposition-result.md
+Skills-Results/{product-slug}/craft-value-proposition/{YYYY-MM-DD_HH-MM}_{product-slug}-craft-value-proposition-result.{md|html}
 ```
 
-Everything else — the normalized input, the ranked criteria, the Job Graph, the raw hypotheses, the scored shortlist, the RAT inventory, dropped hypotheses, and every GATE verdict — **stays in-context across the stages**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.
+- **Extension follows the chosen output format** (`PRODUCER-CONTRACT.md §2`): `.md` (default) or a single self-contained `.html` (inline CSS, working in-page anchors for the How-to-read jumps + every `▸` drill-down link, `<details>` for Layer 3 and methodology traces, source links opening in a new tab). HTML carries the identical content — same attribution, disclaimers, three layers, tables, links — just in a more readable shell. Never write both; one file per run.
+- If the user gave a custom path, write the one file there with the same filename pattern.
+- Everything else — the normalized input, the ranked criteria, the Job Graph, the raw hypotheses, the scored shortlist, the RAT inventory, dropped hypotheses, and every GATE verdict — **stays in-context across the stages**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.
 
 **Attribution (Rule 23).** The file opens with the attribution top-line (the very first content, above the disclaimers) and closes with the attribution block — `utm_source=craft-value-proposition&utm_medium=skill-artifact`.
 
@@ -191,6 +195,17 @@ One Claude, no internet, no subagents. Runs the full S0→S6 chain inline; each 
 **Canon loading (Quick).** Read the **eager core** (`value-creation.md` + `value-creation-mechanics.md`) at run start; pull each **staged** file the first time the run reaches the stage that uses it — not before (see "Methodology — source of truth"). Build the Layer-3 work first (S0→S6), then **compute Layer 2, then Layer 1, LAST** from the finished Layer-3 work, wiring the `▸` drill-down links to the Layer-3 anchors. Write the single file in the order: top disclaimers once → Layer 1 → Layer 2 → Layer 3.
 
 ## S0 — Intake & Route
+
+### Orientation (helicopter view) — print before any question
+**First, the orientation block** (`PRODUCER-CONTRACT.md §1`) — print it before any question, in plain words:
+
+> **What you'll get:** one document — your value proposition (what it is, who it's for, why they'd switch), the top-3 things to test before building, and a PRD-ready spec the next skill (`/product-requirements`) can build from.
+> **The steps:** (1) a few questions about your segment + input → (2) I pull out what this customer wants most → (3) I generate many ways to create value and filter them on feasibility, cost, unit economics, and how well they beat competitors → (4) I rank them and surface a primary + a back-up value prop with test cards → (5) you get one document in three reading depths.
+> **Where I work vs. where you decide:** I do the analysis, the invention, and the hypotheses. *You* pick the primary value prop and run the field validation — interviews, fake-door tests, first sales. I can't validate for you; I can only tell you what to check first and how.
+> **Two modes:** *Quick* (default — no internet, ~10–15 min, reasoning only; good for a first cut and "did I miss a stronger angle") · *Deep* (opt-in — subagents + web research, longer; real competitor and review data; best on a top model with a web-research MCP).
+> **Honest caveat:** this speeds up the *thinking*, not the *proving*. Every value prop here is a hypothesis until you check it in the field.
+
+Then proceed to intake.
 
 ### Language
 Default **English**. If the user writes in another language, offer to work in it via `AskUserQuestion` (English / their language / Other). Hold the choice in context. The report uses the chosen language; canon files and source URLs stay as-is.
@@ -218,6 +233,8 @@ Q3: "What's the active business goal?"
 - "Other — I'll describe"
 ```
 
+**Hand-off debt — what's been validated since (`PRODUCER-CONTRACT.md §4c`).** The market-research result carried a validation debt (its risky assumptions, the RAT in its Section 5). Ask once: *"That research left a list of unvalidated assumptions. Which of them have you since checked in the field — interviews, sales, a test — and what did you learn?"* Carry the answers in context: anything confirmed becomes evidence (cite how it was checked); anything still unchecked stays tagged unvalidated and flows into S5's RAT cards. Debt travels down the chain — it is not silently dropped.
+
 **Path B — wants market-research first.** Reply: *"Strongly recommended — the value prop is much sharper from a real market-research run. Run `/market-research` (Quick or Deep), then come back here with the result file. Want me to open the `/market-research` input prompt now?"* Hand off.
 
 **Path C — manual segment description.** Only if the user declines market-research. Collect a structured manual input via plain-text prompts:
@@ -238,10 +255,20 @@ Required:
 
 Validate the manual input against the invariants; ask for fixes if any fail (e.g. *"that segment criterion is demographic — describe the behaviour or characteristic that causes the Job"*; *"that Job has two infinitive verbs — parse it into the hierarchy"*). Flag reduced confidence at the top of `result.md`: *"⚠️ Confidence reduced — value prop generated from a manual segment description, not a full market-research run."*
 
+### Run options & output (all paths)
+
+Ask in one batched `AskUserQuestion` (defaults keep the common case friction-free):
+
+- **Mode** — Quick (default; fast; no internet) / Deep (subagents + web competitor mining).
+- **Output format** (`PRODUCER-CONTRACT.md §2`) — Markdown (default; faster) / HTML (a bit slower; easier to read — collapsible sections + working in-page navigation; all source and drill-down links stay clickable).
+- **Where to save the result** (`PRODUCER-CONTRACT.md §5`) — default `Skills-Results/{project}/craft-value-proposition/…` / or a folder path to match your repo (e.g., `docs/research/`). Skip = default. One file per run regardless of location (Rule 4).
+
 ### User materials, claims ledger, direction confirmation (all paths)
 
-- **Materials.** Ask once: *"Any files or folders with material I should use — a Notion export (markdown), past research, interview notes, a strategy doc, your current site?"* Read what's given; tag everything taken from it **[user data]** in-context. "Nothing" is a fine answer.
-- **User-claims ledger.** Collect the strong factual claims the user made (segment beliefs, competitor facts, "customers always…"), tag each as **data / observation / hunch** (ask in one batched question if unclear). User claims enter the pipeline as *hypotheses, never facts*: GATE-4's competitiveness check treats an unverified user claim as unsupported evidence, and a primary value prop resting mainly on a user hunch gets flagged in `result.md` with a RAT card pointed at that claim.
+- **Materials.** Ask once: *"Any files or folders with material I should use — a Notion export (markdown), past research, interview notes, a strategy doc, your current site, a deck, a codebase?"* Read what's given; tag everything taken from it **[user data]** in-context. "Nothing" is a fine answer.
+- **Input-as-hypothesis gate (`PRODUCER-CONTRACT.md §3`).** Treat *all* input — the market-research result, the user's free-text claims, every uploaded deck / landing / codebase / past research — as **hypothesis, never established fact**. A landing page is the team's belief about value, not proof customers want it; the Job stated in a deck may be the team's projection, not the customer's real Job (the most expensive error). Don't just record the input — **actively hunt the risks inside it**: for each load-bearing input ask — is this customer-validated or the team's belief? Does the stated Job / segment look like the real one? Any internal contradictions, or guesses dressed as data? What must be true for it to hold, and is that checked? Hold the findings in context — they become the **"What you told me — and the risks I see in it"** block in Layer 2, with the single worst one surfaced in Layer 1. Never silently bake an unvalidated input into the wedge or the value prop.
+- **User-claims ledger.** Collect the strong factual claims the user made (segment beliefs, competitor facts, "customers always…"), tag each as **data / observation / hunch** (ask in one batched question if unclear; hunch is the default for anything from a deck / landing / idea stream). User claims enter the pipeline as *hypotheses, never facts*: GATE-4's competitiveness check treats an unverified user claim as unsupported evidence, and a primary value prop resting mainly on a user hunch gets flagged in `result.md` with a RAT card pointed at that claim.
+- **Hard gate.** No value prop or wedge may rest *primarily* on an unvalidated user input without the document saying so explicitly and pointing a RAT card at it. If the wedge is built on a Job taken from the user's materials and not confirmed by customer evidence, name that as the single most expensive risk.
 - **Direction confirmation.** Before S1 starts, play the understanding back in one short block — *"Here's what I understood: {segment, Core Jobs, business goal, what's out of scope}"* — and confirm via one `AskUserQuestion` (Confirm / Correct). Cheapest moment to fix a wrong direction.
 
 **Output (held in context):** target segment + causal criteria · Core Jobs (canonical form, "in order to" not "so that") · Big Jobs (+ personal Big Job for B2B) · known alternatives/competitors (direct · indirect · turnkey) · the market-research wedge & first mechanic guess (path A) · user materials + claims ledger · mode · language · business goal.
@@ -426,6 +453,9 @@ Three levels — go as deep as you need:
 
 > ⚠️ These are hypotheses, not facts — [full disclaimer ▸](#disclaimers)
 
+> **Validation debt:** this value prop stands on **{N}** unvalidated assumptions — **{M}** of them fatal (would sink it if wrong). The fatal ones are the first things to test, before you build. [see them ▸](#l3-bet)
+> <sub>N = risky assumptions across the RAT inventory; M = those that kill it if wrong. A Quick run on thin input has high debt — say so honestly (`PRODUCER-CONTRACT.md §4`).</sub>
+
 ## What it is
 **{The headline value statement in plain words — what the product is + what it does for them, ≤15 words, zero jargon.}** [the value, in plain terms ▸](#l2-value)
 
@@ -439,7 +469,7 @@ Three levels — go as deep as you need:
 {The single riskiest assumption, in plain words — if this is false, nothing else matters.} [how we know they'll switch ▸](#l2-bet)
 
 ## Do this next
-{One concrete next action — usually: run the cheapest test of the bet above.} [the test cards — every check ▸](#l3-bet)
+{One concrete next action — usually: run the cheapest test of the bet above. This skill emits no "build it now" verdict: the next step is always to **validate first**, not to build (`PRODUCER-CONTRACT.md §4` — the value prop is a hypothesis to test, not a green light).} [the test cards — every check ▸](#l3-bet)
 ```
 
 **Layer 1 rule: minimal jargon, plain words lead** — a methodology term may appear in parentheses as a plain gloss, but never opens a sentence; short, plain sentences ("explain it to a smart friend"). **Each Layer-1 line links to its own unique anchor — never point two lines at the same target** (the bet and the next-action are different links). Every line a skeptic could doubt ends with a `▸` drill-down link.
@@ -455,6 +485,16 @@ Plain English, one gloss per methodology term, `references/glossary.md` linked o
 # How we got here — the reasoning
 
 *Plain-English walk-through of the logic behind the proposition above. The full mechanic work, tables, and the build spec are in the next layer. Methodology terms are defined in the [glossary](references/glossary.md).*
+
+<a id="l2-input-risks"></a>
+## What you told me — and the risks I see in it
+*Everything you gave me — your idea, your deck, your landing, your numbers, the upstream research — I treated as a hypothesis, not as fact. These are the inputs the value prop leans on, and what I'd check before trusting each. (`PRODUCER-CONTRACT.md §3`.)* (Omit this block only if the user provided no claims or materials at all.)
+
+| What you provided / claimed | How I treated it | The risk I see in it | How to check it fast |
+|---|---|---|---|
+| {claim or material, tagged data / observation / hunch} | {used as hypothesis in {where — wedge / segment / mechanic}} | {the specific risk — e.g., "this is your stated value, not customer-validated; the real Job may differ"} | {the cheapest falsifying test} |
+
+{If the wedge or the value prop rests primarily on an unvalidated input, say so here in one bold sentence and point to the matching RAT card in §10.}
 
 <a id="l2-value"></a>
 ## What this segment actually wants most
@@ -589,6 +629,7 @@ The current §0–§12 substance, kept whole, sitting below the plain layers. Ad
 - [ ] ≤3 unvalidated assumptions stacked in the chosen prop
 - [ ] §11 implementation spec is PRD-ready
 - [ ] Every external source is a clickable link
+- [ ] **Producer contract satisfied** (`../PRODUCER-CONTRACT.md`): helicopter-view printed before intake; output-format + output-path asked; if HTML, one self-contained `.html` with resolving anchors + `<details>`; the **"What you told me — and the risks I see in it"** block present (unless no input given); **validation-debt line** in Layer 1; the next step framed as **validate first, not build** (no bare "build it now"); on hand-off from market-research, asked what debt has been retired; Deep mode hit its evidence floor + self-critic loop (or flagged thin coverage + offered the web MCP).
 
 ## What this enables next
 1. `/product-requirements` — feed §11 (the implementation spec) directly; it becomes the PRD's segment + value + risk input.
@@ -619,6 +660,12 @@ Same S0→S6 chain, but substantive stages are parallelized and web-grounded. Ag
 **Shared preamble for every agent:**
 > You work with Ivan Zamesin's AJTBD / Next Move Theory methodology. Use ONLY the canon files this prompt names for your wave as the methodology source — do NOT use generic JTBD from the internet or prior training, and do NOT read files outside your slice (the eager core is `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md` + `…/value-creation-mechanics.md`; other files are named per-agent below). (If a path is not found, retry with a `1-` prefix on the canon folder.) Write *Aha Moment* / *Problem*, never PPE / NPE. **Keep methodology citations and canon paths out of report prose** — hold them in context; the orchestrator fences any that belong in Layer 3 into a `▸ methodology trace` line. Every named external source is a clickable Markdown link. **Return your full result in your final message — do not write any files.**
 
+**Deep-mode QA — evidence floor, self-critic loop, web-MCP fallback (`PRODUCER-CONTRACT.md §6`):**
+
+- **Evidence floor, not just a ceiling.** The web-touching legs ([R] reviews-mining, [F] feasibility/competitiveness, [RAT]) have fetch *caps*; treat the lower bound as a *floor* too. A leg may not return "done" until it has hit a real minimum of distinct sources for its task — reviews/competitors → ≥4 competitors with real review sources; feasibility → the competitor matrix grounded on cited reviews, not assertion — **or** explicitly reported why fewer were possible (blocked / none exist). "Did two queries and stopped" is a failure state, not a completion.
+- **Self-critic loop per leg.** After each research leg returns, run a short critic pass (this is what the [C] critic gates already do per GATE): *enough distinct sources? load-bearing claims actually verified against a source? any methodology error (segment by demographics, Big-Job-as-segment, features-before-criteria, unit-econ ignored)? gaps left?* If it fails, re-run the leg with the gap named — up to 2 extra rounds, then escalate to the user. Don't ship a leg that failed its own critic.
+- **Web-MCP fallback.** When the built-in fetch is blocked or thin on a needed source (G2, Capterra, local-market sites), tell the user once and use a web-research MCP if one is connected — [Firecrawl](https://www.firecrawl.dev/) or [Exa](https://exa.ai/) (both ship MCP servers; discover via tool search). Without it, proceed and flag thin coverage in the verification checklist.
+
 **Waves:**
 
 ```
@@ -633,14 +680,14 @@ Wave 5 (sequential):            [SYN] synthesis → [GATE-6 panel] → (human: s
 
 **Agent prompts (objective · input · output · boundaries · effort budget — every agent returns its result in-message):**
 
-- **[R] reviews-mining.** Given the segment + alternatives, fetch reviews from G2 / Reddit / Product Hunt / Trustpilot / Capterra. Return **raw signals only** (do NOT synthesize hypotheses): the specific Problems-with-current, which dominant criteria each competitor covers poorly, and 5–10 quotable quotes per competitor **with source URLs**. ≤12 fetches / ~10 min.
+- **[R] reviews-mining.** Given the segment + alternatives, fetch reviews from G2 / Reddit / Product Hunt / Trustpilot / Capterra. Return **raw signals only** (do NOT synthesize hypotheses): the specific Problems-with-current, which dominant criteria each competitor covers poorly, and 5–10 quotable quotes per competitor **with source URLs**. ≤12 fetches / ~10 min. **Evidence floor:** cover ≥4 competitors with real review sources, or report why fewer were possible (blocked / none exist) — two queries and stop is a failure. If a source blocks the built-in fetch (G2, Capterra), flag it and use a web-research MCP (Firecrawl / Exa) if connected.
 - **[S1] dominant-criteria.** Read the eager core + `segmentation.md` + `job-structure.md`. Given the normalized input, return the ranked dominant criteria + lead mechanics + Big-Job ladder per S1. No web.
 - **[S2] job-graph.** Read `critical-chain.md` (+ `job-graph.md` only if the substrate needs care). Given the input + the S1 result, return the Job Graph + Critical Chain per S2. No web.
 - **[G1..Gk] mechanic-family generators (sectioning).** Read the eager core + `behaviour-change.md`. Each agent owns one mechanic family (e.g. *subtract/kill/move-up*; *take-off/done-for-you/chain-repair*; *emotion/expectation/need*; *price/cost/cognitive*; *Previous/Next/link-to-Big-Job*). Given the Job Graph + dominant criteria + the reviews signal, return the strongest / fastest / cheapest hypotheses in their family in canonical form; the orchestrator merges them. Effort: 3–6 hypotheses per family.
 - **[F] feasibility · cost · competitiveness.** Read `nmt-key-theses.md`. Given the merged hypotheses + the reviews signal, return the web-grounded criteria×competitor matrix, the feasibility + cost-to-build + unit-econ read per hypothesis, and the RICE ranking with bonuses + top 2. ≤6 fetches.
 - **[C] critic gates.** Given a stage's returned output + its acceptance criteria + the canon anchors for that stage, run the adversarial binary critic per GATE and return the verdict + `fix_instructions` for any failures (≤2 rounds, then escalate to the user).
 - **[RAT] RAT-card generator.** Read `rat-key-theses.md`. Given the chosen primary, return the top-3 RAT cards with web-validated cost-of-validation estimates. ≤3 fetches.
-- **[SYN] synthesis.** Read `communication.md`. Given all stage returns, assemble the single output file as the **three layers** (top disclaimers once → Layer 1 → Layer 2 → Layer 3 = the §0–§12 work). Add the Layer-3 anchors; **compute Layer 2 then Layer 1 LAST** from the assembled Layer-3 work, wiring the `▸` drill-down links; fence every methodology citation into a `▸ methodology trace` line (no canon path or `Rule N` inline in any layer). Run GATE-6 as a panel.
+- **[SYN] synthesis.** Read `communication.md`. Given all stage returns, assemble the single output file as the **three layers** (top disclaimers once → Layer 1 → Layer 2 → Layer 3 = the §0–§12 work). Include the Layer-2 **"What you told me — and the risks I see in it"** block from the input-as-hypothesis findings, and the **validation-debt line** in Layer 1 (`PRODUCER-CONTRACT.md §3, §4`). Add the Layer-3 anchors; **compute Layer 2 then Layer 1 LAST** from the assembled Layer-3 work, wiring the `▸` drill-down links; fence every methodology citation into a `▸ methodology trace` line (no canon path or `Rule N` inline in any layer). If HTML was chosen, render the one file as self-contained `.html` (`PRODUCER-CONTRACT.md §2`). Run GATE-6 as a panel.
 
 **Progress** is reported inline in chat as waves complete — not to a log file.
 
@@ -694,3 +741,4 @@ Produce a `⚠️ Methodology violation` warning (not silent output) for any of:
 - [ ] If path C: reduced-confidence flag at top of `result.md`.
 - [ ] **Step ledger:** every stage S0–S6 checked off by name; a skipped stage or gate was declared to the user, never silent.
 - [ ] **User claims stayed hypotheses:** ledger claims tagged (data / observation / hunch); the primary value prop does not rest primarily on a single unverified user hunch without saying so.
+- [ ] **Producer contract satisfied** (`../PRODUCER-CONTRACT.md`): helicopter-view printed before intake; output-format + output-path asked; if HTML, one self-contained `.html` with resolving anchors + `<details>`; the **"What you told me — and the risks I see in it"** block present (unless no input given); **validation-debt line** in Layer 1; the next step framed as **validate first, not build** (no bare "build it now"); on hand-off from market-research, asked what validation debt has been retired and re-tagged anything still unvalidated; Deep mode hit its evidence floor + self-critic loop (or flagged thin coverage + offered the web MCP).

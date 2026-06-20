@@ -6,7 +6,9 @@ user-invocable: true
 
 # Market Research v11
 
-> **v11 in one breath.** Before any research runs, an **intake gate** closes the gaps that change the research: adaptive clarifying questions (with "I don't have this info" as a valid answer), user materials read in, a **user-claims ledger** (the user's inputs are hypotheses, not facts), and a **direction confirmation**. The deliverable is a **decision**: an A4 one-pager with a **GO / NARROW / PIVOT** verdict, segments scored on the **five-factor selection screen**, an **action-first** RAT, and **ranked strategic options** (incl. pivot markets that fit the idea's assets). Quick mode sizes honestly (one calculation, assumptions named); the 3-method averaging runs only in Deep mode, on real sources. Full version history is in `CHANGELOG.md` beside this file.
+> **v11 in one breath.** Before any research runs, an **intake gate** closes the gaps that change the research: adaptive clarifying questions (with "I don't have this info" as a valid answer), user materials read in, a **user-claims ledger** (the user's inputs are hypotheses, not facts), and a **direction confirmation**. The deliverable is a **decision**: an A4 one-pager with a **GO (to validation) / NARROW / PIVOT** verdict, segments scored on the **five-factor selection screen**, an **action-first** RAT, and **ranked strategic options** (incl. pivot markets that fit the idea's assets). Quick mode sizes honestly (one calculation, assumptions named); the 3-method averaging runs only in Deep mode, on real sources. Full version history is in `CHANGELOG.md` beside this file.
+
+> **Producer contract (binding) — `../PRODUCER-CONTRACT.md`.** Six cross-cutting behaviors shared by all producer skills, from user feedback: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block; (4) print **validation debt** and write **`GO (to validation)`**, never bare `GO`; (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill; the contract is the source of truth for the wording.
 
 ## What this skill produces
 
@@ -80,12 +82,14 @@ Quick mode (one Claude): read the eager core, then read each staged file the fir
 
 ## Output file (one file per run — `CLAUDE.md` Rule 4)
 
-The skill writes **exactly one** file, grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
+The skill writes **exactly one** file. Default location (used unless the user gave a custom output path in intake — `PRODUCER-CONTRACT.md §5`), grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skills-Results/{product-slug}/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.md
+Skills-Results/{product-slug}/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-market-research-result.{md|html}
 ```
 
+- **Extension follows the chosen output format** (`PRODUCER-CONTRACT.md §2`): `.md` (default) or a single self-contained `.html` (inline CSS, working in-page anchors for the How-to-read jumps + every `▸` drill-down link, `<details>` for Layer 3 and methodology traces, source links opening in a new tab). HTML carries the identical content — same attribution, disclaimers, three layers, tables, links — just in a more readable shell. Never write both; one file per run.
+- If the user gave a custom path, write the one file there with the same filename pattern.
 - `{YYYY-MM-DD_HH-MM}` (24h local time) makes each run's file unique; reruns never overwrite.
 - Everything internal — what the user provided, discarded hypotheses, antisegment checks, Big-Job validation, the full sizing tables, milestone notes, and **all methodology citations** (which never appear in the user-facing report — see "Readability") — **stays in-context**, never in a separate file.
 - Deep mode adds no intermediate files: subagents return their results in-message and the orchestrator writes the one file (see the Deep pipeline section).
@@ -94,9 +98,17 @@ Skills-Results/{product-slug}/market-research/{YYYY-MM-DD_HH-MM}_{product-slug}-
 
 ---
 
-## STAGE 0 — Document language
+## STAGE 0 — Orientation (helicopter view) + language
 
-Default to **English**. If the user is writing in another language, the skill's first message offers to work in that language, then asks via `AskUserQuestion` (English / their language / Other). Hold the choice in context. All communication and the report use the chosen language; canon files and source URLs stay as-is.
+**First, the orientation block** (`PRODUCER-CONTRACT.md §1`) — print it before any question, in plain words:
+
+> **What you'll get:** one report — a GO (to validation) / NARROW / PIVOT decision, the segment to sell to first, why, the make-or-break risk, and how big the market is.
+> **The steps:** (1) a few questions about your idea → (2) I find and score the customer segments → (3) I size the market → (4) I pick a wedge and rank your strategic options → (5) you get one report in three reading depths.
+> **Where I work vs. where you decide:** I do the analysis and the hypotheses. *You* pick the direction and run the field validation — interviews, sales, tests. I can't validate for you; I can only tell you what to check first.
+> **Two modes:** *Quick* (default — no internet, ~3–5 min, reasoning only; good for a first cut and "did I miss something") · *Deep* (opt-in — subagents + web research, longer; real competitor/market/review data; best on a top model with a web-research MCP).
+> **Honest caveat:** this speeds up the *thinking*, not the *proving*. Every number and segment is a hypothesis until you check it in the field.
+
+Then **document language.** Default to **English**. If the user is writing in another language, offer to work in that language, then ask via `AskUserQuestion` (English / their language / Other). Hold the choice in context. All communication and the report use the chosen language; canon files and source URLs stay as-is.
 
 ---
 
@@ -107,8 +119,9 @@ Collect in a short stream + two batched `AskUserQuestion` calls (max 4 questions
 ### Step 1 — Idea as a stream (free text)
 > Describe your idea as a stream — what it is, who it's for, what Job it performs, and anything you already have going for it (technology, team, partners, traction).
 
-### Step 2 — Batch 1: mode, stage, country, business type
+### Step 2 — Batch 1: mode, output format, stage, country, business type
 - **Mode** — Quick (default; fast; no internet) / Deep (subagents + web research).
+- **Output format** (`PRODUCER-CONTRACT.md §2`) — Markdown (default; faster) / HTML (a bit slower; easier to read — collapsible sections + working in-page navigation; all source and drill-down links stay clickable).
 - **Stage** — Idea / MVP / Launched / Scaling.
 - **Country / market** — United States / United Kingdom / Russia-CIS / Global-English / Other.
 - **Business type** — B2C / B2B / Both B2C and B2B / B2B2C (true channel-through-business only).
@@ -118,6 +131,7 @@ Collect in a short stream + two batched `AskUserQuestion` calls (max 4 questions
 - **Hypothesized segments** — "Yes, I'll describe" / "I don't know — find them" (default) / Skip.
 - **Known competitors** — "Yes, I'll list them" / "I don't know — find them" (default) / Skip.
 - **Ambition** — "I'll describe" (revenue / margin / timeframe) / Skip.
+- **Where to save the result** (`PRODUCER-CONTRACT.md §5`) — default `Skills-Results/{project}/market-research/…` / or a folder path to match your repo (e.g., `docs/research/`). Skip = default. One file per run regardless of location (Rule 4).
 
 ### Step 4 — Batch 2b: assets & constraints (powers the pivot recommendation)
 Ask once (free text is fine), capturing the idea's **transferable assets and hard constraints** — used by the pivot sub-pipeline (STAGE 9):
@@ -135,13 +149,15 @@ After Steps 1–4, scan the collected input for **gaps that would materially cha
 
 **"I don't have this info" is a valid answer.** Record it in-context as an explicit assumption — the report then *marks the dependent numbers as assumptions* instead of silently inventing specifics.
 
-### Step 6 — User-claims ledger (the user can hallucinate too)
-Collect every **strong factual claim** the user made across Steps 1–5 (market insights, "everyone wants X", competitor facts, regulatory claims, segment beliefs) into an in-context ledger. Tag each with its source as the user states it — **data** (measured / documented), **observation** (seen in interviews, sales calls), or **hunch** (belief, intuition). If the source is unclear, ask in one batched question: *"Quick check on a few things you mentioned — for each, is it data you have, something you observed, or a hunch?"*
+### Step 6 — User-claims ledger + input-as-hypothesis gate (`PRODUCER-CONTRACT.md §3`)
+Collect every **strong factual claim** the user made across Steps 1–5 (market insights, "everyone wants X", competitor facts, regulatory claims, segment beliefs) **and every load-bearing input from their uploaded materials** — a deck, a landing page, a codebase, past research — into an in-context ledger. **All of it is hypothesis, not fact** — a landing page is the team's belief about value, not proof customers want it. Tag each with its source — **data** (measured / documented), **observation** (seen in interviews, sales calls), or **hunch** (belief, intuition; this is the default for anything from a deck/landing/idea stream). If the source is unclear, ask in one batched question: *"Quick check on a few things you mentioned — for each, is it data you have, something you observed, or a hunch?"*
+
+**Actively hunt for the risks inside the input** (don't just record it). For each load-bearing input ask: is this customer-validated, or the team's belief about the customer? Does the stated Job / segment look like the customer's real Job, or the team's projection of it (the most expensive error)? Any internal contradictions, or guesses dressed as data? Hold the findings in context — they become the **"What you told me — and the risks I see in it"** block in Layer 2 (see the Layer-2 template), with the single worst one surfaced in Layer 1.
 
 Downstream rules (enforced in synthesis and self-critic):
-- User claims are **hypotheses, not facts**. They enter the analysis tagged, never silently merged with researched facts.
+- User claims and materials are **hypotheses, not facts**. They enter the analysis tagged, never silently merged with researched facts, and never silently baked into the wedge.
 - **Deep mode:** load-bearing claims (anything the verdict, target-segment pick, or a pivot recommendation would rest on) get a web-verification attempt (≤2 fetches each, inside existing agent budgets). Confirmed → cite the source. Unconfirmed → keep the tag.
-- **No verdict, target-segment pick, or pivot recommendation may rest primarily on a single unverified user hunch.** If it does, the report says so explicitly — *"this recommendation stands on your unverified input X; validate it first"* — and the corresponding RAT row points at that claim.
+- **No verdict, target-segment pick, wedge, or pivot recommendation may rest primarily on a single unverified user input.** If it does, the report says so explicitly — *"this recommendation stands on your unverified input X; validate it first"* — names it as the single most expensive risk, and points the corresponding RAT row at that claim.
 
 ### Step 7 — Direction confirmation (before any research runs)
 Before generating anything (Quick) or spawning any agent (Deep), play the understanding back in one short block: *"Here's what I understood: {product, market + local/global, who it's hypothetically for, what you already have, what's out of scope}. The research direction: {one sentence}."* Then one `AskUserQuestion`: **Confirm / Correct (free text)**. On "Correct", update the held input and re-confirm once. This is the cheapest moment to fix a wrong direction — web research is the most expensive stage, and everything downstream builds on it.
@@ -257,8 +273,11 @@ Three levels — go as deep as you need:
 
 > ⚠️ These are hypotheses, not facts — [full disclaimer ▸](#disclaimers)
 
-## The answer: {GO / aim narrower / pivot — in plain words, e.g. "promising, but aim narrower"}
-{2–4 short sentences. Plain words, no jargon. The single most important conclusion and the one binding constraint.} [why this, not a clean yes ▸](#l2-verdict)
+## The answer: {GO (to validation) / aim narrower / pivot — in plain words, e.g. "promising, but aim narrower"}
+{2–4 short sentences. Plain words, no jargon. The single most important conclusion and the one binding constraint. The first time the verdict is "GO (to validation)", add the half-line gloss: "— worth the next step, which is checking it in the field, not building it yet."} [why this, not a clean yes ▸](#l2-verdict)
+
+> **Validation debt:** this stands on **{N}** unvalidated assumptions — **{M}** of them fatal (would sink it if wrong). The fatal ones are the first things to check. [see them ▸](#l2-risks)
+> <sub>N = risky assumptions in the RAT table; M = those that kill it if wrong. A Quick run on thin input has high debt — say so honestly (`PRODUCER-CONTRACT.md §4`).</sub>
 
 ## Who to sell to
 {The target segment in one plain sentence — who they are, not a methodology label.} [how we found this buyer ▸](#l2-buyer)
@@ -289,6 +308,16 @@ Plain English, one gloss per methodology term, `references/glossary.md` linked o
 # How we got here — the reasoning
 
 *Plain-English walk-through of the logic behind the answer above. The full methodology, tables, and sources are in the next layer. Methodology terms are defined in the [glossary](references/glossary.md).*
+
+<a id="l2-input-risks"></a>
+## What you told me — and the risks I see in it
+*Everything you gave me — your idea, your deck, your landing, your numbers — I treated as a hypothesis, not as fact. These are the inputs the analysis leans on, and what I'd check before trusting each. (`PRODUCER-CONTRACT.md §3`.)* (Omit this block only if the user provided no claims or materials at all.)
+
+| What you provided / claimed | How I treated it | The risk I see in it | How to check it fast |
+|---|---|---|---|
+| {claim or material, tagged data / observation / hunch} | {used as hypothesis in {where — wedge / segment / sizing}} | {the specific risk — e.g., "this is your stated value, not customer-validated; the real Job may differ"} | {the cheapest falsifying test} |
+
+{If any wedge / segment / verdict rests primarily on an unvalidated input, say so here in one bold sentence and point to the matching RAT row.}
 
 <a id="l2-verdict"></a>
 ## Why "{verdict}", not a clean yes
@@ -453,8 +482,8 @@ Close Section 2 with a short **cross-segment themes** block (4–7 patterns span
 <a id="l3-verdict"></a>
 ## 4. Strategic recommendation & pivot options
 
-### Verdict on the proposed segment + Jobs: GO / NARROW / PIVOT
-{Walk the RAT cause-and-effect chain — Market → Segment+Jobs → Value → Unit economics → Channels — and name the verdict + the binding constraint. GO = the chain holds; NARROW = it holds only for a sub-segment / sub-Job; PIVOT = an upstream link is broken and an alternative market scores better.}
+### Verdict on the proposed segment + Jobs: GO (to validation) / NARROW / PIVOT
+{Walk the RAT cause-and-effect chain — Market → Segment+Jobs → Value → Unit economics → Channels — and name the verdict + the binding constraint. **GO (to validation)** = the chain holds on the evidence so far → the next step is to validate it in the field, not to build; NARROW = it holds only for a sub-segment / sub-Job; PIVOT = an upstream link is broken and an alternative market scores better. Never write a bare "GO" — it reads as "build it now" (`PRODUCER-CONTRACT.md §4`).}
 
 ### Adjacent jobs you could capture next (Job switches within the segment)
 {Using the target segment's Job Graph: which Previous Job or Next Job in the chain to capture; whether to climb to a higher Big Job (the most powerful mechanic); which sibling Small Jobs to add. "You're competing on Job X; the more valuable adjacent Job for this same segment is Y."}
@@ -589,6 +618,7 @@ Methodology only — format is guaranteed by the templates above, so it is not r
 - [ ] **Disclaimers once** — full two-part disclaimer at top only; Layer 1 has the one-line pointer; Section 6 does not repeat the block.
 - [ ] **Citations fenced** — no canon path or `Rule N` inline in Layers 1–2 or in Layer-3 prose; any canon reference sits in a `▸ methodology trace` line.
 - [ ] Step ledger ran — every pipeline stage checked off by name; any skip was declared, never silent.
+- [ ] **Producer contract satisfied** (`../PRODUCER-CONTRACT.md`): helicopter-view printed before intake; output-format + output-path asked; if HTML, one self-contained `.html` with resolving anchors + `<details>`; the **"What you told me — and the risks I see in it"** block present (unless no input given); **validation-debt line** in Layer 1; every `GO` written as **`GO (to validation)`**; Deep mode hit its evidence floor + self-critic loop (or flagged thin coverage + offered the web MCP).
 
 ---
 
@@ -617,6 +647,9 @@ Triggered when the user picks Deep. A team of subagents with web access fills th
 - Agents are spawned with the `Agent` tool, `subagent_type: "general-purpose"`, `run_in_background: true`. Within a wave, independent agents run in parallel; the orchestrator waits for a wave to finish before the next.
 - Each agent reads **only the canon slice its wave needs** (per "Methodology — source of truth": sizing & competitor agents → eager core only; Strategy → core + rat + nmt + mechanics; Pivot → core + nmt) and **returns its result in its final message — no per-agent files.** The orchestrator holds those returns in context. No live-tail / `Monitor` machinery.
 - Web caps (hold the longest legs): reviews-mining ≤ 12 `WebFetch` / ~10 min; synthesis ≤ 6; strategy ≤ 4. Pivot agents are reasoning-bound (≤ 2 fetches if any).
+- **Evidence floor, not just a ceiling** (`PRODUCER-CONTRACT.md §6`). Each web leg also has a *minimum*: it may not return "done" until it has hit a real floor of distinct sources for its task (sizing → ≥3 independent inputs; competitors/reviews → ≥4 competitors with real review sources) **or** explicitly reported why fewer were possible (blocked / none exist). "Did two queries and stopped" is a failure, not a completion.
+- **Self-critic loop per leg.** After a leg returns, a critic pass checks: enough distinct sources? load-bearing claims verified against a real source? any methodology error (segment by demographics, Big-Job-as-segment, features-before-criteria, undersized SAM)? gaps? If it fails, re-run the leg with the gap named — up to 2 extra rounds. Don't ship a leg that failed its own critic (this is the fix for "promised deep research, did two fetches, quit").
+- **Web-MCP fallback.** When the built-in fetch is blocked or thin on a needed source (G2, Capterra, local-market sites), tell the user once and use a web-research MCP if one is connected — [Firecrawl](https://www.firecrawl.dev/) or [Exa](https://exa.ai/) (both ship MCP servers; discover via tool search). Without it, proceed and flag thin coverage in the verification checklist.
 - Source links mandatory (Rule 2); never invent sources or figures.
 
 ### No run-folder files (Deep)

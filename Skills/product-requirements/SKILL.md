@@ -8,6 +8,8 @@ user-invocable: true
 
 > **v5 in one breath.** The skill no longer re-derives segments (that is `/market-research`) or invents value (that is `/craft-value-proposition`) — it **consumes** their output, and it runs **no research itself**. With no upstream artifact it does one of two things: **route** the user to run `/market-research` → `/craft-value-proposition` first (the proper path), or — if the user just wants requirements fast and already knows their segment and value — take the **segment + Jobs + value straight from the user's description** (the fast path) and skip research entirely. It then adds a **"challenge the build"** gate before any requirement is written — *is building this even the right move, or is there a more energy-efficient way to perform the business Job?* — and writes the PRD for whatever wins. The deliverable is a **single PRD in three reading depths**: **Layer 1** (what we're building, plain, forwardable) → **Layer 2** (the reasoning) → **Layer 3** (the full build spec — every feature laddered Core Job → Big Job → value mechanic → success criteria → Aha Moment on the Critical Chain + ~90% edge cases). Canon citations are **fenced** into Layer-3 `▸ methodology trace` lines, never inline; internal `CLAUDE.md Rule N` references never appear in the output. Canon is **loaded progressively** — an eager core up front, staged files only at the stage that needs them. Landing/ad/GTM copy moved to `/craft-go-to-market`; analytics and a standalone unit-economics model are out of scope (unit economics survives only as a reasoning filter).
 
+> **Producer contract (binding) — `../PRODUCER-CONTRACT.md`.** Six cross-cutting behaviors shared by all producer skills, from user feedback: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block; (4) print **validation debt** and write **`GO (to validation)`**, never bare `GO`; (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill; the contract is the source of truth for the wording. This skill is the **closest-to-build** artifact in the chain, so the validation-debt + *"validate before you build, don't build yet"* framing (§4) carries the most weight here — get it right.
+
 ## Where this skill sits in the chain
 
 ```
@@ -135,11 +137,14 @@ The PRD is **three reading depths in one file**, linked top-to-bottom like canon
 
 ## Output file (one file per run — `CLAUDE.md` Rule 4)
 
-The skill writes **exactly one** file, grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
+The skill writes **exactly one** file. Default location (used unless the user gave a custom output path in intake — `PRODUCER-CONTRACT.md §5`), grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skills-Results/{product-slug}/product-requirements/{YYYY-MM-DD_HH-MM}_{product-slug}-product-requirements-result.md
+Skills-Results/{product-slug}/product-requirements/{YYYY-MM-DD_HH-MM}_{product-slug}-product-requirements-result.{md|html}
 ```
+
+- **Extension follows the chosen output format** (`PRODUCER-CONTRACT.md §2`): `.md` (default) or a single self-contained `.html` (inline CSS, working in-page anchors for the How-to-read jumps + every `▸` drill-down link, `<details>` for Layer 3 and methodology traces, source links opening in a new tab). HTML carries the identical content — same attribution, disclaimers, three layers, tables, links — just in a more readable shell. Never write both; one file per run.
+- If the user gave a custom output path (intake S0), write the one file there with the same filename pattern.
 
 Everything internal — the normalized input, the challenge (business-goal ladder, subtraction-first, the more-effective ways and which won, the locked build subject), the Critical Chain per Core Job, dropped alternatives, and the self-critic verdicts — **stays in-context**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.
 
@@ -171,6 +176,17 @@ Question budget: **3–5 human touchpoints**, fewer when an upstream artifact al
 
 ## S0 — Intake & route
 
+### Orientation (helicopter view) — print first, before any question
+**Print the orientation block** (`PRODUCER-CONTRACT.md §1`) before the first `AskUserQuestion`, in plain words, in the user's chosen document language:
+
+> **What you'll get:** one build-ready PRD — what to build, who for, the moment that proves it works, the riskiest thing to validate first, and the full spec engineers and designers build against — in three reading depths.
+> **The steps:** (1) a few questions about where you're starting from → (2) I pick up your segment + value (from upstream research, or from your description) → (3) I run a *"challenge the build"* gate — is building this even the right move, or is there a more efficient way to hit the same business goal? → (4) I write the PRD for whatever wins → (5) you get one document in three reading depths.
+> **Where I work vs. where you decide:** I do the analysis, the challenge, and the spec. *You* pick the build subject and run the field validation — interviews, a fake door, a probe — before committing engineering time. I can't validate for you; I can only tell you what to check first.
+> **Two modes:** *Quick* (default — no internet, ~5–10 min, reasoning only; good for a first spec from what you already know) · *Deep* (opt-in — subagents + web research, longer; refreshes competitor parity and stress-tests edge cases against real reviews; best on a top model with a web-research MCP).
+> **Honest caveat:** this speeds up the *thinking*, not the *proving*. A PRD written in 10 minutes on guesses is a hypothesis to validate, not a green light to build — so before any requirement, validate the riskiest assumption.
+
+End with *"Ready? First, a few questions."* and proceed to intake.
+
 ### Language
 Default **English**. If the user writes in another language, offer to work in it (English / their language / Other). Hold the choice in context. The PRD uses the chosen language; canon files and source URLs stay as-is.
 
@@ -187,20 +203,32 @@ Q2 "Mode?"
   - "Quick (default — fast, no internet)"
   - "Deep (subagents + web parity check)"
 
-Q3 (Paths A/B only) "Path to the result file?"  → free text; Read it.
+Q3 "Output format?"  (PRODUCER-CONTRACT.md §2)
+  - "Markdown (default — faster to generate; opens anywhere)"
+  - "HTML (a bit slower; easier to read — collapsible sections + working
+     in-page navigation; all source and drill-down links stay clickable)"
+
+Q4 "Where to save the result?"  (PRODUCER-CONTRACT.md §5)
+  - "Default — Skills-Results/{project}/product-requirements/…"
+  - "A folder / path to match your repo (e.g., docs/specs/)"  → free text
+  (Skip = default. One file per run regardless of location — Rule 4.)
+
+Q5 (Paths A/B only) "Path to the upstream result file?"  → free text; Read it.
 ```
 
 ### Resolve the input path
 
 - **Path A — craft-value-proposition result.** Read it. Its **§11 Implementation spec** already carries the product shape, the feature table (Core Job / criterion / mechanic / Aha link), Critical Chain & Aha placement, cost-to-build & cheapest probe, unit-econ direction, and anti-segment — **plus** the target segment, Big Job(s), competitors, proof, and RAT cards in the body. **This is the richest input — segments AND value are both present.** Most of S1/S2 is already answered; confirm rather than re-ask, then go to S3.
 - **Path B — market-research result.** Read it. Parse the target segment(s) (✅/⚠️), their Core Jobs + success criteria, Big Jobs, competitors (direct/indirect/turnkey), the wedge, and the action-first RAT — **carry all of it forward, never regenerate it.** The value layer is *not yet crafted*, so say so: *"You have segments but no crafted value proposition. Strongly recommended: run `/craft-value-proposition` on the target segment first — the PRD is much sharper from a real value hypothesis. Run it now, or proceed using the market-research wedge as the value direction?"* If the user proceeds, use the wedge/differentiation hypothesis as the value direction; flag the reduced confidence at the top of the PRD.
+- **Hand-off debt — ask what has since been validated (Paths A/B only — `PRODUCER-CONTRACT.md §4c`).** The upstream artifact carried its own validation debt (its RAT / risk rows — segment, willingness-to-pay, value, channel assumptions). Debt travels down the chain; it is *not* silently dropped. Because this PRD is the closest-to-build artifact, ask once before building: *"Your {market-research / value-proposition} result rested on these unvalidated assumptions: {list the upstream RAT rows}. Which of these have you since checked in the field, and what did you find?"* Re-tag anything still unvalidated — it carries into this PRD's risk section (§7) and counts toward this PRD's validation debt (Layer 1), with the cheapest probe pointed at it. Anything the user confirms was validated is marked as such and drops out of the debt count.
 - **Path C — no research yet, wants it (ROUTE OUT — do not run research here).** Reply: *"The right order is `/market-research` → `/craft-value-proposition` → back here. Run `/market-research` first (it finds and scores the segments), then `/craft-value-proposition` (it builds the value hypothesis + a PRD-ready spec), then return and pick Path A. Want me to open the `/market-research` input prompt now?"* Hand off and stop — this skill does not size markets or discover segments.
 - **Path D — fast path, manual segment + Jobs + value (no research).** For the user who already knows the segment and the value and just wants requirements. Collect, by description/dictation: product (1–2 sentences) + URL if any; target segment NAME + causal criteria (behaviour/characteristic, **not** demographics); Big Job(s) + criteria; top 1–3 **Core Jobs** in canonical `When … I want to {outcome} with success criteria {direction+level}, in order to {Big Job}` form; **the value** (what value we create + roughly via which mechanic — this stands in for `/craft-value-proposition`); ≥3 known alternatives (direct/indirect/turnkey if known); the business goal. Validate against the invariants — fix multi-verb Jobs (Rule 7), demographic "criteria", and adjective "value" before proceeding. Then go straight into S1→S5. Flag reduced confidence at the top of the PRD (*"generated from a manually-described segment + value, not a research-backed one"*).
 
-### User materials, claims ledger, direction confirmation (all paths)
+### User materials, claims ledger, input-as-hypothesis gate, direction confirmation (all paths)
 
 - **Materials.** Ask once: *"Any files or folders with material I should use — a Notion export (markdown), past research, interview notes, an existing spec, your current site?"* Read what's given; tag everything taken from it **[user data]** in-context — and **never silently carry a user's existing positioning, copy, or feature list into the PRD as a settled decision**: confirm first that it should carry over (it may be exactly what the challenge step should challenge).
-- **User-claims ledger.** Tag the strong factual claims in the user's input (Path D especially) as **data / observation / hunch**. A requirement or challenge-verdict resting mainly on an unverified hunch is flagged in the PRD's risk section, with the validation step pointed at that claim.
+- **User-claims ledger + input-as-hypothesis gate (`PRODUCER-CONTRACT.md §3`).** Collect every strong factual claim in the user's input — and every load-bearing input from the upstream artifact and the uploaded materials (a deck, a landing page, a codebase, the manually-described segment + value on Path D) — into an in-context ledger. **All of it is hypothesis, not fact** — a landing page is the team's belief about value, not proof customers want it; a stated segment + value can be the team's projection of the customer's Job rather than the customer's real one (the most expensive error). Tag each as **data** (measured / documented), **observation** (seen in interviews, sales), or **hunch** (belief, intuition — the default for anything from a deck / landing / the idea description). **Actively hunt the risks inside each load-bearing input** (don't just record it): is this customer-validated, or the team's belief about the customer? Does the stated Job / segment look like the customer's real Job, or the team's projection of it? Any internal contradictions, or guesses dressed as data? Hold the findings in context — they become the **"What you told me — and the risks I see in it"** block in Layer 2 (see the Layer-2 template), with the single worst one surfaced in Layer 1.
+- **Hard gate (`PRODUCER-CONTRACT.md §3c`).** **No PRD scope, Core-Job selection, or challenge verdict may rest *primarily* on an unvalidated user input without the PRD saying so explicitly and pointing a RAT row at it.** If the build scope leans on a Job or value taken from the user's materials and not confirmed by customer evidence, that is named in §7 as the single most expensive risk, with the cheapest falsifying test attached — and it is the *"single riskiest thing to validate BEFORE building"* in Layer 1.
 - **Direction confirmation.** Before S1, play the understanding back in one short block — *"Here's what I understood: {what we're building, for whom, the business goal, what's already decided vs open}"* — and confirm via one `AskUserQuestion` (Confirm / Correct).
 
 **Hold** the normalized input in context.
@@ -254,6 +282,8 @@ Gather only what an upstream artifact didn't already supply, in **one batch of �
 
 **This runs before any requirement is written.** Source: `the-algorithm.md §4 Step 1`, `subtraction.md`, `local-vs-global-optimum.md`, `rat-key-theses.md §10`, `value-creation.md §1, §14, §17`. The point is not to talk the user out of building — it is to make sure the build is the **most energy-efficient way to perform the business Job**, because *the planning unit is the value hypothesis, not the feature.*
 
+**Question the inputs taken as given (`PRODUCER-CONTRACT.md §3`).** The challenge is also where the segment + value + business goal handed to you get interrogated, not accepted. Before laddering, ask: *is the Job / segment / value I was handed the customer's real one, or the team's projection of it?* A build that is internally perfect but aimed at a Job the customer doesn't actually have is the most expensive failure — surface that doubt here, and feed it into the four moves below.
+
 Run these four moves (hold the result in context):
 
 1. **Ladder the business goal up (5 Whys).** *Why build this? → in order to do what? →* climb 3–5 levels (feature → conversion → sales → margin → the strategic goal). Name the **real business Job** the build is meant to serve. The thing handed to you is frequently a mis-set goal; analyzing *how* to hit a mis-set goal is the most expensive early waste (`the-algorithm.md` Step 1).
@@ -273,6 +303,8 @@ Q "Here's the build as specified, plus {N} potentially more-effective ways to hi
 ```
 
 **Lock the winning build subject.** If a more-effective way wins, the PRD is written **for that** — re-anchor the Core Jobs / Critical Chain on the chosen approach before S4. Hold the decision (and the alternatives not taken, with reasons) in context.
+
+**The challenge verdict is "validate first, then build" — never "build now" (`PRODUCER-CONTRACT.md §4`).** Picking a build subject is *not* a green light to start engineering. By the methodology, the next step after locking the subject is to validate its riskiest assumption cheaply — interviews, a fake door, a concierge run — *before* committing build time; the MVP is a probe, not the product. If the run prints any GO-style verdict on the build decision, write it as **`GO (to validation)`**, never bare `GO`, and gloss it once: *"worth building toward — but the next move is to validate the riskiest assumption in the field, not to start the build."* Layer 1's *"single riskiest thing to validate BEFORE building"* and the validation-debt line carry this through to the reader.
 
 > Keep this proportionate. For a small, well-validated feature on a working product the challenge may be one paragraph that confirms the build; for a from-scratch product it is the highest-leverage step in the run. Do not manufacture alternatives for symmetry — if the specified build genuinely is the most efficient way, say so and move on (`CLAUDE.md` Rule 12).
 
@@ -324,6 +356,9 @@ Three levels — go as deep as you need:
 
 > ⚠️ These are hypotheses, not facts — [full disclaimer ▸](#disclaimers)
 
+> **Validation debt:** this PRD stands on **{N}** unvalidated assumptions — **{M}** of them fatal (would sink the build if wrong). Validate the fatal ones in the field *before* committing engineering time. [see them ▸](#l2-risk)
+> <sub>N = risky assumptions in the §7 risk table (incl. any unretired upstream debt carried in via S0); M = those that kill the build if wrong. A Quick run on a manually-described segment + value has high debt — say so honestly (`PRODUCER-CONTRACT.md §4`). A PRD written fast on guesses looks as convincing as one built on 8 interviews; this line is what keeps it honest.</sub>
+
 ## What we're building
 {One plain breath — what the product/feature does, in the customer's words. No jargon.} [why this and not something else ▸](#l2-build)
 
@@ -353,6 +388,16 @@ Plain English, one gloss per methodology term, `references/glossary.md` linked o
 # Why we're building it this way — the reasoning
 
 *Plain-English walk-through of the logic behind the build above. The full spec, tables, and methodology are in the next layer. Methodology terms are defined in the [glossary](references/glossary.md).*
+
+<a id="l2-input-risks"></a>
+## What you told me — and the risks I see in it
+*Everything you gave me — your idea, your deck, your existing spec, the segment and value, the upstream research — I treated as a hypothesis, not as fact. These are the inputs this PRD leans on, and what I'd check before trusting each. (`PRODUCER-CONTRACT.md §3`.)* (Omit this block only if the user provided no claims or materials at all.)
+
+| What you provided / claimed | How I treated it | The risk I see in it | How to check it fast |
+|---|---|---|---|
+| {claim or material, tagged data / observation / hunch} | {used as hypothesis in {where — scope / Core Jobs / value / a requirement}} | {the specific risk — e.g., "this is your team's stated value, not customer-validated; the real Job may differ"} | {the cheapest falsifying test} |
+
+{If any PRD scope, Core-Job pick, or the challenge verdict rests primarily on an unvalidated input, say so here in one bold sentence and point to the matching §7 risk row — this is also the Layer-1 "riskiest thing to validate before building".}
 
 <a id="l2-build"></a>
 ## Is building this even the right move
@@ -494,6 +539,7 @@ Run the **self-critic** over the draft (Quick: a self-critique pass; Deep: a sep
 - [ ] **Disclaimers once** — full two-part disclaimer at top only; Layer 1 has the one-line pointer; Layer 3 does not repeat the block.
 - [ ] **Citations fenced** — no canon path or `Rule N` inline in Layers 1–2 or in Layer-3 prose; any canon reference sits in a `▸ methodology trace` line. **No `CLAUDE.md Rule N` appears anywhere in the output, in any layer.** The mechanic mapping carries the mechanic *name* but no canon file path.
 - [ ] Step ledger ran — every stage S0–S5 checked off by name; any skip was declared, never silent.
+- [ ] **Producer contract satisfied (`../PRODUCER-CONTRACT.md`)** — helicopter-view printed before the first question (§1); output-format and output-path asked in intake, and the file written in the chosen format at the chosen location (§2, §5); all user input + the upstream artifact treated as hypothesis, the **"What you told me — and the risks I see in it"** block present, and no scope rests primarily on an unvalidated input without saying so + a RAT row (§3); the **validation-debt line** present in Layer 1 and any GO-style build verdict written as **`GO (to validation)`**, framed as "validate first, then build" (§4); on Paths A/B the hand-off asked what upstream debt was retired and re-tagged the rest (§4c); in Deep mode each web leg met its evidence floor + passed its self-critic, with the web-MCP fallback offered when fetch was blocked (§6).
 
 ---
 
@@ -526,6 +572,15 @@ Orchestrator: hold all returns in context; assemble Layer 3 (merge §3 with Crit
 ```
 
 Web caps: parity ≤8 fetches; edge-case review mining ≤8. Source links mandatory (Rule 2); never invent sources or numbers.
+
+### Deep-mode QA — evidence floor + self-critic loop + web-MCP fallback (`PRODUCER-CONTRACT.md §6`)
+
+- **Evidence floor (not just the cap).** Treat each web leg's lower bound as a *floor*, not only a ceiling: the PARITY leg and the EDGE review-mining leg may not return "done" until each has hit a real minimum of distinct sources for its task **or** explicitly reported *why* fewer were possible (blocked, none exist). "Made two queries and stopped" is a failure state, not a completion — the leg re-runs.
+- **Self-critic loop on each leg.** After PARITY and EDGE return, the CRITIC runs a short pass on each: *enough distinct sources? are the load-bearing parity / edge-case claims actually verified against a source? any methodology error (a feature with no Core Job → Big Job ladder or no mechanic; an Aha set to signup/login; edge cases that are a generic QA list, not Critical-Chain breaks)? gaps left?* If a leg fails its critic, **re-run it with the gap named — up to 2 extra rounds**; don't assemble the PRD on a leg that failed its own critic.
+- **Web-MCP fallback.** When the built-in fetch is blocked or thin on a needed source (G2, Capterra, local-market competitor sites), tell the user once and use a web-research MCP if one is connected:
+  > Some sources (e.g., G2, Capterra) block the built-in fetch. For fuller Deep parity and edge-case mining, enable a web-research MCP — [Firecrawl](https://www.firecrawl.dev/) or [Exa](https://exa.ai/) (both ship MCP servers) — and I'll use it. Without it, I'll note where coverage was thin.
+
+  If such an MCP is connected (discoverable via tool search), prefer it for blocked sources; otherwise proceed and flag thin coverage in the verification checklist.
 
 ---
 

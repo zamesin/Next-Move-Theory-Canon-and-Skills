@@ -100,23 +100,64 @@ All five are **user-invocable** in Claude Code (`/ask-nmt`, `/market-research`, 
 
 > The skills produce **hypotheses, not conclusions.** Every number is an LLM-generated estimate with a verification path attached. Validate before any decision with expensive consequences — that's the RAT discipline the methodology is built on.
 
-### Install
+### Install into your project
 
-The skills read the canon by relative path, so **the canon and the skills must stay together in one repo.** The simplest setup is to clone the repo and run Claude Code from inside it:
+Install the canon + skills **into the root of your existing project** (the folder you run your agent from). After install that root looks like:
+
+```
+your-project/
+├── .claude/skills/<skill>/        # skills for Claude Code
+├── .codex/skills/<skill>/         # skills for Codex
+├── Next-Move-Theory-Canon/        # the canon — keep this exact name (skills read it by this path)
+├── AGENTS.md                      # your existing file — rules injected between markers
+├── CLAUDE.md                      # your existing file — rules injected between markers
+└── NextMoveTheory-README.md       # this README, renamed, for reference
+```
+
+**Rules for the installer (agent or script):**
+1. Everything lands in the **project root** — never nest `.claude`, `.codex`, or the canon inside one another.
+2. Skills go **inside** `.claude/skills/` and `.codex/skills/` — never a standalone top-level `Skills/` folder.
+3. Keep the canon folder named exactly **`Next-Move-Theory-Canon`** — the skills read it by that relative path; renaming breaks them.
+4. The rules are **injected between markers** into your existing `AGENTS.md` / `CLAUDE.md` — not a separate file, not overwriting your own content.
+5. The repo's `README.md` is copied in **renamed** to `NextMoveTheory-README.md`.
+6. **Idempotent** — re-running replaces the canon, the skills, the marked rules block, and the README in place; never duplicates, never nests.
 
 ```bash
-# 1. Clone the repo (canon + skills ship together)
-git clone https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git
-cd Next-Move-Theory-Canon-and-Skills
+# Run from your project root. SRC = a fresh clone of this repo.
+SRC=$(mktemp -d) && git clone --depth 1 https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git "$SRC"
 
-# 2. Make the skills discoverable to Claude Code in this repo
-mkdir -p .claude
-cp -r Skills/* .claude/skills/
-# (or symlink to keep them in sync with git pull:)
-# ln -s "$(pwd)/Skills" .claude/skills
+# 1. Canon at the root (keep the name)
+rm -rf ./Next-Move-Theory-Canon && cp -r "$SRC/Next-Move-Theory-Canon" ./Next-Move-Theory-Canon
 
-# 3. Run Claude Code from the repo root — the canon is now at ./Next-Move-Theory-Canon
-claude
+# 2. Skills into BOTH agents' skills dirs (inside .claude / .codex, not a top-level folder)
+mkdir -p .claude/skills .codex/skills
+cp -r "$SRC"/Skills/* .claude/skills/
+cp -r "$SRC"/Skills/* .codex/skills/
+
+# 3. README, renamed
+cp "$SRC/README.md" ./NextMoveTheory-README.md
+
+# 4. Inject the rules between markers into existing CLAUDE.md and AGENTS.md
+#    (creates the file if absent; replaces the block in place if the markers already exist)
+python3 - "$SRC" <<'PY'
+import sys, pathlib
+src = pathlib.Path(sys.argv[1])
+S, E = "<!-- Next-Move-Theory-Rules:start -->", "<!-- Next-Move-Theory-Rules:end -->"
+for name in ("CLAUDE.md", "AGENTS.md"):
+    block = f"{S}\n" + (src / name).read_text().rstrip() + f"\n{E}\n"
+    t = pathlib.Path(name)
+    cur = t.read_text() if t.exists() else ""
+    if S in cur and E in cur:
+        pre, rest = cur.split(S, 1)
+        _, post = rest.split(E, 1)
+        cur = pre + block.rstrip("\n") + post
+    else:
+        cur = (cur.rstrip() + "\n\n" if cur.strip() else "") + block
+    t.write_text(cur)
+    print("injected rules ->", name)
+PY
+
+rm -rf "$SRC"   # cleanup the temp clone
 ```
 
 Then invoke a skill:
@@ -125,11 +166,9 @@ Then invoke a skill:
 /market-research a tool that drafts SOC 2 evidence for early-stage SaaS
 ```
 
-**To use the skills in another project**, copy them into your personal skills directory so they're always available — but keep a clone of this repo's `Next-Move-Theory-Canon/` reachable from where you run them, since the skills read it at runtime:
+**Updating later:** re-run the block. The canon and skills are replaced; the rules between `<!-- Next-Move-Theory-Rules:start -->` … `<!-- Next-Move-Theory-Rules:end -->` are refreshed in place; your own text outside the markers is untouched.
 
-```bash
-cp -r Skills/* ~/.claude/skills/
-```
+**Simplest alternative** — if you don't have a project to install into yet, just clone the repo and run your agent from inside it: the canon is already at `./Next-Move-Theory-Canon`, and you only need to copy `Skills/*` into `.claude/skills/`.
 
 ---
 
@@ -138,7 +177,7 @@ cp -r Skills/* ~/.claude/skills/
 This repo also ships **[`CLAUDE.md`](CLAUDE.md)** and **[`AGENTS.md`](AGENTS.md)** — a compact rules file that teaches a coding agent (Claude Code, Codex, Cursor, and others) to do product work with *this* methodology instead of the generic, often-wrong Jobs To Be Done in its training data.
 
 - **What it is** — the non-negotiable theses (what a Job is, what value is, how to segment) plus a routing table that tells the agent *which canon file to read* for a given task, so it avoids the common JTBD mistakes.
-- **How to use it** — copy `CLAUDE.md` (Claude Code) or `AGENTS.md` (Codex and most other agents) into your own project, or paste its contents into the file you already have. Keep a clone of `Next-Move-Theory-Canon/` reachable so the agent can open the files it routes to.
+- **How to use it** — the install above injects it for you: step 4 writes these rules into your project's `CLAUDE.md` (Claude Code) and `AGENTS.md` (Codex and most other agents), between `<!-- Next-Move-Theory-Rules:start -->` … `<!-- Next-Move-Theory-Rules:end -->` markers, so updates refresh cleanly and your own rules outside the markers stay intact. The canon it routes to sits at `./Next-Move-Theory-Canon`.
 - **Why** — out of the box an agent pattern-matches to generic JTBD and gets the theses wrong. This file points it at the correct definitions and the canon, so its product reasoning is grounded in the methodology.
 
 ---

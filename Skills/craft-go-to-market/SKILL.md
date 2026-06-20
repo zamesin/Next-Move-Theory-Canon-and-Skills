@@ -8,6 +8,8 @@ user-invocable: true
 
 > **One breath.** This skill packages **already-created, validated value** into the communication that acquires customers — landing copy, ad/creative copy, and a GTM/growth-communication plan. It is the last step of the chain and consumes the steps before it; it never invents the segment, the value, or the build. Everything is communicated **through the Big Job** (where motivation lives), stated in **concrete success criteria** (not adjectives), with **features as proof not message**, fears reduced and the competing Job Graph fired. Communication transmits value — it cannot manufacture it; if the value isn't validated yet, the skill says so and better copy only accelerates disappointment.
 
+> **Producer contract (binding) — `../PRODUCER-CONTRACT.md`.** Six cross-cutting behaviors shared by all producer skills, from user feedback: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block; (4) print **validation debt** and frame the pack as *test this messaging*, never *this will work* (GTM has no GO verdict — it inherits the debt of the value it sells); (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill; the contract is the source of truth for the wording.
+
 ## Where this skill sits in the chain
 
 ```
@@ -123,19 +125,30 @@ The pack is **three reading depths in one file**, linked top-to-bottom like cano
 
 ## Output file (one file per run — `CLAUDE.md` Rule 4)
 
-The skill writes **exactly one** file, grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
+The skill writes **exactly one** file. Default location (used unless the user gave a custom output path in intake — `PRODUCER-CONTRACT.md §5`), grouped under the product's folder in the project root (never `TMP/` or `.claude/`):
 
 ```
-Skills-Results/{product-slug}/craft-go-to-market/{YYYY-MM-DD_HH-MM}_{product-slug}-craft-go-to-market-result.md
+Skills-Results/{product-slug}/craft-go-to-market/{YYYY-MM-DD_HH-MM}_{product-slug}-craft-go-to-market-result.{md|html}
 ```
 
-Everything internal — the normalized input (source artifacts, segment, Big/Core Jobs + criteria, Aha, competitors, proof, fears), dropped variants, review-mining notes, and the self-critic verdicts — **stays in-context**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.
+- **Extension follows the chosen output format** (`PRODUCER-CONTRACT.md §2`): `.md` (default) or a single self-contained `.html` (inline CSS, working in-page anchors for the How-to-read jumps + every `▸` drill-down link, `<details>` for Layer 3 and methodology traces, source links opening in a new tab). HTML carries the identical content — same attribution, disclaimers, three layers, all copy, tables, links — just in a more readable shell; the landing/ad copy stays plain and shippable, with its `[VERIFY — source]` tags intact. Never write both; one file per run.
+- If the user gave a custom path, write the one file there with the same filename pattern.
+- Everything internal — the normalized input (source artifacts, segment, Big/Core Jobs + criteria, Aha, competitors, proof, fears), dropped variants, review-mining notes, and the self-critic verdicts — **stays in-context**; none of it is written to a separate file. The timestamp makes each run's file unique, so reruns never overwrite. Disclaimers (Rule 3) go at the top of this one file.
 
 **Attribution (Rule 23).** The GTM pack opens with the attribution top-line (the very first content, above the disclaimers) and closes with the attribution block — `utm_source=craft-go-to-market&utm_medium=skill-artifact`.
 
 ---
 
 ## S0 — Intake & route
+
+### Orientation (helicopter view) — print before the first question (`PRODUCER-CONTRACT.md §1`)
+Before any question, print this short orientation block in plain words, in the user's chosen language:
+
+> **What you'll get:** one pack — ready-to-publish landing-page copy, ad/creative copy, and a GTM/growth plan (channels, lead magnets, viral loops, cross-sell / upsell / retention messaging).
+> **The steps:** (1) a few questions + I read your upstream artifact → (2) I write the landing copy → (3) I write the ad/creative copy → (4) I build the channel & growth plan → (5) you get one pack in three reading depths.
+> **Where I work vs. where you decide:** I write the copy and the channel hypotheses. *You* pick what to ship and run the field validation — A/B tests, real spend, real conversions. I can't prove a channel or a message works; I can only tell you what to test first.
+> **Two modes:** *Quick* (default — no internet, ~10–15 min, reasoning only; good for a first draft) · *Deep* (opt-in — subagents mine real customer-review language + ground the competitor-firing in real Problems, longer; best on a top model with a web-research MCP).
+> **Honest caveat:** this packages value into copy — it doesn't prove the value, the message, or the channel. Better copy on an unvalidated value claim only accelerates disappointment. Everything here is a hypothesis until you test it.
 
 ### Language
 Default **English**. If the user writes in another language, offer to work in it. Hold the choice in context. The copy uses the chosen language; canon files and source URLs stay as-is.
@@ -154,6 +167,11 @@ Q2 "Mode?"
 Q3 (Paths A/B/C) "Path to the result/PRD file?"  → free text; Read it.
 Q4 "Which GTM assets do you need?" (multi-select)
   - "Landing copy"  /  "Ad & creative copy"  /  "GTM / growth-communication plan"  /  "All"
+Q5 "Output format?" (PRODUCER-CONTRACT.md §2)
+  - "Markdown (default — faster; opens anywhere)"
+  - "HTML (a bit slower; easier to read — collapsible sections + working in-page navigation; all source and drill-down links stay clickable)"
+Q6 "Where to save the result?" (PRODUCER-CONTRACT.md §5)
+  - default `Skills-Results/{project}/craft-go-to-market/…`  /  or give a folder path to match your repo (e.g., `docs/research/`). One file per run regardless of location (Rule 4).
 ```
 
 ### Normalize the input (held in context)
@@ -169,11 +187,13 @@ Extract (and only ask the user for what's genuinely missing):
 
 Path D collects the above as a structured manual intake; validate against the invariants (fix multi-verb Jobs, demographic "criteria", adjective "value") before writing. Flag reduced confidence at the top of the result.
 
-### User materials, claims ledger, direction confirmation (all paths)
+### User materials, claims ledger, hand-off debt, direction confirmation (all paths)
 
 - **Materials.** Ask once: *"Any files or folders with material I should use — a Notion export (markdown), past research, interview notes, existing copy, your current site?"* Read what's given; tag everything taken from it **[user data]** in-context. Existing copy is input to rewrite, not copy to preserve — confirm before reusing any of it verbatim.
+- **Input-as-hypothesis gate (`PRODUCER-CONTRACT.md §3`).** Treat **every** input — the upstream value-prop / PRD / research artifact, the deck, the landing, the user's free-text claims, "our customers say X" — as a **hypothesis, never as established fact**. A landing page is the team's belief about value, not proof customers want it. **Actively hunt the risks inside it** (don't just record): for each load-bearing input ask — is this customer-validated, or the team's belief about the customer? Does the stated Job / segment look like the customer's real Job, or the team's projection of it (the most expensive error)? Any internal contradictions, or guesses dressed as data? Hold the findings in context — they become the **"What you told me — and the risks I see in it"** block in Layer 2 (see the Layer-2 template), with the single worst one surfaced in Layer 1. **The GTM copy is the most public artifact in the chain: writing confident landing/ad copy on an unvalidated value claim manufactures a Problem at scale.** No copy claim may rest on an unvalidated input without being flagged — connect each such claim to the existing `[VERIFY — source]` / validation-flag mechanism.
 - **User-claims ledger.** Tag the strong factual claims in the user's input (competitor facts, "our customers say…", channel beliefs) as **data / observation / hunch**. Copy claims built on an unverified hunch are flagged: a concrete number or comparison in customer-facing copy must trace to data, or it ships as a to-verify placeholder — never as an invented fact.
-- **Direction confirmation.** Before S1, play the understanding back in one short block — *"Here's what I understood: {segment, the value we're communicating, validation status, which assets you need}"* — and confirm via one `AskUserQuestion` (Confirm / Correct).
+- **Hand-off debt — ask what's since been checked (`PRODUCER-CONTRACT.md §4c`).** When consuming an upstream artifact (Paths A/B/C), **ask the user what from the prior artifact's validation debt has since been validated in the field** — e.g., *"the value prop you're handing me lists assumptions still to test; which of those have you checked since (sales, interviews, a fake door)?"* Re-tag anything still unvalidated and carry it forward: **if the value proposition was never validated, the landing copy inherits that debt — say so in the validation flag.** Debt travels down the chain; it is not silently dropped.
+- **Direction confirmation.** Before S1, play the understanding back in one short block — *"Here's what I understood: {segment, the value we're communicating, validation status + what's still unvalidated from the hand-off, which assets you need}"* — and confirm via one `AskUserQuestion` (Confirm / Correct).
 
 ---
 
@@ -231,7 +251,10 @@ Computed LAST, from the finished Layer-3 pack. **Minimal jargon, plain words lea
 ## The one thing to test before scaling
 {the single make-or-break thing to prove first — usually whether the value is real, or whether the top channel actually reaches them.} [what to test first ▸](#l2-test)
 
-> ⚠️ {validation flag — ≤2 lines, placed here below the answer, not above it: "value validated by sales/usage" → scale; "value is a hypothesis" → these are demand-test creatives, not facts to scale. Path D → reduced-confidence flag; else name the source artifact.}
+> **Validation debt:** this pack stands on **{N}** unvalidated assumptions — **{M}** of them fatal (would sink it if wrong): that the value is real, that this message lands, and that the top channel reaches them. The fatal ones are the first things to test. [see them ▸](#l2-input-risks)
+> <sub>N = the assumptions the copy rests on (the value claim, the message, each channel + lead-magnet hypothesis, plus anything inherited unvalidated from the upstream artifact's hand-off debt); M = those that kill it if wrong. A Quick draft on an unvalidated value prop has high debt — say so honestly (`PRODUCER-CONTRACT.md §4`).</sub>
+
+> ⚠️ {validation flag — ≤2 lines, placed here below the answer, not above it. This pack has no GO/build verdict: it always reads as **"test this messaging / channel,"** never **"this will work."** "value validated by sales/usage" → these are scale-ready creatives; "value is a hypothesis" (incl. inherited from an unvalidated upstream value prop) → these are demand-test creatives, not facts to scale. Path D → reduced-confidence flag; else name the source artifact and what of its debt is still open.}
 ```
 
 ### Layer 2 — The Plan & why it's shaped this way
@@ -244,6 +267,16 @@ Computed after Layer 3, before Layer 1. Plain English, one gloss per methodology
 <a id="layer-2"></a>
 # The plan, and why it's shaped this way
 *Plain-English reasoning behind the copy. The ready-to-ship assets are in the full pack below.*
+
+<a id="l2-input-risks"></a>
+## What you told me — and the risks I see in it
+*Everything you gave me — the upstream value prop / PRD / research, your deck, your landing, your numbers — I treated as a hypothesis, not as fact. These are the inputs the copy leans on, and what I'd check before trusting each. The copy is the most public artifact in the chain — over-promising on an unvalidated claim manufactures disappointment at scale. (`PRODUCER-CONTRACT.md §3`.)* (Omit this block only if the user provided no claims or materials at all.)
+
+| What you provided / claimed | How I treated it | The risk I see in it | How to check it fast |
+|---|---|---|---|
+| {claim or material, tagged data / observation / hunch} | {used as hypothesis in {where — the message / a copy claim / a channel}} | {the specific risk — e.g., "this is your stated value, not customer-validated; the real Job may differ, and the headline rests on it"} | {the cheapest falsifying test} |
+
+{If the message, a headline claim, or the validation flag rests primarily on an unvalidated input, say so here in one bold sentence and tie it to the matching `[VERIFY — source]` tag in the copy.}
 
 <a id="l2-message"></a>
 ## Why this is the message
@@ -382,6 +415,7 @@ Run the self-critic over the draft (Quick: self-critique; Deep: a critic agent),
 - [ ] **`[VERIFY]` survives into the copy** — every number/claim in landing & ad copy keeps its inline `[VERIFY — source]` tag until proven; opaque table headers carry an inline plain gloss.
 - [ ] **Disclaimers once; answer first** — the two-part disclaimer at the top only; the validation flag sits below the Layer-1 answer (≤2 lines), not above it; Layer 1 has the one-line pointer; Layer 3 does not repeat the block.
 - [ ] **Citations fenced — landing and ad copy must be citation-free.** No canon path or `Rule N` inline in any copy, in Layers 1–2, or in Layer-3 prose; every canon reference sits in a `▸ methodology trace` line at the end of a part. Read the landing blocks and ad lines straight through: they must read as clean, shippable copy.
+- [ ] **Producer contract satisfied (`../PRODUCER-CONTRACT.md`).** Helicopter-view printed before the first question (§1); intake asked output-format (§2) and output-path (§5); HTML run wrote one self-contained `.html` with working anchors + `<details>`; the **"What you told me — and the risks I see in it"** block is present and the input-as-hypothesis gate held (§3); the **validation-debt line** is in Layer 1 and the pack reads as "test this messaging/channel," never "this will work" (§4); on hand-off, the run asked what of the upstream artifact's debt is now validated and carried the rest forward (§4c); Deep mode met the **evidence floor + self-critic loop** and offered the **web-MCP fallback** (§6).
 
 ---
 
@@ -394,6 +428,7 @@ Wave 0 (background from start):
   [REVIEWS] Review-language mining — fetch reviews of the competitors/alternatives (G2, Reddit, Product Hunt,
             Trustpilot, Capterra, App Store). Extract the words customers actually use, their specific Problems
             with the current Solution, and 5–10 quotable lines per competitor WITH source URLs. → returns the review language in-message.
+            Must meet the evidence floor (a real minimum of distinct sources, or report why fewer); use the web-MCP fallback when the built-in fetch is blocked (see "Deep-mode QA" below).
 Wave 1 (parallel, consume the reviews return):
   [LAND]    Landing-copy writer → returns Part 1 in-message
   [ADS]     Ad/creative writer → returns Part 2 in-message
@@ -405,6 +440,16 @@ Orchestrator: hold all returns in context; assemble Layer 3 (the full pack) from
 Each writer agent reads only its canon slice (Landing → core + customers-attention-management + barrier-removal; Ads → core; GTM → core + behaviour-change + job-types-and-properties + critical-chain + b2b-if-B2B + value-creation) and returns its part with **no inline canon citations in the copy** — it holds the canon references in its reasoning, and the orchestrator fences them into the methodology-trace lines.
 
 Web caps: review mining ≤12 fetches / ~10 min. Source links mandatory (Rule 2); never invent sources, figures, or fake reviews.
+
+### Deep-mode QA — evidence floor + self-critic loop + web-MCP fallback (`PRODUCER-CONTRACT.md §6`)
+
+- **Evidence floor (not just a ceiling).** The cap is a ceiling; treat the lower bound as a **floor**. The review-mining leg may not return "done" until it has either pulled a real minimum of distinct sources (a spread across competitors/alternatives, with quotable lines + source URLs) **or** explicitly reported *why* fewer were possible (blocked, none exist). "Did two queries and stopped" is a failure state, not a completion — the customer's actual words are the whole point of Deep mode, and thin mining produces generic copy.
+- **Self-critic loop per leg.** After a research/writer leg returns, run a short critic pass asking: *enough distinct review sources? is each customer-language claim actually traceable to a fetched source (not invented)? any methodology error (Big-Job-as-segment, features-before-criteria, adjectives that fail "as in?", a Big Job promised the product only partially performs)? gaps left?* If it fails, re-run the leg with the gap named — **up to 2 extra rounds**. Don't ship a leg that failed its own critic.
+- **Web-MCP fallback.** When the built-in fetch is blocked or thin on a needed review source (G2, Capterra, Trustpilot, App Store), tell the user once and use a web-research MCP if available:
+
+  > Some review sources (e.g., G2, Capterra) block the built-in fetch. For fuller Deep mining, enable a web-research MCP — [Firecrawl](https://www.firecrawl.dev/) or [Exa](https://exa.ai/) (both ship MCP servers) — and I'll use it. Without it, I'll note where review coverage was thin and the copy leans more on reasoning than on real customer language.
+
+  If such an MCP is connected (discoverable via tool search), prefer it for blocked sources; otherwise proceed and flag thin coverage in the self-critic / verification notes.
 
 ---
 
