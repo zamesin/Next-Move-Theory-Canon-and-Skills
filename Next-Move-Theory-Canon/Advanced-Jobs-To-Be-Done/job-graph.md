@@ -5,7 +5,7 @@ This file is the canon page on the Job Graph in AJTBD. The Job Graph is the *str
 The Job Graph is one of the three units of analysis in AJTBD (see [AJTBD key theses §1](ajtbd-key-theses.md)). Each is a different lens on the same Job substrate:
 
 - The Job — the atomic unit. It is the structure of a single Job, paired with the chosen Solution when you analyze a real customer. Use [Job Structure](job-structure.md).
-- The Job Graph — the structure unit. It shows how Jobs relate in a hierarchy of motivation. This file. It contains the Critical Chain as a sub-concept: the Graph projected onto a time axis at a chosen Solution, where the operational dynamics live (predictions, prediction errors, drop-offs, Solution switches, per-step emotions). Use [Critical Chain](critical-chain.md) when sequence in time matters. Use this file when relationships among Jobs matter (parent-child, sibling, many-to-many).
+- The Job Graph — the structure unit. It shows how Jobs relate in a hierarchy of motivation. This file. It contains the Critical Chain of Jobs as a sub-concept: the Graph projected onto a time axis at a chosen Solution, where the operational dynamics live (predictions, prediction errors, drop-offs, Solution switches, per-step emotions). Use [Critical Chain of Jobs](critical-chain.md) when sequence in time matters. Use this file when relationships among Jobs matter (parent-child, sibling, many-to-many).
 - The Map of Segments — the strategic unit. It tells you which segments to compete for. Use [Segmentation](segmentation.md).
 
 This page owns what is uniquely the Graph's: the level vocabulary (§2), the two-choice formation rule (§4), the three gradients along the levels (§5–§7), the many-to-many edges that make it a *graph* (§9–§10), the segmentation surface (§11), value-creation-as-simplification (§13–§14), the competitive set (§15), and how to study and validate a Graph (§17–§18). Adjacent mechanics are cross-referenced, not restated.
@@ -19,7 +19,7 @@ This page owns what is uniquely the Graph's: the level vocabulary (§2), the two
 Each node in the Graph is a Job ([Job Structure](job-structure.md)). Edges come in two kinds:
 
 - Vertical edges, between levels, are *"in order to"* edges. The lower-level Job is performed in order to land the higher-level Job. Motivation rides the vertical edge upward. In research you walk the edge with two questions. Up with *"Why do you want this? In order to do what?"* surfaces the Big Job above. Down with *"Step by step, which tasks did you do to get this one done?"* surfaces the lower-level Jobs beneath. The full six-direction question set is in §17.
-- Horizontal edges, within a level, connect siblings under the same higher-level Job. They are sequence connectors. Some are positional (Previous → Next in a Critical Chain, when siblings must be performed in order, see [Critical Chain](critical-chain.md)). Others are alongside (parallel siblings, each independently contributing to the same parent).
+- Horizontal edges, within a level, connect siblings under the same higher-level Job. They are sequence connectors. Some are positional (Previous → Next in a Critical Chain of Jobs, when siblings must be performed in order, see [Critical Chain of Jobs](critical-chain.md)). Others are alongside (parallel siblings, each independently contributing to the same parent).
 
 **It is a *graph*, not a *tree*, because the edges are many-to-many.** One lower-level Job can serve several higher-level Jobs at once (§9). One Solution can be hired for several Jobs of the same person and of different people (§10). Trees enforce one parent per node. The real motivational structure does not. Call it a tree and the many-to-many mechanics behind most strategic moves collapse. The Solution the customer hired sits downstream of the Graph. Per [Behaviour Change §2](behaviour-change.md), a Solution is a label for a Job Graph.
 
@@ -153,7 +153,7 @@ Graph mandatory, where the task can't be done well without it:
 
 Graph highly useful, doable without it but with measurably worse outcomes:
 
-- Retention, repeat purchase, conversion. These are the sequences the customer actually walks. For their operational dynamics — predictions, interruptions, drop-offs, Solution switches — zoom into the Critical Chain, the Graph's time-projection at a chosen Solution ([Critical Chain](critical-chain.md)).
+- Retention, repeat purchase, conversion. These are the sequences the customer actually walks. For their operational dynamics — predictions, interruptions, drop-offs, Solution switches — zoom into the Critical Chain of Jobs, the Graph's time-projection at a chosen Solution ([Critical Chain of Jobs](critical-chain.md)).
 - Onboarding and activation. Only the first 5–10 Jobs matter, the ones through which the customer hits the first Aha Moment ([Value Creation §12](value-creation.md)). Downstream Jobs matter for retention, not activation.
 
 **Pick the depth by the task, not the Job's absolute height.** Strategy needs Core, Big, and Small. Activation needs the first 5–10 Micro Jobs, in order. UX and engineering need a Micro-Job zoom: *why does the shoehorn live in this hotel room?* → *put my shoes on without bending → leave the room → go to dinner → enjoy my vacation*. Many levels sit between the shoehorn and *"have a great trip."*
@@ -263,7 +263,7 @@ The question is productive because it can only be answered by naming a real, lev
 Directional moves:
 
 - Up, move up a level. Turn the Big Job above your Core Job into your new Core Job. Uber climbed above *own a car*. Squarespace climbed above *buy hosting → install WordPress → renew SSL*. The most powerful move when applicable ([Value Creation §14.1](value-creation.md)).
-- Sideways, capture a sibling Small Job. The Previous Job in the chain is acquisition and lead-gen, like Zillow's Zestimate upstream of *list for sale*. The Next Job is retention and AOV, like Figma → Dev Mode. A parallel sibling not in a chain is a third option, like Notion's *organize docs* → *manage tasks* → *run wikis*. See [Critical Chain §9](critical-chain.md).
+- Sideways, capture a sibling Small Job. The Previous Job in the chain is acquisition and lead-gen, like Zillow's Zestimate upstream of *list for sale*. The Next Job is retention and AOV, like Figma → Dev Mode. A parallel sibling not in a chain is a third option, like Notion's *organize docs* → *manage tasks* → *run wikis*. See [Critical Chain of Jobs §9](critical-chain.md).
 - Outside, link to a new Big Job. Create a Big-Job edge that didn't exist. Premium water links *"hydrate"* to *"create aesthetics at my table."* Apple links *"do my creative work"* to *"signal taste."* ([Value Creation §16](value-creation.md)).
 
 Non-directional moves, where you transform the structure and the Core Job stays put:
@@ -272,8 +272,8 @@ Non-directional moves, where you transform the structure and the Core Job stays 
 - Take a Job off the customer, where the Job stays but you perform it (Wealthfront rebalances; DoorDash cooks). [Value-Creation Mechanics](value-creation-mechanics.md).
 - Start performing a Job no one performs well, introducing a new Core Job (Bench: *do my bookkeeping for me as a small-business owner*, into a previously DIY-or-CPA-only Graph). [Value-Creation Mechanics](value-creation-mechanics.md).
 - Add Orientation Jobs, guiding the decision process (Stripe's docs, HubSpot Academy). [Job Types and Properties §6](job-types-and-properties.md).
-- Route a Job to a partner, when a chain-critical Job isn't yours (Apple's App Store; a realtor's preferred-vendor network). [Critical Chain §11](critical-chain.md).
-- Repair the Critical Chain, unblocking break-points, reducing hand-offs, killing cycles, compressing time-gaps. [Critical Chain §6–§11](critical-chain.md).
+- Route a Job to a partner, when a chain-critical Job isn't yours (Apple's App Store; a realtor's preferred-vendor network). [Critical Chain of Jobs §11](critical-chain.md).
+- Repair the Critical Chain of Jobs, unblocking break-points, reducing hand-offs, killing cycles, compressing time-gaps. [Critical Chain of Jobs §6–§11](critical-chain.md).
 - Consolidate, performing more of the customer's Jobs in one Solution. [Value-Creation Mechanics](value-creation-mechanics.md).
 
 **Many moves don't operate on the Graph at all.** The diagnostic when stuck is: which Graph move, or which off-Graph move, has the team not yet considered? Most teams default to tuning the existing Core Job, improving it and adding features, when a step-change lives elsewhere.
@@ -288,7 +288,7 @@ Non-directional moves, where you transform the structure and the Core Job stays 
 
 - [AJTBD key theses §1](ajtbd-key-theses.md) — the three units of analysis; Graph as the *structure* unit.
 - [Job Structure §11](job-structure.md) — the four-level hierarchy and Job-level placement.
-- [Critical Chain](critical-chain.md) — the Graph projected onto a time axis at a chosen Solution: where the operational dynamics of chain-walking live (predictions, prediction errors, interruptions, drop-offs, Solution switches, per-step emotions); chain pathologies (cycles, hand-offs, time-gaps, breaks); Previous-Job / Next-Job strategy.
+- [Critical Chain of Jobs](critical-chain.md) — the Graph projected onto a time axis at a chosen Solution: where the operational dynamics of chain-walking live (predictions, prediction errors, interruptions, drop-offs, Solution switches, per-step emotions); chain pathologies (cycles, hand-offs, time-gaps, breaks); Previous-Job / Next-Job strategy.
 - [Job Types and Properties](job-types-and-properties.md) — types (Regular, Orientation, Tax, Fake, Emotional, Viral) and properties every Job can carry. The Tax Job framing covers Jobs that spawn mid-execution.
 - [Value Creation §14](value-creation.md) — move-up-a-level and kill-a-Job as Graph-simplification operators; §16 — link to a new Big Job; §18 — the mechanics catalog.
 - [Subtraction](../Next-Move-Theory/subtraction.md) — the subtraction meta-mechanic behind Graph simplification (§13).

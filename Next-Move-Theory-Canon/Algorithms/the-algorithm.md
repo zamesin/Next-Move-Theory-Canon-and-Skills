@@ -101,7 +101,7 @@ Artifact: a structured picture of the current state, plus an explicit context (P
 **Don't just hypothesize. Start from the structured data you already have — analytics, prior research, customer reviews — and hypothesize only the gaps.** An LLM drafts the hypothesis parts fast. It's still a hypothesis to test in the field, so aim for enough material to scope the research, not for accuracy.
 
 - 3.1. Map of Segments. Extract it from your existing structured data and customer reviews first. Where it's missing or incomplete, hypothesize. The root is similar Core Jobs with similar success criteria. The Big Job above is motivational context, not the cut, and demographics are a secondary correlate.
-- 3.2. Job Graph for the target segment. Same rule: from existing data and reviews first, then hypothesize the gaps. It runs Big Job → Core Jobs → Small / Micro Jobs plus the Critical Chain.
+- 3.2. Job Graph for the target segment. Same rule: from existing data and reviews first, then hypothesize the gaps. It runs Big Job → Core Jobs → Small / Micro Jobs plus the Critical Chain of Jobs.
 - 3.3. Consideration Set per Core Job. List 3–5 current Solutions, including DIY and *"do nothing"* (both are Job Graphs), and how our Graph differs.
 
 ### Step 4. Shortlist candidate mechanics
@@ -122,23 +122,23 @@ Artifact: a shortlist of mechanics, each with the unknowns you must learn in the
 
 Tools: AJTBD interviews, switch interviews with churned or migrated users, expert interviews, product analytics (if the product exists), and a quantitative survey to size the segments. Recruit only past-payers. That is the cheapest filter against Fake Jobs.
 
-Research exists to get the raw material for the mechanics you'll actually apply. That material is the real Job Graphs, success criteria, Critical Chains and their breaks, barriers, habits, fears, Consideration Activators, and Aha Moments.
+Research exists to get the raw material for the mechanics you'll actually apply. That material is the real Job Graphs, success criteria, Critical Chains of Jobs and their breaks, barriers, habits, fears, Consideration Activators, and Aha Moments.
 
 ### Step 6. Apply the surviving mechanics to the real Job Graph
 
 > See [Value Creation §17](../Advanced-Jobs-To-Be-Done/value-creation.md).
 
-Run the surviving mechanics against the Map of Segments, the real Job Graph, and the Critical Chains.
+Run the surviving mechanics against the Map of Segments, the real Job Graph, and the Critical Chains of Jobs.
 
-**The real value usually sits outside the current Core Jobs.** It sits in the Previous and Next Jobs, the Big Jobs, an adjacent segment's Small Jobs, emotional and Orientation Jobs, and Critical Chain repairs.
+**The real value usually sits outside the current Core Jobs.** It sits in the Previous and Next Jobs, the Big Jobs, an adjacent segment's Small Jobs, emotional and Orientation Jobs, and Critical Chain of Jobs repairs.
 
 Each hypothesis is `segment × Job × mechanic → a concrete action`. For example:
 
-- *Kill a Job* × the onboarding Critical Chain → *"auto-import the customer's existing data so they never re-enter it — the setup Job disappears."*
+- *Kill a Job* × the onboarding Critical Chain of Jobs → *"auto-import the customer's existing data so they never re-enter it — the setup Job disappears."*
 - *Move to the Previous Job* × the lead-gen segment → *"build the free estimator they use before they're ready to buy — we capture them earlier than competitors."*
 - *Take the Job off the customer* × the done-for-me segment → *"run the whole workflow as a service; the customer only approves."*
 - *Create a link to a new Big Job* × the status-first segment → *"tie the Core Job to 'signal who I am,' raising willingness-to-pay without changing the product."*
-- *Repair a Critical Chain break* × a new sub-segment → *"the chain breaks at compliance review for enterprise; own that Job and the segment unlocks."*
+- *Repair a Critical Chain of Jobs break* × a new sub-segment → *"the chain breaks at compliance review for enterprise; own that Job and the segment unlocks."*
 
 **A hypothesis only counts if it makes the Big Job land better by the segment's own success criteria** (see [Behaviour Change §4](../Advanced-Jobs-To-Be-Done/behaviour-change.md)). A Core-Job criterion that doesn't ladder up to a Big-Job criterion the customer cares about won't carry the switch, however true it is.
 
@@ -195,7 +195,7 @@ Run solution interviews in iterations of 6. If about 5 iterations produce no sal
 
 Once sales start, run UX tests on the 4-of-4 rule (RITE). Four of four users must complete the Core Job without critical errors. If even one fails, fix it, then run another four, and repeat until 4/4. Ask four questions at every step: what do you see, what are you thinking, what are you feeling, what do you want to do.
 
-Place the first Aha Moment as far left in the Critical Chain as possible. Every step before it is an abandonment window.
+Place the first Aha Moment as far left in the Critical Chain of Jobs as possible. Every step before it is an abandonment window.
 
 Only after 4/4 sales and 4/4 UX should you invest in full-scale development.
 

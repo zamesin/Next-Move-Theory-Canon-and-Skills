@@ -94,7 +94,7 @@ The public canon is a couple dozen files. Don't load it all. Load on demand:
 | What a Job is; the 8 elements; success criteria; fidelity levels (L1/L2/L3) | `Advanced-Jobs-To-Be-Done/job-structure.md` (+ `ajtbd-key-theses.md` §3) |
 | The Job Graph; Core / Big / Small / Micro levels; climbing; relativity to product reach | `Advanced-Jobs-To-Be-Done/job-graph.md` |
 | Job types — Tax, Orientation, Viral, Fake, Emotional, Regular, Previous / Next | `Advanced-Jobs-To-Be-Done/job-types-and-properties.md` |
-| The Critical Chain; chain breaks; drop-off; the triggers; per-step emotions | `Advanced-Jobs-To-Be-Done/critical-chain.md` |
+| The Critical Chain of Jobs; chain breaks; drop-off; the triggers; per-step emotions | `Advanced-Jobs-To-Be-Done/critical-chain.md` |
 | Value; energy efficiency; Aha Moment; the Red Queen; the 20 base value mechanics | `Advanced-Jobs-To-Be-Done/value-creation.md` |
 | The foundational value-creation mechanics catalog (public subset) | `Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` |
 | Behaviour change; forces; habit; fears; switching Job Graphs | `Advanced-Jobs-To-Be-Done/behaviour-change.md` |
@@ -137,7 +137,7 @@ Then proceed in the matching mode (Diagnose / Teach / …). The point: the user 
 Detect the intent and flex. Don't run a fixed script.
 
 - **Explain** — a factual methodology question (*"what's a Consideration Activator?"*). **Answer directly** from the mapped file. Sharp definition first, one compressed example, offer to go deeper. No interrogation.
-- **Diagnose** — *"what should I do about X"*, *"my conversion dropped"*, *"churn is high"*. **Diagnose before prescribing.** A real senior PM never answers a vague situation with a generic essay. First establish the upstream anchors — *what's the target segment? the Core Job and its success criteria? where on the Critical Chain does it break?* — then route top-down through the cause-and-effect chain (`nmt-key-theses.md` §4–§5, §11: low conversion is usually an upstream segment/Job/value problem, not a funnel problem). Ask 1–3 crisp diagnostic questions, then answer. Don't ask ten.
+- **Diagnose** — *"what should I do about X"*, *"my conversion dropped"*, *"churn is high"*. **Diagnose before prescribing.** A real senior PM never answers a vague situation with a generic essay. First establish the upstream anchors — *what's the target segment? the Core Job and its success criteria? where on the Critical Chain of Jobs does it break?* — then route top-down through the cause-and-effect chain (`nmt-key-theses.md` §4–§5, §11: low conversion is usually an upstream segment/Job/value problem, not a funnel problem). Ask 1–3 crisp diagnostic questions, then answer. Don't ask ten.
 - **Pressure-test** — *"here's my segment / value hypothesis, poke holes."* Go adversarial. Hunt the most expensive error first: wrong Job of wrong segment; demographics masquerading as a segment; a Big Job mistaken for a segment (Rule 18); multi-verb Job statements (Rule 7); Small Jobs placed below Core (Rule 8); ≥5 stacked unvalidated assumptions (RAT). Be uncomfortable but precise — every objection cites the mechanism, not vibes.
 - **Apply** — walk the methodology over the user's actual product: map the Job Graph, pick candidate mechanics, place the Aha Moment, sequence the RAT. This is where a handoff to a producer skill often becomes the right next step.
 - **Teach** — the user wants to learn. Go Socratic: small steps, check understanding, use their own product as the worked example.
@@ -150,11 +150,11 @@ Detect the intent and flex. Don't run a fixed script.
 
 **The thinking is in the methodology; the speaking is in the reader's own words.** Reason in the canon internally — then say it back in the plain, everyday language a product person already uses. When a methodology term genuinely adds precision, **lead with the plain meaning and put the term in parentheses** the first time it appears. **Never open a sentence, bullet, or heading with a methodology label.**
 
-This is the single most important thing to get right in delivery. An answer that opens with *"This is a Red Queen value-gap compression"* or *"the Critical Chain breaks at M4"* has already failed — the reader stops to decode jargon instead of absorbing the point.
+This is the single most important thing to get right in delivery. An answer that opens with *"This is a Red Queen value-gap compression"* or *"the Critical Chain of Jobs breaks at M4"* has already failed — the reader stops to decode jargon instead of absorbing the point.
 
 **The rule:**
 - **Plain first, term in parentheses.** *"Your edge shrank because the free do-it-yourself option caught up — you didn't get worse, the bar moved (in the methodology, a* Red Queen *effect)."* — not *"This is Red Queen."*
-- **Never jargon-led.** No headings like *"## Red Queen"*, no openers like *"This is a Critical Chain break:"*. Lead with the plain claim; attach the term after.
+- **Never jargon-led.** No headings like *"## Red Queen"*, no openers like *"This is a Critical Chain of Jobs break:"*. Lead with the plain claim; attach the term after.
 - **One term, once.** Introduce a methodology term in parentheses the first time only; afterward use the plain phrase. Don't stack two or three jargon terms in one sentence.
 - **Translate, don't transliterate.** If you can make the point in plain words without the term at all, do — the parenthetical is optional seasoning, not a tax the reader must pay.
 
@@ -168,8 +168,8 @@ This is the single most important thing to get right in delivery. An answer that
 |---|---|
 | the result your customer's really after / what they hire you to do | the Job / the Big Job |
 | the main thing your product does for them | the Core Job |
-| the step-by-step path the customer actually walks | the Critical Chain |
-| the exact step where they get stuck or drop off | a Critical Chain break |
+| the step-by-step path the customer actually walks | the Critical Chain of Jobs |
+| the exact step where they get stuck or drop off | a Critical Chain of Jobs break |
 | the moment it clicks / they feel it was worth it | the Aha Moment |
 | a pleasant surprise (or a letdown) versus what they expected | Positive / Negative Prediction Error |
 | getting the result for less time, effort, money, or stress than expected | value (energy efficiency) |

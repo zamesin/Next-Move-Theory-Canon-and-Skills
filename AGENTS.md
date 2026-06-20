@@ -35,7 +35,7 @@ When a task touches product strategy, Jobs, segmentation, value, positioning, gr
   - **Move up a level** — turn the Big Job above your Core Jobs into your new Core Jobs and kill the whole class of lower-level Jobs (Uber above owning a car; TurboTax above filing by hand). Highest ceiling; biggest Aha Moment.
   - **Kill a Job** — make a class of Jobs disappear (AirPods killed *untangle my headphones*; Face ID killed *type my password*).
   - **Take the Job off the customer** — do it for them; their only role is approval (Wealthfront, DoorDash vs DIY).
-  - **Fix a break in the Critical Chain** — repair the step that stops a new segment from reaching value (Stripe's no-code drop-in for the non-engineer).
+  - **Fix a break in the Critical Chain of Jobs** — repair the step that stops a new segment from reaching value (Stripe's no-code drop-in for the non-engineer).
   - **Lower one of the six costs** — and find which dimension *this* segment ranks first.
   - **Eliminate a negative emotion** — removal beats addition: the brain weights removing a Problem at roughly 2× an equivalent feature add (loss aversion).
 - **A feature is not value — it is the delivery format for value.** Feature thinking points the opposite way from where value lives (the brain wants the Job done with *less*). Founders fall in love with their features, read criticism as a personal attack, and ship value nobody asked for.
@@ -125,7 +125,7 @@ When a task matches one of the situations below, **open that file and read the r
 
 - **`Next-Move-Theory/focus-as-company-attention-management.md`** — company-side focus as attention management. **Read it when:** the team is spread across too many segments/Jobs; you're deciding what to subtract at the company, portfolio, or team level; you're facing the Innovator's Dilemma; you're trying to sustain focus over time and fund a parallel global-optimum track.
 - **`Advanced-Jobs-To-Be-Done/b2b.md`** — the B2B deal as a Job Graph across roles; personal vs business Jobs. **Read it when:** you're working on a B2B product or sale; deals stall with no clear reason; you're mapping the Jobs of the decision-maker, champion, IT, security, legal, and end users; you want to lift close rate, ACV, or renewal by performing the decision-maker's *personal* Jobs.
-- **`HowTos/basic-ajtbd-interview-guide-and-principles.md`** — the practical interview guide: principles + question bank. **Read it when:** you're planning or running customer interviews; you're recruiting respondents (study people who *paid* in the past); you're writing the questions; you're reconstructing Jobs, criteria, the Consideration Set, the Critical Chain, Aha Moments, and Barriers from what a customer actually did.
+- **`HowTos/basic-ajtbd-interview-guide-and-principles.md`** — the practical interview guide: principles + question bank. **Read it when:** you're planning or running customer interviews; you're recruiting respondents (study people who *paid* in the past); you're writing the questions; you're reconstructing Jobs, criteria, the Consideration Set, the Critical Chain of Jobs, Aha Moments, and Barriers from what a customer actually did.
 - **`Algorithms/the-algorithm.md`** — the integrative operating loop and its anti-patterns. **Read it when:** you need the order of operations; you're unsure what to do next; you're about to jump to a solution before diagnosing; you want the explicit list of anti-patterns to refuse.
 
 ## Default behavior

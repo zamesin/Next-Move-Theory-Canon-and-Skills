@@ -123,8 +123,8 @@ The interviews surface four things:
 
 Two research designs, depending on the question:
 
-- **Acquisition-focused.** Map the Critical Chain ([Critical Chain §11](../Advanced-Jobs-To-Be-Done/critical-chain.md)) from the moment the Big Job appears in the customer's head to the moment they hire a Solution. This shows where to load Consideration Activators, where competitors enter the consideration set, and when receptivity windows open ([Behaviour Change §8](../Advanced-Jobs-To-Be-Done/behaviour-change.md)).
-- **Activation-focused.** Map the Critical Chain of Micro Jobs leading to the Core Job. This shows where the chain breaks ([Critical Chain §5](../Advanced-Jobs-To-Be-Done/critical-chain.md)), where the Aha Moment could fire earlier ([Value Creation §12](../Advanced-Jobs-To-Be-Done/value-creation.md)), and where small Problems pile up.
+- **Acquisition-focused.** Map the Critical Chain of Jobs ([Critical Chain of Jobs §11](../Advanced-Jobs-To-Be-Done/critical-chain.md)) from the moment the Big Job appears in the customer's head to the moment they hire a Solution. This shows where to load Consideration Activators, where competitors enter the consideration set, and when receptivity windows open ([Behaviour Change §8](../Advanced-Jobs-To-Be-Done/behaviour-change.md)).
+- **Activation-focused.** Map the Critical Chain of Jobs of Micro Jobs leading to the Core Job. This shows where the chain breaks ([Critical Chain of Jobs §5](../Advanced-Jobs-To-Be-Done/critical-chain.md)), where the Aha Moment could fire earlier ([Value Creation §12](../Advanced-Jobs-To-Be-Done/value-creation.md)), and where small Problems pile up.
 
 Operational consequences:
 
@@ -231,7 +231,7 @@ Operational consequences:
 
 **The strategic question is which A on one side serves which A on the other most efficiently.** A demand-side A whose criteria the supply-side A can't meet creates friction at every transaction. Worker.ru's A candidates (working-class, stable pay range) map cleanly to its A employers (high-volume hirers like fast-food chains and taxi fleets who need steady wage-band hiring). [Uber](https://www.uber.com) Comfort's A riders (quiet cabin, recent-model car) map to drivers with newer cars. [Airbnb](https://www.airbnb.com)'s A guests (multi-night family or couple travel) map to hosts with full apartments rather than single rooms.
 
-**Start with the scarcer side.** Run the demand-side ABCDX first when supply is plentiful and demand is the constraint. Run the supply-side first when supply is scarce and demand is queuing. (Same logic as the slowest-link diagnostic in [Critical Chain §9](../Advanced-Jobs-To-Be-Done/critical-chain.md).)
+**Start with the scarcer side.** Run the demand-side ABCDX first when supply is plentiful and demand is the constraint. Run the supply-side first when supply is scarce and demand is queuing. (Same logic as the slowest-link diagnostic in [Critical Chain of Jobs §9](../Advanced-Jobs-To-Be-Done/critical-chain.md).)
 
 Operational consequences:
 
@@ -244,7 +244,7 @@ Operational consequences:
 
 **ABCDX is a snapshot of a fixed product setup.** Change any of the inputs that define the setup and the segmentation has to be redone. Three kinds of triggers force a re-run:
 
-- **You change the Core Jobs.** Add a new Core Job ([Value Creation §17](../Advanced-Jobs-To-Be-Done/value-creation.md)), drop one, climb a level ([Value Creation §14.1](../Advanced-Jobs-To-Be-Done/value-creation.md)), or absorb a Previous or Next Job in the chain ([Critical Chain §9](../Advanced-Jobs-To-Be-Done/critical-chain.md)). Customers who were C or D for the old Core Jobs may be A or B for the new ones, and the reverse. The re-run is mandatory; the old segmentation no longer holds.
+- **You change the Core Jobs.** Add a new Core Job ([Value Creation §17](../Advanced-Jobs-To-Be-Done/value-creation.md)), drop one, climb a level ([Value Creation §14.1](../Advanced-Jobs-To-Be-Done/value-creation.md)), or absorb a Previous or Next Job in the chain ([Critical Chain of Jobs §9](../Advanced-Jobs-To-Be-Done/critical-chain.md)). Customers who were C or D for the old Core Jobs may be A or B for the new ones, and the reverse. The re-run is mandatory; the old segmentation no longer holds.
 - **You change the business model.** Pricing, contract structure, distribution, packaging — each can flip a profitable group to unprofitable and back. A C group can become B at a different price point; an A group can become D when a contract change raises the cost to serve.
 - **The environment shifts.** Pandemics, AI commoditization, rate cycles, regulatory change — all rewrite customer behavior under the segmentation. Refresh at least once a year as a floor, and twice a year in fast-moving categories.
 
@@ -339,9 +339,9 @@ This mirrors the delegation logic in [Riskiest Assumption Test §8](../Riskiest-
 - [Value Creation §12](../Advanced-Jobs-To-Be-Done/value-creation.md) — engineering the first Aha Moment.
 - [Value Creation §14.1](../Advanced-Jobs-To-Be-Done/value-creation.md) — move up a level, the structural response to C and D customers.
 - [Value Creation §17](../Advanced-Jobs-To-Be-Done/value-creation.md) — value lives outside your current Core Jobs (the X pointer).
-- [Critical Chain §9](../Advanced-Jobs-To-Be-Done/critical-chain.md) — Previous-Job and Next-Job strategy.
-- [Critical Chain §11](../Advanced-Jobs-To-Be-Done/critical-chain.md) — interview protocol for surfacing the Critical Chain.
-- [Critical Chain §4](../Advanced-Jobs-To-Be-Done/critical-chain.md) — drop-off read as a Solution switch; the *too hard* vs. *not important enough* diagnostic in [Barrier Removal](../Advanced-Jobs-To-Be-Done/barrier-removal.md) and [AJTBD key theses §15](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md).
+- [Critical Chain of Jobs §9](../Advanced-Jobs-To-Be-Done/critical-chain.md) — Previous-Job and Next-Job strategy.
+- [Critical Chain of Jobs §11](../Advanced-Jobs-To-Be-Done/critical-chain.md) — interview protocol for surfacing the Critical Chain of Jobs.
+- [Critical Chain of Jobs §4](../Advanced-Jobs-To-Be-Done/critical-chain.md) — drop-off read as a Solution switch; the *too hard* vs. *not important enough* diagnostic in [Barrier Removal](../Advanced-Jobs-To-Be-Done/barrier-removal.md) and [AJTBD key theses §15](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md).
 - [Behaviour Change §8](../Advanced-Jobs-To-Be-Done/behaviour-change.md) — receptivity windows and triggers.
 - [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — the AJTBD interview guide.
 - [AJTBD key theses §12](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — segmentation by Core Jobs and success criteria as primary; Big Job as motivation refinement.

@@ -8,7 +8,7 @@ Each section below follows the same order: citations, research claim, plain-Engl
 
 Older sources appear as classic anchors: original formulations, canonical constructs, or historical sources still in use. Current AJTBD claims use post-2000 empirical papers, reviews, meta-analyses, or field syntheses wherever the claim is still scientifically active.
 
-> **Why a separate document.** Several canon pages reuse the same scientific results: [Value Creation](value-creation.md), [Behaviour Change](behaviour-change.md), [Communication](communication.md), [Critical Chain](critical-chain.md), [AJTBD key theses](ajtbd-key-theses.md), [Job Structure](job-structure.md), [Job Graph](job-graph.md). Keeping citations here lets those pages stay focused on methodology and gives science-minded readers one place to inspect the evidence.
+> **Why a separate document.** Several canon pages reuse the same scientific results: [Value Creation](value-creation.md), [Behaviour Change](behaviour-change.md), [Communication](communication.md), [Critical Chain of Jobs](critical-chain.md), [AJTBD key theses](ajtbd-key-theses.md), [Job Structure](job-structure.md), [Job Graph](job-graph.md). Keeping citations here lets those pages stay focused on methodology and gives science-minded readers one place to inspect the evidence.
 
 ## Contents
 
@@ -20,7 +20,7 @@ Learning and asymmetry. §11 Reward prediction error · §12 Hedonic adaptation 
 
 Behavior-change forces. §15 Habit · §16 Immunity to Change · §17 Curiosity · §18 Variable-ratio reinforcement · §19 Trauma.
 
-Conceptual frameworks and parallels. §20 Critical Chain · §21 TRIZ's Ideal Final Result as a parallel to AJTBD's invisible-product limit case.
+Conceptual frameworks and parallels. §20 Critical Chain of Jobs · §21 TRIZ's Ideal Final Result as a parallel to AJTBD's invisible-product limit case.
 
 Emerging unifying lens. §22 Dual-process cognition · §23 Predictive processing as AJTBD's emerging unifying lens.
 
@@ -193,12 +193,12 @@ The research extension is that need priority changes by context. [Inglehart & We
 
 **Plain-English explanation.** Emotions do two things at once. First, they extract meaning from a situation — *threat, opportunity, loss, progress, failure, success*. Second, they release motivational energy in the implied direction. Positive emotion signals progress and energizes continuation. Negative emotion signals loss or threat and energizes avoidance, repair, or resistance. Affective valence is present even in many objects, words, and interfaces customers describe as neutral.
 
-**Advanced Jobs To Be Done interpretation.** Every Job is performed in pursuit of a higher-level Job, which ultimately serves a need. The emotional arc of any Critical Chain walk ([Critical Chain §5](critical-chain.md)) is the real-time readout of progress toward that higher-level Job. Aesthetics, brand tone, typography, copy-feel, and packaging matter even in utility-looking categories because customers evaluate the whole experience affectively. Two operational consequences follow:
+**Advanced Jobs To Be Done interpretation.** Every Job is performed in pursuit of a higher-level Job, which ultimately serves a need. The emotional arc of any Critical Chain of Jobs walk ([Critical Chain of Jobs §5](critical-chain.md)) is the real-time readout of progress toward that higher-level Job. Aesthetics, brand tone, typography, copy-feel, and packaging matter even in utility-looking categories because customers evaluate the whole experience affectively. Two operational consequences follow:
 
 - Removing one negative-emotion micro-step from a customer transition carries disproportionate weight. The negative emotion is both a signal of failure and a demotivational drain. Removing it eliminates two losses at once. Square's tipping screen, TurboTax's *"don't worry, we'll catch the missed deduction,"* and Apple Pay's silent-on-the-counter payment each remove one anxiety-producing micro-step from a transition the customer was already willing to make. Mechanic #17 in [Value Creation §18](value-creation.md) routes through this.
 - Communication in the customer's emotional language outperforms purely functional language. *"Stop worrying about whether your IRS return is right"* moves the State-A-anxious customer. *"File your taxes accurately"* stays at the verb. Emotional language activates the goal-and-need substrate.
 
-**Canon usage.** [Value Creation §5–§7](value-creation.md) (positive and negative prediction errors as emotional events); [Critical Chain §5](critical-chain.md) (predictions and per-step emotional signaling during the chain walk); [Job Structure §4, §10](job-structure.md) (negative State A / positive State B emotions); §8 (emotions as progress signals while need-serving Jobs are performed).
+**Canon usage.** [Value Creation §5–§7](value-creation.md) (positive and negative prediction errors as emotional events); [Critical Chain of Jobs §5](critical-chain.md) (predictions and per-step emotional signaling during the chain walk); [Job Structure §4, §10](job-structure.md) (negative State A / positive State B emotions); §8 (emotions as progress signals while need-serving Jobs are performed).
 
 ---
 
@@ -273,9 +273,9 @@ Operationally, value creation is continuous work. The team cannot rely on yester
 
 **Advanced Jobs To Be Done interpretation.** Removing a negative from the customer's experience often creates disproportionate value relative to adding an equivalent positive. We do not know the exact coefficient by which monetary loss aversion transfers to products, Job Graphs, Tax Jobs, friction, anxiety, or chain-breaks. AJTBD uses the finding as a directional heuristic. Deleting an already-felt negative is usually worth more than adding an equally sized positive.
 
-This explains why *fix the Problem* is one of the strongest value-creation mechanics and one of the strongest ways to bring a product to market. A Problem is already emotionally loaded. The customer has felt the break, paid the cost, lost trust, or failed to complete the Critical Chain. Removing that break creates immediate value because the product deletes pain the customer already understands. This does not make *fix the Problem* the only mechanic. It is one powerful route among the broader set of value-creation mechanics.
+This explains why *fix the Problem* is one of the strongest value-creation mechanics and one of the strongest ways to bring a product to market. A Problem is already emotionally loaded. The customer has felt the break, paid the cost, lost trust, or failed to complete the Critical Chain of Jobs. Removing that break creates immediate value because the product deletes pain the customer already understands. This does not make *fix the Problem* the only mechanic. It is one powerful route among the broader set of value-creation mechanics.
 
-**Canon usage.** [Value Creation §7](value-creation.md) (the full operational treatment — activation, retention, trust, WoM); [Behaviour Change §7, §9](behaviour-change.md) (loss aversion as a force blocking behavior change; the cost-asymmetry force); [Subtraction §2(d)](../Next-Move-Theory/subtraction.md) (subtraction of already-felt negatives as a directional value-creation heuristic); [Critical Chain §3](critical-chain.md) (loss aversion amplifies the chain-completability term in customer chain-choice).
+**Canon usage.** [Value Creation §7](value-creation.md) (the full operational treatment — activation, retention, trust, WoM); [Behaviour Change §7, §9](behaviour-change.md) (loss aversion as a force blocking behavior change; the cost-asymmetry force); [Subtraction §2(d)](../Next-Move-Theory/subtraction.md) (subtraction of already-felt negatives as a directional value-creation heuristic); [Critical Chain of Jobs §3](critical-chain.md) (loss aversion amplifies the chain-completability term in customer chain-choice).
 
 ---
 
@@ -291,7 +291,7 @@ This explains why *fix the Problem* is one of the strongest value-creation mecha
 
 **Advanced Jobs To Be Done interpretation.** Products with deferred value face a structural communication problem. The customer's brain under-credits future benefit relative to present cost, price pain (§4), and loss aversion (§13). AJTBD therefore translates deferred value into present-tense experience wherever possible.
 
-This explains why moving the Aha Moment earlier in the customer's Critical Chain is so powerful ([Value Creation §12](value-creation.md)). Every Job before the Aha is a delay before the customer receives a concrete proof of value, and temporal discounting makes that delayed proof feel weaker than it really is. When the Aha fires earlier, the customer gets an immediate better-than-predicted signal. The abandonment window shrinks, and the rest of the Critical Chain is performed under stronger motivation.
+This explains why moving the Aha Moment earlier in the customer's Critical Chain of Jobs is so powerful ([Value Creation §12](value-creation.md)). Every Job before the Aha is a delay before the customer receives a concrete proof of value, and temporal discounting makes that delayed proof feel weaker than it really is. When the Aha fires earlier, the customer gets an immediate better-than-predicted signal. The abandonment window shrinks, and the rest of the Critical Chain of Jobs is performed under stronger motivation.
 
 **Canon usage.** [Value Creation §19](value-creation.md) (deferred-value products face hyperbolic-discount headwinds; translate benefit to present-tense experience); [Communication](communication.md) (copy patterns for translating deferred value).
 
@@ -387,7 +387,7 @@ This explains why moving the Aha Moment earlier in the customer's Critical Chain
 
 ---
 
-## 20. Critical Chain names the Job sequence that must stay intact
+## 20. The Critical Chain of Jobs names the Job sequence that must stay intact
 
 **Primary citation.** Goldratt (1997), [*Critical Chain*](https://northriverpress.com/product/critical-chain/).
 
@@ -397,7 +397,7 @@ This explains why moving the Aha Moment earlier in the customer's Critical Chain
 
 **Advanced Jobs To Be Done interpretation.** AJTBD borrows the term. The *Critical Chain of Jobs* is the sequence of Jobs that must all be performed for a higher-level Job to be achieved. Completion depends on every required link.
 
-**Canon usage.** [Critical Chain](critical-chain.md) (the full treatment); [Value Creation §1, §18](value-creation.md); [AJTBD key theses §10](ajtbd-key-theses.md).
+**Canon usage.** [Critical Chain of Jobs](critical-chain.md) (the full treatment); [Value Creation §1, §18](value-creation.md); [AJTBD key theses §10](ajtbd-key-theses.md).
 
 ---
 
@@ -477,9 +477,9 @@ Three further structural claims from the paper are important to keep in mind thr
 
 **Plain-English explanation.** Faced with a value or risk it can't measure, the brain reaches for a signal it can: what others did, who recommends it, how established the vendor looks.
 
-**Advanced Jobs To Be Done interpretation.** A customer can't directly measure whether a Critical Chain will run end-to-end. That is the Probability-of-the-Outcome term in the value formula (see [Critical Chain §3](critical-chain.md)). So they substitute trust and social-status signals — brand, reviews, customer logos, peer recommendations — as a proxy for that completability forecast. A vendor with weaker Core Jobs but strong trust signals can beat a better one without them.
+**Advanced Jobs To Be Done interpretation.** A customer can't directly measure whether a Critical Chain of Jobs will run end-to-end. That is the Probability-of-the-Outcome term in the value formula (see [Critical Chain of Jobs §3](critical-chain.md)). So they substitute trust and social-status signals — brand, reviews, customer logos, peer recommendations — as a proxy for that completability forecast. A vendor with weaker Core Jobs but strong trust signals can beat a better one without them.
 
-**Canon usage.** [Critical Chain §3](critical-chain.md) (the completability forecast and its trust / social-status proxies).
+**Canon usage.** [Critical Chain of Jobs §3](critical-chain.md) (the completability forecast and its trust / social-status proxies).
 
 ---
 

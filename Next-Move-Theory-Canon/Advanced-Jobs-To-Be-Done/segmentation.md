@@ -40,7 +40,7 @@ The Map answers the strategy question: which Core Jobs of which people will we c
 
 **Strategic segmentation starts by defining the broadest market the team is willing to compete for.** If the team is not ready to change the product's shape, the market is everyone who has paid money, time, or energy for the current Core Jobs across all success-criteria variants. If the team is ready to change the product's shape, the market widens to everyone who has paid for the Big Jobs above those Core Jobs. If the team wants to compete for another market entirely, the initial sample is rebuilt from that market's Big Jobs and the candidate Core Jobs the product could fully perform. The initial market sample defines what the team allows itself to discover.
 
-**Inside that broad market, run qualitative and quantitative research to discover which customers perform which Core Jobs.** Qualitative research surfaces Core Jobs, Big Jobs, success criteria, current Solutions, competitors, Consideration Activators, and Critical Chain breaks. Quantitative research estimates how many customers fit each Job cluster, how often the Jobs occur, how much budget exists, which Solutions they hire and at what share, what their Consideration Sets hold, how satisfied they are with the main competing Solutions and those Solutions' top Problems, and which criteria predict margin or demand. The output is the Map of Segments, not a preselected cohort with Jobs attached after the fact.
+**Inside that broad market, run qualitative and quantitative research to discover which customers perform which Core Jobs.** Qualitative research surfaces Core Jobs, Big Jobs, success criteria, current Solutions, competitors, Consideration Activators, and Critical Chain of Jobs breaks. Quantitative research estimates how many customers fit each Job cluster, how often the Jobs occur, how much budget exists, which Solutions they hire and at what share, what their Consideration Sets hold, how satisfied they are with the main competing Solutions and those Solutions' top Problems, and which criteria predict margin or demand. The output is the Map of Segments, not a preselected cohort with Jobs attached after the fact.
 
 ## 5. Sequential segmentation filters can remove the large segment before research starts
 
@@ -70,7 +70,7 @@ The concrete measurable properties inside those answers are causal segmentation 
 
 **A fake segmentation criterion names a slice but leaves all three decisions blank.** The team can point at the segment yet still can't say what value to create, why the margin closes, or how demand gets made. It buys a false feeling of understanding and nothing else.
 
-This is why *"enterprise," "premium," "parents," "churned," "high intent,"* and *"uses competitor X"* are not automatically causal. They become causal only when they explain one of the three decisions: *"enterprise"* when it means SSO/SAML, audit logs, procurement, security review, and a budget large enough to pay for the chain; *"parents"* when children under five create a different success criterion, frequency, channel, or willingness-to-pay; *"churned"* only after the team knows the churn is inside the target segment and tied to a fixable Core Job or Critical Chain break.
+This is why *"enterprise," "premium," "parents," "churned," "high intent,"* and *"uses competitor X"* are not automatically causal. They become causal only when they explain one of the three decisions: *"enterprise"* when it means SSO/SAML, audit logs, procurement, security review, and a budget large enough to pay for the chain; *"parents"* when children under five create a different success criterion, frequency, channel, or willingness-to-pay; *"churned"* only after the team knows the churn is inside the target segment and tied to a fixable Core Job or Critical Chain of Jobs break.
 
 **Causal segmentation criteria are cause-level, not symptoms or value restatements.** *"They will save $2,000"* is value, not a criterion. Ask: *what is going on in this customer's situation that turns $2,000 in savings into a reason to buy?* *"They run 40 field technicians, each missed appointment creates overtime, and the dispatcher is already overloaded"* is a causal criterion; so is *"they deploy 20+ times a day, every failed release blocks the whole eng team, and on-call is already saturated"* for a CI/CD product.
 
@@ -110,7 +110,7 @@ The pattern is visible across categories. Uber expanded from one ride-hailing se
 
 **Profit from the target segment funds expansion.** Expansion before a profitable base usually spreads resources across several partially served segments; expansion after focus turns existing margin, knowledge, and channel learning into the next segment bet.
 
-**Critical Chain repair is usually the first scaling move inside a sub-segment** (see [Critical Chain §9.4](critical-chain.md)). The product may already create value, but one link breaks for the new sub-segment — building access, data format, compliance review, payment method, installation constraint. Repair the break before declaring the segment unattractive.
+**Critical Chain of Jobs repair is usually the first scaling move inside a sub-segment** (see [Critical Chain of Jobs §9.4](critical-chain.md)). The product may already create value, but one link breaks for the new sub-segment — building access, data format, compliance review, payment method, installation constraint. Repair the break before declaring the segment unattractive.
 
 ## 12. ABCDX is the fastest local-optimum move for an existing product with enough paying customers
 
@@ -130,11 +130,11 @@ Operational consequence:
 
 ## 14. B2B segmentation uses the same root — plus role chain, approval process, and budget structure
 
-**B2B segmentation is still rooted in Core Jobs and success criteria.** Industry, employee count, revenue, ACV, and company stage are refinements unless they change Jobs, criteria, margin, or the Critical Chain.
+**B2B segmentation is still rooted in Core Jobs and success criteria.** Industry, employee count, revenue, ACV, and company stage are refinements unless they change Jobs, criteria, margin, or the Critical Chain of Jobs.
 
 B2B adds three fields to the segment record (see [B2B §10](b2b.md)):
 
-- Deal Critical Chain. The same surface Core Job runs through different role maps — founder-led SMB, mid-market functional buyer, enterprise buying committee — each demanding different stakeholders, different evidence, and a different deal chain.
+- Deal Critical Chain of Jobs. The same surface Core Job runs through different role maps — founder-led SMB, mid-market functional buyer, enterprise buying committee — each demanding different stakeholders, different evidence, and a different deal chain.
 - Approval process. Credit-card swipe, procurement, RFP, security review, legal review, CFO approval — each creates a different chain-break risk.
 - Budget structure. Calendar-year budget, project-based budget, department budget, emergency budget, and renewal budget produce different timing and channel economics.
 
@@ -190,11 +190,11 @@ Operational consequences:
 - [Job Graph §11](job-graph.md) — Job Graph as the segmentation surface.
 - [Job Structure §8 and §11](job-structure.md) — success criteria and same-outcome-different-criteria discipline.
 - [Value Creation §9–§10](value-creation.md) — success criteria as the operational location of value; different segments value different criteria and rank them in different priority orders.
-- [Critical Chain §9.4](critical-chain.md) — scaling to sub-segments by discovering and repairing chain-breaks.
+- [Critical Chain of Jobs §9.4](critical-chain.md) — scaling to sub-segments by discovering and repairing chain-breaks.
 - [Behaviour Change §10–§11](behaviour-change.md) — behavior-change classes and durable-switching mechanics by segment.
 - [B2B §10](b2b.md) — B2B segmentation additions: role chain, approval process, budget cycle.
 - [ABCDX segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md) — existing-product local-optimum segmentation by margin × satisfaction before AJTBD-on-A-and-B.
-- [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — interview mechanics for surfacing Jobs, criteria, Consideration Activators, and Critical Chains.
+- [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md) — interview mechanics for surfacing Jobs, criteria, Consideration Activators, and Critical Chains of Jobs.
 
 ---
 

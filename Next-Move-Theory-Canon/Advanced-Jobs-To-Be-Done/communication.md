@@ -1,6 +1,6 @@
 # Product Communication
 
-This is the canon page on communication in AJTBD. It covers how delivered value becomes understandable before purchase, why copy is derived from Job research rather than invented, and how pre-purchase expectations shape the first Aha Moment. It expands [AJTBD key theses §24](ajtbd-key-theses.md). It sits on top of [Segmentation](segmentation.md), [Value Creation](value-creation.md), [Consideration Activators](consideration-activators.md), and [Critical Chain](critical-chain.md) — the operational core, where the customer's walk from State A to State B lives.
+This is the canon page on communication in AJTBD. It covers how delivered value becomes understandable before purchase, why copy is derived from Job research rather than invented, and how pre-purchase expectations shape the first Aha Moment. It expands [AJTBD key theses §24](ajtbd-key-theses.md). It sits on top of [Segmentation](segmentation.md), [Value Creation](value-creation.md), [Consideration Activators](consideration-activators.md), and [Critical Chain of Jobs](critical-chain.md) — the operational core, where the customer's walk from State A to State B lives.
 
 ---
 
@@ -8,33 +8,33 @@ This is the canon page on communication in AJTBD. It covers how delivered value 
 
 **Communication is the transmission of already-created value to a target segment.** It does not turn an unvalidated Job, a weak segment, or an undelivered value hypothesis into fact. The operating sequence is strict. Choose the target segment, validate the Core Jobs and Big Jobs, create value against the segment's success criteria, prove the value through sales or usage, then scale communication. Before that point, landing pages, ads, and sales scripts are research artifacts or demand tests. They are not facts to scale.
 
-The source material for communication is the AJTBD research record. A usable record names the target segment, the Core Jobs with success criteria, the Big Jobs above them, and the Micro Jobs before purchase and activation. It also names current Solutions and their Problems, Critical Chain blockers, specific fears, Consideration Activators, and the Critical Chain from trigger to first Aha Moment. If those fields exist, the team has the content for the landing page, ad creatives, sales script, lead magnet, demo, and buyer-enablement assets. If they do not exist, the copywriter is forced to invent.
+The source material for communication is the AJTBD research record. A usable record names the target segment, the Core Jobs with success criteria, the Big Jobs above them, and the Micro Jobs before purchase and activation. It also names current Solutions and their Problems, Critical Chain of Jobs blockers, specific fears, Consideration Activators, and the Critical Chain of Jobs from trigger to first Aha Moment. If those fields exist, the team has the content for the landing page, ad creatives, sales script, lead magnet, demo, and buyer-enablement assets. If they do not exist, the copywriter is forced to invent.
 
 **Communication is therefore not a separate creative step.** It is the packaging of segment-and-Job knowledge into the customer's language: we know your context and trigger; we perform these Core Jobs so these Big Jobs land; we do it more energy-efficiently by these criteria; this proof is why the claim is believable; these specific fears are handled; here is the first step.
 
 Operational consequences:
 
 - Do not scale communication before value is proven. If the product has not created a real Aha Moment for the target segment, better copy only accelerates disappointment.
-- Do not write copy without the Job record. A page without Core Jobs, Big Jobs, success criteria, Critical Chain blockers, specific fears, and current-Solution Problems is category prose, not AJTBD communication.
+- Do not write copy without the Job record. A page without Core Jobs, Big Jobs, success criteria, Critical Chain of Jobs blockers, specific fears, and current-Solution Problems is category prose, not AJTBD communication.
 - Treat every message as a risky assumption. The customer must recognize themselves, understand the value, believe the proof, and reach the first Aha Moment without the chain breaking.
 
-## 2. A purchase requires seven assumptions to hold along the Critical Chain
+## 2. A purchase requires seven assumptions to hold along the Critical Chain of Jobs
 
-**A purchase happens only when seven assumptions hold along the customer's Critical Chain from trigger to first Aha.** Each assumption belongs to a different methodology object. When the sale fails, diagnose the failed assumption before rewriting copy.
+**A purchase happens only when seven assumptions hold along the customer's Critical Chain of Jobs from trigger to first Aha.** Each assumption belongs to a different methodology object. When the sale fails, diagnose the failed assumption before rewriting copy.
 
 | Assumption | Methodology object | Typical failure |
 |---|---|---|
 | The lead is from the target segment and has the relevant Big Jobs. | Map of Segments / Job Graph | Acquisition brings people whose Core Jobs or criteria the product does not serve. |
 | The product creates value above the customer's prediction and current Solution. | Value creation | The Core Jobs are performed, but not enough better by the segment's success criteria. |
 | The lead understands the value. | Communication / Consideration Activators | The value exists, but the message fails to express it in Job-language and criteria. |
-| The necessary chain prerequisites are true in reality. | Critical Chain | Migration, payment method, compliance, setup, permission, or data-format support is missing. |
+| The necessary chain prerequisites are true in reality. | Critical Chain of Jobs | Migration, payment method, compliance, setup, permission, or data-format support is missing. |
 | Specific fears about the new Job Graph are reduced. | Consideration Activators component 4 | The customer predicts a chain-break, under-delivery against expectations, Tax Job, personal risk, or irreversible loss. |
-| The activation path gets the customer to value quickly enough. | Critical Chain / Aha Moment | Registration, onboarding, purchase, or setup costs block the first Aha Moment. |
-| The Critical Chain does not break on the way. | Critical Chain | Payment fails, the form crashes, a cookie banner covers the CTA, the calendar link is dead, or the demo never loads. |
+| The activation path gets the customer to value quickly enough. | Critical Chain of Jobs / Aha Moment | Registration, onboarding, purchase, or setup costs block the first Aha Moment. |
+| The Critical Chain of Jobs does not break on the way. | Critical Chain of Jobs | Payment fails, the form crashes, a cookie banner covers the CTA, the calendar link is dead, or the demo never loads. |
 
-**Real blockers and fears are different objects.** A real blocker is a fact that prevents the Critical Chain from running: financing path, documents, logistics, compliance, payment method, data format, migration path. It is fixed by changing reality. A fear is the customer's prediction of a chain-break, an unmet promise, a Tax Job, a personal risk, or an irreversible loss: *"this broker feels shady," "I won't pull off buying a car from another state," "this workflow will fail in front of my team."* Once reality can hold the claim, communication names the fear and shows why it is prevented, absorbed, reversible, insured, or irrelevant for this Solution.
+**Real blockers and fears are different objects.** A real blocker is a fact that prevents the Critical Chain of Jobs from running: financing path, documents, logistics, compliance, payment method, data format, migration path. It is fixed by changing reality. A fear is the customer's prediction of a chain-break, an unmet promise, a Tax Job, a personal risk, or an irreversible loss: *"this broker feels shady," "I won't pull off buying a car from another state," "this workflow will fail in front of my team."* Once reality can hold the claim, communication names the fear and shows why it is prevented, absorbed, reversible, insured, or irrelevant for this Solution.
 
-The seventh assumption is not marketing polish. A broken chain after the customer already decided to move creates disappointment against the whole Solution. The customer does not say *"the CTA had a bug."* They update the prediction to *"this company may not perform the Big Jobs reliably"* (see [Critical Chain §2](critical-chain.md)).
+The seventh assumption is not marketing polish. A broken chain after the customer already decided to move creates disappointment against the whole Solution. The customer does not say *"the CTA had a bug."* They update the prediction to *"this company may not perform the Big Jobs reliably"* (see [Critical Chain of Jobs §2](critical-chain.md)).
 
 ## 3. Every message names the Core Jobs, the value, and the specific-fear work
 
@@ -103,9 +103,9 @@ LLMs are variant generators after the Job record exists. A model can generate 10
 
 Specific stories are the most compressed Consideration Activators format. A Belong story about a landlord who receives guaranteed rent while repairs are handled, a Wealthfront story about a founder whose portfolio auto-rebalanced after a liquidity event, a Stripe story about a marketplace that passed payments review without building payouts from scratch — each story carries Job Graph, value delta, named product, fear reduction, and competitor firing in one unit. Abstract *"we save time"* carries almost none of it.
 
-## 8. A landing page is a short Critical Chain, not a brochure
+## 8. A landing page is a short Critical Chain of Jobs, not a brochure
 
-**A landing page is a short Critical Chain whose State B is enough belief and motivation to take the first step.** The visitor arrives with a trigger, partial Consideration Activators, a prediction, fears, a current-Solution habit, and limited attention. The page must move them through recognition, value prediction, proof, specific-fear work, competitor firing, and a low-cost first Micro Job.
+**A landing page is a short Critical Chain of Jobs whose State B is enough belief and motivation to take the first step.** The visitor arrives with a trigger, partial Consideration Activators, a prediction, fears, a current-Solution habit, and limited attention. The page must move them through recognition, value prediction, proof, specific-fear work, competitor firing, and a low-cost first Micro Job.
 
 The canonical landing sequence follows the Consideration Activators and transition logic:
 
@@ -119,7 +119,7 @@ The canonical landing sequence follows the Consideration Activators and transiti
 8. State B / Big Jobs reminder — what the higher-level results look and feel like.
 9. Consideration Activators and CTA — named product, first step, low activation cost.
 
-**The sequence is a diagnostic, not a decoration rule.** If the page has motivated traffic but does not move people to the next step, ask which transition step failed. The visitor did not recognize the context. The value was not concrete. The proof did not connect to the criterion. A real blocker remained in the Critical Chain. A specific fear stayed active. The competing Solution was not fired. Or the CTA required too much cost before the first Aha Moment.
+**The sequence is a diagnostic, not a decoration rule.** If the page has motivated traffic but does not move people to the next step, ask which transition step failed. The visitor did not recognize the context. The value was not concrete. The proof did not connect to the criterion. A real blocker remained in the Critical Chain of Jobs. A specific fear stayed active. The competing Solution was not fired. Or the CTA required too much cost before the first Aha Moment.
 
 ## 9. Communication sets the customer's prediction before the product can beat it
 
@@ -141,7 +141,7 @@ Operational consequences:
 - [Segmentation](segmentation.md) — target segment, causal segmentation criteria, and proxy audiences.
 - [Value Creation](value-creation.md) — value as energy efficiency (outcome/cost), predict-and-compare driving behaviour change, Aha Moment, expectation management.
 - [Consideration Activators](consideration-activators.md) — the five Consideration Activators components, channels, and category-creation mechanics.
-- [Critical Chain](critical-chain.md) — the operational core: chain structure (breaks, hand-offs, cycles, time-gaps), chain execution (predictions, interruptions, drop-offs, Solution switches, per-step emotions, knows-how vs first-time), and Previous Job / Next Job strategy.
+- [Critical Chain of Jobs](critical-chain.md) — the operational core: chain structure (breaks, hand-offs, cycles, time-gaps), chain execution (predictions, interruptions, drop-offs, Solution switches, per-step emotions, knows-how vs first-time), and Previous Job / Next Job strategy.
 - [Behaviour Change](behaviour-change.md) — behavior-change forces, trigger timing, and the familiar vs. unfamiliar Core Jobs distinction.
 - [Job Structure](job-structure.md) — eight elements of a Job, success criteria, triggers, emotions, and the Big/Core/Small/Micro hierarchy.
 

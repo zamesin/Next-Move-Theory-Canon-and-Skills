@@ -19,7 +19,7 @@ Plain-language definitions for readers new to Ivan Zamesin's AJTBD / Next Move T
 - **Selection screen** — the five tests this report scores each segment on: (1) noticeable added value, (2) demand we can generate, (3) target margin per paying customer, (4) size in money × switchability, (5) no existential (legal / impossible-tech) risk.
 - **Consideration Activators** — the pieces of information that, when they reach the customer's head, move their choice toward you (a better way exists; it's better by these criteria; here's the product and the first step; your fears about it are handled; the alternative's problems are real).
 - **Barrier** — an objective condition that stops a customer from using a new solution at all (a missing integration, an unsupported region, a compliance gap). Reality work, not messaging.
-- **Critical Chain** — the Job Graph laid out on a timeline: the actual sequence the customer walks, where the Aha Moment should fire and where things break.
+- **Critical Chain of Jobs** — the Job Graph laid out on a timeline: the actual sequence the customer walks, where the Aha Moment should fire and where things break.
 - **Positioning** — the link between the Core Job you perform and the Big Job the customer cares about.
 - **RAT (Riskiest Assumption Test)** — listing the beliefs the idea depends on (market → segment+Jobs → value → unit economics → channels), ranking them by how lethal they'd be if wrong and how cheap they are to test, and buying evidence against the worst ones first. The aim is to *kill or pivot* cheaply, not to confirm.
 - **Pivot** — a change in the set of risky assumptions — often switching to a different Big-Job market that fits the same assets (technology, team, resources) better.

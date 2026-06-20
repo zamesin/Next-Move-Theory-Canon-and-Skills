@@ -23,12 +23,12 @@ This thesis is the substrate for every section below. The brain runs a continuou
 Attention is three structurally distinct phenomena that everyday vocabulary conflates. Naming the three lets the practitioner pick the right mechanic for the right form.
 
 - Attention *to* a Job — pre-existing awareness that a Job and a way of performing it exist for me. This is the Consideration Set in State A, the output of every act of Consideration Activators the customer has ever encountered ([Consideration Activators §8](consideration-activators.md)). When a customer reaches for Wealthfront instead of Chase savings, attention to robo-advised portfolios as a category, and to Wealthfront as a named product, was loaded into their head long before the choice moment.
-- Attention *during* a Job — the customer's continuous attentional spend while walking a Critical Chain. These are the chain-walk dynamics of [Critical Chain §5 and §7.4](critical-chain.md): per-step predictions, per-step Aha Moments and Problems, interruptions, drop-offs, mid-flight Solution switches. Activation-and-retention work lives here.
+- Attention *during* a Job — the customer's continuous attentional spend while walking a Critical Chain of Jobs. These are the chain-walk dynamics of [Critical Chain of Jobs §5 and §7.4](critical-chain.md): per-step predictions, per-step Aha Moments and Problems, interruptions, drop-offs, mid-flight Solution switches. Activation-and-retention work lives here.
 - Attention *captured* by external triggers — what wins the brain's attention in unstructured time the customer didn't pre-allocate. The scroll feed, the notification, the billboard the commuter sees, the YouTube preroll, the *"someone is typing"* dot on Slack. Capture is the mechanic of every product that competes inside an attention-economy surface.
 
 The three forms compose into the full attentional life of a customer. A customer with no attention to the category cannot start a Job. A customer who started cannot finish without attention during. A customer in unstructured time becomes acquisition surface for whichever attention-capturer is competing for their next minute.
 
-**Diagnose the form before picking the mechanic.** A team trying to fix a chain-walk drop-off with more brand ads is mis-routing. A team trying to load Consideration Activators for an unfamiliar category through banner retargeting is mis-routing the other direction. Banners capture but rarely carry the bandwidth to load Job Graphs. Mechanics for attention-to: Consideration Activators, content marketing, peer stories, named-product-and-entry-path messaging. Mechanics for attention-during: front-load the Aha, reduce time-gaps, kill cycles, save state, remove negative-emotion micro-steps. Mechanics for attention-captured: trigger associations, viral Jobs, presence in the customer's Critical Chain.
+**Diagnose the form before picking the mechanic.** A team trying to fix a chain-walk drop-off with more brand ads is mis-routing. A team trying to load Consideration Activators for an unfamiliar category through banner retargeting is mis-routing the other direction. Banners capture but rarely carry the bandwidth to load Job Graphs. Mechanics for attention-to: Consideration Activators, content marketing, peer stories, named-product-and-entry-path messaging. Mechanics for attention-during: front-load the Aha, reduce time-gaps, kill cycles, save state, remove negative-emotion micro-steps. Mechanics for attention-captured: trigger associations, viral Jobs, presence in the customer's Critical Chain of Jobs.
 
 ---
 
@@ -69,14 +69,14 @@ Consideration Activators loading is a large component of Customer Acquisition Co
 
 ## 5. The receptivity window — attention to new Solutions opens at specific triggers, not uniformly across time
 
-**Customer attention to new Solutions opens at specific moments and closes between them.** The canon names seven of these triggers in [Behaviour Change §8](behaviour-change.md): a Critical Chain break in the current Solution; accumulated Problems exceeding a threshold; a life event or context shift; a status or identity shift; an external shock or forced switch; new external Consideration Activators that wakes up an Orientation Job; a first-hand trial that produced a strong Aha Moment.
+**Customer attention to new Solutions opens at specific moments and closes between them.** The canon names seven of these triggers in [Behaviour Change §8](behaviour-change.md): a Critical Chain of Jobs break in the current Solution; accumulated Problems exceeding a threshold; a life event or context shift; a status or identity shift; an external shock or forced switch; new external Consideration Activators that wakes up an Orientation Job; a first-hand trial that produced a strong Aha Moment.
 
 All seven are attention-opening events. Outside them, the customer's attention is locked into habit physiology (DLS-network-dominant control; see [Scientific Foundations §15](scientific-foundations.md)) and steady-state Job Graph execution. Marketing aimed at habit-state attention mostly burns budget.
 
 Operational consequences:
 
 - Map the calendar of predictable trigger windows in the target segment. Tax season, fiscal year-end, layoff cycles, new-role onboarding, post-merger integration, regulatory deadlines, planned moves, school start. Time Consideration Activators delivery to these windows. Cost-per-acquired-customer drops dramatically when attention is already open.
-- Detect chain-breaks in customer behavior as acquisition signals. G2 reviews complaining about competitor X, sales-call recordings where the prospect describes a recent failure, support-ticket transcripts showing repeated Tax Jobs — each is a customer whose attention has just opened. The window closes within days-to-weeks ([Critical Chain §6](critical-chain.md)), so deliver Consideration Activators fast.
+- Detect chain-breaks in customer behavior as acquisition signals. G2 reviews complaining about competitor X, sales-call recordings where the prospect describes a recent failure, support-ticket transcripts showing repeated Tax Jobs — each is a customer whose attention has just opened. The window closes within days-to-weeks ([Critical Chain of Jobs §6](critical-chain.md)), so deliver Consideration Activators fast.
 
 ---
 
@@ -84,7 +84,7 @@ Operational consequences:
 
 The Aha Moment is the Positive Prediction Error the customer experiences against the success criteria they came in with ([Value Creation §12](value-creation.md)). Reframed through attention: **the Aha is the moment the customer's brain spends attention on the product and detects that the attention is being repaid above prediction.** That detection is the teaching signal that re-trains the brain to spend attention on this Job Graph again.
 
-The leftward-positioning discipline ([Value Creation §12](value-creation.md): *"position the Aha as far leftward in the customer's critical chain as possible"*) is, in attentional vocabulary, *minimize the attentional debt the customer has to extend before the first repayment lands.* Every Job before the Aha is attention spent on the product without yet receiving the Aha Moment. Every additional pre-Aha Job is a place where attention can be withdrawn by interruption, habit, or competitor Consideration Activators ([Critical Chain §7.4](critical-chain.md) — external interruptions during the chain-walk).
+The leftward-positioning discipline ([Value Creation §12](value-creation.md): *"position the Aha as far leftward in the customer's critical chain of jobs as possible"*) is, in attentional vocabulary, *minimize the attentional debt the customer has to extend before the first repayment lands.* Every Job before the Aha is attention spent on the product without yet receiving the Aha Moment. Every additional pre-Aha Job is a place where attention can be withdrawn by interruption, habit, or competitor Consideration Activators ([Critical Chain of Jobs §7.4](critical-chain.md) — external interruptions during the chain-walk).
 
 Concrete Aha placements that compress pre-Aha attention spend:
 
@@ -97,9 +97,9 @@ Concrete Aha placements that compress pre-Aha attention spend:
 
 ---
 
-## 7. Attention guidance through the Critical Chain is a continuous discipline — not a one-shot act
+## 7. Attention guidance through the Critical Chain of Jobs is a continuous discipline — not a one-shot act
 
-**Attention management is a discipline applied at every transition in the Critical Chain.** Every step in the customer's chain-walk is an attention-direction decision the team is making, explicitly or by default. Which signal does the product surface next, which option does the customer see, which decision is asked of them, which information is shown versus hidden, which next action is proposed. The team that treats attention-management as a one-shot move — capture at the ad, then leave the rest to UX best-practice — leaves attention undirected at every subsequent transition. Competitors, interruptions, and habit fill the vacuum.
+**Attention management is a discipline applied at every transition in the Critical Chain of Jobs.** Every step in the customer's chain-walk is an attention-direction decision the team is making, explicitly or by default. Which signal does the product surface next, which option does the customer see, which decision is asked of them, which information is shown versus hidden, which next action is proposed. The team that treats attention-management as a one-shot move — capture at the ad, then leave the rest to UX best-practice — leaves attention undirected at every subsequent transition. Competitors, interruptions, and habit fill the vacuum.
 
 The principle compounds with §6 (Aha placement) and §8 (interruption resilience). The Aha sets the first attentional repayment, interruption-resilience defends against attention loss, and continuous guidance routes attention forward through every chain step in between. **Attention guidance, Aha placement, and interruption resilience are the three operations that compose chain-walk completion**, and skipping any one drops completion rate proportionally.
 
@@ -114,13 +114,13 @@ Concrete patterns of continuous attention guidance the canon already names:
 
 ---
 
-## 8. The Critical Chain walk is a sequence of attention transitions — most drop-off is interruption, not rejection
+## 8. The Critical Chain of Jobs walk is a sequence of attention transitions — most drop-off is interruption, not rejection
 
-[Critical Chain §5 and §7.4](critical-chain.md) name the sources of interruption during chain-walking. From inside the chain (§5): chain-break and mid-flight Problem. From outside (§7.4): external interruption, criteria change, and a competitor surfacing mid-walk. Through the attention lens, **each interruption is a moment when the customer's attention is pulled off the current Solution's chain and onto something else.** The single most consequential finding (§7.4): *"Most one-step abandonment is interruption, not rejection."*
+[Critical Chain of Jobs §5 and §7.4](critical-chain.md) name the sources of interruption during chain-walking. From inside the chain (§5): chain-break and mid-flight Problem. From outside (§7.4): external interruption, criteria change, and a competitor surfacing mid-walk. Through the attention lens, **each interruption is a moment when the customer's attention is pulled off the current Solution's chain and onto something else.** The single most consequential finding (§7.4): *"Most one-step abandonment is interruption, not rejection."*
 
 The dominant interruption source is rarely the obvious one. A customer who didn't complete the signup flow usually didn't reject the product. A notification fired, a kid called, the page took 30 seconds and they switched tabs. The chain is competing with every other claim on attention in the customer's environment at that moment. Attention is shared with the customer's full life context, not allocated exclusively to the product.
 
-Three attention-management moves the canon names ([Critical Chain §7.4](critical-chain.md)):
+Three attention-management moves the canon names ([Critical Chain of Jobs §7.4](critical-chain.md)):
 
 - Save state aggressively across interruptions. Every step that requires the customer to rebuild context on resume is a place where interruption permanently terminates the walk. Wealthfront's resume-where-you-left-off, Stripe's persistent dashboard state, Notion's auto-save — each treats interruption as the default and continuity as the value.
 - Time the chain to low-interrupt windows. Wealthfront's under-5-minute onboarding, Stripe's afternoon-integration promise, banks sending refinance offers on weekend mornings — short chains in low-interrupt windows complete more often than long chains in high-interrupt windows. Attention competing with fewer external claims has a lower probability of being captured.
@@ -132,7 +132,7 @@ The diagnostic for drop-off is *"What could have interrupted them here?"* asked 
 
 ## 9. Move-to-Previous-Job is attention capture upstream of the competitive set
 
-The canon names *Move to the Previous Job in the chain* as one of the directional strategic moves ([Critical Chain §9](critical-chain.md), [Job Graph §19](job-graph.md)). The deeper move: **whoever performs the Previous Job in the customer's Critical Chain captures the customer's attention before the comparison-shopping Job fires**, and shapes the Consideration Set the customer brings into evaluation.
+The canon names *Move to the Previous Job in the chain* as one of the directional strategic moves ([Critical Chain of Jobs §9](critical-chain.md), [Job Graph §19](job-graph.md)). The deeper move: **whoever performs the Previous Job in the customer's Critical Chain of Jobs captures the customer's attention before the comparison-shopping Job fires**, and shapes the Consideration Set the customer brings into evaluation.
 
 US examples where Previous-Job capture is the dominant acquisition mechanic:
 
@@ -170,7 +170,7 @@ Five canon principles read as attention-engineering rules when reframed:
 - The one-liner enters the customer's brain before attention collapses ([Communication §5](communication.md), explicit in the source). The formula `[What it is] + [Core Jobs the product performs] + [value by criteria]` is dense because attention budget is short. Stripe — *"online payments for businesses of every size"*; Notion — *"the all-in-one workspace for your notes, tasks, wikis, and databases"*; Linear — *"the issue tracking tool you'll enjoy using."*
 - Features are proof, not the message ([Communication §4](communication.md)). Features demand attention to translate them into the customer's Job Graph. Jobs reward attention by speaking the customer's existing language. Feature-first messaging asks for unpaid attentional work. Job-first messaging spends the customer's attention on the value, not on the translation.
 - Visuals show State B, not the production process ([Communication §6](communication.md)). DoorDash shows dinner on the table, not route logistics. Peloton shows the completed workout ritual, not the bike hardware. State B captures attention because it activates the Big Job's emotional payoff.
-- The landing page is a short Critical Chain ([Communication §8](communication.md)). The visitor arrives with a trigger, partial Consideration Activators, a prediction, fears, and limited attention. The page moves them through recognition, value prediction, proof, fear reduction, competitor firing, and a low-cost first Micro Job. Every block competes for the next ration of attention.
+- The landing page is a short Critical Chain of Jobs ([Communication §8](communication.md)). The visitor arrives with a trigger, partial Consideration Activators, a prediction, fears, and limited attention. The page moves them through recognition, value prediction, proof, fear reduction, competitor firing, and a low-cost first Micro Job. Every block competes for the next ration of attention.
 - Promises about Big Jobs must match delivery at the Core-Job level ([Communication §3](communication.md)). Overpromise manufactures Problems at first use. The customer's brain registers the gap and re-routes attention away. Honest communication earns the attention again next time.
 
 **Test the one-liner against the sales-script question: can the buyer repeat what the product is, which Core Jobs it performs, and what value it gives, after one hearing?** ([Communication §5](communication.md)) If not, the one-liner didn't fit the attention budget. Rewrite until it does.
@@ -206,7 +206,7 @@ The advertising business model has one foundational economic structure. **A free
 
 ### Why the model rests 100% on attention management
 
-- The product's primary KPI is time-spent-on-platform. Not customer value delivered, not Big Jobs landed, not Critical Chains completed. Time-spent is the proxy for attention captured, and attention captured is what's resold. Every product decision flows from this KPI.
+- The product's primary KPI is time-spent-on-platform. Not customer value delivered, not Big Jobs landed, not Critical Chains of Jobs completed. Time-spent is the proxy for attention captured, and attention captured is what's resold. Every product decision flows from this KPI.
 - Variable-ratio reinforcement is the dominant attention-capture mechanic. Per [Scientific Foundations §18](scientific-foundations.md), uncertainty in reward recruits sustained dopaminergic attention. Eyal's Hook Model — Trigger → Action → Variable Reward → Investment — is the operational template every ad-funded product runs.
 - Notifications are externally-injected attention triggers. Push notification → home-screen badge → app open → variable reward → time-on-platform → ad impression → revenue. Each step is an attention-redirection move.
 - The attention-economy critique (Hari 2022, Center for Humane Technology) names the externality. The customer's attention is a finite resource the customer would have spent elsewhere. The ad-funded product extracts that attention and resells it, and the customer pays in attention they didn't intend to spend.
@@ -224,7 +224,7 @@ The advertising business model has one foundational economic structure. **A free
 - [Value Creation §§2–8, §12](value-creation.md) — value as energy efficiency (outcome/cost); cognitive cost; Aha as first attentional capture.
 - [Consideration Activators](consideration-activators.md) — Consideration Activators as the loader for *attention to* a new Job Graph; five attentional payloads.
 - [Behaviour Change §§5, 7, 8, 10](behaviour-change.md) — Consideration Activators channels; Aha Moment/Problem neurobiology; trigger windows; familiar vs unfamiliar Core Job classes.
-- [Critical Chain §4, §5, §7.4](critical-chain.md) — drop-off as Solution switch; chain-walk dynamics; interruptions.
+- [Critical Chain of Jobs §4, §5, §7.4](critical-chain.md) — drop-off as Solution switch; chain-walk dynamics; interruptions.
 - [Job Types and Properties §6](job-types-and-properties.md) — Orientation Jobs as the verb cluster that updates the Consideration Set.
 - [Communication](communication.md) — communication as attention engineering.
 - [Scientific Foundations §§1, 11, 15, 17, 18](scientific-foundations.md) — allostasis as the substrate; reward prediction error; habit physiology; curiosity; variable-ratio reinforcement.

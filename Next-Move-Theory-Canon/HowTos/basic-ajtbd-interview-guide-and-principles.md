@@ -1,6 +1,6 @@
 # Basic AJTBD Interview Guide and Principles
 
-An AJTBD interview reconstructs a customer's motivation from what they actually did. One 30–90 minute conversation surfaces the Jobs the person performs, the success criteria by which they judge "good enough," and the Consideration Set they compared at the moment of choice. It also surfaces the Critical Chain they walked, the Aha Moments and Problems along the way, and the Barriers that stopped them. Throughout, it anchors on past performance rather than on what they say they'll do next.
+An AJTBD interview reconstructs a customer's motivation from what they actually did. One 30–90 minute conversation surfaces the Jobs the person performs, the success criteria by which they judge "good enough," and the Consideration Set they compared at the moment of choice. It also surfaces the Critical Chain of Jobs they walked, the Aha Moments and Problems along the way, and the Barriers that stopped them. Throughout, it anchors on past performance rather than on what they say they'll do next.
 
 This guide is the distilled version. It covers the principles that govern every interview and the question bank you actually ask. The conceptual base lives in the canon — start with [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md). The interview is upstream of everything else. The Jobs, criteria, and competitors it surfaces are what the strategy is later built from.
 
@@ -162,10 +162,10 @@ Across both, the per-Job questions are universal. You choose which Jobs to dig. 
 
 ## Cross-references
 
-- [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — the conceptual base: the eight-element Job (§3), the four levels (§9), the Critical Chain (§10), segmentation by Jobs (§12), Consideration Activators (§18), past-payment recruiting (§15), B2B specifics (§25).
+- [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — the conceptual base: the eight-element Job (§3), the four levels (§9), the Critical Chain of Jobs (§10), segmentation by Jobs (§12), Consideration Activators (§18), past-payment recruiting (§15), B2B specifics (§25).
 - [Job Structure](../Advanced-Jobs-To-Be-Done/job-structure.md) — the eight elements and the per-element interview questions (§3–§10).
 - [Job Graph](../Advanced-Jobs-To-Be-Done/job-graph.md) — the six-direction Graph-study question set (§17), the climb test (§3), Graph validation (§18), the real competitive set (§15).
-- [Critical Chain](../Advanced-Jobs-To-Be-Done/critical-chain.md) — researching the chain in an interview (§11).
+- [Critical Chain of Jobs](../Advanced-Jobs-To-Be-Done/critical-chain.md) — researching the chain in an interview (§11).
 - [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md) — define the broad market before narrowing, at the Big-Job or current-Core-Job altitude (§2, §3, §14); ABCDX before AJTBD-on-A/B (§13).
 - [Consideration Activators](../Advanced-Jobs-To-Be-Done/consideration-activators.md) — the five Activators (§1) and the surfacing question (§12).
 - [Behaviour Change](../Advanced-Jobs-To-Be-Done/behaviour-change.md) — Aha Moment and Problem (§7); receptivity windows / triggers (§8).

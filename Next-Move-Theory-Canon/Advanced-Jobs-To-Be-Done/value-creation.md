@@ -29,7 +29,7 @@ The cursed feature-shipping cycle starts with an *idea* disconnected from the ta
 **For a product past initial product-market fit, the highest-leverage value-creation work is rarely another feature for current customers — it is work aimed at segments or sub-segments not yet scaled into.** Two failure modes:
 
 - Mode A — value for the new sub-segment doesn't exist yet. The added value is too small to overcome the gravitational forces holding the customer on their current way: habit, switching cost, identity, fears (see [Behaviour Change §9](behaviour-change.md)). *Fix:* apply the mechanics from [Value-Creation Mechanics](value-creation-mechanics.md) to *their* Job Graph and *their* criteria. (Notion → enterprise: individuals' *"organize my thinking"* is not enterprise's *"govern team knowledge with compliance"*; the gap was SSO/SAML, audit log, admin roles.)
-- Mode B — value exists, but the Critical Chain breaks before the new sub-segment can reach it. This is invisible from inside the existing base, because every current customer already passed through that part of the chain. *Fix:* repair the chain ([Critical Chain](critical-chain.md)). (Stripe Checkout: *accept money turnkey* already existed, but for a local bakery the chain broke at *"I don't know what an API key is."* The no-code drop-in repaired it.)
+- Mode B — value exists, but the Critical Chain of Jobs breaks before the new sub-segment can reach it. This is invisible from inside the existing base, because every current customer already passed through that part of the chain. *Fix:* repair the chain ([Critical Chain of Jobs](critical-chain.md)). (Stripe Checkout: *accept money turnkey* already existed, but for a local bakery the chain broke at *"I don't know what an API key is."* The no-code drop-in repaired it.)
 
 ### Problem 4 — feature thinking ignores the de-risking process
 
@@ -191,11 +191,11 @@ The diagnostic question: *"Which one or several criteria are priority for this s
 
 | Segment's priority criterion | Lead mechanics from [Value-Creation Mechanics](value-creation-mechanics.md) |
 |---|---|
-| Speed-first | Reduce time-gaps between Jobs; Take the Job off the customer (done-for-you); Kill cycles in the Critical Chain; Reduce role-to-role hand-offs |
+| Speed-first | Reduce time-gaps between Jobs; Take the Job off the customer (done-for-you); Kill cycles in the Critical Chain of Jobs; Reduce role-to-role hand-offs |
 | Price-first | Lower the price; Bundle multiple products / services; Perform the Core Job at the level of expectations (don't overspend on extras) |
-| Done-for-me first | Take the Job off the customer; Perform more Jobs with one Solution; Perform the Next Job in the Critical Chain; Reduce role-to-role hand-offs |
+| Done-for-me first | Take the Job off the customer; Perform more Jobs with one Solution; Perform the Next Job in the Critical Chain of Jobs; Reduce role-to-role hand-offs |
 | No-stress first | Remove negative emotions; Fix the Problems; Adjust expectations; Take the Job off the customer |
-| Reliability-first | Perform the Core Job at the level of expectations; Better meet success criteria; Fix Critical Chain breaks between different people; Kill cycles in the Critical Chain |
+| Reliability-first | Perform the Core Job at the level of expectations; Better meet success criteria; Fix Critical Chain of Jobs breaks between different people; Kill cycles in the Critical Chain of Jobs |
 | Control-first | Perform more Jobs with one Solution; Better meet success criteria (on the control-related dimensions the segment tunes for); Perform Small Jobs for additional Big Jobs |
 | Status-first | Perform Jobs while satisfying deeper needs (status); Create new connections to higher-level Big Jobs (*"signal who I am"*); Exclusive value — only available here |
 | Privacy-first | Remove negative emotions (tracking anxiety); Better meet success criteria (on the privacy dimension); Exclusive value (privacy as a moat) |
@@ -227,7 +227,7 @@ Canonical Aha Moments — what loyal customers actually report:
 - ChatGPT: *"I asked for a marketing email; the model returned a usable draft in 10 seconds."*
 - Belong: *"The first rent payment landed on the 1st even though the unit had been vacant for two weeks. The guarantee was real."*
 
-**Position the Aha Moment as far left in the Critical Chain as possible.** In the [Critical Chain](critical-chain.md) of Jobs leading up to the Big Job, every step *before* the Aha Moment is a step where habit, fear, or distraction can pull the customer back to the old Job Graph. The earlier the Aha fires, the smaller the abandonment window. Dropbox famously rebuilt their entire onboarding around delivering the file-sync Aha inside the first session. The more customers who reach the Aha Moment, the higher the conversion to the next Job in the chain, and the larger the cumulative economic effect.
+**Position the Aha Moment as far left in the Critical Chain of Jobs as possible.** In the [Critical Chain of Jobs](critical-chain.md) leading up to the Big Job, every step *before* the Aha Moment is a step where habit, fear, or distraction can pull the customer back to the old Job Graph. The earlier the Aha fires, the smaller the abandonment window. Dropbox famously rebuilt their entire onboarding around delivering the file-sync Aha inside the first session. The more customers who reach the Aha Moment, the higher the conversion to the next Job in the chain, and the larger the cumulative economic effect.
 
 New-category products are a special case. When the customer has no prior prediction to measure against, any positive experience produces a strong Aha — there is no bar to beat. That's a structural advantage and a structural difficulty at once: without Consideration Activators the customer never tries it (Class 2 in [Behaviour Change §10](behaviour-change.md)).
 
@@ -239,7 +239,7 @@ New-category products are a special case. When the customer has no prior predict
 
 Job-Graph optimization has three sub-sources:
 
-- (a) Optimize the graph itself. Kill Jobs in the chain; perform more Jobs with one Solution; expand into Previous or Next Jobs; fix breaks in the Critical Chain; remove cycles. Most of the 100+ catalog operates here.
+- (a) Optimize the graph itself. Kill Jobs in the chain; perform more Jobs with one Solution; expand into Previous or Next Jobs; fix breaks in the Critical Chain of Jobs; remove cycles. Most of the 100+ catalog operates here.
 - (b) Perform the Core Jobs to the segment's success criteria (§9). The most-skipped move. Until criteria are nailed, every mechanic stacked on top is leverage on nothing.
 - (c) Find a categorically different way to perform the Big Job — move up a level (§14.1). The rarest source and the highest ceiling.
 
@@ -285,7 +285,7 @@ Worked example. A financial audit firm operating only at the Core-Job level *"do
 
 ## 17. The unique value usually lives outside your current Core Jobs
 
-**The largest available value is rarely a better version of your current Core Jobs.** It is usually a Job you don't perform yet — a Previous Job, a Next Job, a Critical-Chain fix for your Core Jobs, or one level up.
+**The largest available value is rarely a better version of your current Core Jobs.** It is usually a Job you don't perform yet — a Previous Job, a Next Job, a Critical Chain of Jobs fix for your Core Jobs, or one level up.
 
 - Slack started from *"chat with my team asynchronously."* Each expansion performed a new adjacent Job — *"keep a focused side-conversation"* (threads), *"jump on a quick voice call without scheduling"* (huddles), *"capture team knowledge in one place"* (Canvas), *"work with external partners inside our chat"* (Slack Connect), *"catch up on what I missed in 30 seconds"* (AI summaries).
 - Figma started from *"design an interface together with my team."* Each expansion performed an adjacent Job and defended the Core Job by raising switching cost — *"give and receive feedback in context"* (comments), *"show how the design will behave before any code"* (prototyping), *"hand off to engineering with specs and tokens"* (Dev Mode), *"present design work to a client"* (Slides).
@@ -328,7 +328,7 @@ Two independent traditions converge on this limit. AJTBD arrives at the invisibl
 For deeper unpacks of specific topics referenced above:
 
 - [Job Graph](job-graph.md) — the Job Graph, levels, moves
-- [Critical Chain](critical-chain.md) — critical chains, breaks, cycle removal
+- [Critical Chain of Jobs](critical-chain.md) — critical chains of jobs, breaks, cycle removal
 - [Behaviour Change](behaviour-change.md) — full mechanism of how the Aha Moment and Problem rewire customer behavior
 - [Consideration Activators](consideration-activators.md) — the Consideration Activators construct that makes Class-2 (unfamiliar Core Job) switches possible
 - [Scientific Foundations](scientific-foundations.md) — AJTBD's key hypothesis of value (§2), neural common currency (§3), purchase-decision neuroscience (§4), the AJTBD need taxonomy (§5), status as rank-position motivation (§6), identity-based motivation (§7), Jobs as need-serving goal representations (§8), habit physiology (§15), Immunity to Change (§16), variable-ratio reward loops (§18)

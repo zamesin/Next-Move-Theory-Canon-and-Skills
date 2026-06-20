@@ -64,7 +64,7 @@ Subtraction runs in reverse. Removing a segment, Job, feature, or channel hands 
 
 The largest class of subtraction targets in Next Move Theory includes Tax Jobs, friction, anxiety, chain-breaks, cycles, switching costs, and every negative-emotion line in the cost structure ([Value Creation §8](../Advanced-Jobs-To-Be-Done/value-creation.md)). **For these targets, the customer's brain registers the removal at roughly twice the strength of an equivalent feature addition.** This is a measurable property of how customers evaluate products, not a stylistic preference. The science is in [Scientific Foundations §13](../Advanced-Jobs-To-Be-Done/scientific-foundations.md).
 
-Four AJTBD value-creation mechanics route through this directly: eliminate a negative emotion ([mechanic #17](../Advanced-Jobs-To-Be-Done/value-creation.md)); fix the Problem (#3, especially inside the Critical Chain); kill a Job that was itself a Tax Job (#15; §14.2); and reduce time-gaps that produce anxiety while waiting (#5). Same operation in four shapes.
+Four AJTBD value-creation mechanics route through this directly: eliminate a negative emotion ([mechanic #17](../Advanced-Jobs-To-Be-Done/value-creation.md)); fix the Problem (#3, especially inside the Critical Chain of Jobs); kill a Job that was itself a Tax Job (#15; §14.2); and reduce time-gaps that produce anxiety while waiting (#5). Same operation in four shapes.
 
 Square's tip screen did not *"add delight to leaving a tip"* — it removed the awkwardness of choosing while the barista watches. Insurance does not *"add safety"* — it removes the present-tense anxiety of a future loss. TurboTax did not *"add tax-filing convenience"* — it removed the anxiety of *"am I doing this wrong; will the IRS catch a mistake."* Each brand collected ~2× the value-signal of an additive competitor at the same build cost.
 
@@ -174,7 +174,7 @@ Subtraction shows up across the canon in its pillar-specific forms. The most rel
 - [Value Creation](../Advanced-Jobs-To-Be-Done/value-creation.md) — Kill a Job (§14.2), Move up a level (§14.1), Done-for-you (the *Take the Job off the customer* mechanic), Eliminate a negative emotion (the *Remove negative emotions* mechanic), feature creep as the default failure mode (§1).
 - [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — Move-up-a-level as the most powerful mechanic and the invisible-product limit (§22).
 - [Job Graph](../Advanced-Jobs-To-Be-Done/job-graph.md) — the Job Graph simplifies over time; lower-level Jobs disappear faster than higher-level ones.
-- [Critical Chain](../Advanced-Jobs-To-Be-Done/critical-chain.md) — kill cycles, reduce handoffs, reduce time-gaps as subtraction within the critical chain.
+- [Critical Chain of Jobs](../Advanced-Jobs-To-Be-Done/critical-chain.md) — kill cycles, reduce handoffs, reduce time-gaps as subtraction within the critical chain of jobs.
 - [Riskiest Assumption Test](../Riskiest-Assumption-Test/rat-key-theses.md) — drop-it exercise (§10); the assumption stack is multiplicative (§1); kill zombie products at the portfolio level (§15).
 - [ABCDX Segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md) — fire C/D customers; lead qualification at the funnel mouth.
 - [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md) — focus as the subtraction of all non-target segments.

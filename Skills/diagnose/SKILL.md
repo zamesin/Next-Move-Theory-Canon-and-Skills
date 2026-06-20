@@ -91,13 +91,13 @@ Market with money
 | Low / falling conversion | Wrong Segment+Job, or value doesn't beat alternatives | Segment+Job / Value |
 | High / rising CAC | Wrong segment, or value not noticeable | Segment+Job / Value / Demand |
 | High churn, low satisfaction | Value below the success-criteria threshold; or wrong segment retained | Value / Segment+Job |
-| Low activation | Aha Moment too late or absent on the Critical Chain | Value / activation |
+| Low activation | Aha Moment too late or absent on the Critical Chain of Jobs | Value / activation |
 | Revenue flat despite usage | Monetization / unit economics; value captured by the wrong tier | Unit economics |
 | "Busy but not growing" | No focus (effort on non-binding nodes); or local optimum when a global move is needed | Focus / local-vs-global |
 | "Don't know our best customers" | Segment not defined by Jobs (ABCDX never run) | Segment+Job |
 | "Idea, no customers yet" | Not a constraint problem — discovery | → route to `/market-research` |
 
-**The growth-points lens** (`the-algorithm §6`): the real value usually sits **outside** the current Core Jobs — in the Previous and Next Jobs, the Big Jobs (climb a level), an adjacent segment's Small Jobs, emotional/Orientation Jobs, kill-a-Job moves, and Critical-Chain repairs. Sweep for these, not only for what's broken.
+**The growth-points lens** (`the-algorithm §6`): the real value usually sits **outside** the current Core Jobs — in the Previous and Next Jobs, the Big Jobs (climb a level), an adjacent segment's Small Jobs, emotional/Orientation Jobs, kill-a-Job moves, and Critical Chain of Jobs repairs. Sweep for these, not only for what's broken.
 
 **"Only we can find it" — the methodology's unique lens.** Flag prominently the findings a builder wouldn't see alone: a wrong segmentation cut (demographics mistaken for a segment), value below the success-criteria threshold, a Fake Job (future-intent no one paid for), a Previous/Next-Job growth move, a kill-a-Job opportunity, a symptom whose cause is two nodes upstream. These are the skill's reason to exist.
 
@@ -137,7 +137,7 @@ Walk down the chain, asking the few questions that discriminate at each node; do
 - **Unit economics:** does one customer's margin work (price − cost to serve)?
 - **Demand & acquisition:** reachable at acceptable CAC? do they understand the value (activating knowledge)?
 - **Activation:** do new users reach the Aha Moment — what % and how fast?
-- **Retention / repeat:** churn, repeat rate, where the Critical Chain breaks.
+- **Retention / repeat:** churn, repeat rate, where the Critical Chain of Jobs breaks.
 
 In the same sweep, probe for **growth points**: *"what in the current process do customers hate or always put off?"* (kill a Job) · *"what do they do right before / right after they use you, for the same higher goal?"* (Previous/Next Job) · *"what else do your best customers ask for?"* (adjacent Small Jobs).
 

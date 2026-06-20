@@ -1,18 +1,18 @@
 # Barrier Removal
 
-This is the canon page on Barrier Removal in AJTBD: the work of making a new Job Graph executable in reality for a specific segment. It connects [Value Creation](value-creation.md), [Critical Chain](critical-chain.md), [Consideration Activators](consideration-activators.md), [Communication](communication.md), and [Behaviour Change](behaviour-change.md).
+This is the canon page on Barrier Removal in AJTBD: the work of making a new Job Graph executable in reality for a specific segment. It connects [Value Creation](value-creation.md), [Critical Chain of Jobs](critical-chain.md), [Consideration Activators](consideration-activators.md), [Communication](communication.md), and [Behaviour Change](behaviour-change.md).
 
 ---
 
 ## 1. A Barrier is a fact that makes the new Job Graph non-executable for a segment
 
-**A Barrier is an objective condition that prevents the customer from performing the new Job Graph or Critical Chain.** The condition can live before the chain starts, inside a chain node, at a hand-off, or inside a cycle. It can also live at the point where the chain has to prove the Big Jobs landed. If a missing prerequisite sits before the first visible action, treat it as node zero of the chain.
+**A Barrier is an objective condition that prevents the customer from performing the new Job Graph or Critical Chain of Jobs.** The condition can live before the chain starts, inside a chain node, at a hand-off, or inside a cycle. It can also live at the point where the chain has to prove the Big Jobs landed. If a missing prerequisite sits before the first visible action, treat it as node zero of the chain.
 
 The customer usually knows the Barrier exists. They use it as the reason not to enter the new Job Graph with our Solution. Fears are predictions about a break that may or may not happen. Consideration Activators gaps are things the customer doesn't know to look for. A Barrier is different: it is a fact the customer can name the moment we ask — *"my state isn't supported," "you don't have SSO yet," "you don't deliver to my ZIP code," "the import failed on my data."* The customer hits the fact, recognizes it as a blocker, and routes around our Solution. Most of them do this silently, without ever telling us.
 
 Every Barrier maps to a broken, impossible, too-costly, or too-risky Job. TurboTax without K-1 support blocks *"file my federal and state return correctly"* for LLC owners. DoorDash outside a ZIP code blocks *"receive dinner at my address."* A B2B SaaS without SAML blocks *"pass IT security review."*
 
-**A Barrier is segment-specific.** The same product can be executable for one segment and blocked for another. Stripe's API worked for YC-stage startups with engineers, but local merchants needed no-code checkout. Zoom worked for corporate meetings, but K-12 schools needed FERPA, waiting rooms, locked meetings, and classroom controls. The product did not become bad. The segment's Critical Chain changed.
+**A Barrier is segment-specific.** The same product can be executable for one segment and blocked for another. Stripe's API worked for YC-stage startups with engineers, but local merchants needed no-code checkout. Zoom worked for corporate meetings, but K-12 schools needed FERPA, waiting rooms, locked meetings, and classroom controls. The product did not become bad. The segment's Critical Chain of Jobs changed.
 
 ## 2. Barrier Removal creates the possibility to switch Job Graphs
 
@@ -68,12 +68,12 @@ The research object is the exact Job where the chain became non-executable. Not 
 
 Interview question: *"Was there anything that stopped you from starting to use {studied Solution} to perform these Core Jobs?"* Follow with: *"What exactly stopped you? At which step? What had to be true for you to continue? Did you solve it another way?"*
 
-**The output is a Barrier backlog.** Each item names the segment, Big Jobs, Core Jobs, Critical Chain node, real blocker, evidence that it blocks execution, and mechanic selected to remove it. Fear-reduction copy is downstream of this backlog, not a substitute for it.
+**The output is a Barrier backlog.** Each item names the segment, Big Jobs, Core Jobs, Critical Chain of Jobs node, real blocker, evidence that it blocks execution, and mechanic selected to remove it. Fear-reduction copy is downstream of this backlog, not a substitute for it.
 
 ## Cross-references
 
 - [Value Creation](value-creation.md) — value as energy efficiency (outcome over cost), value mechanics, the *Aha Moment* and *Problem* as drivers of behaviour change.
-- [Critical Chain](critical-chain.md) — chain-breaks, Tax Jobs, preemptive avoidance, and mechanics for fixing broken chains.
+- [Critical Chain of Jobs](critical-chain.md) — chain-breaks, Tax Jobs, preemptive avoidance, and mechanics for fixing broken chains.
 - [Consideration Activators](consideration-activators.md) — Consideration Activators components and why real blockers are not Consideration Activators.
 - [Communication](communication.md) — how Barrier reality and fear-reduction claims show up in messages, landing pages, and sales.
 - [Behaviour Change](behaviour-change.md) — forces that drive and block behavior change.

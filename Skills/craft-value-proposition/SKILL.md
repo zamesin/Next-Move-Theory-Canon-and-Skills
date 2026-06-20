@@ -1,6 +1,6 @@
 ---
 name: craft-value-proposition
-description: Generate the strongest possible Value Proposition for a chosen segment using Ivan Zamesin's AJTBD / Next Move Theory methodology (distinct from generic Christensen JTBD). Input — a /market-research result OR a manual segment+Jobs description. The skill extracts the segment's dominant success criteria, builds the Job Graph + Critical Chain substrate, generates value hypotheses by walking the value-creation mechanics catalog over that graph, filters them on feasibility, cost-to-build, unit economics, and competitiveness, ranks by RICE, and surfaces a primary + supplementary value proposition with top-3 RAT cards and a PRD-ready implementation spec that feeds /product-requirements. Use when the user wants a value proposition, differentiation, or asks "how do we win this segment". Two modes — Quick (default, no internet) and Deep (subagents + web competitor mining). Plain language; defaults to English.
+description: Generate the strongest possible Value Proposition for a chosen segment using Ivan Zamesin's AJTBD / Next Move Theory methodology (distinct from generic Christensen JTBD). Input — a /market-research result OR a manual segment+Jobs description. The skill extracts the segment's dominant success criteria, builds the Job Graph + Critical Chain of Jobs substrate, generates value hypotheses by walking the value-creation mechanics catalog over that graph, filters them on feasibility, cost-to-build, unit economics, and competitiveness, ranks by RICE, and surfaces a primary + supplementary value proposition with top-3 RAT cards and a PRD-ready implementation spec that feeds /product-requirements. Use when the user wants a value proposition, differentiation, or asks "how do we win this segment". Two modes — Quick (default, no internet) and Deep (subagents + web competitor mining). Plain language; defaults to English.
 user-invocable: true
 ---
 
@@ -47,7 +47,7 @@ The output is a single file in **three reading depths, linked top-to-bottom** (s
 - **Mechanics operate over a Job Graph**, not against a Core Job in isolation (`value-creation.md §11`, `job-graph.md §12`).
 - **Segmentation root = similar Core Jobs + similar success criteria, in a similar priority order.** The *priority order over criteria* is what makes a segment a segment (`segmentation.md §2`, `value-creation.md §10`). Big Job is motivation context, **never** the primary segmentation criterion. Demographics are second-order correlates.
 - **Habit cannot be fought head-on** — reuse it or sidestep it via an Aha Moment + loaded Consideration Activators (`behaviour-change.md §9–§11`). Never "beat the habit."
-- **Aha Moment is a specific positive-prediction-error event** — NOT signup, login, or first feature use. Place it as far left in the Critical Chain as possible.
+- **Aha Moment is a specific positive-prediction-error event** — NOT signup, login, or first feature use. Place it as far left in the Critical Chain of Jobs as possible.
 - **All switches go through the Big Job** — the value prop must be communicable through a Big-Job criterion (`behaviour-change.md §4`).
 - **Anti-segment must be nameable** — if everyone wants this, the value prop is too universal.
 - **Unit economics is a filter** — value that does not convert to margin (LTV > CAC, Job budget covers cost-to-serve) is not a product (`nmt-key-theses.md §4`).
@@ -61,12 +61,12 @@ Per project `CLAUDE.md`: every named external source in any output is a clickabl
 
 **The reader of this output is a product person, not a methodologist.** Write the user-facing document in the plain, everyday language the target segments already use; when a methodology term genuinely adds precision, **lead with the plain meaning and put the term in parentheses the first time it appears** — never lead a sentence, bullet, or heading with a methodology label.
 
-- ❌ *"Red Queen value-gap compression…"* · *"the Critical Chain breaks at M4"* · *"load the Consideration Activators."*
+- ❌ *"Red Queen value-gap compression…"* · *"the Critical Chain of Jobs breaks at M4"* · *"load the Consideration Activators."*
 - ✅ *"The free do-it-yourself option caught up, so your edge shrank even though you didn't get worse (in the methodology, a* Red Queen *effect)."*
 
 **Who reads it** — the target segments (the essentials are inline here, so the skill stays self-contained and public-safe): US founders, indie hackers / vibe-coders, growth-stage PMs, senior PMs / VPs, and product marketers. Their vocabulary: *PMF, runway, pivot, a niche that pays, ship it, first paying customers, a roadmap I can defend, a metric that moves (not theater), positioning, conversion.* **Avoid the words they reject:** *scale fast, 10x, hockey stick, proven framework, growth / funnel hacks, 5 hacks* — and methodology jargon as the lead.
 
-**Plain ↔ methodology** (say the left; add the right in parentheses only when it earns its place): the result they're after *(the Job / Big Job)* · the main thing the product does for them *(the Core Job)* · the step-by-step path the customer walks *(the Critical Chain)* · the exact step where they get stuck *(a Critical Chain break)* · the moment it clicks / feels worth it *(the Aha Moment)* · getting the result for less time, effort, money, or stress than expected *(value)* · a pleasant surprise / a letdown vs. what they expected *(Positive / Negative Prediction Error — never PPE/NPE)* · the few things they must learn or believe before switching *(Consideration Activators)* · a real blocker vs. just a worry *(a Barrier vs. a fear)* · the assumption most likely to kill this, tested cheap first *(the riskiest assumption / RAT)*.
+**Plain ↔ methodology** (say the left; add the right in parentheses only when it earns its place): the result they're after *(the Job / Big Job)* · the main thing the product does for them *(the Core Job)* · the step-by-step path the customer walks *(the Critical Chain of Jobs)* · the exact step where they get stuck *(a Critical Chain of Jobs break)* · the moment it clicks / feels worth it *(the Aha Moment)* · getting the result for less time, effort, money, or stress than expected *(value)* · a pleasant surprise / a letdown vs. what they expected *(Positive / Negative Prediction Error — never PPE/NPE)* · the few things they must learn or believe before switching *(Consideration Activators)* · a real blocker vs. just a worry *(a Barrier vs. a fear)* · the assumption most likely to kill this, tested cheap first *(the riskiest assumption / RAT)*.
 
 **Precision still holds in the methodology layer.** Job-grammar discipline (Jobs as *"I want to + verb,"* levels named, terms capitalized) governs the internal-reasoning held in context and the explicit **§12 Methodology appendix (NMT)** inside Layer 3, where full methodology language is expected. The *lead the reader sees* in Layers 1–2 (and in Layer-3 prose) is plain; the *parenthetical and the appendix* carry the precise terms.
 
@@ -115,7 +115,7 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 |---|---|---|---|
 | `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md` | confirming the segment root at intake / S1 | segment root, sub-segment vs new segment | ~5k |
 | `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md` | building the success-criteria list (S1) | the 8 Job elements, success criteria (direction + level), 3 fidelity levels | ~4k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` | building the graph substrate (S2 — Aha-placement stage) | Critical Chain, breaks/cycles/hand-offs, Aha placement, Previous/Next Job | ~5k |
+| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` | building the graph substrate (S2 — Aha-placement stage) | Critical Chain of Jobs, breaks/cycles/hand-offs, Aha placement, Previous/Next Job | ~5k |
 | `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` | reaching the forces / Aha stage (S3, §7 proof, §12 forces) | forces of behaviour change, Consideration Activators, Class 1/2, habit reuse | ~6k |
 | `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md` | reaching the unit-economics filter (S4) | §4 chain-to-profit (LTV > CAC, payback, target margin per unit) + §5 Consequence 2 (segment budget covers cost-to-serve) | ~5.4k |
 | `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` | reaching the RAT-cards stage (S5) | the RAT chain, the RAT formula, custom risks | ~6.5k |
@@ -137,7 +137,7 @@ S0  Intake & Route ───(human: input path, mode, target segment)
      │
 S1  Dominant success criteria + anchors ──────────► GATE-1 ─┐
      │                                                        │ loop ≤2 rounds,
-S2  Job-Graph substrate (Micro + Critical Chain) ─► GATE-2 ─┤ then escalate to human
+S2  Job-Graph substrate (Micro + Critical Chain of Jobs) ─► GATE-2 ─┤ then escalate to human
      │
 S3  Value-hypothesis GENERATION (divergence) ─────► GATE-3 ─┤  ⇇ Deep: parallel mechanic-family
      │   "strongest / fastest / cheapest way"                │      agents + reviews-mining
@@ -294,9 +294,9 @@ Procedure:
 - ▢ Lead mechanics are drawn from the §11 map for this priority order.
 - **Hard checks:** every Core Job is a single `I want to + infinitive`; every external number carries a clickable link.
 
-## S2 — Job-Graph substrate (Micro + Critical Chain)  → GATE-2
+## S2 — Job-Graph substrate (Micro + Critical Chain of Jobs)  → GATE-2
 
-**Objective.** Build the surface the mechanics operate over: the Job Graph **one level below** the top 1–2 Core Jobs (the Micro Jobs the person performs in order to perform the Core Job), *and* the Critical Chain (the graph projected onto a time axis) with break-points marked. Mechanics apply to a graph, not a Job in isolation.
+**Objective.** Build the surface the mechanics operate over: the Job Graph **one level below** the top 1–2 Core Jobs (the Micro Jobs the person performs in order to perform the Core Job), *and* the Critical Chain of Jobs (the graph projected onto a time axis) with break-points marked. Mechanics apply to a graph, not a Job in isolation.
 
 For each of the top 1–2 Core Jobs (highest importance × frequency), generate the lower-level graph using this prompt:
 
@@ -316,15 +316,15 @@ For every Job one level below the Core Job, output:
 - Problem(s) [if any] + strength on a 1–10 scale
 
 Output 5–10 lower-level Jobs as a sequence (or parallel branches if the Core Job
-has parallel sub-flows). Then project them onto the Critical Chain and mark:
+has parallel sub-flows). Then project them onto the Critical Chain of Jobs and mark:
 breaks · cycles · role hand-offs · time-gaps · Tax Jobs.
 ```
 
-**Output (held in context):** 5–10 Micro Jobs per Core Job + the Critical Chain with break-points flagged. This is the substrate S3 operates on.
+**Output (held in context):** 5–10 Micro Jobs per Core Job + the Critical Chain of Jobs with break-points flagged. This is the substrate S3 operates on.
 
 **GATE-2 acceptance criteria:**
 - ▢ Nodes are real Jobs (verb form), anchored to past performance — not future-tense fantasy (no Fake Jobs).
-- ▢ The Critical Chain marks at least the break / cycle / hand-off points.
+- ▢ The Critical Chain of Jobs marks at least the break / cycle / hand-off points.
 - ▢ Levels are named and product-relative (Rule 20).
 - ▢ "For what? / in order to do what?" resolves at every node (`job-graph.md §18`).
 
@@ -564,10 +564,10 @@ The current §0–§12 substance, kept whole, sitting below the plain layers. Ad
 **The wedge:** {the underserved criteria intersection}.
 
 ## 7. Proof & the Aha Moment
-**Aha Moment:** {the specific positive-prediction-error event — where it fires on the Critical Chain, how far left it is shifted}. NOT signup/login.
+**Aha Moment:** {the specific positive-prediction-error event — where it fires on the Critical Chain of Jobs, how far left it is shifted}. NOT signup/login.
 **Proof / how we make it true:** {evidence, comparable cases with links, or the cheapest probe that will prove it}.
 
-> <sub>**▸ methodology trace.** Mechanics operate over the Job Graph, not a Core Job in isolation (`value-creation.md §11`); strongest mechanics = move up a level / kill a Job (`value-creation.md §14`); Aha = a positive-prediction-error event placed as far left on the Critical Chain as possible (`value-creation.md §12`, `critical-chain.md`); all switches go through the Big Job (`behaviour-change.md §4`).</sub>
+> <sub>**▸ methodology trace.** Mechanics operate over the Job Graph, not a Core Job in isolation (`value-creation.md §11`); strongest mechanics = move up a level / kill a Job (`value-creation.md §14`); Aha = a positive-prediction-error event placed as far left on the Critical Chain of Jobs as possible (`value-creation.md §12`, `critical-chain.md`); all switches go through the Big Job (`behaviour-change.md §4`).</sub>
 
 ---
 *Above = the proposition. Below = the bet and the build.*
@@ -594,7 +594,7 @@ The current §0–§12 substance, kept whole, sitting below the plain layers. Ad
   | Core Job / criterion | Mechanic | What we ship | Aha-Moment link |
   |---|---|---|---|
   | {…} | {#mechanic} | {feature / service} | {step where value beats prediction} |
-- **Critical Chain & Aha placement:** {the chain the customer walks; where the Aha fires; what to remove to shift it left}.
+- **Critical Chain of Jobs & Aha placement:** {the chain the customer walks; where the Aha fires; what to remove to shift it left}.
 - **Cost-to-build & cheapest probe:** {build path + the probe that validates before building}.
 - **Unit-economics direction:** {Job budget vs cost-to-serve; pricing hypothesis; LTV>CAC direction}.
 - **Anti-segment / out of scope:** {who this is NOT for — 2–3 groups; non-focal Jobs deferred}.
@@ -682,7 +682,7 @@ Wave 5 (sequential):            [SYN] synthesis → [GATE-6 panel] → (human: s
 
 - **[R] reviews-mining.** Given the segment + alternatives, fetch reviews from G2 / Reddit / Product Hunt / Trustpilot / Capterra. Return **raw signals only** (do NOT synthesize hypotheses): the specific Problems-with-current, which dominant criteria each competitor covers poorly, and 5–10 quotable quotes per competitor **with source URLs**. ≤12 fetches / ~10 min. **Evidence floor:** cover ≥4 competitors with real review sources, or report why fewer were possible (blocked / none exist) — two queries and stop is a failure. If a source blocks the built-in fetch (G2, Capterra), flag it and use a web-research MCP (Firecrawl / Exa) if connected.
 - **[S1] dominant-criteria.** Read the eager core + `segmentation.md` + `job-structure.md`. Given the normalized input, return the ranked dominant criteria + lead mechanics + Big-Job ladder per S1. No web.
-- **[S2] job-graph.** Read `critical-chain.md` (+ `job-graph.md` only if the substrate needs care). Given the input + the S1 result, return the Job Graph + Critical Chain per S2. No web.
+- **[S2] job-graph.** Read `critical-chain.md` (+ `job-graph.md` only if the substrate needs care). Given the input + the S1 result, return the Job Graph + Critical Chain of Jobs per S2. No web.
 - **[G1..Gk] mechanic-family generators (sectioning).** Read the eager core + `behaviour-change.md`. Each agent owns one mechanic family (e.g. *subtract/kill/move-up*; *take-off/done-for-you/chain-repair*; *emotion/expectation/need*; *price/cost/cognitive*; *Previous/Next/link-to-Big-Job*). Given the Job Graph + dominant criteria + the reviews signal, return the strongest / fastest / cheapest hypotheses in their family in canonical form; the orchestrator merges them. Effort: 3–6 hypotheses per family.
 - **[F] feasibility · cost · competitiveness.** Read `nmt-key-theses.md`. Given the merged hypotheses + the reviews signal, return the web-grounded criteria×competitor matrix, the feasibility + cost-to-build + unit-econ read per hypothesis, and the RICE ranking with bonuses + top 2. ≤6 fetches.
 - **[C] critic gates.** Given a stage's returned output + its acceptance criteria + the canon anchors for that stage, run the adversarial binary critic per GATE and return the verdict + `fix_instructions` for any failures (≤2 rounds, then escalate to the user).
@@ -726,7 +726,7 @@ Produce a `⚠️ Methodology violation` warning (not silent output) for any of:
 
 - [ ] GATE-1…GATE-5 ran (verdicts kept in-context); GATE-6 panel passed.
 - [ ] Dominant success criteria extracted and ranked (S1).
-- [ ] Job-Graph + Critical Chain substrate exists with break-points marked (S2).
+- [ ] Job-Graph + Critical Chain of Jobs substrate exists with break-points marked (S2).
 - [ ] 12–20 raw hypotheses generated; mechanics walked over the graph (S3).
 - [ ] Feasibility + cost-to-build + unit-econ + competitiveness matrix done; RICE-ranked (S4).
 - [ ] Primary + supplementary surfaced and distinct; user picked the primary.

@@ -1,6 +1,6 @@
 # Critical Chain of Jobs
 
-This file is the canon page on Critical Chains in AJTBD. A Critical Chain is the sequence of lower-level Jobs that must all be performed for a higher-level Job to land. It expands [AJTBD key theses §10](ajtbd-key-theses.md) (Critical Chain as operational delivery) and [§11](ajtbd-key-theses.md) (Critical-Chain scaling).
+This file is the canon page on Critical Chains of Jobs in AJTBD. A Critical Chain of Jobs is the sequence of lower-level Jobs that must all be performed for a higher-level Job to land. It expands [AJTBD key theses §10](ajtbd-key-theses.md) (Critical Chain as operational delivery) and [§11](ajtbd-key-theses.md) (Critical-Chain scaling).
 
 The Critical Chain is the Job Graph projected onto a time axis at a chosen Solution ([Job Graph](job-graph.md)). Strategic moves operate on the Job Graph. Operational moves operate here, on the chain: value delivery, communication, activation, retention, churn diagnosis. The term is borrowed from Goldratt's *Critical Chain* (see [Scientific Foundations §20](scientific-foundations.md)). In project management the chain is tasks. In AJTBD it is Jobs, and three properties carry across: the throttle by the slowest link, the catastrophic effect of a single break, and the dominance of cycles.
 
@@ -8,7 +8,7 @@ The Critical Chain is the Job Graph projected onto a time axis at a chosen Solut
 
 ## 1. A Critical Chain is the sequence of necessary Jobs for a higher-level Job to land
 
-**A Critical Chain is the sequence of necessary lower-level Jobs that must all complete for the level-above Job to land.** *Necessary*, not *typical* — only Jobs whose failure breaks the result. The structure recurs at every level of the Job Graph.
+**A Critical Chain of Jobs is the sequence of necessary lower-level Jobs that must all complete for the level-above Job to land.** *Necessary*, not *typical* — only Jobs whose failure breaks the result. The structure recurs at every level of the Job Graph.
 
 Quick illustrations, each at a single zoom level:
 

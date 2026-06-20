@@ -22,7 +22,7 @@ Deeper: [Value Creation §14.2](value-creation.md); [Subtraction](../Next-Move-T
 
 Examples: Just Eat's London experiment found dark-kitchen density below 25-min delivery produced a step-change in retention; DoorDash reduced kitchen-prep latency via restaurant tablets and unlocked courier capacity; Stripe shipped instant payouts where banks had taken 2–3 days; ChatGPT collapsed *"find template → format headings → draft → restructure"* from hours to seconds; modern checkouts collapsed *"enter address + card + verification"* into a single tap (Apple Pay, Shop Pay).
 
-Deeper: [Critical Chain §9](critical-chain.md).
+Deeper: [Critical Chain of Jobs §9](critical-chain.md).
 
 ---
 
@@ -80,13 +80,13 @@ Deeper: [Scientific Foundations §13](scientific-foundations.md) (loss aversion)
 
 ---
 
-### Reduce role-to-role hand-offs in Critical Chains
+### Reduce role-to-role hand-offs in Critical Chains of Jobs
 
-**Fewer roles in the chain means fewer break-boundaries and higher end-to-end completion probability.** This is distinct from *Fix Critical Chain breaks between different people*, which repairs at existing boundaries. This mechanic *removes* the boundaries by collapsing roles.
+**Fewer roles in the chain means fewer break-boundaries and higher end-to-end completion probability.** This is distinct from *Fix Critical Chain of Jobs breaks between different people*, which repairs at existing boundaries. This mechanic *removes* the boundaries by collapsing roles.
 
 Examples: Tesla collapsed dealer + finance + service into one company; in-house procurement at large enterprises collapses *vendor → distributor → procurement → end-user*; Salesforce's full-suite play absorbs Marketo + Service Cloud + Tableau roles; Apple's vertical integration (chip → device → OS → store → service) collapses every traditional consumer-electronics hand-off.
 
-Deeper: [Critical Chain §11](critical-chain.md).
+Deeper: [Critical Chain of Jobs §11](critical-chain.md).
 
 ---
 
@@ -128,21 +128,21 @@ Examples: Stripe in 2010 — *"accept online payments without spending two weeks
 
 ### Fix the Problems
 
-Perform a Job without the Problem the customer has been hitting in their current Solution. **This is especially high-leverage when the Problem sits inside the Critical Chain, because one broken Job halts the entire Big Job.** Reconstruct the chain `Job → Solution → Problem` before fixing. The named Problem is rarely the root.
+Perform a Job without the Problem the customer has been hitting in their current Solution. **This is especially high-leverage when the Problem sits inside the Critical Chain of Jobs, because one broken Job halts the entire Big Job.** Reconstruct the chain `Job → Solution → Problem` before fixing. The named Problem is rarely the root.
 
 Examples: Stripe Checkout fixed *"I don't know what an API key is"* for local merchants who had been blocked at integration; Plaid fixed *"upload bank statements as PDFs"* for digital mortgage applications; TurboTax fixed *"will the IRS catch a mistake"* by adding accuracy guarantees; modern telehealth fixed *"the video call won't connect after I've filled out a 30-minute intake form"* with end-to-end session reliability.
 
-Deeper: [Critical Chain §2, §11](critical-chain.md).
+Deeper: [Critical Chain of Jobs §2, §11](critical-chain.md).
 
 ---
 
-### Fix unperformed Jobs in the Critical Chain (including Jobs outside our Core Jobs)
+### Fix unperformed Jobs in the Critical Chain of Jobs (including Jobs outside our Core Jobs)
 
 **Find Jobs that break the chain and fix them, even Jobs outside your core competence.** That can mean owning a Job adjacent to your category. This is common during scaling into a new sub-segment, when the chain breaks at a Job your product never touched in the launch segment. Repair the Job onto your product, or partner with a vendor who reliably performs it.
 
 Examples: Stripe Checkout absorbed *"explain to a non-technical merchant how to integrate payments"* — a Job Stripe never had in their YC-stage launch market; Notion Enterprise absorbed *"pass IT security review with SOC 2, SAML, SCIM, audit log"* — Jobs Notion never had at the individual / small-team level; Zoom for Education absorbed *"FERPA-compliant waiting rooms, breakout rooms, locked meetings"* during 2020 K-12 expansion.
 
-Deeper: [Critical Chain §6, §11](critical-chain.md).
+Deeper: [Critical Chain of Jobs §6, §11](critical-chain.md).
 
 ---
 
@@ -154,13 +154,13 @@ Examples: robot vacuum vs manual vacuuming; Wealthfront vs DIY rebalancing; Belo
 
 ---
 
-### Perform the Next Job in the Critical Chain (cross-sell into adjacency)
+### Perform the Next Job in the Critical Chain of Jobs (cross-sell into adjacency)
 
 **Take over the next Job the customer performs after your current Core Job lands.** Each absorbed Next Job is retention plus AOV growth. The customer doesn't have to leave to perform the Job, and doesn't return to a competitor's product for that adjacency.
 
 Examples: Typeform's natural next Job after *"build the form, collect responses"* is *"analyze and respond to responses"* — Typeform's Insights and integrations expand into this; Figma's natural next Job after design is implementation handoff — Dev Mode performs that Job; after-sale auto-service contracts on car sales; tax-advisor add-on after TurboTax filing; Carfax adding mortgage referral after vehicle-history report; a kitchen-and-bath remodel firm cross-selling appliances after the renovation.
 
-Deeper: [Critical Chain §9](critical-chain.md).
+Deeper: [Critical Chain of Jobs §9](critical-chain.md).
 
 ---
 
@@ -174,7 +174,7 @@ Deeper: [Job Types and Properties](job-types-and-properties.md); [Consideration 
 
 ---
 
-### Break value into slices and deliver parts of it earlier in the Critical Chain
+### Break value into slices and deliver parts of it earlier in the Critical Chain of Jobs
 
 **Spread the cost of getting to value across multiple steps, each delivering a slice of value.** The mechanic is partial-value-delivery before commitment: lead magnet, free trial, MVP-with-basic-features, intro consultation. The customer pays less upfront, gets enough value to keep moving forward, and completes the full chain over multiple sessions. The earlier the first slice lands, the smaller the abandonment window before the first Aha Moment.
 
@@ -220,23 +220,23 @@ Examples: Adobe Creative Cloud (Photoshop + Illustrator + InDesign + Premiere + 
 
 ---
 
-### Kill cycles in the Critical Chain — including across different people
+### Kill cycles in the Critical Chain of Jobs — including across different people
 
 **Eliminate customer-visible return-for-rework loops in the chain.** Cycles are the dominant break source. Each return iteration is felt at ~2× the weight of forward progress, and three cycle iterations wipe out six forward Jobs' worth of perceived value. The default fix: front-load requirements so the customer provides everything upfront and the chain runs without returns.
 
 Examples: Plaid's instant account-linking killed the document-cycle in digital mortgage applications (lender requests doc A → submit → asks for B → submit → asks for C that could have been asked at A); modern PSA systems front-load tax requirements; SOC-2 audit firms that ask for the full evidence list upfront vs. iteratively; TurboTax's *"let's collect all your forms at once"* import flow replaced the cycle where the user had to re-enter when something was missing.
 
-Deeper: [Critical Chain §8](critical-chain.md).
+Deeper: [Critical Chain of Jobs §8](critical-chain.md).
 
 ---
 
-### Fix Critical Chain breaks between different people
+### Fix Critical Chain of Jobs breaks between different people
 
 **Repair role-to-role hand-offs where ownership ambiguity, latency, and information loss cluster.** The majority of multi-role chain-breaks happen at role boundaries, not inside a single role's lane. Diagnostic order: map the chain, fix hand-offs first, kill cycles second, optimize single-role lanes last.
 
 Examples: Tesla owns sales + service + financing — collapses the typical car-buy hand-off sequence (dealer → finance → service department) into one company. Stripe owns merchant-onboarding + payments + reconciliation + dispute-handling. Warby Parker owns prescription + frames + retail. Zappos owns service + fulfillment. In healthcare, integrated systems (Kaiser Permanente, Mayo) collapse the GP → lab → specialist → primary-care hand-off chain that breaks routinely in fragmented systems.
 
-Deeper: [Critical Chain §7, §11](critical-chain.md).
+Deeper: [Critical Chain of Jobs §7, §11](critical-chain.md).
 
 ---
 

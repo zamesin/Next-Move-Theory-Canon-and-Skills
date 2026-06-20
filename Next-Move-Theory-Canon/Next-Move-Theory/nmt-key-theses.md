@@ -35,7 +35,7 @@ Core pillars:
 
 Core methodology — constraint management:
 
-- Theory of Constraints (Goldratt) — the system view that throughput is governed by the slowest link, that the bottleneck moves as the system changes, and that the Critical Chain is where breaks and cycles cluster. The Critical Chain is the sequence of Jobs that must complete in order for a higher-level Job to land. AJTBD's Critical Chain of Jobs is borrowed and adapted from Goldratt's *Critical Chain*. The chain-repair mechanics in [Critical Chain](../Advanced-Jobs-To-Be-Done/critical-chain.md) operationalise the principle.
+- Theory of Constraints (Goldratt) — the system view that throughput is governed by the slowest link, that the bottleneck moves as the system changes, and that the Critical Chain is where breaks and cycles cluster. AJTBD's Critical Chain of Jobs is borrowed and adapted from Goldratt's *Critical Chain*. The Critical Chain of Jobs is the sequence of Jobs that must complete in order for a higher-level Job to land. The chain-repair mechanics in [Critical Chain of Jobs](../Advanced-Jobs-To-Be-Done/critical-chain.md) operationalise the principle.
 
 Supporting methodology:
 
@@ -146,7 +146,7 @@ Two consequences fall out of this:
 
 **Value is the substrate on which every other operation in the methodology stands.** The Chosen Company Strategy, segmentation, communication, Unit Economics, focus, subtraction, RAT, ABCDX, retention, and acquisition are operational layers on top of value. If value is not created, the methodology has nothing to talk about. If value does not reach the customer, alignment and focus have no result to align around.
 
-Value lives across the canon in different operational forms: full theory and 20 base mechanics in [Value Creation](../Advanced-Jobs-To-Be-Done/value-creation.md); the canon's key hypothesis of value (energy efficiency in performing a Job — outcome over cost) in [Scientific Foundations §2](../Advanced-Jobs-To-Be-Done/scientific-foundations.md); allostasis and prediction-error substrate in [Scientific Foundations §1, §11](../Advanced-Jobs-To-Be-Done/scientific-foundations.md); communication as conveyance of value already delivered in [Communication](../Advanced-Jobs-To-Be-Done/communication.md); criteria differences across segments in [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md); the chain-walk where value actually delivers (or fails) in [Critical Chain](../Advanced-Jobs-To-Be-Done/critical-chain.md); the Consideration Activators that load the awareness of value in [Consideration Activators](../Advanced-Jobs-To-Be-Done/consideration-activators.md); subtraction as the asymmetric value-creator in [Subtraction](subtraction.md); the validation of value before scaling in [Riskiest Assumption Test](../Riskiest-Assumption-Test/rat-key-theses.md); the customers worth keeping in [ABCDX Segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md).
+Value lives across the canon in different operational forms: full theory and 20 base mechanics in [Value Creation](../Advanced-Jobs-To-Be-Done/value-creation.md); the canon's key hypothesis of value (energy efficiency in performing a Job — outcome over cost) in [Scientific Foundations §2](../Advanced-Jobs-To-Be-Done/scientific-foundations.md); allostasis and prediction-error substrate in [Scientific Foundations §1, §11](../Advanced-Jobs-To-Be-Done/scientific-foundations.md); communication as conveyance of value already delivered in [Communication](../Advanced-Jobs-To-Be-Done/communication.md); criteria differences across segments in [Segmentation](../Advanced-Jobs-To-Be-Done/segmentation.md); the chain-walk where value actually delivers (or fails) in [Critical Chain of Jobs](../Advanced-Jobs-To-Be-Done/critical-chain.md); the Consideration Activators that load the awareness of value in [Consideration Activators](../Advanced-Jobs-To-Be-Done/consideration-activators.md); subtraction as the asymmetric value-creator in [Subtraction](subtraction.md); the validation of value before scaling in [Riskiest Assumption Test](../Riskiest-Assumption-Test/rat-key-theses.md); the customers worth keeping in [ABCDX Segmentation](../ABCDX-Segmentation/abcdx-segmentation-key-theses.md).
 
 Examples: ChatGPT delivered a massive Positive Prediction Error on *"generate a usable first draft in seconds"*; Apple Pay killed *"reach for the wallet"*; Stripe killed *"a two-week PayPal integration"*; Wealthfront took *"manage my retirement turnkey"* off the customer entirely.
 
@@ -229,7 +229,7 @@ A company that answers *"yes"* to all of these compounds. A company that can't b
 
 ## Cross-references
 
-- [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — substrate root: Job, Job Graph, Map of Segments, Critical Chain.
+- [AJTBD key theses](../Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md) — substrate root: Job, Job Graph, Map of Segments, Critical Chain of Jobs.
 - [Subtraction](subtraction.md) — meta-operator detail across all four pillars.
 - [Focus & Attention Management](focus-as-company-attention-management.md) — focus operation detail; five scopes; two-track investment.
 - [Local vs Global Optimum](local-vs-global-optimum.md) — two parallel investment tracks.

@@ -19,12 +19,12 @@ Building from scratch is the deepest form of respect for the original JTBD work 
 AJTBD operates on three units of analysis. Every concept, mechanic, and decision in the methodology is built on top of these three.
 
 - **A Job is the specification of a desired transition.** It names the person's situation (*State A*), the transition process they are trying to perform, and the *expected outcome* they want to reach (*State B*), in order to perform a higher-level Job that ultimately satisfies a need. The atomic unit (see §2). In customer analysis, a Job is paired with the chosen Solution — the Solution the customer hired to perform it. The Job carries the Consideration Set in State A: the customer's existing knowledge of how to perform the higher-level Jobs efficiently, their fear reductions across alternatives, and their fears of specific competitors. The Consideration Set is not a separate unit of analysis — it lives inside the Job. Loading Consideration Activators is the operation of writing the five pieces of information into the Consideration Set so the customer moves our way (see §18).
-- **The Job Graph of the segment is the hierarchy of all Jobs that exist for the people in the segment around the Core Jobs your product touches.** That includes higher-order, lower-order, same-level, unconscious, and the Jobs people don't say out loud. It is the unit you use to create value and design strategic moves — which Jobs of which segments to compete for, where to climb, where to expand (see §9). The Critical Chain is the Job Graph projected onto a time axis, where the operational detail of how the customer performs the chain lives: predictions, prediction errors, interruptions, drop-offs, micro-emotions, Solution switches. It is the operational unit for value delivery, communication, activation, retention, and churn diagnosis (see §10 and [Critical Chain](critical-chain.md)).
+- **The Job Graph of the segment is the hierarchy of all Jobs that exist for the people in the segment around the Core Jobs your product touches.** That includes higher-order, lower-order, same-level, unconscious, and the Jobs people don't say out loud. It is the unit you use to create value and design strategic moves — which Jobs of which segments to compete for, where to climb, where to expand (see §9). The Critical Chain of Jobs is the Job Graph projected onto a time axis, where the operational detail of how the customer performs the chain lives: predictions, prediction errors, interruptions, drop-offs, micro-emotions, Solution switches. It is the operational unit for value delivery, communication, activation, retention, and churn diagnosis (see §10 and [Critical Chain of Jobs](critical-chain.md)).
 - **The Map of Segments is the set of distinct Job-based segments in the market around the Core Jobs we want to compete for, with their economic attractiveness attached** — size, Jobs budget, frequency, reachability, ability to create value, competition. It is the unit you use to choose where to compete (see §14 and §9).
 
 ## 2. The Job is the root cause of everything in the product
 
-- A Job is the specification of a desired transition. It names the person's situation (*State A*), the transition process, and the *expected outcome* (*State B*), in order to perform a higher-level Job that ultimately satisfies a need. *State A* is the person's current situation — their context, past experience, the Consideration Set they carry (their knowledge of the most efficient way to perform the higher-level Jobs, fear reductions across alternatives, fears of specific competitors), the negative emotions they feel while the result is not yet reached, and the triggering event that kicks off action. The *transition process* is the action path the person expects to take from State A to State B — with or without a Solution, through lower-level Jobs (a Critical Chain — see §10), with costs, predictions, prediction errors, interruptions, and learning. The *expected outcome* (*State B*) is the result with its success criteria and the positive emotions they expect once it is reached. (The eight elements are unpacked in §3; the Critical Chain in §10. Loading Consideration Activators writes the five pieces of information into the Consideration Set — see §18.)
+- A Job is the specification of a desired transition. It names the person's situation (*State A*), the transition process, and the *expected outcome* (*State B*), in order to perform a higher-level Job that ultimately satisfies a need. *State A* is the person's current situation — their context, past experience, the Consideration Set they carry (their knowledge of the most efficient way to perform the higher-level Jobs, fear reductions across alternatives, fears of specific competitors), the negative emotions they feel while the result is not yet reached, and the triggering event that kicks off action. The *transition process* is the action path the person expects to take from State A to State B — with or without a Solution, through lower-level Jobs (a Critical Chain of Jobs — see §10), with costs, predictions, prediction errors, interruptions, and learning. The *expected outcome* (*State B*) is the result with its success criteria and the positive emotions they expect once it is reached. (The eight elements are unpacked in §3; the Critical Chain of Jobs in §10. Loading Consideration Activators writes the five pieces of information into the Consideration Set — see §18.)
 - A Solution is what the customer uses to perform a Job. Underneath, it has a dual position: a real thing in the world (*Belong, TurboTax, ChatGPT, hire a contractor, do my taxes by hand*) AND a label for the specific Job Graph the customer walks under it — the set of Core Jobs and Micro Jobs that Solution installs (see [Behaviour Change §2](behaviour-change.md)). Switching Solutions means switching the Job Graphs below.
 - **A Job is the root cause of every human action.** Everything a person does — every action, movement, purchase, choice of solution, moment of attention — flows from a Job they are performing.
 - A Job is a unit of human motivation. The brain forms goals to satisfy needs, and those goals — formulated as concrete expected outcomes in concrete contexts — are Jobs.
@@ -177,7 +177,7 @@ The Job (§2) is the specification — what is wanted, by whom, with what criter
 
 Most foundational AJTBD concepts live at the Graph level, not on the static Job:
 
-- Value is the Job Graph performed more energy-efficiently — outcome (against the customer's success criteria) over cost. Value is the *absolute* energy-efficiency of the Solution × Job pairing, not a quantity measured relative to the customer's expectation (see [Value Creation §2](value-creation.md)). The *delta* between delivered value and the customer's prediction is the separate construct that drives behaviour change; on the Critical Chain (§10) that delta lands as the Aha Moment (Positive Prediction Error) the moment value beats prediction (see [Behaviour Change §6](behaviour-change.md)).
+- Value is the Job Graph performed more energy-efficiently — outcome (against the customer's success criteria) over cost. Value is the *absolute* energy-efficiency of the Solution × Job pairing, not a quantity measured relative to the customer's expectation (see [Value Creation §2](value-creation.md)). The *delta* between delivered value and the customer's prediction is the separate construct that drives behaviour change; on the Critical Chain of Jobs (§10) that delta lands as the Aha Moment (Positive Prediction Error) the moment value beats prediction (see [Behaviour Change §6](behaviour-change.md)).
 - A Problem is the customer-side consequence of a Solution hired for a Job and performing below that Job's success criteria. The Negative Prediction Error is the brain-side signal when that under-delivery lands. Unpacked in §7; the mechanism in §6.
 - A Solution is a label for a Job Graph (see [Behaviour Change §2](behaviour-change.md)) — the specific sub-graph the customer walks under a chosen brand, product, or DIY route. The customer doesn't hire a Solution in the abstract; they hire the Graph that Solution proposes.
 - Behavior change is the customer swapping one Job Graph for another — performing the same Big Job through a different set of Core Jobs and a different Solution (see [Behaviour Change](behaviour-change.md)).
@@ -189,7 +189,7 @@ Most foundational AJTBD concepts live at the Graph level, not on the static Job:
 
 The Job Graph is the hierarchy of all the Jobs that exist for the people in some segment — the structural unit that makes strategy, value, and segmentation legible.
 
-A Job Graph contains, around a set of Core Jobs: critical chains, cycles, higher- and lower-order Jobs, unconscious and hidden Jobs, and Jobs of every type — Regular, Orientation, Tax, Fake, Emotional, Viral (full taxonomy in [Job Types and Properties](job-types-and-properties.md)).
+A Job Graph contains, around a set of Core Jobs: Critical Chains of Jobs, cycles, higher- and lower-order Jobs, unconscious and hidden Jobs, and Jobs of every type — Regular, Orientation, Tax, Fake, Emotional, Viral (full taxonomy in [Job Types and Properties](job-types-and-properties.md)).
 
 Every person performs tens to hundreds of distinct Jobs a day, thousands a month. The full Job Graph of even one person is huge; across a segment, vastly larger. You don't need the whole graph — only the subset that surrounds the Core Jobs your product performs and the Big Jobs above them.
 
@@ -204,23 +204,23 @@ Every person performs tens to hundreds of distinct Jobs a day, thousands a month
 
 It's a graph, not a tree. One lower-level Job can connect to many higher-level Jobs (many-to-many). The more higher-level Jobs a single lower-level Job contributes to, the higher the customer's motivation to perform it. The graph is built by two choices: the maker chooses which graph the Solution offers, and the customer accepts it or rejects it for another Solution ([Job Graph §4](job-graph.md)).
 
-## 10. The Critical Chain — operational delivery
+## 10. The Critical Chain of Jobs — operational delivery
 
-**The Critical Chain is the Job Graph projected onto a time axis at a chosen Solution.** Only the lowest-level Jobs at the chosen zoom appear as nodes; higher-level organizing Jobs collapse into what the chain *delivers* by running every lowest-level Job in order. The chain holds the sequence the customer walks, the hand-offs between roles or systems, the cycles, the time-gaps, the slowest links, and the operational dynamics of walking it: predictions and prediction errors at each step, interruptions, drop-offs, Solution switches, per-step emotions, knows-how vs first-time entry.
+**The Critical Chain of Jobs is the Job Graph projected onto a time axis at a chosen Solution.** Only the lowest-level Jobs at the chosen zoom appear as nodes; higher-level organizing Jobs collapse into what the chain *delivers* by running every lowest-level Job in order. The chain holds the sequence the customer walks, the hand-offs between roles or systems, the cycles, the time-gaps, the slowest links, and the operational dynamics of walking it: predictions and prediction errors at each step, interruptions, drop-offs, Solution switches, per-step emotions, knows-how vs first-time entry.
 
 Where strategy operates on the Graph, operational delivery operates on the chain — value delivery, communication, activation, retention, churn diagnosis, trigger timing. The Aha Moment fires here, on the chain, the moment the customer notices the value the Graph delivered above prediction.
 
 Operational consequence:
 
-- **What a team actually ships is the Critical Chain, not the Job.** The Job names the destination; the chain is the lived path — onboarding flow, pricing tier, in-product moments where the Aha must fire, post-purchase touchpoints that prevent churn. A roadmap of Jobs is a roadmap of *intentions;* a roadmap of chains is a roadmap of *work.*
+- **What a team actually ships is the Critical Chain of Jobs, not the Job.** The Job names the destination; the chain is the lived path — onboarding flow, pricing tier, in-product moments where the Aha must fire, post-purchase touchpoints that prevent churn. A roadmap of Jobs is a roadmap of *intentions;* a roadmap of chains is a roadmap of *work.*
 
-Detailed canon in [Critical Chain](critical-chain.md) — chain pathologies, predictions during the walk, interruptions and their four outcomes, drop-off as Solution switch, the knows-how vs first-time path through orientation, the triggers that re-launch the chain, per-step emotions.
+Detailed canon in [Critical Chain of Jobs](critical-chain.md) — chain pathologies, predictions during the walk, interruptions and their four outcomes, drop-off as Solution switch, the knows-how vs first-time path through orientation, the triggers that re-launch the chain, per-step emotions.
 
 ---
 
-## 11. Critical-Chain scaling discipline — chain-break discovery is the first move when expanding into sub-segments
+## 11. Critical Chain of Jobs scaling discipline — chain-break discovery is the first move when expanding into sub-segments
 
-In a new sub-segment the chain often breaks, because the new context is invisible from inside the launch sub-segment — a different regulator, a different role on the buy-side, a different language of success criteria. The break is a knowledge problem, not a quality problem. **So discovering, attributing, and unblocking chain-breaks across sub-segments is the first priority when scaling.** Even when the broken Job sits outside your product's scope, owning the fix is often the largest single source of unlocked value. Detailed canon: [Critical Chain](critical-chain.md).
+In a new sub-segment the chain often breaks, because the new context is invisible from inside the launch sub-segment — a different regulator, a different role on the buy-side, a different language of success criteria. The break is a knowledge problem, not a quality problem. **So discovering, attributing, and unblocking chain-breaks across sub-segments is the first priority when scaling.** Even when the broken Job sits outside your product's scope, owning the fix is often the largest single source of unlocked value. Detailed canon: [Critical Chain of Jobs](critical-chain.md).
 
 ## 12. Segmentation by Jobs (not by demographics)
 
@@ -281,7 +281,7 @@ The part that is *not* in the customer's head is the invention — the new techn
 
 ## 16. AJTBD becomes much easier to internalize through AJTBD interviews
 
-**Reading JTBD books and case anecdotes can install vocabulary; AJTBD interviews make the mental rewire happen.** The methodology becomes much easier to internalize when a practitioner interviews customers who actually performed a Job, reconstructs the eight elements, walks the Job Graph, traces the Critical Chain the customer actually walked, and compares repeated interviews into a Map of Segments. That is the bridge from elegant theory to applied instrument: the Job stops being an idea and becomes a structure the practitioner can extract, inspect, compare, and use.
+**Reading JTBD books and case anecdotes can install vocabulary; AJTBD interviews make the mental rewire happen.** The methodology becomes much easier to internalize when a practitioner interviews customers who actually performed a Job, reconstructs the eight elements, walks the Job Graph, traces the Critical Chain of Jobs the customer actually walked, and compares repeated interviews into a Map of Segments. That is the bridge from elegant theory to applied instrument: the Job stops being an idea and becomes a structure the practitioner can extract, inspect, compare, and use.
 
 ## 17. People can do without products
 
@@ -315,7 +315,7 @@ Prerequisites for Loading Consideration Activators to actually work, in this ord
 
 a. Detailed knowledge of the target segment — who the people are, in what context, with what set of Jobs.
 b. Detailed knowledge of the Core Jobs of that segment, including their concrete success criteria.
-c. Detailed knowledge of the Job Graph around those Core Jobs — Big Jobs above, Small Jobs at the same level, Micro Jobs below, critical chains, cycles, hidden Jobs.
+c. Detailed knowledge of the Job Graph around those Core Jobs — Big Jobs above, Small Jobs at the same level, Micro Jobs below, Critical Chains of Jobs, cycles, hidden Jobs.
 d. Actually performing those Core Jobs significantly more energy-efficiently than the alternatives, and being able to prove it. The loop: ship, sell, watch real customers use it, validate which value we actually deliver, and *only then* extract concrete Consideration Activators. Activators built before the value is validated are hypotheses, not facts.
 
 Consideration Activators are extracted from AJTBD interviews (see [AJTBD interview guide](../HowTos/basic-ajtbd-interview-guide-and-principles.md)). The same interview method that surfaces Jobs, criteria, and segments also surfaces what was already in the Consideration Set, and what got loaded into it that turned an unfamiliar new way from invisible into hireable.
@@ -330,7 +330,7 @@ For the full set of theses and examples, see [Consideration Activators](consider
 
 A Barrier is an objective condition that prevents the customer from performing the new Job Graph — a missing prerequisite, an unsupported context (state, ZIP, plan, compliance regime), a broken chain link, a failing hand-off, a cycle that sends the customer back for rework, or an irreversible-loss exposure. TurboTax without K-1 support blocks LLC owners; DoorDash outside a ZIP code blocks delivery; B2B SaaS without SAML blocks IT security review.
 
-Barriers are segment-specific. Stripe's API worked for engineering-staffed startups; local merchants needed no-code checkout. Zoom worked for corporate meetings; K-12 schools needed FERPA, waiting rooms, locked rooms. The product didn't become bad — the segment's Critical Chain changed.
+Barriers are segment-specific. Stripe's API worked for engineering-staffed startups; local merchants needed no-code checkout. Zoom worked for corporate meetings; K-12 schools needed FERPA, waiting rooms, locked rooms. The product didn't become bad — the segment's Critical Chain of Jobs changed.
 
 **Reality first, communication second.** Barrier Removal makes the claim true; Consideration Activators make the truth usable in the customer's head. Reverse the order and you over-promise: the customer enters a chain that still breaks and registers a Problem against the whole Solution. If the chain *cannot* run, fix the Barrier; if it *can* run but the customer predicts a break, reduce the fear.
 
@@ -386,7 +386,7 @@ The same mechanic often attaches to several tasks — a move that grows product 
 - Move up to a higher-level Job — turn a Big Job into your new Core Job and kill many lower-level Jobs as a class. Often the most powerful mechanic when applicable (§23).
 - Kill a Job — a class of Jobs disappears (Uber killed *"search for change"*).
 - Take a Job off the customer — do it for them.
-- Fix breaks in the Critical Chain — the highest-leverage move when present (§11).
+- Fix breaks in the Critical Chain of Jobs — the highest-leverage move when present (§11).
 - Lower costs without removing Jobs (price, cognitive cost, time, emotional cost).
 - Eliminate a negative emotion — sell peace of mind, not the absence of problems.
 
@@ -413,7 +413,7 @@ When this mechanic applies, no other in the 100+ catalog rivals its leverage —
 
 You leave home in the morning, come back in the evening, the house is clean — and there is no *"cleaning product"* you used. Zoom didn't beat the airlines by being a better airline; it removed the trip. The robot vacuum is closer to the ideal than a better mop. The best interface is no interface; the best product is invisible.
 
-Every other mechanic in the catalog — kill a Job, take a Job off the customer, fix the Critical Chain, lower costs, eliminate negative emotions — is a partial step toward this ideal. When you can climb a level, climb. When you can't yet, optimize the level you are on against this North Star: what would it look like for the customer to get the result with no product to perform at all?
+Every other mechanic in the catalog — kill a Job, take a Job off the customer, fix the Critical Chain of Jobs, lower costs, eliminate negative emotions — is a partial step toward this ideal. When you can climb a level, climb. When you can't yet, optimize the level you are on against this North Star: what would it look like for the customer to get the result with no product to perform at all?
 
 ## 24. Communication through Jobs
 
@@ -427,10 +427,10 @@ Full landing-page structure (9 Job-language blocks mapped to the five Considerat
 
 ## 25. B2B specifics
 
-- **A B2B sale isn't one Job performed by one person — it's a graph of Jobs performed by several roles, strung along a critical chain that must not break at any link.** The roles include champion, decision-maker, budget holder, IT/security/legal influencers, end users, sometimes saboteurs. Drop one role's Jobs from the analysis and the deal can stall there indefinitely while every other role is satisfied.
+- **A B2B sale isn't one Job performed by one person — it's a graph of Jobs performed by several roles, strung along a Critical Chain of Jobs that must not break at any link.** The roles include champion, decision-maker, budget holder, IT/security/legal influencers, end users, sometimes saboteurs. Drop one role's Jobs from the analysis and the deal can stall there indefinitely while every other role is satisfied.
 - Every role in the chain has at least two kinds of Jobs — business Jobs and personal Jobs — and each kind is itself a graph. The business Jobs are what's written into the role's KPIs (hit the plan, reduce the cost line, deliver on time, pass audit). The personal Jobs are what the person gets out of the deal (job security, bonus, recognition, career growth, not being blamed, a story to tell at the next conference). In a real deal you're standing in front of a graph of business Jobs × a graph of personal Jobs for *every* role.
 - **B2B motivation is usually dominated by personal Jobs, not business Jobs.** This is the single most counter-intuitive B2B finding for teams trained on B2C. The business Jobs are the *frame* in which the deal happens; the personal Jobs are *why* the human in the seat actually moves.
-- **Knowing — and performing — the business and personal Jobs of every role in the deal's critical chain dramatically increases close probability.** Most teams know one business Job of the decision-maker and stop there. The deals that close are the ones where the team has mapped the *full graph* of business and personal Jobs for every role and done deliberate work to perform them.
+- **Knowing — and performing — the business and personal Jobs of every role in the deal's Critical Chain of Jobs dramatically increases close probability.** Most teams know one business Job of the decision-maker and stop there. The deals that close are the ones where the team has mapped the *full graph* of business and personal Jobs for every role and done deliberate work to perform them.
 - Five typical personal Jobs of a decision-maker, as a starter checklist:
   1. *"I want to make a vendor choice that won't get me blamed or fired."*
   2. *"I want to use the same tools the best people in my field use."*
