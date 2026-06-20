@@ -8,17 +8,17 @@ This repository is the open canon (the methodology, written as theses) plus a se
 
 ## How to install
 
-Into your project root (sets up Claude Code + Codex). One command — clone + install:
-
-```bash
-curl -fsSL https://nextmovetheory.com/install.sh | bash
-```
-
-Or clone and run the installer locally:
+Into your project root (sets up Claude Code + Codex). Clone and run the installer:
 
 ```bash
 git clone https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git
 bash Next-Move-Theory-Canon-and-Skills/install.sh --target .
+```
+
+Or do it in one command from the site:
+
+```bash
+curl -fsSL https://nextmovetheory.com/install.sh | bash
 ```
 
 [Full details ▸](#install-into-your-project)
