@@ -17,18 +17,23 @@
 #   curl -fsSL https://raw.githubusercontent.com/zamesin/Next-Move-Theory-Canon-and-Skills/main/install.sh | bash
 #
 #   # B) from a clone of this repo — installs into the PARENT dir by default
-#   #    (so the skills land in your project, not inside the clone):
+#   #    (so the skills land in your project, not inside the clone). After a
+#   #    successful install it REMOVES the clone folder, so
+#   #    `git clone … && bash …/install.sh --target .` leaves nothing behind.
 #   bash install.sh                 # target = parent of the clone
 #   bash install.sh --target DIR    # or an explicit target project root
 #   bash install.sh --target .      # or install in place (current dir)
+#   bash install.sh --keep-clone    # keep the clone folder after installing
 set -euo pipefail
 
 REPO_URL="https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git"
 
 TARGET=""
+KEEP_CLONE=0
 while [ $# -gt 0 ]; do
   case "$1" in
     --target) TARGET="${2:?--target needs a directory}"; shift 2 ;;
+    --keep-clone) KEEP_CLONE=1; shift ;;
     -h|--help) sed -n '2,30p' "$0" 2>/dev/null || true; exit 0 ;;
     *) echo "unknown argument: $1" >&2; exit 1 ;;
   esac
@@ -117,6 +122,18 @@ echo "Done."
 echo "  skills:  $TARGET/.claude/skills/  and  $TARGET/.codex/skills/"
 echo "  canon:   $TARGET/Next-Move-Theory-Canon/"
 echo "Open your agent from $TARGET and the skills are available (e.g. /diagnose, /market-research)."
+
+# Auto-remove the clone when we installed from one sitting directly inside the
+# target (the `git clone … && bash …/install.sh --target .` flow), so the command
+# leaves no leftover repo folder. Opt out with --keep-clone. (The curl|bash path
+# already cleaned its temp clone above.) cd to the target first so we never delete
+# the shell's working directory.
 if [ "${CLEANUP_SRC}" = "0" ] && [ "$(dirname "$SRC")" = "$TARGET" ]; then
-  echo "You can now delete the clone folder if you no longer need it: rm -rf \"$SRC\""
+  if [ "${KEEP_CLONE}" = "1" ]; then
+    echo "Clone kept at $SRC (remove it with: rm -rf \"$SRC\")."
+  else
+    cd "$TARGET" 2>/dev/null || cd /
+    rm -rf "$SRC"
+    echo "Removed the clone folder: $SRC"
+  fi
 fi
