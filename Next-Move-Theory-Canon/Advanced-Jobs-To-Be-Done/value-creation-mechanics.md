@@ -7,7 +7,6 @@ The foundational catalog of value-creation mechanics referenced from [Value Crea
 ---
 
 ### Kill a Job
-*Убить работу*
 
 **Lower-level Jobs disappear as a class.** The product performs the higher-level Job through fewer lower-level Jobs, or eliminates the lower-level Jobs entirely. This is one of the two highest-leverage moves in the catalog. The customer's brain weights the removal at roughly 2× the value of an equivalent feature addition (loss aversion applied to Jobs).
 
@@ -18,7 +17,6 @@ Deeper: [Value Creation §14.2](value-creation.md); [Subtraction](../Next-Move-T
 ---
 
 ### Reduce time-gaps between Jobs → reach the Big Job faster
-*Уменьшать промежутки времени (гэпы) между работами*
 
 **Faster end-to-end delivery of the Big Job creates value.** Wait-time between Jobs in the chain is felt as cost. Compress it and the entire chain reads as a different Job to the brain. Threshold effects matter. Many categories have a step-change point below which retention jumps.
 
@@ -29,7 +27,6 @@ Deeper: [Critical Chain §9](critical-chain.md).
 ---
 
 ### Perform more Jobs with one Solution
-*Выполнять больше работ человека одним решением*
 
 **The product performs several of the customer's Jobs with one Solution, raising value through reduced context-switching across tools.** The mechanic isn't *"add features."* It's *"absorb adjacent Jobs the customer was performing in another product."* Each absorbed Job is one less switch-cost paid.
 
@@ -38,7 +35,6 @@ Examples: Figma absorbed *"share design with team," "comment in context," "revie
 ---
 
 ### Create new connections to higher-level Big Jobs
-*Создавать связи с новыми работами выше уровнем, которых раньше не было*
 
 **Connect your Core Job to a Big Job above it that wasn't previously linked.** The more Big Jobs your Core Job serves, the higher the customer's motivation to perform it with you. This adds a multiplicative motivation surface without changing the Core Job at all.
 
@@ -49,7 +45,6 @@ Deeper: [Value Creation §16](value-creation.md).
 ---
 
 ### Adjust the customer's expectations
-*Корректировать ожидания*
 
 **Behaviour change is the delta against the customer's prediction, not the absolute level of value.** A real value delivery against inflated expectations registers as no Aha Moment, or as a Problem. The same delivery against calibrated expectations registers as an Aha Moment. Manage the prediction *before* the customer experiences the product, through communication, pricing, brand framing, and sales-call honesty.
 
@@ -60,7 +55,6 @@ Deeper: [Value Creation §6](value-creation.md).
 ---
 
 ### Ecosystem — combine products for unique combined value, raise switching cost
-*Экосистема — способ дать уникальную ценность при комбинации продуктов и поднять цену переключения*
 
 **Link several products so that 1 + 1 > 2.** When a customer uses multiple products, leaving one degrades the value of the others, which raises the Switching Cost. The mechanic is additive in connection points, not in features. Each new Solution in the ecosystem lowers the cost of performing any Job already in the system. The switching cost out of the ecosystem rises with every piece adopted.
 
@@ -69,7 +63,6 @@ Examples: Apple ecosystem (iPhone + Mac + Watch + AirPods + iCloud — leave any
 ---
 
 ### Lower the price
-*Снизить цену*
 
 **Cheaper performance of the Job is a powerful lever, but structurally hard to scale.** At scale it requires either an order-of-magnitude cost-structure advantage or willingness to operate at a margin competitors won't. It's often the first move teams reach for and the last move they should. Value mechanics that don't compete on price usually beat price cuts on long-term defensibility.
 
@@ -78,7 +71,6 @@ Examples: Costco runs a structurally cheaper supply chain (members pay annual fe
 ---
 
 ### Remove negative emotions and bring them to positive ones
-*Избавить от негативных эмоций и привести к позитивным*
 
 **Wherever the chain produces a negative emotion, remove it.** That covers anxiety, doubt, irritation, shame, and fear of failure. Emotions are the brain's signaling system about how a Job is being performed. Removing a negative emotion registers as ~2× the value of adding an equivalent feature. The closer to the customer's underlying need, the stronger the emotional signal.
 
@@ -89,7 +81,6 @@ Deeper: [Scientific Foundations §13](scientific-foundations.md) (loss aversion)
 ---
 
 ### Reduce role-to-role hand-offs in Critical Chains
-*Уменьшать количество переходов между разными людьми в критических цепочках*
 
 **Fewer roles in the chain means fewer break-boundaries and higher end-to-end completion probability.** This is distinct from *Fix Critical Chain breaks between different people*, which repairs at existing boundaries. This mechanic *removes* the boundaries by collapsing roles.
 
@@ -100,7 +91,6 @@ Deeper: [Critical Chain §11](critical-chain.md).
 ---
 
 ### Lower Job/Solution Cost before the value lands
-*Снижать Job/Solution Cost до получения ценности*
 
 **Lower the customer's cost on the path to first value.** Cost here is time, money, effort, and cognitive load. The chain `pay → integrate → configure → try → see-value` has a high abandonment rate at every step. Collapsing the steps before value lands is a direct conversion lever and a direct value lever, because the brain doesn't pay for value it never reached.
 
@@ -111,7 +101,6 @@ Deeper: [Value Creation §8](value-creation.md).
 ---
 
 ### *"This value is only available with us"* — exclusive value
-*Эксклюзивная ценность — эта ценность доступна только у нас*
 
 **Lock unique value that competitors structurally cannot match.** Exclusivity sources include licensed content, proprietary technology, exclusive partnerships, regulatory protection, and network effects past the tipping point. This builds the comparative anchor that makes the Solution the obvious hire.
 
@@ -120,7 +109,6 @@ Examples: Spotify-exclusive podcasts (Joe Rogan early years); Apple TV+ exclusiv
 ---
 
 ### Perform the Core Job at the level of the segment's expectations
-*Выполнить работу на уровне ожидаемых критериев успеха*
 
 **Until the Core Job lands at the target segment's success criteria, every mechanic stacked on top is leverage on nothing.** This is the most-skipped baseline. Performing the Core Job *at the criteria the segment expects* is itself a value mechanic. Most teams over-invest in adjacent features and under-invest in nailing the criteria. Without criteria, value is a wish.
 
@@ -131,7 +119,6 @@ Deeper: [Value Creation §9](value-creation.md).
 ---
 
 ### Start performing a Job that nobody currently performs well
-*Начать выполнять работу, которая не выполняется, хотя человек ищет решение*
 
 The Job exists, the customers exist, no acceptable Solution does. Whoever performs it first wins the segment outright. There is no incumbent to displace, only a vacuum the customer has been routing around with workarounds.
 
@@ -140,7 +127,6 @@ Examples: Stripe in 2010 — *"accept online payments without spending two weeks
 ---
 
 ### Fix the Problems
-*Починить проблемы*
 
 Perform a Job without the Problem the customer has been hitting in their current Solution. **This is especially high-leverage when the Problem sits inside the Critical Chain, because one broken Job halts the entire Big Job.** Reconstruct the chain `Job → Solution → Problem` before fixing. The named Problem is rarely the root.
 
@@ -151,7 +137,6 @@ Deeper: [Critical Chain §2, §11](critical-chain.md).
 ---
 
 ### Fix unperformed Jobs in the Critical Chain (including Jobs outside our Core Jobs)
-*Чинить не выполняемые работы в критической цепочке, включая работы за пределами наших Core Jobs*
 
 **Find Jobs that break the chain and fix them, even Jobs outside your core competence.** That can mean owning a Job adjacent to your category. This is common during scaling into a new sub-segment, when the chain breaks at a Job your product never touched in the launch segment. Repair the Job onto your product, or partner with a vendor who reliably performs it.
 
@@ -162,7 +147,6 @@ Deeper: [Critical Chain §6, §11](critical-chain.md).
 ---
 
 ### Take the Job off the customer entirely (done-for-you)
-*Забрать выполнение работы с человека*
 
 **Convert the product from a tool into a service.** The customer was performing the Job, and now you perform it for them. This is the strongest form of value compression, because the customer's chain shrinks by the entire Job, not just a step inside it. It carries a money premium that the *done-for-me-first* segment will pay (see [Value Creation §10](value-creation.md)).
 
@@ -171,7 +155,6 @@ Examples: robot vacuum vs manual vacuuming; Wealthfront vs DIY rebalancing; Belo
 ---
 
 ### Perform the Next Job in the Critical Chain (cross-sell into adjacency)
-*Выполнять следующую работу в критической цепочке Core Jobs*
 
 **Take over the next Job the customer performs after your current Core Job lands.** Each absorbed Next Job is retention plus AOV growth. The customer doesn't have to leave to perform the Job, and doesn't return to a competitor's product for that adjacency.
 
@@ -182,7 +165,6 @@ Deeper: [Critical Chain §9](critical-chain.md).
 ---
 
 ### Perform Orientation Jobs (including explaining what the Job Graph looks like)
-*Выполнить ориентационные работы — включая объяснение того, как выглядит Job Graph*
 
 **Perform the meta-Jobs whose verbs are *understand, discover, find, choose, figure out*.** First-time customers facing a Big Job must perform an Orientation Job before they can pick a Solution. They don't know the Job Graph yet, don't know which Solutions exist, don't know how to evaluate them. The product that performs the Orientation Job becomes the customer's guide and routes them into its own Core Jobs.
 
@@ -193,7 +175,6 @@ Deeper: [Job Types and Properties](job-types-and-properties.md); [Consideration 
 ---
 
 ### Break value into slices and deliver parts of it earlier in the Critical Chain
-*Разбить пользу и давать части пользы поэтапно, раньше в критической цепочке работ*
 
 **Spread the cost of getting to value across multiple steps, each delivering a slice of value.** The mechanic is partial-value-delivery before commitment: lead magnet, free trial, MVP-with-basic-features, intro consultation. The customer pays less upfront, gets enough value to keep moving forward, and completes the full chain over multiple sessions. The earlier the first slice lands, the smaller the abandonment window before the first Aha Moment.
 
@@ -204,7 +185,6 @@ Deeper: [Value Creation §12](value-creation.md) (Aha Moment placement).
 ---
 
 ### Perform Jobs while simultaneously satisfying deeper needs
-*Выполняя работы, одновременно удовлетворять глубинные потребности*
 
 **Connect the Core Job to a base human need — status, autonomy, control, competence, belonging, safety, recognition, self-actualization.** Status in particular is enormous and routinely underweighted. People pay vast sums for status-coded objects and experiences. The mechanic: identify which need your target segment is also paying to satisfy, and design the product to deliver against that need alongside the Core Job.
 
@@ -215,7 +195,6 @@ Deeper: [Scientific Foundations §5-7](scientific-foundations.md).
 ---
 
 ### Better meet the success criteria of Core Jobs / Big Jobs
-*Лучше выполнять критерии успеха Core Jobs / Big Jobs*
 
 **Perform the same Job better against the criteria the target segment uses to evaluate it.** Different segments value different criteria. The priority order over criteria is what makes them different segments ([Segmentation](segmentation.md)). The mechanic: identify which one or several criteria dominate for your target segment, and raise performance on those specifically.
 
@@ -226,7 +205,6 @@ Deeper: [Value Creation §9, §10, §11](value-creation.md).
 ---
 
 ### Perform Small Jobs for additional Big Jobs that emerged in the process
-*Выполнять Small Jobs для дополнительных Big Jobs, которые возникли в процессе*
 
 **During the chain-walk, the customer's other needs activate and new Jobs appear that the customer didn't predict at the start.** Those needs include safety, control, status, and recognition. Perform these emergent Small Jobs in-flight. The criterion: the customer didn't know, at the start, that they'd need this Job done.
 
@@ -235,7 +213,6 @@ Examples: during a used-car sale, the seller suddenly needs *"verify the buyer i
 ---
 
 ### Bundle multiple products / services together
-*Сделать бандл из нескольких продуктов / услуг*
 
 **Combine multiple products into one package at a combined price.** The customer pays less per individual product than buying them separately, but the total spend rises. This is often used with cross-sell — bundle the Next Job in the chain (a service contract with the car).
 
@@ -244,7 +221,6 @@ Examples: Adobe Creative Cloud (Photoshop + Illustrator + InDesign + Premiere + 
 ---
 
 ### Kill cycles in the Critical Chain — including across different people
-*Убивать циклы в критических цепочках — в том числе между разными людьми*
 
 **Eliminate customer-visible return-for-rework loops in the chain.** Cycles are the dominant break source. Each return iteration is felt at ~2× the weight of forward progress, and three cycle iterations wipe out six forward Jobs' worth of perceived value. The default fix: front-load requirements so the customer provides everything upfront and the chain runs without returns.
 
@@ -255,7 +231,6 @@ Deeper: [Critical Chain §8](critical-chain.md).
 ---
 
 ### Fix Critical Chain breaks between different people
-*Чинить разрывы критических цепочек между разными людьми*
 
 **Repair role-to-role hand-offs where ownership ambiguity, latency, and information loss cluster.** The majority of multi-role chain-breaks happen at role boundaries, not inside a single role's lane. Diagnostic order: map the chain, fix hand-offs first, kill cycles second, optimize single-role lanes last.
 
