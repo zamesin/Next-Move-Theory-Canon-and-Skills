@@ -1,6 +1,16 @@
 ---
 name: diagnose
-description: Diagnose a product against Ivan Zamesin's Next Move Theory / Advanced Jobs To Be Done methodology (distinct from generic Christensen JTBD) and route to the next move. A conversational, chat-first skill — through up to ~15 adaptive questions it challenges the goal you walked in with (climbing your business-Job graph to find a higher-leverage growth point), then surfaces EVERYTHING the methodology can find: all the risks (every weak node on the chain to profit, each traced to its upstream cause), all the growth points (kill a Job, Previous/Next Job, climb a level, adjacent-segment Small Jobs, underserved success criteria), and the risky assumptions hiding inside your current initiatives (RAT). It is comprehensive on findings and focused on action — it lists them all, then says which one to tackle first and which existing skill executes it (market-research, craft-value-proposition, product-requirements, craft-go-to-market, ask-nmt). The front door for LIVE products the way market-research is the front door for new ideas. Use when the user says "diagnose my product", "what should I do next", "a metric dropped", "where are my risks / growth points", "where is this breaking", or is unsure what to work on. Chat-first: writes nothing unless asked; recommends the next skill but the user launches it. Plain language; defaults to English.
+description: >-
+  Diagnose a live product against Ivan Zamesin's Next Move Theory / Advanced
+  Jobs To Be Done methodology and route to the next move. A conversational,
+  chat-first skill: through up to ~15 adaptive questions it challenges the goal,
+  traces weak metrics upstream through the chain to profit, surfaces risks,
+  growth points, and risky assumptions in current initiatives, then recommends
+  which issue to tackle first and which skill executes it. Use when the user says
+  "diagnose my product", "what should I do next", "a metric dropped", "where are
+  my risks / growth points", "where is this breaking", or is unsure what to work
+  on. Writes nothing unless asked; recommends the next skill but the user
+  launches it. Plain language; defaults to English.
 user-invocable: true
 ---
 
