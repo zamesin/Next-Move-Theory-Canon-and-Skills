@@ -1,6 +1,16 @@
 ---
 name: nmt-craft-value-proposition
-description: Generate the strongest possible Value Proposition for a chosen segment using Ivan Zamesin's AJTBD / Next Move Theory methodology (distinct from generic Christensen JTBD). Input — a $nmt-market-research result OR a manual segment+Jobs description. The skill extracts the segment's dominant success criteria, builds the Job Graph + Critical Chain of Jobs substrate, generates value hypotheses by walking the value-creation mechanics catalog over that graph, filters them on feasibility, cost-to-build, unit economics, and competitiveness, ranks by RICE, and surfaces a primary + supplementary value proposition with top-3 RAT cards and a PRD-ready implementation spec that feeds $nmt-product-requirements. Use when the user wants a value proposition, differentiation, or asks "how do we win this segment". Two modes — Quick (default, no internet) and Deep (subagents + web competitor mining). Plain language; defaults to English.
+description: >-
+  Generate the strongest possible Value Proposition for a chosen segment using
+  Ivan Zamesin's AJTBD / Next Move Theory methodology. Input — a $nmt-market-
+  research result OR a manual segment+Jobs description. It extracts the segment's
+  dominant success criteria, builds the Job Graph + Critical Chain of Jobs,
+  generates value hypotheses via the value-creation mechanics catalog, filters on
+  feasibility, cost, unit economics, and competitiveness, ranks by RICE, and
+  surfaces a primary + supplementary value proposition with top-3 RAT cards and a
+  PRD-ready spec for $nmt-product-requirements. Use when the user wants a value
+  proposition, differentiation, or asks "how do we win this segment". Two modes —
+  Quick (default) and Deep. Defaults to English.
 user-invocable: true
 ---
 

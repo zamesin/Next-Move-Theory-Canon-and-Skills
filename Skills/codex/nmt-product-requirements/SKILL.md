@@ -1,6 +1,17 @@
 ---
 name: nmt-product-requirements
-description: Turn a chosen segment + Core Jobs into a build-ready PRD (full functionality + edge cases) using Ivan Zamesin's AJTBD / Next Move Theory methodology. It consumes upstream work — segments from $nmt-market-research, value from $nmt-craft-value-proposition — and never re-derives them; with no research done it routes you upstream first, or takes a manually described segment + value for a fast run. Before writing requirements it runs a "challenge the build" gate that looks for a more effective way to hit the same business goal; if a better way wins, the PRD is written for that. Output — a single PRD — functionality mapped Core Job → Big Job → value mechanic → success criteria → Aha Moment on the Critical Chain of Jobs, plus edge cases covering ~90% of use cases. Use when the user says "write the PRD / product requirements" or wants to turn a segment+value or a feature idea into a build spec. Two modes — Quick (default, no internet) and Deep (subagents + web parity check). Plain language; defaults to English.
+description: >-
+  Turn a chosen segment + Core Jobs into a build-ready PRD (full functionality +
+  edge cases) using Ivan Zamesin's AJTBD / Next Move Theory methodology. Consumes
+  upstream work — segments from $nmt-market-research, value from $nmt-craft-value-
+  proposition — and never re-derives them; with no research it routes you upstream
+  first, or takes a manually described segment+value for a fast run. First runs a
+  "challenge the build" gate that looks for a more effective way to hit the same
+  goal. Output — one PRD mapping Core Job to Big Job to value mechanic to success
+  criteria to Aha Moment on the Critical Chain of Jobs, plus edge cases. Use when
+  the user says "write the PRD / product requirements" or wants to turn a
+  segment+value or feature idea into a build spec. Two modes — Quick (default) and
+  Deep. Defaults to English.
 user-invocable: true
 ---
 

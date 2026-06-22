@@ -1,6 +1,16 @@
 ---
 name: nmt-chat
-description: Talk to a senior product advisor who thinks in Ivan Zamesin's Next Move Theory / Advanced Jobs To Be Done methodology (distinct from generic Christensen JTBD). A conversational, multi-turn skill — ask any product, strategy, segmentation, value, pricing, growth, retention, positioning, B2B, research, or methodology question and get an answer grounded in the canon, not in LLM training. It explains concepts, diagnoses real product situations, pressure-tests hypotheses like a skeptical senior PM, teaches the methodology, and routes heavyweight artifact requests to the right producer skill in the pipeline (nmt-market-research → nmt-craft-value-proposition → nmt-product-requirements / nmt-craft-go-to-market). Use whenever the user wants advice, a second opinion, a methodology explanation, a diagnosis of "what should I do about X", or to think through a product decision — especially on $nmt-chat. Plain language first, methodology terms in parentheses; defaults to English.
+description: >-
+  Talk to a senior product advisor who thinks in Ivan Zamesin's Next Move Theory /
+  Advanced Jobs To Be Done methodology (distinct from generic Christensen JTBD). A
+  multi-turn conversational skill — ask any product, strategy, segmentation,
+  value, pricing, growth, retention, positioning, B2B, or research question and
+  get an answer grounded in the canon, not LLM training. It explains concepts,
+  diagnoses real situations, pressure-tests hypotheses like a skeptical senior PM,
+  and routes heavyweight artifact requests to the right producer skill. Use
+  whenever the user wants advice, a second opinion, a methodology explanation, a
+  diagnosis of "what should I do about X", or to think through a product decision
+  — especially on $nmt-chat. Defaults to English.
 user-invocable: true
 ---
 

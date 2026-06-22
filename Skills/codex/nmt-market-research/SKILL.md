@@ -1,6 +1,16 @@
 ---
 name: nmt-market-research
-description: Run market research for a product or feature idea using Ivan Zamesin's AJTBD / Next Move Theory methodology (distinct from generic Christensen JTBD). Output — an A4 one-pager with a GO / NARROW / PIVOT verdict plus a detailed report — market sizing, customer segments scored on the selection screen, competitors defined by Jobs, a differentiation hypothesis, an action-first risk plan, and ranked strategic options including alternative markets to pivot into. Use whenever the user wants to size a market, find or evaluate segments and Jobs, assess competitors, decide whether an idea is worth pursuing, or explore a pivot — even if they don't say "market research". Two modes — Quick (default; fast; no internet) and Deep (subagents + web research). Writes in plain language with methodology terms in parentheses. Defaults to English; adapts to the user's language.
+description: >-
+  Run market research for a product or feature idea using Ivan Zamesin's AJTBD /
+  Next Move Theory methodology (distinct from generic Christensen JTBD). Output —
+  an A4 one-pager with a GO / NARROW / PIVOT verdict plus a detailed report —
+  market sizing, customer segments scored on the selection screen, competitors
+  defined by Jobs, a differentiation hypothesis, an action-first risk plan, and
+  ranked strategic options including alternative markets to pivot into. Use
+  whenever the user wants to size a market, find or evaluate segments and Jobs,
+  assess competitors, decide whether an idea is worth pursuing, or explore a pivot
+  — even if they don't say "market research". Two modes — Quick (default) and
+  Deep. Defaults to English.
 user-invocable: true
 ---
 

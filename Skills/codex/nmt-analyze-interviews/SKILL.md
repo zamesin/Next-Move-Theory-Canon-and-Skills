@@ -4,16 +4,14 @@ description: >-
   Extract the AJTBD structure from customer-interview files you already have —
   segments by Core Jobs, personas, the Consideration Set, existing Solutions and
   Problems, and value hypotheses — using Ivan Zamesin's Next Move Theory /
-  Advanced Jobs To Be Done methodology. Input: one or many files (transcripts,
-  notes, sales or support calls, survey open-ends), AJTBD or not. It asks which
-  business task you're solving, reads each interview in its own context so it
-  never overflows, scores each extraction's confidence, clusters them into
-  segments by similar Core Jobs and success criteria, and writes one report: a
-  data-quality summary, segments with personas, structured Solutions and
-  Problems, a Consideration Set, value hypotheses, and what to interview next.
-  Use for "analyze my interviews", "extract jobs from these transcripts", "find
-  the segments in these calls". The post-fieldwork counterpart to
-  nmt-interview-guide. Plain language; defaults to English.
+  Advanced Jobs To Be Done methodology. Input — one or many files (transcripts,
+  notes, sales or support calls, survey open-ends), AJTBD or not. It reads each
+  interview in its own context so it never overflows, scores each extraction's
+  confidence, clusters into segments by similar Core Jobs, and writes one report —
+  data-quality summary, segments with personas, structured Solutions and Problems,
+  a Consideration Set, value hypotheses, and what to interview next. Use for
+  "analyze my interviews", "extract jobs from these transcripts", "find the
+  segments in these calls". Defaults to English.
 user-invocable: true
 ---
 

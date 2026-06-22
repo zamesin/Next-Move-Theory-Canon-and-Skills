@@ -1,6 +1,17 @@
 ---
 name: nmt-craft-go-to-market
-description: Write the go-to-market communication for a chosen segment using Ivan Zamesin's AJTBD / Next Move Theory methodology. Input — a $nmt-craft-value-proposition result (best), a $nmt-product-requirements PRD, a $nmt-market-research result, or a manual segment+Jobs description. Output — ready-to-publish landing-page copy, ad/creative copy built on the seven Job-language formulas, and a GTM/growth plan — channel hypotheses, lead magnets, viral loops, cross-sell / upsell / retention messaging. Everything is communicated through the Big Job (motivation), in concrete success criteria not adjectives, with features as proof not message. Use when the user wants landing copy, ad copy, creatives, channel hypotheses, or a launch plan — "write the landing / the copy / the go-to-market". Two modes — Quick (default, no internet) and Deep (subagents + web for real review language). Plain language; defaults to English.
+description: >-
+  Write the go-to-market communication for a chosen segment using Ivan Zamesin's
+  AJTBD / Next Move Theory methodology. Input — a $nmt-craft-value-proposition
+  result (best), a $nmt-product-requirements PRD, a $nmt-market-research result,
+  or a manual segment+Jobs description. Output — ready-to-publish landing-page
+  copy, ad/creative copy built on the seven Job-language formulas, and a
+  GTM/growth plan (channel hypotheses, lead magnets, viral loops, cross-
+  sell/upsell/retention). Everything speaks through the Big Job, in concrete
+  success criteria not adjectives, with features as proof. Use when the user wants
+  landing copy, ad copy, creatives, channel hypotheses, or a launch plan — "write
+  the landing / the copy / the go-to-market". Two modes — Quick (default) and
+  Deep. Defaults to English.
 user-invocable: true
 ---
 
