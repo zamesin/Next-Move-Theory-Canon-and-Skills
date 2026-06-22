@@ -4,11 +4,11 @@
 # Installs INTO the root of your existing project (the folder you run your agent from):
 #   <target>/Next-Move-Theory-Canon/        the canon (keep this exact name)
 #   <target>/.claude/skills/<skill>/        skills for Claude Code
-#   <target>/.codex/skills/<skill>/         skills for Codex
+#   <target>/.agents/skills/<skill>/        skills for OpenAI Codex
 #   <target>/CLAUDE.md, AGENTS.md           rules injected between markers (your file kept)
 #   <target>/NextMoveTheory-README.md       this repo's README, renamed
 #
-# It NEVER leaves a top-level `Skills/` folder and NEVER nests `.claude`/`.codex`/canon
+# It NEVER leaves a top-level `Skills/` folder and NEVER nests `.claude`/`.agents`/canon
 # inside one another. Re-running is idempotent: it replaces the canon, the skills, the
 # marked rules block, and the README in place.
 #
@@ -27,6 +27,14 @@
 set -euo pipefail
 
 REPO_URL="https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git"
+CODEX_SKILLS_STAGE=""
+
+cleanup_codex_skills_stage() {
+  if [ -n "${CODEX_SKILLS_STAGE:-}" ] && [ -d "$CODEX_SKILLS_STAGE" ]; then
+    rm -rf "$CODEX_SKILLS_STAGE"
+  fi
+}
+trap cleanup_codex_skills_stage EXIT
 
 TARGET=""
 KEEP_CLONE=0
@@ -76,17 +84,21 @@ echo "Installing Next Move Theory canon + skills"
 echo "  source: $SRC"
 echo "  target: $TARGET"
 
-mkdir -p "$TARGET/.claude/skills" "$TARGET/.codex/skills"
+mkdir -p "$TARGET/.claude/skills" "$TARGET/.agents/skills"
 
 # 1. Canon at the root (keep the exact name — skills read it by this relative path).
 rm -rf "$TARGET/Next-Move-Theory-Canon"
 cp -r "$SRC/Next-Move-Theory-Canon" "$TARGET/Next-Move-Theory-Canon"
 
 # 2. Skills CONTENTS into BOTH agents' skills dirs (the skill folders + the shared
-#    contract files), never a standalone top-level Skills/ folder. Replace in place.
-for dir in "$TARGET/.claude/skills" "$TARGET/.codex/skills"; do
-  cp -r "$SRC"/Skills/. "$dir"/
-done
+#    contract files), never a standalone top-level Skills/ folder. The Claude copy is
+#    unchanged. Patch a temporary Codex staging copy before merging it into
+#    .agents/skills, so unrelated existing Codex skills are never read or modified.
+cp -r "$SRC"/Skills/. "$TARGET/.claude/skills"/
+CODEX_SKILLS_STAGE="$(mktemp -d "${TMPDIR:-/tmp}/nmt-codex-skills.XXXXXX")"
+cp -r "$SRC"/Skills/. "$CODEX_SKILLS_STAGE"/
+bash "$SRC/scripts/patch-codex-skills.sh" "$CODEX_SKILLS_STAGE"
+cp -r "$CODEX_SKILLS_STAGE"/. "$TARGET/.agents/skills"/
 
 # 3. README, renamed (so it doesn't clobber your project's own README).
 cp "$SRC/README.md" "$TARGET/NextMoveTheory-README.md"
@@ -120,11 +132,24 @@ PY
 echo ""
 echo "Done — Next Move Theory canon + skills installed. Free and open-source."
 echo ""
-echo "  skills:  $TARGET/.claude/skills/  and  $TARGET/.codex/skills/"
-echo "  canon:   $TARGET/Next-Move-Theory-Canon/"
-echo "  readme:  $TARGET/NextMoveTheory-README.md"
+echo "  Claude Code skills:  $TARGET/.claude/skills/"
+echo "  OpenAI Codex skills: $TARGET/.agents/skills/"
+echo "  canon:               $TARGET/Next-Move-Theory-Canon/"
+echo "  readme:              $TARGET/NextMoveTheory-README.md"
 echo ""
-echo "Open your agent from $TARGET and run a skill — e.g. /diagnose or /market-research."
+echo "Claude Code: run /diagnose or /market-research."
+echo 'OpenAI Codex: run /skills or mention $diagnose / $market-research.'
+echo ""
+echo "Codex setup note: this installer does not edit Codex configuration."
+echo "Codex Plan mode (/plan) can ask structured questions by default. Enable this"
+echo "experimental feature key manually for full skill intake outside Plan mode:"
+echo "  [features]"
+echo "  default_mode_request_user_input = true"
+echo "Add this to ~/.codex/config.toml, or to .codex/config.toml in a trusted"
+echo "project, then restart Codex."
+echo 'The key was verified against Codex CLI 0.141.0 with `codex features list`; if it'
+echo "is unavailable in your Codex version or mode, the installed Codex skills fall back"
+echo "to asking the same questions directly in chat."
 echo ""
 echo "This is a free, open repository:"
 echo "  https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills"

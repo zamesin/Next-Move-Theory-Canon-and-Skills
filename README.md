@@ -2,7 +2,7 @@
 
 **Next Move Theory is a methodology with a step-by-step algorithm for every product decision: it lays out every tactical and strategic move open to you and helps you choose the best, with the odds on your side.**
 
-This repository holds the open canon (the methodology, written as theses) and a set of Claude Code skills that run it. It's written for the people who decide *what to build*: founders, indie hackers, product managers, and product marketers. The methodology and the skills are by Ivan Zamesin ([X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/)).
+This repository holds the open canon (the methodology, written as theses) and a set of skills for Claude Code and OpenAI Codex that run it. It's written for the people who decide *what to build*: founders, indie hackers, product managers, and product marketers. The methodology and the skills are by Ivan Zamesin ([X](https://x.com/zamesin) · [LinkedIn](https://www.linkedin.com/in/ivan-zamesin/)).
 
 ---
 
@@ -13,6 +13,16 @@ Into your project root (sets up Claude Code + Codex). Clone and run the installe
 ```bash
 git clone https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git
 bash Next-Move-Theory-Canon-and-Skills/install.sh --target .
+```
+
+Windows 11 PowerShell:
+
+```powershell
+git clone https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git
+
+powershell -NoProfile -ExecutionPolicy Bypass -File `
+  .\Next-Move-Theory-Canon-and-Skills\install.ps1 `
+  -Target .
 ```
 
 Or do it in one command from the site:
@@ -108,19 +118,19 @@ The `Skills/` directory holds Claude Code skills that run the methodology for yo
 | **[`product-requirements`](Skills/product-requirements/)** | Turns the chosen segment + value into a build-ready **PRD** (full functionality + edge cases). First it runs a *"challenge the build"* gate that hunts for a cheaper way to hit the same business goal before specifying the build. |
 | **[`craft-go-to-market`](Skills/craft-go-to-market/)** | Turns the value proposition into ready-to-publish **go-to-market**: landing-page copy, ad / creative formulas, and an acquisition + growth-communication plan (channels loaded with Consideration Activators, lead magnets, viral loops, retention messaging). |
 
-**Two front doors.** **`/ask-nmt`** is the conversational front door for advice, explanation, or pressure-testing an idea. **`/diagnose`** is the front door for a *live product*: it finds your risks and growth points and routes you to the next move. Both answer from the canon and point you to the right producer skill when you need a full artifact. For a brand-new idea, start at `/market-research`.
+**Two front doors.** **`ask-nmt`** is the conversational front door for advice, explanation, or pressure-testing an idea. **`diagnose`** is the front door for a *live product*: it finds your risks and growth points and routes you to the next move. Both answer from the canon and point you to the right producer skill when you need a full artifact. For a brand-new idea, start at `market-research`.
 
 **The four producer skills form a pipeline**, each one building on the artifact the one before it produced:
 
-1. **`/market-research`** → pick the segment and the Core Jobs to compete for (with the GO / NARROW / PIVOT verdict and the riskiest assumptions to test).
-2. **`/craft-value-proposition`** → feed it the market-research result; get the value proposition plus a PRD-ready implementation spec.
+1. **`market-research`** → pick the segment and the Core Jobs to compete for (with the GO / NARROW / PIVOT verdict and the riskiest assumptions to test).
+2. **`craft-value-proposition`** → feed it the market-research result; get the value proposition plus a PRD-ready implementation spec.
 3. From the value proposition, branch to either (or both):
-   - **`/product-requirements`** → the build-ready PRD, *what to build*. It consumes the segment from step 1 and the value from step 2.
-   - **`/craft-go-to-market`** → the landing page, ads, and growth plan, *how to sell it*. Works best from the value proposition; also accepts the PRD or the market-research result.
+   - **`product-requirements`** → the build-ready PRD, *what to build*. It consumes the segment from step 1 and the value from step 2.
+   - **`craft-go-to-market`** → the landing page, ads, and growth plan, *how to sell it*. Works best from the value proposition; also accepts the PRD or the market-research result.
 
 You can also jump in mid-pipeline if you already know your segment and Jobs. Each skill takes what you hand it, or routes you back to the step it needs first.
 
-All six are **user-invocable** in Claude Code (`/ask-nmt`, `/diagnose`, `/market-research`, `/craft-value-proposition`, `/product-requirements`, `/craft-go-to-market`). The four producers each have a fast **Quick** mode (no internet) and a deeper **Deep** mode (subagents + web research). `/ask-nmt` and `/diagnose` are conversational (no file unless you ask).
+All six are **user-invocable** in Claude Code and OpenAI Codex. Claude Code uses slash commands such as `/diagnose`; Codex can browse them with `/skills` or mention them with `$diagnose`. The four producers each have a fast **Quick** mode (no internet) and a deeper **Deep** mode (subagents + web research). `ask-nmt` and `diagnose` are conversational (no file unless you ask).
 
 > The skills produce **hypotheses, not conclusions.** Every number is an LLM-generated estimate with a verification path attached. Validate before any decision with expensive consequences. That's the RAT discipline the methodology is built on.
 
@@ -137,7 +147,7 @@ That's the whole install: clone + setup in one step, so there's nothing to "run 
 ```
 your-project/
 ├── .claude/skills/<skill>/        # skills for Claude Code
-├── .codex/skills/<skill>/         # skills for Codex
+├── .agents/skills/<skill>/        # skills for OpenAI Codex
 ├── Next-Move-Theory-Canon/        # the canon — keep this exact name (skills read it by this path)
 ├── AGENTS.md                      # your existing file — rules injected between markers
 ├── CLAUDE.md                      # your existing file — rules injected between markers
@@ -151,28 +161,48 @@ bash install.sh            # installs into the PARENT dir (your project root)
 # or: bash install.sh --target /path/to/your/project
 ```
 
+The installers remove that nested clone after a successful install when the clone is directly inside the target project. If you are testing installer changes and want to keep the clone, pass `--keep-clone` for Bash or `-KeepClone` for PowerShell.
+
 Then invoke a skill:
 
+```text
+Claude Code:
+  /diagnose
+  /market-research
+
+OpenAI Codex:
+  /skills
+  $diagnose
+  $market-research
 ```
-/diagnose            # what should I do next with my product?
-/market-research a tool that drafts SOC 2 evidence for early-stage SaaS
+
+In Codex Plan mode (`/plan`), `request_user_input` is available by default, so Codex can ask structured clarification questions before continuing. For the full skill flow outside Plan mode, enable the experimental feature key below manually; it was verified locally with Codex CLI 0.141.0 via `codex features list`. The installers do not edit any Codex configuration file.
+
+```toml
+[features]
+default_mode_request_user_input = true
 ```
+
+Add this to `~/.codex/config.toml`, or to `.codex/config.toml` in a trusted project, then restart Codex.
+
+If `request_user_input` is unavailable in your Codex mode or version, the installed Codex skills ask the same intake questions directly in chat.
 
 **Updating later:** re-run the install command. It's **idempotent**: the canon and skills are replaced, the rules between `<!-- Next-Move-Theory-Rules:start -->` … `<!-- Next-Move-Theory-Rules:end -->` are refreshed in place, and your own text outside the markers is untouched.
 
-> **Note for AI agents:** if a user asks you to "install this repo," do **not** stop at `git clone`. That leaves the skills in a nested `Skills/` folder where no agent will find them. Run the one-command installer (or `bash install.sh` from the clone). The skills must end up in `.claude/skills/` and `.codex/skills/` at the project root, never in a top-level `Skills/` folder.
+> **Note for AI agents:** if a user asks you to "install this repo," do **not** stop at `git clone`. That leaves the skills in a nested `Skills/` folder where no agent will find them. Run the one-command installer, `bash install.sh`, or `install.ps1` from the clone. The skills must end up in `.claude/skills/` and `.agents/skills/` at the project root, never in a top-level `Skills/` folder.
 
 <details>
 <summary><b>What the installer does (manual equivalent)</b></summary>
 
-The installer enforces these rules: everything lands in the **project root**; `.claude`/`.codex`/canon are never nested inside one another; skills go **inside** `.claude/skills/` and `.codex/skills/` (never a standalone top-level `Skills/`); the canon folder keeps the exact name `Next-Move-Theory-Canon` (skills read it by that relative path); the rules are injected **between markers** into your existing `CLAUDE.md`/`AGENTS.md` (not a separate file, not overwriting your content); the README is copied in renamed; and re-running is idempotent. The equivalent by hand:
+The installer enforces these rules: everything lands in the **project root**; `.claude`/`.agents`/canon are never nested inside one another; skills go **inside** `.claude/skills/` and `.agents/skills/` (never a standalone top-level `Skills/`); the canon folder keeps the exact name `Next-Move-Theory-Canon` (skills read it by that relative path); the rules are injected **between markers** into your existing `CLAUDE.md`/`AGENTS.md` (not a separate file, not overwriting your content); the README is copied in renamed; and re-running is idempotent. The equivalent by hand:
 
 ```bash
 SRC=$(mktemp -d) && git clone --depth 1 https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git "$SRC"
 rm -rf ./Next-Move-Theory-Canon && cp -r "$SRC/Next-Move-Theory-Canon" ./Next-Move-Theory-Canon
-mkdir -p .claude/skills .codex/skills
+mkdir -p .claude/skills .agents/skills
 cp -r "$SRC"/Skills/. .claude/skills/
-cp -r "$SRC"/Skills/. .codex/skills/
+cp -r "$SRC"/Skills/. .agents/skills/
+bash "$SRC/scripts/patch-codex-skills.sh" .agents/skills
 cp "$SRC/README.md" ./NextMoveTheory-README.md
 # then inject the rules block from "$SRC/CLAUDE.md" and "$SRC/AGENTS.md" between the markers
 rm -rf "$SRC"
