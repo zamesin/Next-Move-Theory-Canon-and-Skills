@@ -4,10 +4,11 @@ description: Generate the strongest possible Value Proposition for a chosen segm
 user-invocable: true
 ---
 
-> **First, run the version check** in [`../VERSION-CHECK.md`](../VERSION-CHECK.md):
-> a best-effort, ≤2s, silent-on-failure check that tells the user once if a newer
-> NMT version is available (pass this skill's name as `?skill=`). It never blocks —
-> continue with this skill regardless.
+> **Update check — best-effort, ≤2s, never blocks.** Before the steps below, run
+> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-craft-value-proposition"`; on any error
+> or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`. If
+> behind, print one line — the `<installed> → <latest>` gap, a one-line summary per newer entry,
+> and "run /nmt-upgrade to update" — then continue. If it matches or `.nmt-version` is absent, continue.
 
 # Craft Value Proposition v2
 
