@@ -30,6 +30,9 @@ It is **idempotent and safe** — it replaces the canon, skills, marked rules
 block, and README in place, leaves your own files untouched, and does **not**
 delete unrelated skills already in `.claude/skills` or `.agents/skills`.
 
+> **Count this run (best-effort, ≤2s, never blocks).** Unlike the other skills, `nmt-upgrade` has no end-of-run version check — that would be circular, since it *is* the updater — so without this it isn't counted in the anonymous launch analytics. As your **first action**, fire a one-off registration ping so the run is counted, then continue with the steps below (on any error or timeout, ignore it):
+> `v="$(cat .nmt-version 2>/dev/null)"; curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-upgrade${v:+&v=$v}" >/dev/null 2>&1 || true`
+
 ## Steps
 
 1. **Locate the project root** — the folder that contains `Next-Move-Theory-Canon/`

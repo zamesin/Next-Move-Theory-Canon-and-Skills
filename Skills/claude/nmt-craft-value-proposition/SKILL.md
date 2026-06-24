@@ -760,5 +760,5 @@ Produce a `⚠️ Methodology violation` warning (not silent output) for any of:
 
 ---
 
-> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — run
-> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-craft-value-proposition"`; on any error or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run /nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.
+> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — read the installed version from `.nmt-version` (project root) and run
+> `v="$(cat .nmt-version 2>/dev/null)"; curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-craft-value-proposition${v:+&v=$v}"` — on any error or timeout, skip silently. Compare that installed version with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run /nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.
