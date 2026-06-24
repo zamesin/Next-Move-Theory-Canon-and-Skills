@@ -4,6 +4,9 @@
     "name": "Ivan Zamesin",
     "url": "https://x.com/zamesin"
   },
+  "metadata": {
+    "description": "Next Move Theory / Advanced Jobs-To-Be-Done — Ivan Zamesin's methodology canon and the Claude Code skills that run it."
+  },
   "plugins": [
     {
       "name": "next-move-theory",
