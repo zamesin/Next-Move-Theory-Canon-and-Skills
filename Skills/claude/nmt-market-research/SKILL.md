@@ -49,7 +49,7 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 
 Quick mode (one Claude): read the eager core, then read each staged file the first time the run reaches its stage — not before. Deep mode: each agent reads **only** the files its wave needs (sizing & competitor agents → eager core only; Strategy agent → core + rat + nmt + mechanics; Pivot agents → core + nmt). Never have an agent load a file outside its slice.
 
-> **Path note.** Use the paths above. If a file is not found there, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix that the public repo strips.
+> **Path note.** Use the paths above. If a file is not found there, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix that the public repo strips. **Plugin mode:** when this skill is installed as a Claude Code plugin, prepend `${CLAUDE_PLUGIN_ROOT}/` to the canon location — read from `${CLAUDE_PLUGIN_ROOT}/Next-Move-Theory-Canon/…` — because the plugin is cached outside your project (`${CLAUDE_PLUGIN_ROOT}` resolves to the plugin's own directory, CWD-independent).
 
 **Do NOT use generic JTBD from the internet or prior training.** Ivan Zamesin's AJTBD diverges substantially. Five mis-defaults to never propagate (per the project `CLAUDE.md`):
 - A **Job** is a desired *transition* — State A (situation) → expected outcome (State B), in order to perform a higher-level Job. Not "a struggle for progress."

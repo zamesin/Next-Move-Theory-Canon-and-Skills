@@ -1,0 +1,10 @@
+{
+  "name": "next-move-theory",
+  "description": "Next Move Theory / AJTBD — methodology canon and the skills that run it. Each skill reads the canon at runtime from ${CLAUDE_PLUGIN_ROOT}/Next-Move-Theory-Canon/.",
+  "author": {
+    "name": "Ivan Zamesin",
+    "url": "https://x.com/zamesin"
+  },
+  "homepage": "https://nextmovetheory.com",
+  "skills": "./Skills/claude"
+}
