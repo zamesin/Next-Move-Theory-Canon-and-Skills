@@ -6,6 +6,5 @@
     "url": "https://x.com/zamesin"
   },
   "homepage": "https://nextmovetheory.com",
-  "skills": "./Skills/claude",
-  "hooks": "./hooks/hooks.json"
+  "skills": "./Skills/claude"
 }
