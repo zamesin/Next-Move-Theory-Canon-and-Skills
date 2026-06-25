@@ -75,7 +75,7 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 
 Quick mode (one Claude): read the eager core, then read each staged file the first time the run reaches its stage — not before. Deep mode: each agent reads **only** the files its wave needs (Critical Chain of Jobs builder → eager core + value-creation; Parity → eager core only; PRD designer → eager core + value-creation + value-creation-mechanics; Edge-case analyst → eager core + job-types-and-properties + b2b-if-B2B). Never have an agent load a file outside its slice.
 
-> **Path note.** Use the paths above. If a file is not found there, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix that the public repo strips.
+> **Path note.** Use the paths above. If a file is not found there, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix that the public repo strips. **Plugin mode:** when this skill is installed as a Claude Code plugin, prepend `${CLAUDE_PLUGIN_ROOT}/` to the canon location — read from `${CLAUDE_PLUGIN_ROOT}/Next-Move-Theory-Canon/…` — because the plugin is cached outside your project (`${CLAUDE_PLUGIN_ROOT}` resolves to the plugin's own directory, CWD-independent).
 
 **This skill runs no research and performs no segmentation.** With no upstream artifact it either **routes** the user to `/nmt-market-research` → `/nmt-craft-value-proposition` (the proper path), or takes a **manually-described** segment + Jobs + value (the fast path) and writes the PRD directly. The canon files above are read to *build the PRD on* a segment+value that already exists — not to discover one.
 

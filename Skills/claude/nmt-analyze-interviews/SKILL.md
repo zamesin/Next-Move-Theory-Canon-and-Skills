@@ -89,7 +89,7 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 | `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` | extracting switching barriers / fears | the blockers, Solution-as-label, habit, fears | ~10k |
 | `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` | generating value hypotheses (Section 5) | the published mechanic menu | ~5k |
 
-> **Path note.** Use the paths above. If a file is not found, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix the public repo strips.
+> **Path note.** Use the paths above. If a file is not found, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix the public repo strips. **Plugin mode:** when this skill is installed as a Claude Code plugin, prepend `${CLAUDE_PLUGIN_ROOT}/` to the canon location — read from `${CLAUDE_PLUGIN_ROOT}/Next-Move-Theory-Canon/…` — because the plugin is cached outside your project (`${CLAUDE_PLUGIN_ROOT}` resolves to the plugin's own directory, CWD-independent).
 
 **Do NOT use generic JTBD from the internet or prior training.** Ivan Zamesin's AJTBD diverges substantially. The mis-defaults to never propagate (per the project `CLAUDE.md`):
 - A **Job** is a desired *transition* — State A (situation) → expected outcome (State B), in order to perform a higher-level Job. Not "a struggle for progress."

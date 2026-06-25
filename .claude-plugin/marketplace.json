@@ -1,0 +1,27 @@
+{
+  "name": "next-move-theory",
+  "owner": {
+    "name": "Ivan Zamesin",
+    "url": "https://x.com/zamesin"
+  },
+  "metadata": {
+    "description": "Next Move Theory / Advanced Jobs-To-Be-Done — Ivan Zamesin's methodology canon and the Claude Code skills that run it."
+  },
+  "plugins": [
+    {
+      "name": "next-move-theory",
+      "source": ".",
+      "description": "Next Move Theory / Advanced Jobs-To-Be-Done — the methodology canon plus the Claude Code skills that run it (nmt-chat, nmt-diagnose, nmt-market-research, nmt-craft-value-proposition, nmt-product-requirements, nmt-craft-go-to-market, nmt-analyze-interviews). Each skill reads the canon at runtime.",
+      "homepage": "https://nextmovetheory.com",
+      "keywords": [
+        "product",
+        "jobs-to-be-done",
+        "ajtbd",
+        "next-move-theory",
+        "strategy",
+        "value-proposition",
+        "market-research"
+      ]
+    }
+  ]
+}

@@ -75,7 +75,7 @@ A chat-first diagnostic for a live product. It finds your real risks and best gr
 | `Advanced-Jobs-To-Be-Done/value-creation.md` | the constraint is value | what "value" means, the Aha Moment, the Red Queen |
 | `Advanced-Jobs-To-Be-Done/behaviour-change.md` | activation / retention constraint | Aha Moment / Problem, activation, homeostasis-exit triggers |
 
-> **Path note.** Use `Next-Move-Theory-Canon/...`; if not found, retry with a `1-` prefix (`1-Next-Move-Theory-Canon/...`) — the source repo numbers folders, the public mirror strips the prefix.
+> **Path note.** Use `Next-Move-Theory-Canon/...`; if not found, retry with a `1-` prefix (`1-Next-Move-Theory-Canon/...`) — the source repo numbers folders, the public mirror strips the prefix. **Plugin mode:** when this skill is installed as a Claude Code plugin, prepend `${CLAUDE_PLUGIN_ROOT}/` to the canon location — read from `${CLAUDE_PLUGIN_ROOT}/Next-Move-Theory-Canon/…` — because the plugin is cached outside your project (`${CLAUDE_PLUGIN_ROOT}` resolves to the plugin's own directory, CWD-independent).
 
 This skill grounds **only in the public canon** (all files above are public). For proprietary depth (the 100+ mechanics catalog, unit-economics theory, per-task algorithms) it gives the public-canon foundation and routes to a producer skill or the newsletter.
 

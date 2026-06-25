@@ -184,6 +184,34 @@ rm -rf "$SRC"
 
 ---
 
+### Install as an auto-updating Claude Code plugin
+
+Prefer hands-off updates? Install the canon + skills as a **Claude Code plugin**, with this repo as the marketplace — Claude Code then refreshes them automatically at session start, so you always run the latest canon without re-running the installer.
+
+```
+/plugin marketplace add zamesin/Next-Move-Theory-Canon-and-Skills
+/plugin install next-move-theory@next-move-theory
+```
+
+Then **turn on auto-update** — it is **off by default** for third-party marketplaces, so without this you would stay on the version you installed. Add it in your `.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "next-move-theory": {
+      "source": { "source": "github", "repo": "zamesin/Next-Move-Theory-Canon-and-Skills" },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": { "next-move-theory@next-move-theory": {} }
+}
+```
+
+Commit that file to a shared repo and your whole team auto-installs and auto-updates on first run. Skills invoke exactly the same way (`/nmt-chat`, `/nmt-diagnose`, …); the plugin reads the canon from inside itself, so nothing lands in your project tree.
+
+> **Plugin vs. installer — pick one.** The plugin and the `install.sh` route are independent. On the plugin, **don't** run `/nmt-upgrade` (it re-runs the copy-based installer and would shadow the plugin); update via auto-update or `claude plugin update next-move-theory@next-move-theory`, then `/reload-plugins`. A bundled session hook nudges you when a newer version is available if auto-update is off.
+
+
 ## Make your AI agent methodology-aware
 
 This repo also ships **[`CLAUDE.md`](CLAUDE.md)** and **[`AGENTS.md`](AGENTS.md)**, a compact rules file that teaches a coding agent (Claude Code, Codex, Cursor, and others) to do product work with *this* methodology instead of the generic, often-wrong Jobs To Be Done in its training data.

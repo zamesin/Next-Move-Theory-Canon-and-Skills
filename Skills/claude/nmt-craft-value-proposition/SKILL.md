@@ -128,7 +128,7 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 
 Quick mode (one Claude): read the eager core, then read each staged file the first time the run reaches its stage — not before. Deep mode: **each agent reads only the files its wave needs** (the [S1] dominant-criteria agent → eager core + `segmentation.md` + `job-structure.md`; [S2] job-graph → `critical-chain.md` (+ `job-graph.md` if needed); [G*] mechanic generators → eager core + `behaviour-change.md`; [F] feasibility → `nmt-key-theses.md`; [RAT] → `rat-key-theses.md`; [SYN] → `communication.md`). Never have an agent load a file outside its slice.
 
-**Path note:** if a file is not found, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix the public repo strips.
+**Path note:** if a file is not found, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix the public repo strips. **Plugin mode:** when this skill is installed as a Claude Code plugin, prepend `${CLAUDE_PLUGIN_ROOT}/` to the canon location — read from `${CLAUDE_PLUGIN_ROOT}/Next-Move-Theory-Canon/…` — because the plugin is cached outside your project (`${CLAUDE_PLUGIN_ROOT}` resolves to the plugin's own directory, CWD-independent).
 
 ---
 

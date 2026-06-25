@@ -103,7 +103,7 @@ The public canon is a couple dozen files. Don't load it all. Load on demand:
 4. **Cite the grounding, lightly.** Reference the canon file by its human name when it helps the user go deeper (*"this is in [Job Graph]"*) — never paste file paths or `§`-spam at the user. Internal traceability is fine; reader-facing citations stay clean.
 5. **Sources get links.** Per `CLAUDE.md` Rule 2, any external source you cite (a study, report, figure, tool) must be a clickable Markdown link, verified live before you commit it.
 
-**Path note.** Read canon via `Next-Move-Theory-Canon/...` (public layout). If not found, retry with a `1-` prefix — `1-Next-Move-Theory-Canon/...` (Internal layout; the source repo numbers folders, the public mirror strips the prefix).
+**Path note.** Read canon via `Next-Move-Theory-Canon/...` (public layout). If not found, retry with a `1-` prefix — `1-Next-Move-Theory-Canon/...` (Internal layout; the source repo numbers folders, the public mirror strips the prefix). **Plugin mode:** when this skill is installed as a Claude Code plugin, prepend `${CLAUDE_PLUGIN_ROOT}/` to the canon location — read from `${CLAUDE_PLUGIN_ROOT}/Next-Move-Theory-Canon/…` — because the plugin is cached outside your project (`${CLAUDE_PLUGIN_ROOT}` resolves to the plugin's own directory, CWD-independent).
 
 ---
 
