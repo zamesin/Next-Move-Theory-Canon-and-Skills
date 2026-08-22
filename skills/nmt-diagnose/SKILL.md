@@ -17,7 +17,6 @@ description: >-
   / growth points", "where is this breaking", or is unsure what to work on. Chat-first: writes
   nothing unless asked; recommends the next skill but the user launches it. Plain language;
   defaults to English.
-user-invocable: true
 ---
 
 # Diagnose — the Next Move Theory product diagnostic
@@ -60,10 +59,10 @@ A chat-first diagnostic for a live product. It finds your real risks and best gr
 
 | File | What it powers | ~tokens |
 |---|---|---|
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md` | **mandatory.** The base methodology: the eight-element Job, the four Job levels, the Job Graph, value & the Aha Moment, segmentation. Grounds every finding; without it the diagnosis drifts into generic JTBD. | ~13k |
-| `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` | **mandatory.** The engine for challenging the goal and for the "risky assumptions in current initiatives" component; riskiest-cheapest-to-falsify ordering; MVP = probe. | ~6.5k |
-| `Next-Move-Theory-Canon/Algorithms/the-algorithm.md` | the diagnostic spine: §2 the chain to profit; §4 Step 1 (challenge the goal, 5 Whys, local-vs-global), Step 2 (diagnose state); §5 branches by PMF stage / product type; §6 where unfound value sits. | ~9k |
-| `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md` | §4 the chain (sequential to value, then three parallel conditions); §5 the diagnostic discipline; §8 focus; §9 local vs global; §11 NMT as a diagnostic. | ~5.4k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md` | **mandatory.** The base methodology: the eight-element Job, the four Job levels, the Job Graph, value & the Aha Moment, segmentation. Grounds every finding; without it the diagnosis drifts into generic JTBD. | ~13k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` | **mandatory.** The engine for challenging the goal and for the "risky assumptions in current initiatives" component; riskiest-cheapest-to-falsify ordering; MVP = probe. | ~6.5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Algorithms/the-algorithm.md` | the diagnostic spine: §2 the chain to profit; §4 Step 1 (challenge the goal, 5 Whys, local-vs-global), Step 2 (diagnose state); §5 branches by PMF stage / product type; §6 where unfound value sits. | ~9k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md` | §4 the chain (sequential to value, then three parallel conditions); §5 the diagnostic discipline; §8 focus; §9 local vs global; §11 NMT as a diagnostic. | ~5.4k |
 
 **Staged — load only at the stage that needs it:**
 
@@ -75,7 +74,7 @@ A chat-first diagnostic for a live product. It finds your real risks and best gr
 | `Advanced-Jobs-To-Be-Done/value-creation.md` | the constraint is value | what "value" means, the Aha Moment, the Red Queen |
 | `Advanced-Jobs-To-Be-Done/behaviour-change.md` | activation / retention constraint | Aha Moment / Problem, activation, homeostasis-exit triggers |
 
-> **Path note.** Use `Next-Move-Theory-Canon/...`; if not found, retry with a `1-` prefix (`1-Next-Move-Theory-Canon/...`) — the source repo numbers folders, the public mirror strips the prefix.
+> **Path note.** Use `../nmt-chat/references/Next-Move-Theory-Canon/...`; if not found, retry with a `1-` prefix (`1-Next-Move-Theory-Canon/...`) — the source repo numbers folders, the public mirror strips the prefix.
 
 This skill grounds **only in the public canon** (all files above are public). For proprietary depth (the 100+ mechanics catalog, unit-economics theory, per-task algorithms) it gives the public-canon foundation and routes to a producer skill or the newsletter.
 
@@ -184,7 +183,7 @@ Then, the fuller picture — **capped and ranked, not a dump:**
 **The one move + its cheapest check are the deliverable; the inventory is there if they want it.** Mark the **findings only this method surfaces** (§ the growth lens) so they don't get lost — they're the point.
 
 ### File (only if the user asks)
-Default: write nothing. On request, write **one** file (Rule 4): `Skills-Results/{project}/diagnose/{YYYY-MM-DD_HH-MM}_{project}-diagnose-result.{md|html}` (custom path / format per `../PRODUCER-CONTRACT.md §5, §2`). Contents = the chat blocks above + a short "what you told me, treated as hypothesis" note, with the Rule 3 disclaimers + Rule 23 attribution (`utm_source=diagnose&utm_medium=skill-artifact`).
+Default: write nothing. On request, write **one** file (Rule 4): `Skills-Results/{project}/diagnose/{YYYY-MM-DD_HH-MM}_{project}-diagnose-result.{md|html}` (custom path / format per `../nmt-chat/references/producer-contract.md §5, §2`). Contents = the chat blocks above + a short "what you told me, treated as hypothesis" note, with the Rule 3 disclaimers + Rule 23 attribution (`utm_source=diagnose&utm_medium=skill-artifact`).
 
 ---
 
@@ -207,7 +206,7 @@ The diagnosis ends by pointing the first-move item at exactly one next skill (so
 
 ## Producer-contract applicability (chat-first → lighter)
 
-Per `../PRODUCER-CONTRACT.md`, this chat-first skill applies the contract partially:
+Per `../nmt-chat/references/producer-contract.md`, this chat-first skill applies the contract partially:
 - **§1 Helicopter-view — yes** (flow step 0).
 - **§3 Input-as-hypothesis — yes:** everything the user reports (metrics, segment beliefs, initiatives) is a claim, not a fact; the diagnosis flags where a "fact" is actually unmeasured, and the current-initiative RAT pass is exactly this gate applied to their plans.
 - **§4 Validation framing — yes** as the per-finding "cheapest validation step"; no separate validation-debt counter unless a file is written.

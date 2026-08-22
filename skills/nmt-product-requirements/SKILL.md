@@ -1,7 +1,6 @@
 ---
 name: nmt-product-requirements
 description: Turn a chosen segment + Core Jobs into a build-ready PRD (full functionality + edge cases) using Ivan Zamesin's AJTBD / Next Move Theory methodology. It consumes upstream work — segments from /nmt-market-research, value from /nmt-craft-value-proposition — and never re-derives them; with no research done it routes you upstream first, or takes a manually described segment + value for a fast run. Before writing requirements it runs a "challenge the build" gate that looks for a more effective way to hit the same business goal; if a better way wins, the PRD is written for that. Output — a single PRD — functionality mapped Core Job → Big Job → value mechanic → success criteria → Aha Moment on the Critical Chain of Jobs, plus edge cases covering ~90% of use cases. Use when the user says "write the PRD / product requirements" or wants to turn a segment+value or a feature idea into a build spec. Two modes — Quick (default, no internet) and Deep (subagents + web parity check). Plain language; defaults to English.
-user-invocable: true
 ---
 
 # Product Requirements (PRD) — English / US edition
@@ -10,7 +9,7 @@ user-invocable: true
 
 > **In one breath.** The skill no longer re-derives segments (that is `/nmt-market-research`) or invents value (that is `/nmt-craft-value-proposition`) — it **consumes** their output, and it runs **no research itself**. With no upstream artifact it does one of two things: **route** the user to run `/nmt-market-research` → `/nmt-craft-value-proposition` first (the proper path), or — if the user just wants requirements fast and already knows their segment and value — take the **segment + value straight from the user's description** (the fast path) and skip research entirely. It then adds a **"challenge the build"** gate before any requirement is written — *is building this even the right move, or is there a cheaper, more effective way to hit the same business goal?* — and writes the PRD for whatever wins. The deliverable is a **single PRD, short by default**: the one-page summary (what we're building · who it's for · the moment that proves it works · the single riskiest thing to validate before building · what to build first) is what most readers need; the full functional requirements and the ~90% edge-case table sit underneath as a deeper layer for whoever builds it. Internal methodology citations are kept out of the reader's reading flow; project rule numbers never appear in the output. Canon is **loaded progressively** — an eager core up front, staged files only at the stage that needs them. Landing/ad/GTM copy moved to `/nmt-craft-go-to-market`; analytics and a standalone unit-economics model are out of scope (unit economics survives only as a reasoning filter).
 
-> **Producer contract (binding) — `../PRODUCER-CONTRACT.md`.** Six cross-cutting behaviors shared by all producer skills, from user feedback: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block; (4) print **validation debt** and write **`GO (to validation)`**, never bare `GO`; (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill; the contract is the source of truth for the wording. This skill is the **closest-to-build** artifact in the chain, so the validation-debt + *"validate before you build, don't build yet"* framing (§4) carries the most weight here — get it right.
+> **Producer contract (binding) — `../nmt-chat/references/producer-contract.md`.** Six cross-cutting behaviors shared by all producer skills, from user feedback: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block; (4) print **validation debt** and write **`GO (to validation)`**, never bare `GO`; (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill; the contract is the source of truth for the wording. This skill is the **closest-to-build** artifact in the chain, so the validation-debt + *"validate before you build, don't build yet"* framing (§4) carries the most weight here — get it right.
 
 ## Where this skill sits in the chain
 
@@ -48,30 +47,30 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 
 | File | What it powers | ~tokens |
 |---|---|---|
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` | The chain the functionality is built on; **break sites = the edge-case source** (§5, §7) — the PRD's spine | ~5k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md` | The 8 Job elements; context→criteria (§3); criteria→metrics (§8); fidelity levels — the Job-grammar spine | ~5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` | The chain the functionality is built on; **break sites = the edge-case source** (§5, §7) — the PRD's spine | ~5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md` | The 8 Job elements; context→criteria (§3); criteria→metrics (§8); fidelity levels — the Job-grammar spine | ~5k |
 
 **Staged — load only at the stage that uses it:**
 
 | File | Load when | Used by | ~tokens |
 |---|---|---|---|
-| `Next-Move-Theory-Canon/Algorithms/the-algorithm.md` | reaching the challenge gate (S3) | **Step 1 — Challenge the business goal** (5 Whys, local-vs-global gate) is the challenge step's home | ~6k |
-| `Next-Move-Theory-Canon/Next-Move-Theory/subtraction.md` | reaching the challenge gate (S3) | the subtraction-first question + invisible-product asymptote — the heart of the challenge | ~4k |
-| `Next-Move-Theory-Canon/Next-Move-Theory/local-vs-global-optimum.md` | reaching the challenge gate (S3) | is this an additive local-optimum build when a global-optimum move returns more? | ~4k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md` | reaching the functional-requirements stage (S4 §3) | value formula (§3), success criteria (§9), criteria→mechanics map (§11), Aha Moment (§12), the two dominant mechanics (§14), value-lives-outside-Core-Jobs (§17) | ~7k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` | reaching the challenge gate (S3) + the functional-requirements stage (S4 §3) | the mechanics catalog — the menu for the challenge AND the feature→mechanic mapping | ~4.9k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-types-and-properties.md` | reaching the edge-case stage (S4 §4) | Tax / Orientation / Emotional / Viral Jobs — edge-case and functionality sources | ~5k |
-| `Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` | reaching the challenge gate (S3) + the risk stage (S4 §7) | risk handling; the drop-it exercise (used in the challenge); MVP = probe | ~6.5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Algorithms/the-algorithm.md` | reaching the challenge gate (S3) | **Step 1 — Challenge the business goal** (5 Whys, local-vs-global gate) is the challenge step's home | ~6k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Next-Move-Theory/subtraction.md` | reaching the challenge gate (S3) | the subtraction-first question + invisible-product asymptote — the heart of the challenge | ~4k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Next-Move-Theory/local-vs-global-optimum.md` | reaching the challenge gate (S3) | is this an additive local-optimum build when a global-optimum move returns more? | ~4k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation.md` | reaching the functional-requirements stage (S4 §3) | value formula (§3), success criteria (§9), criteria→mechanics map (§11), Aha Moment (§12), the two dominant mechanics (§14), value-lives-outside-Core-Jobs (§17) | ~7k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` | reaching the challenge gate (S3) + the functional-requirements stage (S4 §3) | the mechanics catalog — the menu for the challenge AND the feature→mechanic mapping | ~4.9k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-types-and-properties.md` | reaching the edge-case stage (S4 §4) | Tax / Orientation / Emotional / Viral Jobs — edge-case and functionality sources | ~5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Riskiest-Assumption-Test/rat-key-theses.md` | reaching the challenge gate (S3) + the risk stage (S4 §7) | risk handling; the drop-it exercise (used in the challenge); MVP = probe | ~6.5k |
 
 **As-needed — load only when the condition fires:**
 
 | File | When | ~tokens |
 |---|---|---|
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-graph.md` | when the Job-Graph slice needs care (level placement, many-to-many, directional moves) | ~6k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md` | Path D — sharpening a manually-described segment; confirming Core-Job level placement | ~5k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` | Aha Moment placement, triggers, the seven behavior-change triggers | ~6k |
-| `Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md` | the unit-economics filter inside the challenge + ranking — §4 chain-to-profit (UE condition: LTV > CAC, payback, target margin per unit) and §5 Consequence 2 (segment budget supports the math). Filter only — not an output | ~5.4k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/b2b.md` | **only if the buyer is a company** — role-chain edge cases, two parallel Job Graphs | ~6k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-graph.md` | when the Job-Graph slice needs care (level placement, many-to-many, directional moves) | ~6k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md` | Path D — sharpening a manually-described segment; confirming Core-Job level placement | ~5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` | Aha Moment placement, triggers, the seven behavior-change triggers | ~6k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Next-Move-Theory/nmt-key-theses.md` | the unit-economics filter inside the challenge + ranking — §4 chain-to-profit (UE condition: LTV > CAC, payback, target margin per unit) and §5 Consequence 2 (segment budget supports the math). Filter only — not an output | ~5.4k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/b2b.md` | **only if the buyer is a company** — role-chain edge cases, two parallel Job Graphs | ~6k |
 
 Quick mode (one Claude): read the eager core, then read each staged file the first time the run reaches its stage — not before. Deep mode: each agent reads **only** the files its wave needs (Critical Chain of Jobs builder → eager core + value-creation; Parity → eager core only; PRD designer → eager core + value-creation + value-creation-mechanics; Edge-case analyst → eager core + job-types-and-properties + b2b-if-B2B). Never have an agent load a file outside its slice.
 
@@ -147,7 +146,7 @@ The PRD's **default face is the one-page summary** — what we're building, who 
 - **Disclaimers once.** The two-part disclaimer appears **once** (top of file), plus a one-line pointer in Layer 1. Do not repeat the full disclaimer block lower in the file. (Search the file before shipping — the disclaimer wording should hit at most twice.)
 - **Keep source links** for external facts (Rule 2).
 
-**Enforcement gate (these kept getting skipped in real runs — check each before writing the file; full version in `../READABILITY-CONTRACT.md`):**
+**Enforcement gate (these kept getting skipped in real runs — check each before writing the file; full version in `../nmt-chat/references/readability-contract.md`):**
 
 - **Unique, resolving anchors.** Every `▸` drill-down link points to its own unique `<a id="…">` that exists **exactly once**; no two links share a target. Before shipping, list every `▸` target and confirm each resolves.
 - **Inline-gloss opaque Layer-3 table headers.** A non-obvious column header (in the edge-case, requirement, or gate tables) carries a 3–6-word plain gloss right there. Don't rely on the glossary file.
@@ -570,7 +569,7 @@ Run the **self-critic** over the draft (Quick: a self-critique pass; Deep: a sep
 - [ ] **Disclaimers once** — full two-part disclaimer at top only; Layer 1 has the one-line pointer; Layer 3 does not repeat the block.
 - [ ] **Citations fenced** — no canon path or `Rule N` inline in Layers 1–2 or in Layer-3 prose; any canon reference sits in a `▸ methodology trace` line. **No `CLAUDE.md Rule N` appears anywhere in the output, in any layer.** The mechanic mapping carries the mechanic *name* but no canon file path.
 - [ ] Step ledger ran — every stage S0–S5 checked off by name; any skip was declared, never silent.
-- [ ] **Producer contract satisfied (`../PRODUCER-CONTRACT.md`)** — helicopter-view printed before the first question (§1); output-format and output-path asked in intake, and the file written in the chosen format at the chosen location (§2, §5); all user input + the upstream artifact treated as hypothesis, the **"What you told me — and the risks I see in it"** block present, and no scope rests primarily on an unvalidated input without saying so + a RAT row (§3); the **validation-debt line** present in Layer 1 and any GO-style build verdict written as **`GO (to validation)`**, framed as "validate first, then build" (§4); on Paths A/B the hand-off asked what upstream debt was retired and re-tagged the rest (§4c); in Deep mode each web leg met its evidence floor + passed its self-critic, with the web-MCP fallback offered when fetch was blocked (§6).
+- [ ] **Producer contract satisfied (`../nmt-chat/references/producer-contract.md`)** — helicopter-view printed before the first question (§1); output-format and output-path asked in intake, and the file written in the chosen format at the chosen location (§2, §5); all user input + the upstream artifact treated as hypothesis, the **"What you told me — and the risks I see in it"** block present, and no scope rests primarily on an unvalidated input without saying so + a RAT row (§3); the **validation-debt line** present in Layer 1 and any GO-style build verdict written as **`GO (to validation)`**, framed as "validate first, then build" (§4); on Paths A/B the hand-off asked what upstream debt was retired and re-tagged the rest (§4c); in Deep mode each web leg met its evidence floor + passed its self-critic, with the web-MCP fallback offered when fetch was blocked (§6).
 
 ---
 

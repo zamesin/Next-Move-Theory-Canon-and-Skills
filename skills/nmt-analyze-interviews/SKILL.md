@@ -1,31 +1,41 @@
 ---
 name: nmt-analyze-interviews
 description: >-
-  Extract the AJTBD structure from customer-interview files you already have —
-  segments by Core Jobs, personas, the Consideration Set, existing Solutions and
-  Problems, and value hypotheses — using Ivan Zamesin's Next Move Theory /
-  Advanced Jobs To Be Done methodology. Input — one or many files (transcripts,
-  notes, sales or support calls, survey open-ends), AJTBD or not. It reads each
-  interview in its own context so it never overflows, scores each extraction's
-  confidence, clusters into segments by similar Core Jobs, and writes one report —
-  data-quality summary, segments with personas, structured Solutions and Problems,
-  a Consideration Set, value hypotheses, and what to interview next. Use for
-  "analyze my interviews", "extract jobs from these transcripts", "find the
-  segments in these calls". Defaults to English.
-user-invocable: true
+  Take one or many customer-interview files you already have and extract the AJTBD structure
+  from them — segments by Core Jobs, personas, Consideration Set, existing Solutions and
+  Problems, value hypotheses — using Ivan Zamesin's AJTBD / Next Move Theory methodology
+  (distinct from generic Christensen JTBD). Input — a folder or list of files: deep-interview
+  transcripts, interview notes, sales-call or demo transcripts, support/chat logs, survey
+  open-ends. The interviews may be AJTBD or not, well- or poorly-conducted, one file or
+  dozens. The skill first asks which business task you're solving (and helps you choose if you
+  can't name one), then reads each interview in its own subagent (a fan-out so it never
+  overflows context, no matter how many large transcripts), extracts the Core Jobs with an
+  honest per-interview confidence (a clean extraction vs. a weak hypothesis), gives per-
+  interview feedback (what was pulled, what's missing, whether this interview can even serve
+  your business task), clusters the extractions into segments by similar Core Jobs + similar
+  success criteria + similar priority order, and computes each segment's confidence from the
+  supporting interviews' confidence. Output — one report: a data-quality summary, segments by
+  Core Jobs with personas and confidence, structured existing Solutions and Problems, a
+  Consideration Set per segment, value-creation hypotheses, and a gap list of what to
+  interview next. Use when the user says "analyze my interviews", "extract jobs from these
+  transcripts", "I have customer interviews — find the segments", "what jobs are in these
+  calls", "synthesize my interviews", or has interview/transcript files and wants the
+  methodology pulled out of them. The post-fieldwork counterpart to /nmt-interview-guide. Two
+  modes — Quick (default, no internet) and Deep (subagents + web to enrich competitors and the
+  Consideration Set). Plain language; defaults to English.
 ---
 
 # Analyze Interviews v1
 
 > **v1 in one breath.** You already ran the interviews; this skill pulls the methodology out of them. It takes **one or many** interview files (transcripts, notes, sales calls, support logs, survey open-ends — AJTBD or not, good or bad), asks **which business task** you're solving (and helps you pick one if you can't), then reads **each interview in its own subagent** — a fan-out that keeps the run from ever overflowing context no matter how many large transcripts you load. Each interview is distilled to the AJTBD constructs with an **honest confidence** (a clean Core-Job extraction vs. a weak hypothesis) and **per-interview feedback** (what was found, what's missing, whether this interview can serve your task). The distillations are clustered into **segments by similar Core Jobs + similar success criteria + similar priority order**, and each segment's confidence is **computed from its supporting interviews' confidence**. Output — one report: data-quality summary, segments with personas, structured Solutions + Problems, a Consideration Set per segment, value hypotheses, and what to interview next.
 
-> **Producer contract (binding) — `../PRODUCER-CONTRACT.md`.** Six cross-cutting behaviors shared by all producer skills: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block — here the inputs are interviews, so this becomes the per-interview quality read; (4) print **validation framing** — extracted Jobs are hypotheses with a confidence, only as strong as the interviews behind them; (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill.
+> **Producer contract (binding) — `../nmt-chat/references/producer-contract.md`.** Six cross-cutting behaviors shared by all producer skills: (1) print a **helicopter-view** before the first question; (2) ask **Markdown or HTML** output; (3) treat **all** user input as hypothesis and emit a *"risks I see in what you gave me"* block — here the inputs are interviews, so this becomes the per-interview quality read; (4) print **validation framing** — extracted Jobs are hypotheses with a confidence, only as strong as the interviews behind them; (5) accept a **custom output path**; (6) Deep mode runs an **evidence floor + self-critic loop** and offers a **web-MCP fallback**. The hooks below wire each into this skill.
 
-> **New here, or not sure this is the right skill?** Start right here — or run `$nmt-chat`, describe your situation, and it points you to the right one. Quick map: **new idea →** `$nmt-market-research` · **live product or a metric moved →** `$nmt-diagnose` · **have customer interviews →** `$nmt-analyze-interviews` · **ready to build →** `$nmt-product-requirements` · **positioning / launch copy →** `$nmt-craft-value-proposition` → `$nmt-craft-go-to-market`.
+> **New here, or not sure this is the right skill?** Start right here — or run `/nmt-chat`, describe your situation, and it points you to the right one. Quick map: **new idea →** `nmt-market-research` · **live product or a metric moved →** `nmt-diagnose` · **have customer interviews →** `nmt-analyze-interviews` · **ready to build →** `nmt-product-requirements` · **positioning / launch copy →** `nmt-craft-value-proposition` → `nmt-craft-go-to-market`.
 
 ## Where this skill sits
 
-The **post-fieldwork counterpart to `$nmt-interview-guide`.** `nmt-interview-guide` designs the study *before* the field; this skill analyzes the transcripts *after*. Distinct from `$nmt-market-research`, which **invents** segments from web research and reasoning — this skill **reconstructs** segments from *your real interviews* and tells you how far the data can be trusted. Its output feeds `$nmt-craft-value-proposition`, `$nmt-diagnose`, and `$nmt-craft-go-to-market`.
+The **post-fieldwork counterpart to `/nmt-interview-guide`.** `nmt-interview-guide` designs the study *before* the field; this skill analyzes the transcripts *after*. Distinct from `/nmt-market-research`, which **invents** segments from web research and reasoning — this skill **reconstructs** segments from *your real interviews* and tells you how far the data can be trusted. Its output feeds `/nmt-craft-value-proposition`, `/nmt-diagnose`, and `/nmt-craft-go-to-market`.
 
 | Skill | Input | Answers |
 |---|---|---|
@@ -35,18 +45,18 @@ The **post-fieldwork counterpart to `$nmt-interview-guide`.** `nmt-interview-gui
 
 ## What this skill produces
 
-**A single file** (one file per run — `AGENTS.md` Rule 4) with:
+**A single file** (one file per run — `CLAUDE.md` Rule 4) with:
 
 1. **Data-quality summary** — how many files, the type/quality mix (AJTBD / partial / non-AJTBD; well / poorly conducted), and whether the set can serve the chosen business task.
 2. **Segments by Core Jobs** — each with a persona (= the causal criteria), Core Jobs in canon grammar, Big Jobs, **a confidence level and the interviews it stands on.**
 3. **What they use today and where it falls short** — for each tool they hired, the set of tasks it does for them, and each problem traced to the task it botched (task → tool → problem). DIY counts as a tool.
 4. **What they weighed before choosing** — the options, how they compare, the named products plus a way in, and their fears (their consideration set), as its own block.
-5. **Value-creation hypotheses** — underserved success-criteria + a one-line mechanic direction (no feature list — that is `$nmt-craft-value-proposition`'s job).
+5. **Value-creation hypotheses** — underserved success-criteria + a one-line mechanic direction (no feature list — that is `/nmt-craft-value-proposition`'s job).
 6. **Per-interview appendix** — what was extracted from each file, with anchor quotes and confidence.
 7. **Gaps + what to interview next** — what the current data cannot answer for the task, and whom to re-recruit (past-payment screener).
 
 **Two modes:**
-- **Quick (default):** no internet. Subagents distill each interview; one Codex agent synthesizes the segments.
+- **Quick (default):** no internet. Subagents distill each interview; one Claude synthesizes the segments.
 - **Deep (opt-in, longer):** also sends web subagents to enrich the competitor / Consideration-Set picture and mine real review language around the Jobs surfaced. See "Deep mode" at the end.
 
 ---
@@ -59,28 +69,28 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 
 | File | What it powers | ~tokens |
 |---|---|---|
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md` | the whole model: Job, Job Graph, value, the Aha Moment, the segmentation root | ~13k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md` | clustering into segments; causal vs. symptomatic criteria; persona = causal criteria | ~5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/ajtbd-key-theses.md` | the whole model: Job, Job Graph, value, the Aha Moment, the segmentation root | ~13k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/segmentation.md` | clustering into segments; causal vs. symptomatic criteria; persona = causal criteria | ~5k |
 
 **Each distiller subagent reads (its slice only):**
 
 | File | Why | ~tokens |
 |---|---|---|
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md` | the eight Job elements + the per-element extraction question + the quality signals | ~9k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-types-and-properties.md` | typing the Job (Fake / Tax / Orientation / Emotional / Viral / Regular); the Fake-Job past-behaviour test | ~5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-structure.md` | the eight Job elements + the per-element extraction question + the quality signals | ~9k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/job-types-and-properties.md` | typing the Job (Fake / Tax / Orientation / Emotional / Viral / Regular); the Fake-Job past-behaviour test | ~5k |
 
 **Staged — the orchestrator loads only at the stage that uses it:**
 
 | File | Load when | Used by | ~tokens |
 |---|---|---|---|
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/consideration-activators.md` | writing the Consideration Set per segment | the four-slot container + the five Activators | ~4k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` | the task is conversion / retention / acquisition | Previous / Next Jobs, chain breaks, Aha placement | ~6k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` | extracting switching barriers / fears | the blockers, Solution-as-label, habit, fears | ~10k |
-| `Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` | generating value hypotheses (Section 5) | the published mechanic menu | ~5k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/consideration-activators.md` | writing the Consideration Set per segment | the four-slot container + the five Activators | ~4k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/critical-chain.md` | the task is conversion / retention / acquisition | Previous / Next Jobs, chain breaks, Aha placement | ~6k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/behaviour-change.md` | extracting switching barriers / fears | the blockers, Solution-as-label, habit, fears | ~10k |
+| `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md` | generating value hypotheses (Section 5) | the published mechanic menu | ~5k |
 
 > **Path note.** Use the paths above. If a file is not found, retry with a `1-` prefix on the canon folder (`1-Next-Move-Theory-Canon/...`) — the source repo orders folders with a numeric prefix the public repo strips.
 
-**Do NOT use generic JTBD from the internet or prior training.** Ivan Zamesin's AJTBD diverges substantially. The mis-defaults to never propagate (per the project `AGENTS.md`):
+**Do NOT use generic JTBD from the internet or prior training.** Ivan Zamesin's AJTBD diverges substantially. The mis-defaults to never propagate (per the project `CLAUDE.md`):
 - A **Job** is a desired *transition* — State A (situation) → expected outcome (State B), in order to perform a higher-level Job. Not "a struggle for progress."
 - `I want to + verb` is the **primary element** of an eight-element Job, not the whole Job. **Each infinitive verb is a separate Job** — parse multi-verb statements into the hierarchy.
 - A **Problem** is a consequence of a Solution hired for a Job and underperforming its success criteria — not a root cause.
@@ -101,7 +111,7 @@ The **only** source of methodology is the Next Move Theory canon, read at runtim
 
 Why this matters: 18 deep interviews at ~8–10k tokens each are ~150k tokens — they cannot fit one 200k window alongside the canon and the report, and forcing them in triggers compaction that *summarizes away the verbatim customer utterances AJTBD depends on*. Fan-out turns ~150k of raw transcript into ~15k of distillation, fits comfortably, and **preserves the exact quotes on purpose.** The concurrency cap handles the rest — pass all N files; they run in waves.
 
-- Distillers run with Codex's available execution (parallel subagents if your build supports them, otherwise sequentially in one context); the orchestrator waits for the wave, collects the returns.
+- Distillers run with the `Agent` tool, `subagent_type: "general-purpose"`, `run_in_background: true`; the orchestrator waits for the wave, collects the returns.
 - **No per-interview files.** Each distiller returns its distillation in its final message. The orchestrator holds them in context and writes the one report (Rule 4).
 
 ---
@@ -112,7 +122,7 @@ Write the report in the plain language the user speaks; when a methodology term 
 
 ---
 
-## Output file (one file per run — `AGENTS.md` Rule 4)
+## Output file (one file per run — `CLAUDE.md` Rule 4)
 
 The skill writes **exactly one** file. Default location (unless the user gave a custom output path in intake — `PRODUCER-CONTRACT.md §5`):
 
@@ -144,21 +154,21 @@ Skills-Results/{product-slug}/analyze-interviews/{YYYY-MM-DD_HH-MM}_{product-slu
 > **Two modes:** *Quick* (default — no internet; reads and synthesizes your files) · *Deep* (opt-in — also researches the real competing products and review language around the tasks I find, to enrich the competitive picture).
 > **Honest caveat:** the output is only as good as your interviews. If they're about hypotheticals or never touched a real past purchase, I'll flag that — and the right next step is better interviews, not a prettier report.
 
-Then **document language.** Default to **English**; if the user writes in another language, offer to work in it (`request_user_input`: English (Recommended) / their language; for another language, ask directly in chat). Hold the choice; all communication and the file use it; canon files and URLs stay as-is.
+Then **document language.** Default to **English**; if the user writes in another language, offer to work in it (`AskUserQuestion`: English / their language / Other). Hold the choice; all communication and the file use it; canon files and URLs stay as-is.
 
 ---
 
 ## STAGE 1 — The business task (asked first — it is the spec on the extraction)
 
-The chosen business task changes *what to dig for and at what altitude* — the canon: *"the shortlisted mechanics are the spec on the research… without them you interview blind"* (`Next-Move-Theory-Canon/Algorithms/the-algorithm.md`). So pin it before extracting. Run this waterfall:
+The chosen business task changes *what to dig for and at what altitude* — the canon: *"the shortlisted mechanics are the spec on the research… without them you interview blind"* (`../nmt-chat/references/Next-Move-Theory-Canon/Algorithms/the-algorithm.md`). So pin it before extracting. Run this waterfall:
 
-1. **Ask directly** (`request_user_input`) — *"What business task are you trying to solve with these interviews?"* — offer the menu below.
+1. **Ask directly** (`AskUserQuestion`) — *"What business task are you trying to solve with these interviews?"* — offer the menu below.
 2. **If the user can't name one** → *"Describe in your own words what you're trying to figure out or fix."* (free text).
 3. **Infer from the description.** If you can confidently map it to a task on the menu, **play it back in one sentence and confirm.**
-4. **If you can't confidently map it** → propose the **2–4 most likely tasks** (`request_user_input`) and let the user pick.
+4. **If you can't confidently map it** → propose the **2–4 most likely tasks** (`AskUserQuestion`) and let the user pick.
 5. **If several tasks apply** → ask them to rank; the top one drives extraction emphasis, the rest are secondary.
 
-**Business-task menu** (distilled from the canon's Algorithms + mechanics catalog — `Next-Move-Theory-Canon/Algorithms/the-algorithm.md`, `Next-Move-Theory-Canon/Next-Move-Theory/mechanics-catalog.md`; cited as provenance, no need to read them for the menu):
+**Business-task menu** (distilled from the canon's Algorithms + mechanics catalog — `../nmt-chat/references/Next-Move-Theory-Canon/Algorithms/the-algorithm.md`, `../nmt-chat/references/Next-Move-Theory-Canon/Advanced-Jobs-To-Be-Done/value-creation-mechanics.md`; cited as provenance, no need to read them for the menu):
 
 - **Create value / beat competitors** — perform the Jobs more efficiently than the alternatives.
 - **Increase conversion to sale / activate customers into value** — repair the path to the first Aha Moment.
@@ -169,7 +179,7 @@ The chosen business task changes *what to dig for and at what altitude* — the 
 - **Position & differentiate** — communicate validated value to a validated segment.
 - **Grow / scale an existing product** — more segments, sub-segments, geographies, or more of one customer's Jobs.
 - **Escape direct competition / climb a level** — relocate where you compete.
-- **Not sure / challenge my goal** — a "broken metric almost never sits where it shows" → diagnose upstream (route to `$nmt-diagnose` if it turns out there are no interviews to analyze yet).
+- **Not sure / challenge my goal** — a "broken metric almost never sits where it shows" → diagnose upstream (route to `/nmt-diagnose` if it turns out there are no interviews to analyze yet).
 
 **Hold the chosen task** — STAGE 3 conditions the extraction on it (see "Business-task → extraction emphasis").
 
@@ -177,7 +187,7 @@ The chosen business task changes *what to dig for and at what altitude* — the 
 
 ## STAGE 2 — Intake the interviews + run settings
 
-Collect in a short stream + one or two batched `request_user_input` calls (max 4 each).
+Collect in a short stream + one or two batched `AskUserQuestion` calls (max 4 each).
 
 ### Step 1 — The interview files
 > Point me at your interviews — a folder, or a list of files. They can be deep-interview transcripts, interview notes, sales-call or demo recordings turned to text, support or chat logs, or open-ended survey answers. One file or many; AJTBD-style or not; polished or rough — I'll sort the quality myself.
@@ -323,16 +333,16 @@ Build the single file in this order (top attribution → disclaimers once → th
 {The options they knew · how those compare · the named products plus a way in · their fears (their consideration set). What they weigh before choosing, and what they'd need to learn or believe to switch.}
 
 ## 5. Value-creation hypotheses
-{Underserved success-criteria intersections + a one-line mechanic direction per segment — no feature list. "What to build to deliver this is $nmt-craft-value-proposition's job."}
+{Underserved success-criteria intersections + a one-line mechanic direction per segment — no feature list. "What to build to deliver this is /nmt-craft-value-proposition's job."}
 
 ## 6. Per-interview appendix
 {One row/block per file: type & quality · Core Jobs found (+ per-Job confidence) · what's present · what's missing · serves-the-task verdict. In HTML, a <details> block.}
 
 ## 7. Gaps + what to interview next
-{What the data can't answer for the chosen task; whom to re-recruit (past-payment screener); which segments need more interviews to move from Hypothesis → Emerging → Solid. Suggest $nmt-interview-guide for the design.}
+{What the data can't answer for the chosen task; whom to re-recruit (past-payment screener); which segments need more interviews to move from Hypothesis → Emerging → Solid. Suggest /nmt-interview-guide for the design.}
 ```
 
-**Hand-off (`PRODUCER-CONTRACT.md §4c`).** End with the next step: a **Solid** segment + its value hypothesis → `$nmt-craft-value-proposition`; a live product to grow/fix → `$nmt-diagnose`; only **Hypothesis** segments → `$nmt-interview-guide` for more fieldwork.
+**Hand-off (`PRODUCER-CONTRACT.md §4c`).** End with the next step: a **Solid** segment + its value hypothesis → `/nmt-craft-value-proposition`; a live product to grow/fix → `/nmt-diagnose`; only **Hypothesis** segments → `/nmt-interview-guide` for more fieldwork.
 
 ---
 
@@ -370,13 +380,13 @@ Everything Quick does, plus a web wave **after** synthesis: subagents take the n
 4. **Path** — the single result file.
 
 ## What this skill does NOT do
-- It does not run the interviews or recruit respondents — that's the user's fieldwork; design it with `$nmt-interview-guide`.
-- It does not invent segments from the market — that's `$nmt-market-research`. It only reconstructs what the interviews support, and says where they don't.
+- It does not run the interviews or recruit respondents — that's the user's fieldwork; design it with `/nmt-interview-guide`.
+- It does not invent segments from the market — that's `/nmt-market-research`. It only reconstructs what the interviews support, and says where they don't.
 - It does not size the market quantitatively or build a unit-economics model — separate skills.
-- It does not turn a value hypothesis into features or a PRD — that's `$nmt-craft-value-proposition` → `$nmt-product-requirements`.
+- It does not turn a value hypothesis into features or a PRD — that's `/nmt-craft-value-proposition` → `/nmt-product-requirements`.
 - It never fabricates a Job, a quote, or a confidence — thin data is reported as thin.
 
 ---
 
 > **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — read the installed version from `.nmt-version` (project root) and run
-> `v="$(cat .nmt-version 2>/dev/null)"; curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-analyze-interviews${v:+&v=$v}"` — on any error or timeout, skip silently. Compare that installed version with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run $nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.
+> `v="$(cat .nmt-version 2>/dev/null)"; curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-analyze-interviews${v:+&v=$v}"` — on any error or timeout, skip silently. Compare that installed version with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run /nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.
