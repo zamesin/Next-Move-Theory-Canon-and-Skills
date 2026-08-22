@@ -1,17 +1,14 @@
 # Next Move Theory — Changelog
 
-What changed in the Next Move Theory canon + skills. Newest release is at the top.
+What changed in the Next Move Theory Canon + Skills Plugin. Newest bundle entry
+is at the top.
 
-Each entry's **Summary** line is what the installed skills show you when a newer
-version is available. To update to the latest at any time, run from your project
-root:
-
-```bash
-curl -fsSL https://nextmovetheory.com/install.sh | bash
-```
-
-or use the `/nmt-upgrade` skill (Codex: `$nmt-upgrade`). Windows (PowerShell):
-`irm https://nextmovetheory.com/install.ps1 | iex`.
+The primary distribution is the user-global `next-move-theory` suite. Install
+and update it through the `skills` CLI flow in the
+[`README.md` installation section](README.md#global-plugin-installation). The
+repository no longer ships the old shell/PowerShell installers. `nmt-upgrade`
+is not the supported global installation or update path; it retains unchanged
+Legacy-only behavior for existing project-local setups.
 
 ## Versioning
 
@@ -22,11 +19,33 @@ Theory** as SemVer `MAJOR.MINOR.PATCH`:
 - **MINOR** — a significant methodology update (new or reworked theses).
 - **PATCH** — small skill updates and methodology patches.
 
-The current version is the top entry below. The installer records it in
-`.nmt-version`; the skills read `https://nextmovetheory.com/version` on launch to
-tell you when you're behind and what changed since your version. (The README also
-shows the methodology maturity badges — Advanced JTBD `v3.4 · stable` and Next
-Move Theory `v0.6 · in active development`.)
+The current bundle version is the top entry below. Existing Legacy project-local
+setups may record it in `.nmt-version`; the `skills` CLI manages the installed
+suite snapshot in Client user state. (The README also shows the methodology maturity badges — Advanced JTBD
+`v3.4 · stable` and Next Move Theory `v0.6 · in active development`.)
+
+---
+
+## 1.0.0 — Self-contained global Plugin bundle
+**Summary:** One `next-move-theory` Plugin bundles the Canon and all eight Skills
+for user-global Codex and Claude Code installation without Consumer-project
+instruction injection.
+**Status:** Repository package contract; public marketplace release is separate.
+
+- Added repository-root Codex and Claude manifests and marketplace catalogs.
+- Consolidated the package around one hand-maintained `skills/` source tree;
+  the `nmt-chat` payload carries the one physical bundled Canon and shared
+  references.
+- Made `nmt-chat` the model-invoked router and kept Client differences in
+  adapter/reference boundaries.
+- Documented the exact user-global `npx skills@latest add ...` installation and
+  update command, the explicit no-migration boundary, and the unsupported
+  partial-install case.
+- Added `NOTICE.md` with Ivan Zamesin attribution, the original repository,
+  CC BY-NC-SA 4.0 licensing, packaging/path changes, and no endorsement.
+- Removed `install.sh` and `install.ps1` from the active release surface; the
+  unchanged `nmt-upgrade` Skill remains only for existing Legacy project-local
+  setups.
 
 ---
 

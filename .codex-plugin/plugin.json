@@ -1,0 +1,35 @@
+{
+  "name": "next-move-theory",
+  "version": "1.0.0",
+  "description": "Advanced Jobs To Be Done and Next Move Theory canon and agent skills.",
+  "author": {
+    "name": "Next Move Theory",
+    "url": "https://nextmovetheory.com/"
+  },
+  "homepage": "https://nextmovetheory.com/",
+  "repository": "https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills",
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "ajtbd",
+    "jobs-to-be-done",
+    "product-strategy"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Next Move Theory",
+    "shortDescription": "Apply Next Move Theory",
+    "longDescription": "Use the bundled Next Move Theory canon and workflows for product strategy, research, segmentation, value, positioning, and validation.",
+    "developerName": "Next Move Theory",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://nextmovetheory.com/",
+    "defaultPrompt": [
+      "Diagnose my product with Next Move Theory",
+      "Find the next product move using AJTBD",
+      "Turn product evidence into a focused next move"
+    ]
+  }
+}

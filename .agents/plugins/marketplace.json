@@ -1,0 +1,21 @@
+{
+  "name": "next-move-theory",
+  "interface": {
+    "displayName": "Next Move Theory"
+  },
+  "plugins": [
+    {
+      "name": "next-move-theory",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
